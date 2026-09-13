@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+<text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">Coagulase 시험 모식</text>
+<rect x="60" y="70" width="120" height="120" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+<circle cx="90" cy="120" r="15" fill="#dc2626"/><circle cx="130" cy="140" r="18" fill="#dc2626"/>
+<text x="120" y="210" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#dc2626">응고(+)</text>
+<rect x="240" y="70" width="120" height="120" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+<ellipse cx="300" cy="130" rx="40" ry="25" fill="#fecaca" opacity="0.5"/>
+<text x="300" y="210" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#64748b">액상(−)</text>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+<text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">분쇄적혈구 모식</text>
+<polygon points="100,100 150,120 130,170 90,160" fill="#f87171" stroke="#b91c1c"/>
+<polygon points="200,110 250,100 260,150 210,160" fill="#f87171" stroke="#b91c1c"/>
+<polygon points="300,120 340,140 320,180 280,160" fill="#f87171" stroke="#b91c1c"/>
+<text x="210" y="230" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#64748b">조각난·헬멧형 적혈구 (schistocyte)</text>
+</svg>

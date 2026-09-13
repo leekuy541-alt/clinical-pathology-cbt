@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+<text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">Ziehl-Neelsen 순서 모식</text>
+<rect x="30" y="70" width="80" height="60" rx="6" fill="#dc2626"/>
+<text x="70" y="105" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#fff">Carbolfuchsin</text>
+<text x="120" y="105" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#334155">→</text>
+<rect x="140" y="70" width="80" height="60" rx="6" fill="#fef3c7"/>
+<text x="180" y="105" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#334155">탈색</text>
+<text x="230" y="105" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#334155">→</text>
+<rect x="250" y="70" width="100" height="60" rx="6" fill="#1e3a8a"/>
+<text x="300" y="105" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#fff">Methylene blue</text>
+<text x="210" y="180" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#b91c1c">AFB = 적색 잔류</text>
+<text x="210" y="210" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">비항산균은 탈색 후 청색</text>
+</svg>

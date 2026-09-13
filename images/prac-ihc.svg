@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+<text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">면역조직화학(IHC) 모식</text>
+<rect x="80" y="70" width="100" height="100" rx="6" fill="#fef3c7" stroke="#92400e"/><circle cx="130" cy="120" r="25" fill="#1e3a8a"/>
+<text x="130" y="190" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#334155">항원</text>
+<path d="M190 120 L240 120" stroke="#334155" stroke-width="2"/>
+<rect x="250" y="70" width="100" height="100" rx="6" fill="#dcfce7" stroke="#166534"/><circle cx="300" cy="120" r="25" fill="#1e3a8a"/><circle cx="300" cy="120" r="35" fill="none" stroke="#16a34a" stroke-width="4"/>
+<text x="300" y="190" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#334155">항체+발색(+)</text>
+<text x="210" y="250" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">항원-항체 결합 후 발색</text>
+</svg>

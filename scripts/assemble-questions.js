@@ -30,6 +30,7 @@ const QUESTIONS = {
   hematology: loadParts('he'),
   'immuno-transfusion': loadParts('it'),
   microbiology: loadParts('mb'),
+  practical: loadOne('practical'),
 };
 
 const SUBJECTS = [
@@ -42,6 +43,7 @@ const SUBJECTS = [
   { id: 'hematology', name: '혈액학', status: 'ready', description: '혈구·응고·도말·혈액종양' },
   { id: 'immuno-transfusion', name: '면역혈청학·수혈의학', status: 'ready', description: '혈액형·항체·교차·수혈반응·혈청학' },
   { id: 'microbiology', name: '임상미생물학', status: 'ready', description: '염색·배양·동정·감수성·감염관리' },
+  { id: 'practical', name: '실기(사진·도표형)', status: 'ready', description: '국시 3교시형 이미지·도표 MCQ' },
 ];
 
 const MIN_COUNTS = {
@@ -54,6 +56,7 @@ const MIN_COUNTS = {
   hematology: 100,
   'immuno-transfusion': 100,
   microbiology: 100,
+  practical: 80,
 };
 
 const errors = [];
@@ -94,6 +97,8 @@ for (const [key, arr] of Object.entries(QUESTIONS)) {
     out += '    {\n';
     out += `      id: ${esc(q.id)},\n`;
     out += `      stem: ${esc(q.stem)},\n`;
+    if (q.image) out += `      image: ${esc(q.image)},\n`;
+    if (q.major) out += `      major: ${esc(q.major)},\n`;
     out += `      choices: ${esc(q.choices)},\n`;
     out += `      answerIndex: ${q.answerIndex},\n`;
     out += `      explainCorrect: ${esc(q.explainCorrect)},\n`;

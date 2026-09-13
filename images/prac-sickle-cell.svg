@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+<text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">말초혈액 도말 모식</text>
+<path d="M80 140 Q120 80 160 140 Q120 200 80 140" fill="#f87171" stroke="#b91c1c" stroke-width="2"/>
+<path d="M200 130 Q250 90 300 150 Q240 190 200 130" fill="#f87171" stroke="#b91c1c" stroke-width="2"/>
+<circle cx="340" cy="140" r="28" fill="#fecaca" stroke="#b91c1c"/>
+<text x="210" y="230" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#b91c1c">낫모양(겸상) 적혈구</text>
+</svg>

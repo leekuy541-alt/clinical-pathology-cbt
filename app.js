@@ -44,7 +44,7 @@
   });
   const PRESET_S2_PRACTICAL = 0;
 
-  /** 3교시 실기 65 — 전공 실기형 혼합(법규·공중보건·해부 제외) */
+  /** 3교시 실기 65 — 사진·도표형 practical 은행에서 추출 */
   const PRESET_S3 = Object.assign({}, ZERO_COUNTS);
   const PRESET_S3_PRACTICAL = 65;
 
@@ -78,15 +78,8 @@
     "microbiology",
   ];
 
-  /** 실기형 풀 — 법규·공중보건·해부생리학개론 제외 */
-  const PRACTICAL_IDS = [
-    "histopathology",
-    "physiology",
-    "clinical-chemistry",
-    "hematology",
-    "immuno-transfusion",
-    "microbiology",
-  ];
+  /** 실기(사진·도표형) 전용 은행 ID */
+  const PRACTICAL_BANK_ID = "practical";
 
   /** @type {'home'|'count'|'exam-config'|'quiz'|'end'} */
   let screen = "home";
@@ -127,8 +120,11 @@
     progressFill: $("#progress-fill"),
     questionTag: $("#question-tag"),
     stem: $("#question-stem"),
+    imageWrap: $("#question-image-wrap"),
+    image: $("#question-image"),
     choices: $("#choices"),
     feedback: $("#feedback"),
+    btnPrev: $("#btn-prev"),
     btnNext: $("#btn-next"),
     btnSubmit: $("#btn-submit"),
     btnResume: $("#btn-resume"),
@@ -309,11 +305,14 @@
 
   function startSubjectPractice(id, n) {
     const bank = QUESTIONS[id] || [];
+    const isPrac = id === PRACTICAL_BANK_ID;
     const picked = sampleN(bank, n).map((q) =>
       Object.assign({}, q, {
-        subjectId: id,
-        paperTag: subjectName(id),
-        isPractical: false,
+        subjectId: isPrac ? (q.major || PRACTICAL_BANK_ID) : id,
+        paperTag: isPrac
+          ? "실기 · " + subjectName(q.major || id)
+          : subjectName(id),
+        isPractical: isPrac,
       })
     );
     beginSession(picked, {
@@ -367,10 +366,7 @@
   }
 
   function totalBankSize() {
-    return MAJOR_IDS.reduce(
-      (sum, id) => sum + ((QUESTIONS[id] && QUESTIONS[id].length) || 0),
-      0
-    );
+    return ((QUESTIONS[PRACTICAL_BANK_ID] && QUESTIONS[PRACTICAL_BANK_ID].length) || 0);
   }
 
   function readCustomState() {
@@ -461,8 +457,8 @@
 
   /**
    * Build mixed exam paper.
-   * Major draws per subject, then optional practical sample across all banks
-   * excluding already drawn ids. Full shuffle for CBT feel.
+   * Major draws per subject, then optional practical sample from image bank.
+   * Full shuffle for CBT feel.
    */
   function buildExamPaper(counts, practical) {
     const usedKeys = new Set();
@@ -487,23 +483,20 @@
     });
 
     if (practical > 0) {
-      const pool = [];
-      PRACTICAL_IDS.forEach((id) => {
-        (QUESTIONS[id] || []).forEach((q) => {
-          if (!usedKeys.has(id + "::" + q.id)) {
-            pool.push(
-              Object.assign({}, q, {
-                subjectId: id,
-                paperTag: "실기 · " + subjectName(id),
-                isPractical: true,
-              })
-            );
-          }
-        });
-      });
-      sampleN(pool, practical).forEach((q) => {
-        usedKeys.add(q.subjectId + "::" + q.id);
-        paper.push(q);
+      const bank = QUESTIONS[PRACTICAL_BANK_ID] || [];
+      const available = bank.filter(
+        (q) => !usedKeys.has(PRACTICAL_BANK_ID + "::" + q.id)
+      );
+      sampleN(available, practical).forEach((q) => {
+        const major = q.major || PRACTICAL_BANK_ID;
+        usedKeys.add(PRACTICAL_BANK_ID + "::" + q.id);
+        paper.push(
+          Object.assign({}, q, {
+            subjectId: major,
+            paperTag: "실기 · " + subjectName(major),
+            isPractical: true,
+          })
+        );
       });
     }
 
@@ -578,21 +571,79 @@
     });
   }
 
+  function recomputeScore() {
+    score = sessionAnswers.reduce((n, a) => n + (a.answered && a.correct ? 1 : 0), 0);
+    el.scoreLabel.textContent = "점수 " + score;
+  }
+
+  function updateWrongRefsFromSession() {
+    if (reviewMode) return;
+    const next = [];
+    const seen = new Set();
+    sessionAnswers.forEach((a, i) => {
+      if (!a.answered || a.correct) return;
+      const q = questionList[i];
+      const sid = a.subjectId || (q && q.subjectId) || subjectId;
+      const key = sid + "::" + a.id;
+      if (seen.has(key)) return;
+      seen.add(key);
+      next.push({ subjectId: sid, id: a.id, question: q });
+    });
+    wrongRefs = next;
+  }
+
+  function updateNavButtons() {
+    const total = questionList.length;
+    const atFirst = index <= 0;
+    const atLast = index >= total - 1;
+    if (el.btnPrev) {
+      el.btnPrev.disabled = atFirst;
+      el.btnPrev.classList.remove("btn-hidden");
+    }
+    if (el.btnNext) {
+      el.btnNext.classList.remove("btn-hidden");
+      if (atLast) {
+        el.btnNext.textContent = "결과 보기";
+        el.btnNext.disabled = false;
+      } else {
+        el.btnNext.textContent = "다음 문제";
+        el.btnNext.disabled = false;
+      }
+    }
+  }
+
+  function applyGradedState(q, selected) {
+    const correct = q.answerIndex;
+    const isCorrect = selected === correct;
+    const buttons = el.choices.querySelectorAll(".choice-btn");
+    buttons.forEach((btn) => {
+      btn.disabled = false;
+      btn.classList.remove("correct", "wrong-selected", "dimmed");
+      const i = Number(btn.dataset.index);
+      if (i === correct) {
+        btn.classList.add("correct");
+      } else if (i === selected && !isCorrect) {
+        btn.classList.add("wrong-selected");
+      } else {
+        btn.classList.add("dimmed");
+      }
+    });
+    renderFeedback(q, selected, isCorrect);
+  }
+
   function renderQuestion() {
-    answered = false;
     const q = questionList[index];
     const total = questionList.length;
     const n = index + 1;
+    const prev = sessionAnswers[index];
+    answered = !!(prev && prev.answered);
 
     el.progressLabel.textContent =
       (reviewMode ? "복습 " : "") + "Q " + n + "/" + total;
-    el.scoreLabel.textContent = "점수 " + score;
+    recomputeScore();
     el.progressFill.style.width = (n / total) * 100 + "%";
 
-    if (examMode && q.paperTag) {
-      el.questionTag.hidden = false;
-      el.questionTag.textContent = q.paperTag;
-    } else if (!examMode && q.paperTag) {
+    if ((examMode || q.paperTag) && q.paperTag) {
       el.questionTag.hidden = false;
       el.questionTag.textContent = q.paperTag;
     } else {
@@ -601,6 +652,17 @@
     }
 
     el.stem.textContent = q.stem;
+
+    if (el.imageWrap && el.image) {
+      if (q.image) {
+        el.imageWrap.hidden = false;
+        el.image.src = q.image;
+        el.image.alt = "문항 그림";
+      } else {
+        el.imageWrap.hidden = true;
+        el.image.removeAttribute("src");
+      }
+    }
 
     el.choices.innerHTML = "";
     q.choices.forEach((text, i) => {
@@ -622,13 +684,15 @@
 
     el.feedback.classList.remove("visible");
     el.feedback.innerHTML = "";
-    el.btnNext.classList.add("btn-hidden");
-    el.btnNext.disabled = true;
+
+    if (answered && prev) {
+      applyGradedState(q, prev.selected);
+    }
+
+    updateNavButtons();
   }
 
   function onAnswer(selected) {
-    if (answered) return;
-    answered = true;
     const q = questionList[index];
     const correct = q.answerIndex;
     const isCorrect = selected === correct;
@@ -641,92 +705,27 @@
       correct: isCorrect,
       answered: true,
     };
+    answered = true;
 
-    if (isCorrect) {
-      score += 1;
-    } else if (!reviewMode) {
-      const already = wrongRefs.some(
-        (r) => r.subjectId === sid && r.id === q.id
-      );
-      if (!already) {
-        wrongRefs.push({ subjectId: sid, id: q.id, question: q });
-      }
-    }
-
-    el.scoreLabel.textContent = "점수 " + score;
-
-    const buttons = el.choices.querySelectorAll(".choice-btn");
-    buttons.forEach((btn) => {
-      btn.disabled = true;
-      const i = Number(btn.dataset.index);
-      if (i === correct) {
-        btn.classList.add("correct");
-      } else if (i === selected && !isCorrect) {
-        btn.classList.add("wrong-selected");
-      } else {
-        btn.classList.add("dimmed");
-      }
-    });
-
-    renderFeedback(q, selected, isCorrect);
-    el.btnNext.classList.remove("btn-hidden");
-    el.btnNext.disabled = false;
-    el.btnNext.textContent =
-      index + 1 >= questionList.length ? "결과 보기" : "다음 문제";
-  }
-
-  function renderFeedback(q, selected, isCorrect) {
-    const correctLabel = NUM_LABELS[q.answerIndex];
-    let html = "";
-    html +=
-      '<div class="feedback-result ' +
-      (isCorrect ? "is-correct" : "is-wrong") +
-      '">' +
-      (isCorrect ? "정답" : "오답") +
-      "</div>";
-    html +=
-      '<p class="feedback-answer">정답: ' +
-      correctLabel +
-      " " +
-      escapeHtml(q.choices[q.answerIndex]) +
-      "</p>";
-    html +=
-      '<div class="feedback-section"><h3>해설</h3><p>' +
-      escapeHtml(q.explainCorrect) +
-      "</p></div>";
-
-    const wrongLines = [];
-    q.choices.forEach((choice, i) => {
-      if (i === q.answerIndex) return;
-      const why = q.explainWrong[i] || "";
-      if (!why) return;
-      wrongLines.push(
-        "<li><span class=\"choice-ref\">" +
-          NUM_LABELS[i] +
-          "</span>" +
-          escapeHtml(why) +
-          "</li>"
-      );
-    });
-    if (wrongLines.length) {
-      html +=
-        '<div class="feedback-section"><h3>오선 해설</h3><ul class="wrong-list">' +
-        wrongLines.join("") +
-        "</ul></div>";
-    }
-
-    el.feedback.innerHTML = html;
-    el.feedback.classList.add("visible");
-    el.feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    recomputeScore();
+    updateWrongRefsFromSession();
+    applyGradedState(q, selected);
+    updateNavButtons();
   }
 
   function nextQuestion() {
-    if (!answered) return;
     if (index + 1 >= questionList.length) {
       showEnd({ fromSubmit: false });
       return;
     }
     index += 1;
+    renderQuestion();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function prevQuestion() {
+    if (index <= 0) return;
+    index -= 1;
     renderQuestion();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -1017,6 +1016,7 @@
   }
 
   // —— Events ——
+  if (el.btnPrev) el.btnPrev.addEventListener("click", prevQuestion);
   el.btnNext.addEventListener("click", nextQuestion);
   el.btnHome.addEventListener("click", goHome);
   el.btnEndHome.addEventListener("click", goHome);

@@ -413,6 +413,36 @@ body {
   margin-right: 4px;
 }
 
+
+/* —— Question figure —— */
+.question-image-wrap {
+  margin: 0 0 14px;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+}
+.question-image {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 6px;
+}
+
+/* —— Prev/Next row —— */
+.actions-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.actions-nav #btn-submit {
+  grid-column: 1 / -1;
+}
+.actions-nav .btn {
+  width: 100%;
+}
 /* —— Actions —— */
 .actions {
   display: flex;

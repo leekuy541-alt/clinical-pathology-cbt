@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+<text x="210" y="24" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">요시험지 모식</text>
+<rect x="80" y="60" width="260" height="40" rx="4" fill="#f1f5f9" stroke="#64748b"/>
+<rect x="100" y="68" width="24" height="24" fill="#fef08a"/><rect x="140" y="68" width="24" height="24" fill="#86efac"/><rect x="180" y="68" width="24" height="24" fill="#fda4af"/>
+<rect x="220" y="68" width="24" height="24" fill="#93c5fd"/><rect x="260" y="68" width="24" height="24" fill="#c4b5fd"/><rect x="300" y="68" width="24" height="24" fill="#fdba74"/>
+<text x="112" y="120" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#334155">GLU</text>
+<text x="152" y="120" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#334155">PRO</text>
+<text x="192" y="120" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#334155">BLD</text>
+<text x="232" y="120" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#334155">LEU</text>
+<text x="272" y="120" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#334155">NIT</text>
+<text x="312" y="120" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#334155">pH</text>
+<text x="210" y="160" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#64748b">패드를 표준색표와 비교 판독</text>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+<text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">Chocolate agar</text>
+<circle cx="210" cy="150" r="100" fill="#78350f" stroke="#64748b" stroke-width="3"/>
+<circle cx="180" cy="140" r="16" fill="#a16207"/><circle cx="240" cy="155" r="14" fill="#a16207"/>
+<text x="210" y="255" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#64748b">가열 용해 혈액 · 갈색 배지</text>
+</svg>

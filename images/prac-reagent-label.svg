@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+<text x="210" y="24" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">시약 라벨 필수 정보</text>
+<rect x="100" y="50" width="220" height="180" rx="8" fill="#fff" stroke="#334155" stroke-width="2"/>
+<text x="210" y="80" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#334155">시약명</text>
+<text x="210" y="110" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">농도 / Lot No.</text>
+<text x="210" y="140" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">개봉일 · 유효기한</text>
+<text x="210" y="170" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">보관온도 · 위험표시</text>
+<text x="210" y="200" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">조제시·폐기 정보</text>
+</svg>

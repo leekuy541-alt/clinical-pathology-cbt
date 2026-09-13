@@ -38,7 +38,7 @@
           </button>
           <button type="button" class="preset-btn" data-preset="S3">
             <span class="preset-name">3교시 실기 (65)</span>
-            <span class="preset-desc">실기 65 (전공 실기형 혼합)</span>
+            <span class="preset-desc">실기 65 · 사진·도표형</span>
           </button>
           <button type="button" class="preset-btn" data-preset="WRITTEN">
             <span class="preset-name">필기 215</span>
@@ -84,7 +84,7 @@
           <p class="count-help">과목별 문항 수 (± 또는 직접 입력). 마지막 설정은 기기에 저장됩니다.</p>
           <ul id="custom-count-list" class="custom-count-list"></ul>
           <div class="custom-row practical-row">
-            <label for="input-practical">실기 (전공 혼합)</label>
+            <label for="input-practical">실기 (사진·도표형)</label>
             <div class="stepper">
               <button type="button" class="step-btn" data-step="-1" data-for="practical" aria-label="감소">−</button>
               <input type="number" id="input-practical" min="0" max="200" inputmode="numeric" />
@@ -110,10 +110,16 @@
         </div>
         <span id="question-tag" class="question-tag" hidden></span>
         <p id="question-stem" class="question-stem"></p>
+        <div id="question-image-wrap" class="question-image-wrap" hidden>
+          <img id="question-image" class="question-image" alt="문항 그림" />
+        </div>
         <ul id="choices" class="choices"></ul>
         <div id="feedback" class="feedback" aria-live="polite"></div>
-        <div class="actions">
-          <button type="button" id="btn-next" class="btn btn-primary btn-hidden" disabled>
+        <div class="actions actions-nav">
+          <button type="button" id="btn-prev" class="btn btn-secondary" disabled>
+            이전 문제
+          </button>
+          <button type="button" id="btn-next" class="btn btn-primary" disabled>
             다음 문제
           </button>
           <button type="button" id="btn-submit" class="btn btn-secondary">제출</button>
