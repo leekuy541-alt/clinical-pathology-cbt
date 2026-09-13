@@ -9,7 +9,7 @@
   /** @type {'home'|'quiz'|'end'} */
   let screen = "home";
   let subjectId = null;
-  let queueList = [];
+  let questionList = [];
   let index = 0;
   let score = 0;
   let answered = false;
