@@ -486,3 +486,364 @@ body {
     font-size: 1.65rem;
   }
 }
+
+/* —— National exam CTA —— */
+.btn-national {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 64px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  letter-spacing: -0.01em;
+}
+
+.btn-national:active {
+  opacity: 0.92;
+  transform: scale(0.99);
+}
+
+.national-hint {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  text-align: center;
+  margin-top: -4px;
+  padding: 0 4px;
+}
+
+.section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+}
+
+/* —— Screen header (back) —— */
+.screen-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.screen-header h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.btn-back {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: inherit;
+}
+
+.btn-back:active {
+  background: #243044;
+}
+
+.count-subject-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.count-help {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.45;
+}
+
+.count-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.count-opt-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 52px;
+}
+
+.count-opt-btn:active,
+.count-opt-btn:hover {
+  border-color: var(--accent);
+  background: #243044;
+}
+
+.count-opt-all {
+  border-color: var(--accent);
+  color: #93c5fd;
+}
+
+/* —— Exam config —— */
+.exam-note {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exam-note strong {
+  color: var(--text);
+}
+
+.preset-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.preset-btn {
+  width: 100%;
+  text-align: left;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.preset-btn:hover,
+.preset-btn:active {
+  border-color: var(--accent);
+  background: #243044;
+}
+
+.preset-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.preset-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.config-divider {
+  display: flex;
+  justify-content: center;
+  padding: 4px 0;
+}
+
+.btn-sm {
+  min-height: 44px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  width: auto;
+  min-width: 140px;
+}
+
+.custom-counts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.custom-counts.hidden {
+  display: none;
+}
+
+.custom-count-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.custom-row label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+}
+
+.bank-cap {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.practical-row {
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.step-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.step-btn:active {
+  background: #243044;
+}
+
+.stepper input[type="number"] {
+  width: 52px;
+  height: 36px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  -moz-appearance: textfield;
+}
+
+.stepper input[type="number"]::-webkit-outer-spin-button,
+.stepper input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-total {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: center;
+}
+
+/* —— Question subject tag —— */
+.question-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 2px 10px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-bottom: -4px;
+}
+
+.question-tag[hidden] {
+  display: none;
+}
+
+/* —— End breakdown / pass hint —— */
+.end-pass-hint {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  text-align: left;
+  background: var(--bg-elevated);
+  border-radius: 8px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent);
+}
+
+.end-pass-hint[hidden] {
+  display: none;
+}
+
+.end-breakdown {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.breakdown-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.breakdown-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.breakdown-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.82rem;
+  padding: 6px 8px;
+  background: var(--bg);
+  border-radius: 8px;
+}
+
+.bd-name {
+  color: var(--text);
+  font-weight: 500;
+  min-width: 0;
+}
+
+.bd-score {
+  color: var(--text-muted);
+  font-weight: 600;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}

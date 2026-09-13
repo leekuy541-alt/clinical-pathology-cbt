@@ -20,8 +20,79 @@
           <h1>임상병리사 CBT</h1>
           <p class="subtitle">국가고시 대비 · 컴퓨터기반 평가</p>
         </header>
+
+        <button type="button" id="btn-national" class="btn btn-national">
+          국가고시 모의
+        </button>
+        <p class="national-hint">
+          필기 215(법규20+이론I 80+이론II 115)+실기 65=280 (국시원 공시).
+          전공 세부는 「관례 배분(참고)」입니다.
+        </p>
+
+        <h2 class="section-label">과목별 연습</h2>
         <ul id="subject-list" class="subject-list"></ul>
-        <p class="footer-note">문항을 선택하여 응시를 시작하십시오.</p>
+        <p class="footer-note">매 응시마다 문항을 무작위로 추출합니다.</p>
+      </section>
+
+      <!-- Subject count picker -->
+      <section id="screen-count" class="screen" aria-label="문항 수 선택">
+        <header class="screen-header">
+          <button type="button" id="btn-count-back" class="btn-back" aria-label="뒤로">←</button>
+          <h2 id="count-title">문항 수</h2>
+        </header>
+        <p id="count-subject-name" class="count-subject-name"></p>
+        <p class="count-help">연습할 문항 수를 선택하세요. (중복 없이 무작위 추출)</p>
+        <div id="count-options" class="count-options"></div>
+      </section>
+
+      <!-- National exam config -->
+      <section id="screen-exam-config" class="screen" aria-label="국가고시 모의 설정">
+        <header class="screen-header">
+          <button type="button" id="btn-exam-back" class="btn-back" aria-label="뒤로">←</button>
+          <h2>국가고시 모의</h2>
+        </header>
+
+        <div class="exam-note">
+          <p><strong>국시원 공시</strong>: 필기 215(법규20 + 이론I 80 + 이론II 115) + 실기 65 = 280</p>
+          <p>전공 과목 세분 배분은 공시되지 않으며, 아래는 <strong>「관례 배분(참고)」</strong>입니다. 공통 40문항(법규·공중보건·해부생리)은 은행 준비 전까지 미포함.</p>
+        </div>
+
+        <h3 class="section-label">프리셋</h3>
+        <div class="preset-list">
+          <button type="button" class="preset-btn" data-preset="A">
+            <span class="preset-name">A. 필기 전공 모의 (175문항)</span>
+            <span class="preset-desc">임상검사이론 전공 근사 · 공통 40문항 미포함</span>
+          </button>
+          <button type="button" class="preset-btn" data-preset="B">
+            <span class="preset-name">B. 전체 모의 (240문항)</span>
+            <span class="preset-desc">175 + 실기형 65(전공 은행 혼합 · 실기 대비) · 280−40=240</span>
+          </button>
+          <button type="button" class="preset-btn" data-preset="C">
+            <span class="preset-name">C. 빠른 모의 (50문항)</span>
+            <span class="preset-desc">A를 비례 축소(관례 배분)</span>
+          </button>
+        </div>
+
+        <div class="config-divider">
+          <button type="button" id="btn-toggle-custom" class="btn btn-secondary btn-sm">
+            문항 수 조절
+          </button>
+        </div>
+
+        <div id="custom-counts" class="custom-counts hidden">
+          <p class="count-help">과목별 문항 수 (± 또는 직접 입력). 마지막 설정은 기기에 저장됩니다.</p>
+          <ul id="custom-count-list" class="custom-count-list"></ul>
+          <div class="custom-row practical-row">
+            <label for="input-practical">실기형 혼합 (실기 대비)</label>
+            <div class="stepper">
+              <button type="button" class="step-btn" data-step="-1" data-for="practical" aria-label="감소">−</button>
+              <input type="number" id="input-practical" min="0" max="200" inputmode="numeric" />
+              <button type="button" class="step-btn" data-step="1" data-for="practical" aria-label="증가">+</button>
+            </div>
+          </div>
+          <p id="custom-total" class="custom-total">합계 0문항</p>
+          <button type="button" id="btn-exam-start" class="btn btn-primary">시작</button>
+        </div>
       </section>
 
       <!-- Quiz -->
@@ -33,6 +104,7 @@
         <div class="progress-bar" aria-hidden="true">
           <div id="progress-fill" class="progress-fill"></div>
         </div>
+        <span id="question-tag" class="question-tag" hidden></span>
         <p id="question-stem" class="question-stem"></p>
         <ul id="choices" class="choices"></ul>
         <div id="feedback" class="feedback" aria-live="polite"></div>
@@ -50,6 +122,8 @@
           <h2>응시 결과</h2>
           <div id="end-score" class="end-score">0 <span>/ 0</span></div>
           <p id="end-pct" class="end-pct"></p>
+          <p id="end-pass-hint" class="end-pass-hint"></p>
+          <div id="end-breakdown" class="end-breakdown"></div>
           <p id="end-summary" class="end-summary"></p>
         </div>
         <div class="actions">
