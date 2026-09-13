@@ -97,9 +97,12 @@
 
       <!-- Quiz -->
       <section id="screen-quiz" class="screen" aria-label="퀴즈">
-        <div class="quiz-top">
-          <span id="progress-label" class="progress-label">Q 1/1</span>
-          <span id="score-label" class="score-label">점수 0</span>
+        <div class="quiz-head">
+          <button type="button" id="btn-home" class="btn-home-link">← 처음으로</button>
+          <div class="quiz-top">
+            <span id="progress-label" class="progress-label">Q 1/1</span>
+            <span id="score-label" class="score-label">점수 0</span>
+          </div>
         </div>
         <div class="progress-bar" aria-hidden="true">
           <div id="progress-fill" class="progress-fill"></div>
@@ -112,21 +115,26 @@
           <button type="button" id="btn-next" class="btn btn-primary btn-hidden" disabled>
             다음 문제
           </button>
-          <button type="button" id="btn-home" class="btn btn-secondary">처음으로</button>
+          <button type="button" id="btn-submit" class="btn btn-secondary">제출</button>
         </div>
       </section>
 
       <!-- End -->
       <section id="screen-end" class="screen" aria-label="결과">
         <div class="end-card">
-          <h2>응시 결과</h2>
-          <div id="end-score" class="end-score">0 <span>/ 0</span></div>
+          <h2 id="end-title">응시 결과</h2>
+          <p class="end-score-caption">맞힌 / 응시한 / 전체</p>
+          <div id="end-score" class="end-score">0 <span>/ 0 / 0</span></div>
           <p id="end-pct" class="end-pct"></p>
           <p id="end-pass-hint" class="end-pass-hint"></p>
+          <div id="end-analytics" class="end-analytics"></div>
           <div id="end-breakdown" class="end-breakdown"></div>
           <p id="end-summary" class="end-summary"></p>
         </div>
         <div class="actions">
+          <button type="button" id="btn-resume" class="btn btn-primary" hidden>
+            이어서 풀기
+          </button>
           <button type="button" id="btn-retry-wrong" class="btn btn-primary">
             틀린 문제 다시보기
           </button>

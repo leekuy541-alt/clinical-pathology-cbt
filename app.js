@@ -50,14 +50,16 @@
   let index = 0;
   let score = 0;
   let answered = false;
-  /** @type {{subjectId:string,id:string}[]} */
+  /** @type {{subjectId:string,id:string,question?:object}[]} */
   let wrongRefs = [];
   /** 틀린 문제 다시보기 모드 */
   let reviewMode = false;
   /** 혼합/모의 시험 여부 */
   let examMode = false;
-  /** @type {Record<string,{correct:number,total:number}>} */
-  let subjectStats = {};
+  /** @type {{subjectId:string,id:string,selected:number|null,correct:boolean,answered:boolean}[]} */
+  let sessionAnswers = [];
+  /** 중간 제출 후 결과 화면인지 */
+  let midSubmit = false;
   /** pending subject for count picker */
   let pendingSubjectId = null;
 
@@ -83,9 +85,13 @@
     choices: $("#choices"),
     feedback: $("#feedback"),
     btnNext: $("#btn-next"),
+    btnSubmit: $("#btn-submit"),
+    btnResume: $("#btn-resume"),
+    endTitle: $("#end-title"),
     endScore: $("#end-score"),
     endPct: $("#end-pct"),
     endPassHint: $("#end-pass-hint"),
+    endAnalytics: $("#end-analytics"),
     endBreakdown: $("#end-breakdown"),
     endSummary: $("#end-summary"),
     btnRetryWrong: $("#btn-retry-wrong"),
@@ -127,6 +133,33 @@
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
+  }
+
+  /**
+   * Shuffle choices once per session item and remap answerIndex + explainWrong
+   * so the correct option is equally likely in any slot. Does not mutate the bank.
+   */
+  function shuffleQuestionChoices(q) {
+    const n = (q.choices && q.choices.length) || 0;
+    const indices = [];
+    for (let i = 0; i < n; i++) indices.push(i);
+    const order = shuffle(indices);
+    const choices = order.map((i) => q.choices[i]);
+    const ewSrc = q.explainWrong || [];
+    const explainWrong = order.map((i) => ewSrc[i] || "");
+    let answerIndex = 0;
+    for (let j = 0; j < order.length; j++) {
+      if (order[j] === q.answerIndex) {
+        answerIndex = j;
+        break;
+      }
+    }
+    return Object.assign({}, q, {
+      choices: choices,
+      explainWrong: explainWrong,
+      answerIndex: answerIndex,
+      _shuffled: true,
+    });
   }
 
   /** Sample n items without replacement */
@@ -441,30 +474,23 @@
   }
 
   function beginSession(list, opts) {
-    questionList = list;
+    questionList = list.map((q) =>
+      q && q._shuffled ? q : shuffleQuestionChoices(q)
+    );
     examMode = !!opts.examMode;
     reviewMode = !!opts.reviewMode;
     subjectId = opts.subjectId || null;
     if (!reviewMode) {
       wrongRefs = [];
     }
-    subjectStats = {};
-    questionList.forEach((q) => {
-      const sid = q.subjectId || subjectId || "unknown";
-      const key = q.isPractical ? sid + "|practical" : sid;
-      if (!subjectStats[key]) {
-        subjectStats[key] = {
-          correct: 0,
-          total: 0,
-          label: q.isPractical
-            ? "실기 대비 · " + subjectName(sid)
-            : subjectName(sid),
-          subjectId: sid,
-          isPractical: !!q.isPractical,
-        };
-      }
-      subjectStats[key].total += 1;
-    });
+    sessionAnswers = questionList.map((q) => ({
+      subjectId: q.subjectId || subjectId || "unknown",
+      id: q.id,
+      selected: null,
+      correct: false,
+      answered: false,
+    }));
+    midSubmit = false;
     index = 0;
     score = 0;
     answered = false;
@@ -477,6 +503,10 @@
     if (!wrongRefs.length) return;
     const list = [];
     wrongRefs.forEach((ref) => {
+      if (ref.question && ref.question._shuffled) {
+        list.push(ref.question);
+        return;
+      }
       const bank = QUESTIONS[ref.subjectId] || [];
       const q = bank.find((x) => x.id === ref.id);
       if (q) {
@@ -553,16 +583,22 @@
     const isCorrect = selected === correct;
     const sid = q.subjectId || subjectId;
 
+    sessionAnswers[index] = {
+      subjectId: sid,
+      id: q.id,
+      selected: selected,
+      correct: isCorrect,
+      answered: true,
+    };
+
     if (isCorrect) {
       score += 1;
-      const key = q.isPractical ? sid + "|practical" : sid;
-      if (subjectStats[key]) subjectStats[key].correct += 1;
     } else if (!reviewMode) {
       const already = wrongRefs.some(
         (r) => r.subjectId === sid && r.id === q.id
       );
       if (!already) {
-        wrongRefs.push({ subjectId: sid, id: q.id });
+        wrongRefs.push({ subjectId: sid, id: q.id, question: q });
       }
     }
 
@@ -636,7 +672,7 @@
   function nextQuestion() {
     if (!answered) return;
     if (index + 1 >= questionList.length) {
-      showEnd();
+      showEnd({ fromSubmit: false });
       return;
     }
     index += 1;
@@ -644,46 +680,208 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  function showEnd() {
-    const total = questionList.length;
-    const pct = total ? Math.round((score / total) * 100) : 0;
-    el.endScore.innerHTML = score + " <span>/ " + total + "</span>";
-    el.endPct.textContent = "정답률 " + pct + "%";
-
-    // Per-subject breakdown
-    const keys = Object.keys(subjectStats);
-    let breakdownHtml = "";
-    if (keys.length > 0) {
-      breakdownHtml += '<h3 class="breakdown-title">과목별 성적</h3><ul class="breakdown-list">';
-      keys.forEach((key) => {
-        const st = subjectStats[key];
-        const sp =
-          st.total > 0 ? Math.round((st.correct / st.total) * 100) : 0;
-        breakdownHtml +=
-          "<li><span class=\"bd-name\">" +
-          escapeHtml(st.label) +
-          '</span><span class="bd-score">' +
-          st.correct +
-          "/" +
-          st.total +
-          " (" +
-          sp +
-          "%)</span></li>";
-      });
-      breakdownHtml += "</ul>";
+  function onSubmitMid() {
+    if (
+      !window.confirm("지금 제출하면 중간 분석이 표시됩니다. 계속할까요?")
+    ) {
+      return;
     }
-    el.endBreakdown.innerHTML = breakdownHtml;
+    showEnd({ fromSubmit: true });
+  }
 
-    // Pass hint (참고) — only for exam mode with major subjects
-    if (examMode && !reviewMode) {
+  function computeAnalysis() {
+    const bySubject = {};
+    let correct = 0;
+    let attempted = 0;
+    const total = questionList.length;
+
+    sessionAnswers.forEach((a, i) => {
+      const q = questionList[i] || {};
+      const sid = a.subjectId || q.subjectId || subjectId || "unknown";
+      const isPractical = !!q.isPractical;
+      const key = isPractical ? sid + "|practical" : sid;
+      if (!bySubject[key]) {
+        bySubject[key] = {
+          subjectId: sid,
+          label: isPractical
+            ? "실기 대비 · " + subjectName(sid)
+            : subjectName(sid),
+          isPractical: isPractical,
+          correct: 0,
+          attempted: 0,
+          total: 0,
+        };
+      }
+      bySubject[key].total += 1;
+      if (a.answered) {
+        bySubject[key].attempted += 1;
+        attempted += 1;
+        if (a.correct) {
+          bySubject[key].correct += 1;
+          correct += 1;
+        }
+      }
+    });
+
+    return { correct: correct, attempted: attempted, total: total, bySubject: bySubject };
+  }
+
+  function renderSubjectChart(bySubject) {
+    const keys = Object.keys(bySubject);
+    if (!keys.length) return "";
+    let html = '<h3 class="breakdown-title">과목별 성적</h3><div class="subject-chart">';
+    keys.forEach((key) => {
+      const st = bySubject[key];
+      const pct = st.attempted > 0 ? Math.round((st.correct / st.attempted) * 100) : 0;
+      const barClass =
+        st.attempted === 0
+          ? ""
+          : pct >= 70
+            ? "is-strong"
+            : pct >= 40
+              ? "is-mid"
+              : "is-weak";
+      html +=
+        '<div class="chart-row">' +
+        '<div class="chart-row-head">' +
+        '<span class="bd-name">' +
+        escapeHtml(st.label) +
+        "</span>" +
+        '<span class="bd-score">' +
+        st.correct +
+        "/" +
+        st.attempted +
+        " (" +
+        pct +
+        "%)</span>" +
+        "</div>" +
+        '<div class="chart-bar-track" role="img" aria-label="' +
+        escapeHtml(st.label) +
+        " " +
+        pct +
+        '%">' +
+        '<div class="chart-bar-fill ' +
+        barClass +
+        '" style="width:' +
+        pct +
+        '%"></div>' +
+        "</div>" +
+        "</div>";
+    });
+    html += "</div>";
+    return html;
+  }
+
+  function renderInsights(bySubject) {
+    const rows = Object.keys(bySubject)
+      .map((k) => {
+        const st = bySubject[k];
+        const pct = st.attempted > 0 ? (st.correct / st.attempted) * 100 : -1;
+        return Object.assign({}, st, { pct: pct });
+      })
+      .filter((st) => st.attempted > 0);
+
+    let html = '<div class="insight-block"><h3 class="breakdown-title">강점 · 취약</h3>';
+    if (!rows.length) {
+      html +=
+        '<p class="insight-text">아직 응시한 문항이 없습니다. 미응시 문항은 오답으로 치지 않습니다.</p></div>';
+      return html;
+    }
+
+    rows.sort((a, b) => b.pct - a.pct || a.label.localeCompare(b.label, "ko"));
+    const topN = Math.min(2, rows.length);
+    const strong = rows.slice(0, topN);
+    const weakSorted = rows.slice().sort(function (a, b) {
+      return a.pct - b.pct || a.label.localeCompare(b.label, "ko");
+    });
+    const weak = weakSorted.slice(0, topN);
+
+    function fmt(list) {
+      return list
+        .map(function (s) {
+          return escapeHtml(s.label) + " (" + Math.round(s.pct) + "%)";
+        })
+        .join(", ");
+    }
+
+    html +=
+      '<p class="insight-text"><strong>잘 맞춘 과목 TOP</strong>' +
+      fmt(strong) +
+      "</p>";
+    html +=
+      '<p class="insight-text"><strong>취약 과목 TOP</strong>' +
+      fmt(weak) +
+      "</p></div>";
+    return html;
+  }
+
+  function renderTypeBreakdown(bySubject) {
+    const keys = Object.keys(bySubject);
+    if (!keys.length) return "";
+    let html =
+      '<div class="insight-block"><h3 class="breakdown-title">유형</h3><div class="type-chips">';
+    keys.forEach((key) => {
+      const st = bySubject[key];
+      html +=
+        '<span class="type-chip">' +
+        escapeHtml(st.label) +
+        " " +
+        st.attempted +
+        "/" +
+        st.total +
+        "</span>";
+    });
+    html += "</div></div>";
+    return html;
+  }
+
+  function showEnd(opts) {
+    const fromSubmit = !!(opts && opts.fromSubmit);
+    midSubmit = fromSubmit;
+    const analysis = computeAnalysis();
+    const pct =
+      analysis.attempted > 0
+        ? Math.round((analysis.correct / analysis.attempted) * 100)
+        : 0;
+
+    if (el.endTitle) {
+      el.endTitle.textContent = fromSubmit ? "중간 분석" : "응시 결과";
+    }
+    el.endScore.innerHTML =
+      analysis.correct +
+      " <span>/ " +
+      analysis.attempted +
+      " / " +
+      analysis.total +
+      "</span>";
+    el.endPct.textContent =
+      "정답률 " +
+      pct +
+      "%" +
+      (fromSubmit ? " · 중간 제출 (미응시 " + (analysis.total - analysis.attempted) + "문항)" : "");
+
+    const analyticsHtml =
+      renderSubjectChart(analysis.bySubject) +
+      renderInsights(analysis.bySubject) +
+      renderTypeBreakdown(analysis.bySubject);
+    if (el.endAnalytics) {
+      el.endAnalytics.innerHTML = analyticsHtml;
+      el.endBreakdown.innerHTML = "";
+    } else {
+      el.endBreakdown.innerHTML = analyticsHtml;
+    }
+
+    const keys = Object.keys(analysis.bySubject);
+    if (examMode && !reviewMode && !fromSubmit) {
       const overallOk = pct >= 60;
       let allSubjectsOk = true;
       let anyMajor = false;
       keys.forEach((key) => {
-        const st = subjectStats[key];
+        const st = analysis.bySubject[key];
         if (st.isPractical) return;
         anyMajor = true;
-        const sp = st.total > 0 ? (st.correct / st.total) * 100 : 0;
+        const denom = st.attempted > 0 ? st.attempted : st.total;
+        const sp = denom > 0 ? (st.correct / denom) * 100 : 0;
         if (sp < 40) allSubjectsOk = false;
       });
       let hint =
@@ -709,15 +907,49 @@
 
     if (reviewMode) {
       el.endSummary.textContent = "틀린 문제 복습을 완료했습니다.";
+    } else if (fromSubmit && analysis.attempted === 0) {
+      el.endSummary.textContent = "응시한 문항이 없습니다.";
+    } else if (wrongRefs.length === 0 && analysis.attempted > 0) {
+      el.endSummary.textContent = fromSubmit
+        ? "지금까지 응시한 문항을 모두 맞혔습니다."
+        : "모든 문제를 맞혔습니다.";
     } else if (wrongRefs.length === 0) {
-      el.endSummary.textContent = "모든 문제를 맞혔습니다.";
+      el.endSummary.textContent = "";
     } else {
       el.endSummary.textContent =
         "틀린 문제 " + wrongRefs.length + "문항이 있습니다.";
     }
+
+    const canResume =
+      fromSubmit && sessionAnswers.some((a) => !a.answered);
+    if (el.btnResume) {
+      el.btnResume.hidden = !canResume;
+    }
     el.btnRetryWrong.style.display =
       !reviewMode && wrongRefs.length > 0 ? "block" : "none";
+    if (canResume && el.btnRetryWrong.style.display === "block") {
+      el.btnRetryWrong.classList.remove("btn-primary");
+      el.btnRetryWrong.classList.add("btn-secondary");
+    } else {
+      el.btnRetryWrong.classList.add("btn-primary");
+      el.btnRetryWrong.classList.remove("btn-secondary");
+    }
     showScreen("end");
+  }
+
+  function resumeSession() {
+    const unanswered = sessionAnswers.findIndex((a) => !a.answered);
+    if (unanswered < 0) {
+      showEnd({ fromSubmit: false });
+      return;
+    }
+    midSubmit = false;
+    if (sessionAnswers[index] && sessionAnswers[index].answered) {
+      index = unanswered;
+    }
+    showScreen("quiz");
+    renderQuestion();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function goHome() {
@@ -726,6 +958,9 @@
     subjectId = null;
     examMode = false;
     pendingSubjectId = null;
+    midSubmit = false;
+    sessionAnswers = [];
+    questionList = [];
     renderHome();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -735,6 +970,8 @@
   el.btnHome.addEventListener("click", goHome);
   el.btnEndHome.addEventListener("click", goHome);
   el.btnRetryWrong.addEventListener("click", startReviewWrong);
+  if (el.btnSubmit) el.btnSubmit.addEventListener("click", onSubmitMid);
+  if (el.btnResume) el.btnResume.addEventListener("click", resumeSession);
   el.btnNational.addEventListener("click", openExamConfig);
   el.btnCountBack.addEventListener("click", () => {
     pendingSubjectId = null;

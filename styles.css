@@ -177,6 +177,37 @@ body {
 }
 
 /* —— Quiz header —— */
+.quiz-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-home-link {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 2px 0;
+  margin: 0;
+  cursor: pointer;
+  min-height: 0;
+  width: auto;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.btn-home-link:hover,
+.btn-home-link:active {
+  color: var(--text);
+  text-decoration: underline;
+  background: none;
+  opacity: 1;
+}
+
 .quiz-top {
   display: flex;
   align-items: center;
@@ -846,4 +877,101 @@ body {
   font-weight: 600;
   flex-shrink: 0;
   font-variant-numeric: tabular-nums;
+}
+
+
+/* —— End analytics —— */
+.end-score-caption {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.end-analytics {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.subject-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chart-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 0.82rem;
+}
+
+.chart-bar-track {
+  height: 10px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.chart-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  min-width: 0;
+  transition: width 0.3s ease;
+}
+
+.chart-bar-fill.is-strong {
+  background: var(--correct);
+}
+
+.chart-bar-fill.is-mid {
+  background: #eab308;
+}
+
+.chart-bar-fill.is-weak {
+  background: var(--wrong);
+}
+
+.insight-block {
+  margin-top: 16px;
+}
+
+.insight-text {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+.insight-text strong {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.type-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.type-chip {
+  font-size: 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: var(--text-muted);
+}
+
+#btn-resume[hidden] {
+  display: none;
+}
+
+#btn-submit {
+  font-weight: 600;
 }
