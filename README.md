@@ -4,6 +4,12 @@
 
 **Live:** https://leekuy541-alt.github.io/clinical-pathology-cbt/
 
+
+## 문항 난이도
+
+**문항 난이도 = 국시 표준(기초~중급 기출형).**  
+교과서·강의 핵심 암기 사실 위주이며, 실무자급 SOP·희귀 트러블슈팅·고난도 감별은 넣지 않습니다.
+
 ## 기능
 
 - **국시 유형 응시** — 1교시(100) / 2교시(115) / 3교시 실기(65) / 필기 215 / 전체 280
@@ -46,6 +52,7 @@
 - `data/*.json` — 문항 원본
 - `scripts/assemble-questions.js` — JSON → `questions.js` 조립
 - `scripts/gen-common-banks.js` — 법규·공중보건·해부 은행 생성
+- `scripts/gen-student-majors.js` / `gen-student-majors2.js` — 전공 6과목 국시 수험생 수준 재생성
 - `scripts/helpers.js` — 문항 스키마 헬퍼
 
 ## 재생성
