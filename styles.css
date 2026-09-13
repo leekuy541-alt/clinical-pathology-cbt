@@ -975,3 +975,37 @@ body {
 #btn-submit {
   font-weight: 600;
 }
+
+/* 국시 유형 홈 프리셋 */
+.home-presets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.subject-details {
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.75rem;
+}
+
+.subject-summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.subject-summary::-webkit-details-marker {
+  display: none;
+}
+
+.subject-summary::after {
+  content: " ▾";
+  opacity: 0.6;
+  font-size: 0.85em;
+}
+
+details[open] > .subject-summary::after {
+  content: " ▴";
+}

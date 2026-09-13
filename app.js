@@ -6,35 +6,80 @@
   "use strict";
 
   const NUM_LABELS = ["①", "②", "③", "④", "⑤"];
-  const STORAGE_KEY = "cbt-exam-counts-v1";
+  const STORAGE_KEY = "cbt-exam-counts-v2";
   const SUBJECT_COUNT_PRESETS = [10, 20, 35, 50];
 
-  /** 관례 배분(참고) — 필기 전공 175 (공통 40 미포함) */
-  const PRESET_A = {
-    histopathology: 32,
-    physiology: 26,
+  /** 영점 템플릿 */
+  const ZERO_COUNTS = {
+    "medical-law": 0,
+    "public-health": 0,
+    anatomy: 0,
+    histopathology: 0,
+    physiology: 0,
+    "clinical-chemistry": 0,
+    hematology: 0,
+    "immuno-transfusion": 0,
+    microbiology: 0,
+  };
+
+  /**
+   * 관례 배분(참고) — 국시원 공시: 필기215(법규20+이론I 80+이론II 115)+실기65=280
+   * 1교시 100 = 법규20 + 이론I 80(공중보건10+해부10+조직35+임상생리25)
+   */
+  const PRESET_S1 = Object.assign({}, ZERO_COUNTS, {
+    "medical-law": 20,
+    "public-health": 10,
+    anatomy: 10,
+    histopathology: 35,
+    physiology: 25,
+  });
+  const PRESET_S1_PRACTICAL = 0;
+
+  /** 2교시 115 = 이론II (화학40+혈액30+면역수혈15+미생물30) */
+  const PRESET_S2 = Object.assign({}, ZERO_COUNTS, {
     "clinical-chemistry": 40,
     hematology: 30,
     "immuno-transfusion": 15,
-    microbiology: 32,
-  };
-  const PRESET_A_PRACTICAL = 0;
+    microbiology: 30,
+  });
+  const PRESET_S2_PRACTICAL = 0;
 
-  /** 전체 모의 240 = 175 + 실기형 65 */
-  const PRESET_B_PRACTICAL = 65;
+  /** 3교시 실기 65 — 전공 실기형 혼합(법규·공중보건·해부 제외) */
+  const PRESET_S3 = Object.assign({}, ZERO_COUNTS);
+  const PRESET_S3_PRACTICAL = 65;
 
-  /** 빠른 모의 50 — A 비례 축소(최대잔여법) */
-  const PRESET_C = {
-    histopathology: 9,
-    physiology: 7,
-    "clinical-chemistry": 12,
-    hematology: 9,
-    "immuno-transfusion": 4,
-    microbiology: 9,
-  };
-  const PRESET_C_PRACTICAL = 0;
+  /** 필기 215 = 1교시+2교시 */
+  const PRESET_WRITTEN = Object.assign({}, ZERO_COUNTS, {
+    "medical-law": 20,
+    "public-health": 10,
+    anatomy: 10,
+    histopathology: 35,
+    physiology: 25,
+    "clinical-chemistry": 40,
+    hematology: 30,
+    "immuno-transfusion": 15,
+    microbiology: 30,
+  });
+  const PRESET_WRITTEN_PRACTICAL = 0;
+
+  /** 전체 280 = 필기215 + 실기65 */
+  const PRESET_FULL = Object.assign({}, PRESET_WRITTEN);
+  const PRESET_FULL_PRACTICAL = 65;
 
   const MAJOR_IDS = [
+    "medical-law",
+    "public-health",
+    "anatomy",
+    "histopathology",
+    "physiology",
+    "clinical-chemistry",
+    "hematology",
+    "immuno-transfusion",
+    "microbiology",
+  ];
+
+  /** 실기형 풀 — 법규·공중보건·해부생리학개론 제외 */
+  const PRACTICAL_IDS = [
     "histopathology",
     "physiology",
     "clinical-chemistry",
@@ -202,7 +247,7 @@
         practical: Math.max(0, Number(saved.practical) || 0),
       };
     }
-    return { counts: Object.assign({}, PRESET_A), practical: PRESET_A_PRACTICAL };
+    return { counts: Object.assign({}, PRESET_WRITTEN), practical: PRESET_WRITTEN_PRACTICAL };
   }
 
   function renderHome() {
@@ -279,7 +324,7 @@
   }
 
   function openExamConfig() {
-    el.customCounts.classList.add("hidden");
+    if (el.customCounts) el.customCounts.classList.remove("hidden");
     renderCustomCountInputs(defaultCounts());
     showScreen("exam-config");
   }
@@ -354,9 +399,9 @@
     el.customTotal.textContent =
       "합계 " +
       total +
-      "문항 (전공 " +
+      "문항 (필기 " +
       majorSum +
-      " + 실기형 " +
+      " + 실기 " +
       s.practical +
       ")";
   }
@@ -392,15 +437,21 @@
   function applyPreset(key) {
     let counts;
     let practical;
-    if (key === "A") {
-      counts = Object.assign({}, PRESET_A);
-      practical = PRESET_A_PRACTICAL;
-    } else if (key === "B") {
-      counts = Object.assign({}, PRESET_A);
-      practical = PRESET_B_PRACTICAL;
-    } else if (key === "C") {
-      counts = Object.assign({}, PRESET_C);
-      practical = PRESET_C_PRACTICAL;
+    if (key === "S1") {
+      counts = Object.assign({}, PRESET_S1);
+      practical = PRESET_S1_PRACTICAL;
+    } else if (key === "S2") {
+      counts = Object.assign({}, PRESET_S2);
+      practical = PRESET_S2_PRACTICAL;
+    } else if (key === "S3") {
+      counts = Object.assign({}, PRESET_S3);
+      practical = PRESET_S3_PRACTICAL;
+    } else if (key === "WRITTEN") {
+      counts = Object.assign({}, PRESET_WRITTEN);
+      practical = PRESET_WRITTEN_PRACTICAL;
+    } else if (key === "FULL") {
+      counts = Object.assign({}, PRESET_FULL);
+      practical = PRESET_FULL_PRACTICAL;
     } else {
       return;
     }
@@ -437,13 +488,13 @@
 
     if (practical > 0) {
       const pool = [];
-      MAJOR_IDS.forEach((id) => {
+      PRACTICAL_IDS.forEach((id) => {
         (QUESTIONS[id] || []).forEach((q) => {
           if (!usedKeys.has(id + "::" + q.id)) {
             pool.push(
               Object.assign({}, q, {
                 subjectId: id,
-                paperTag: "실기 대비 · " + subjectName(id),
+                paperTag: "실기 · " + subjectName(id),
                 isPractical: true,
               })
             );
@@ -704,7 +755,7 @@
         bySubject[key] = {
           subjectId: sid,
           label: isPractical
-            ? "실기 대비 · " + subjectName(sid)
+            ? "실기 · " + subjectName(sid)
             : subjectName(sid),
           isPractical: isPractical,
           correct: 0,
@@ -972,19 +1023,21 @@
   el.btnRetryWrong.addEventListener("click", startReviewWrong);
   if (el.btnSubmit) el.btnSubmit.addEventListener("click", onSubmitMid);
   if (el.btnResume) el.btnResume.addEventListener("click", resumeSession);
-  el.btnNational.addEventListener("click", openExamConfig);
+  if (el.btnNational) el.btnNational.addEventListener("click", openExamConfig);
   el.btnCountBack.addEventListener("click", () => {
     pendingSubjectId = null;
     renderHome();
   });
-  el.btnExamBack.addEventListener("click", goHome);
-  el.btnToggleCustom.addEventListener("click", () => {
-    el.customCounts.classList.toggle("hidden");
-    if (!el.customCounts.classList.contains("hidden")) {
-      renderCustomCountInputs(defaultCounts());
-    }
-  });
-  el.btnExamStart.addEventListener("click", () => {
+  if (el.btnExamBack) el.btnExamBack.addEventListener("click", goHome);
+  if (el.btnToggleCustom) {
+    el.btnToggleCustom.addEventListener("click", () => {
+      el.customCounts.classList.toggle("hidden");
+      if (!el.customCounts.classList.contains("hidden")) {
+        renderCustomCountInputs(defaultCounts());
+      }
+    });
+  }
+  if (el.btnExamStart) el.btnExamStart.addEventListener("click", () => {
     const s = readCustomState();
     startExamSession(s.counts, s.practical);
   });

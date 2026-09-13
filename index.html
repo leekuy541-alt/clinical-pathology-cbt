@@ -18,20 +18,43 @@
       <section id="screen-home" class="screen active" aria-label="홈">
         <header class="app-header">
           <h1>임상병리사 CBT</h1>
-          <p class="subtitle">국가고시 대비 · 컴퓨터기반 평가</p>
+          <p class="subtitle">국가고시 유형 · 컴퓨터기반 평가</p>
         </header>
 
-        <button type="button" id="btn-national" class="btn btn-national">
-          국가고시 모의
-        </button>
         <p class="national-hint">
-          필기 215(법규20+이론I 80+이론II 115)+실기 65=280 (국시원 공시).
-          전공 세부는 「관례 배분(참고)」입니다.
+          국시원 공시: 필기 215(법규20+이론I 80+이론II 115) + 실기 65 = 280.
+          과목 내부 배분은 <strong>관례 배분(참고)</strong>입니다.
         </p>
 
-        <h2 class="section-label">과목별 연습</h2>
-        <ul id="subject-list" class="subject-list"></ul>
-        <p class="footer-note">매 응시마다 문항을 무작위로 추출합니다.</p>
+        <h2 class="section-label">국시 유형 응시</h2>
+        <div class="preset-list home-presets">
+          <button type="button" class="preset-btn" data-preset="S1">
+            <span class="preset-name">1교시 (100)</span>
+            <span class="preset-desc">의료관계법규 20 + 임상검사이론I 80</span>
+          </button>
+          <button type="button" class="preset-btn" data-preset="S2">
+            <span class="preset-name">2교시 (115)</span>
+            <span class="preset-desc">임상검사이론II 115 (화학·혈액·면역수혈·미생물)</span>
+          </button>
+          <button type="button" class="preset-btn" data-preset="S3">
+            <span class="preset-name">3교시 실기 (65)</span>
+            <span class="preset-desc">실기 65 (전공 실기형 혼합)</span>
+          </button>
+          <button type="button" class="preset-btn" data-preset="WRITTEN">
+            <span class="preset-name">필기 215</span>
+            <span class="preset-desc">1교시 + 2교시 (국시원 필기 문제 수)</span>
+          </button>
+          <button type="button" class="preset-btn" data-preset="FULL">
+            <span class="preset-name">전체 280</span>
+            <span class="preset-desc">필기 215 + 실기 65 (국시원 합계)</span>
+          </button>
+        </div>
+
+        <details class="subject-details">
+          <summary class="section-label subject-summary">과목별 연습 (선택)</summary>
+          <ul id="subject-list" class="subject-list"></ul>
+          <p class="footer-note">과목 은행에서 문항을 무작위로 추출합니다.</p>
+        </details>
       </section>
 
       <!-- Subject count picker -->
@@ -45,45 +68,23 @@
         <div id="count-options" class="count-options"></div>
       </section>
 
-      <!-- National exam config -->
-      <section id="screen-exam-config" class="screen" aria-label="국가고시 모의 설정">
+      <!-- National exam config (optional custom) -->
+      <section id="screen-exam-config" class="screen" aria-label="문항 수 조절">
         <header class="screen-header">
           <button type="button" id="btn-exam-back" class="btn-back" aria-label="뒤로">←</button>
-          <h2>국가고시 모의</h2>
+          <h2>문항 수 조절</h2>
         </header>
 
         <div class="exam-note">
           <p><strong>국시원 공시</strong>: 필기 215(법규20 + 이론I 80 + 이론II 115) + 실기 65 = 280</p>
-          <p>전공 과목 세분 배분은 공시되지 않으며, 아래는 <strong>「관례 배분(참고)」</strong>입니다. 공통 40문항(법규·공중보건·해부생리)은 은행 준비 전까지 미포함.</p>
+          <p>전공·공통 세분 배분은 공시되지 않으며, 아래는 <strong>「관례 배분(참고)」</strong>입니다.</p>
         </div>
 
-        <h3 class="section-label">프리셋</h3>
-        <div class="preset-list">
-          <button type="button" class="preset-btn" data-preset="A">
-            <span class="preset-name">A. 필기 전공 모의 (175문항)</span>
-            <span class="preset-desc">임상검사이론 전공 근사 · 공통 40문항 미포함</span>
-          </button>
-          <button type="button" class="preset-btn" data-preset="B">
-            <span class="preset-name">B. 전체 모의 (240문항)</span>
-            <span class="preset-desc">175 + 실기형 65(전공 은행 혼합 · 실기 대비) · 280−40=240</span>
-          </button>
-          <button type="button" class="preset-btn" data-preset="C">
-            <span class="preset-name">C. 빠른 모의 (50문항)</span>
-            <span class="preset-desc">A를 비례 축소(관례 배분)</span>
-          </button>
-        </div>
-
-        <div class="config-divider">
-          <button type="button" id="btn-toggle-custom" class="btn btn-secondary btn-sm">
-            문항 수 조절
-          </button>
-        </div>
-
-        <div id="custom-counts" class="custom-counts hidden">
+        <div id="custom-counts" class="custom-counts">
           <p class="count-help">과목별 문항 수 (± 또는 직접 입력). 마지막 설정은 기기에 저장됩니다.</p>
           <ul id="custom-count-list" class="custom-count-list"></ul>
           <div class="custom-row practical-row">
-            <label for="input-practical">실기형 혼합 (실기 대비)</label>
+            <label for="input-practical">실기 (전공 혼합)</label>
             <div class="stepper">
               <button type="button" class="step-btn" data-step="-1" data-for="practical" aria-label="감소">−</button>
               <input type="number" id="input-practical" min="0" max="200" inputmode="numeric" />
