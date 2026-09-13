@@ -5,10 +5,14 @@
 **Live:** https://leekuy541-alt.github.io/clinical-pathology-cbt/
 
 
-## 문항 난이도
+## 문항 스타일
 
-**문항 난이도 = 국시 표준(기초~중급 기출형).**  
-교과서·강의 핵심 암기 사실 위주이며, 실무자급 SOP·희귀 트러블슈팅·고난도 감별은 넣지 않습니다.
+문항 스타일 = **국시원 A형 기출 경향(연습용 창작)**. 저작권상 기출 문장·보기·비공개 자료를 복제하지 않았습니다.
+
+- 난이도: 국시 중위. 한 개념과 그 **이웃**을 함께 알아야 고른다.
+- 문두에 조건(법령명, 수치, 소견, 이전 결과)을 두고, 보기는 같은 분류의 한 칸 근사.
+- 암기 25–35% / 해석 40–50% / 문제해결 15–25%. 실무 SOP·희귀 감별은 넣지 않는다.
+- 실기 SVG는 원작 모식도이며, 문두는 그림을 봐야 풀리게 썼다.
 
 ## 기능
 
@@ -55,14 +59,13 @@
 - `data/*.json` — 문항 원본 (`practical.json` = 실기 이미지 문항)
 - `images/*.svg` — 원작 SVG 모식도 (국시 실기형)
 - `scripts/assemble-questions.js` — JSON → `questions.js` 조립
-- `scripts/gen-common-banks.js` — 법규·공중보건·해부 은행 생성
-- `scripts/gen-student-majors.js` / `gen-student-majors2.js` — 전공 6과목 국시 수험생 수준 재생성
+- `scripts/tsv/` · `scripts/from_tsv.py` · `scripts/mid_lib.py` — 필기 은행 원본
 - `scripts/helpers.js` — 문항 스키마 헬퍼
+- `_ref/style-notes.md` — 문체 참고(기출 PDF는 저장소에 넣지 않음)
 
-## 재생성
+## 조립
 
 ```bash
-node scripts/gen-common-banks.js   # 공통 3과목 재생성 시
 node scripts/assemble-questions.js
 node --check questions.js app.js
 ```

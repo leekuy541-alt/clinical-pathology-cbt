@@ -1,0 +1,3 @@
+_ref/*.pdf
+__pycache__/
+scripts/__pycache__/
