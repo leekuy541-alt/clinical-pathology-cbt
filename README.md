@@ -1,40 +1,36 @@
 # 임상병리사 CBT
 
-모바일 우선 임상병리사 국가고시 대비 CBT(컴퓨터기반 평가) 퀴즈 웹앱입니다.
+국가고시 대비 모바일 친화 컴퓨터기반 평가 (GitHub Pages).
 
-## 실행 방법
+**Live:** https://leekuy541-alt.github.io/clinical-pathology-cbt/
 
-빌드·서버 없이 정적 파일만으로 동작합니다.
+## 과목 (각 100문항, 5지선다)
 
-1. `index.html`을 브라우저에서 연다. (모바일·데스크톱 모두 가능)
-2. 또는 로컬 서버 예:
-   ```bash
-   cd /workspace/clinical-pathology-cbt
-   python3 -m http.server 8080
-   ```
-   이후 `http://localhost:8080` 접속.
+| ID | 과목 |
+|----|------|
+| histopathology | 조직병리학 |
+| clinical-chemistry | 임상화학 |
+| hematology | 혈액학 |
+| microbiology | 임상미생물학 |
+| immuno-transfusion | 면역혈청학·수혈의학 |
+| physiology | 임상생리학 |
 
-## 구성
+## 구조
 
-| 파일 | 설명 |
-|------|------|
-| `index.html` | 진입 HTML |
-| `styles.css` | 다크 톤 시험 UI (max-width 480px) |
-| `app.js` | 홈·퀴즈·결과 흐름 |
-| `questions.js` | 과목·문항 데이터 |
+- `index.html` / `styles.css` / `app.js` — UI·퀴즈 로직 (`questionList` 유지)
+- `questions.js` — `SUBJECTS` + `QUESTIONS` 전역 (생성물)
+- `data/*.json` — 문항 원본
+- `scripts/assemble-questions.js` — JSON → `questions.js` 조립
+- `scripts/helpers.js` — 문항 스키마 헬퍼
 
-## 사용 흐름
+## 재생성
 
-1. **홈** — 「임상병리사 CBT」 제목과 과목 목록
-2. **조직병리학** — 응시 가능 (24문항). 나머지 과목은 「준비중」
-3. **퀴즈** — 1문항/화면, 5지선다, 진행도·점수 표시
-4. **채점** — 정답/오답, 정답 번호, 정답 해설, 오선별 오답 해설
-5. **결과** — 점수, 틀린 문제 다시보기, 처음으로
+```bash
+node scripts/assemble-questions.js
+node --check questions.js app.js
+```
 
-## 문항 범위 (조직병리학)
+## 스키마
 
-고정, 조직처리, 박절, H&E, 특수염색(PAS, Masson, 은함침, Perls, Congo red, Alcian blue, von Kossa 등), 색소·인공산물, 동결절편, 탈칼슘 등 국가고시 수준.
-
-## 라이선스
-
-학습·개인 연습용. 실제 기출의 무단 복제가 아닌 교육용 자체 작성 문항입니다.
+`{ id, stem, choices[5], answerIndex 0-4, explainCorrect, explainWrong[5] }`  
+정답 인덱스의 `explainWrong`은 `""`.

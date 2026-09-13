@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "mb01",
+    "stem": "Gram 염색에서  кристаль violet 후 매염에 쓰는 시약은?",
+    "choices": [
+      "요오드(Iodine)",
+      "알코올만",
+      "사프라닌만",
+      "산성알코올만",
+      "과산화수소만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Gram iodine이 염료-요오드 복합체를 형성한다.",
+    "explainWrong": [
+      "",
+      "탈색.",
+      "대조.",
+      "ZN.",
+      "표백."
+    ]
+  },
+  {
+    "id": "mb02",
+    "stem": "Gram 양성균이 보라색으로 남는 주된 이유는?",
+    "choices": [
+      "두꺼운 펩티도글리칸이 복합체를 유지",
+      "외막 LPS만",
+      "협막만",
+      "아포만",
+      "편모만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "탈색 후에도 GP는 염료복합체를 유지하고 GN은 탈색 후 대비염색된다.",
+    "explainWrong": [
+      "",
+      "GN 특징.",
+      "독력.",
+      "일부균.",
+      "운동성."
+    ]
+  },
+  {
+    "id": "mb03",
+    "stem": "항산염색(Ziehl-Neelsen)에서 탈색에 쓰는 것은?",
+    "choices": [
+      "산성 알코올",
+      "증류수만",
+      "생리식염수",
+      "자일렌",
+      "수산화나트륨만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Acid-alcohol이 비항산균을 탈색한다.",
+    "explainWrong": [
+      "",
+      "불충분.",
+      "불충분.",
+      "투명.",
+      "손상."
+    ]
+  },
+  {
+    "id": "mb04",
+    "stem": "마이코박테륨 세포벽의 항산성 관련 성분은?",
+    "choices": [
+      "마이콜산(mycolic acid)",
+      "펩티도글리칸만",
+      "LPS만",
+      "테코산만",
+      "콜레스테롤만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "높은 지질·마이콜산이 항산성의 근거이다.",
+    "explainWrong": [
+      "",
+      "공통.",
+      "GN.",
+      "GP.",
+      "진핵."
+    ]
+  },
+  {
+    "id": "mb05",
+    "stem": "혈액배양 오염을 줄이는 가장 중요한 채혈 전 조치는?",
+    "choices": [
+      "엄격한 피부 소독·무균 채혈",
+      "손만 물로 씻기",
+      "소독 생략",
+      "같은 바늘로 여러 환자",
+      "배지 뚜껑 개방 방치"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "피부상재균 오염이 위양성의 주원인이다.",
+    "explainWrong": [
+      "",
+      "불충분.",
+      "오염.",
+      "감염전파.",
+      "오염."
+    ]
+  },
+  {
+    "id": "mb06",
+    "stem": "혈액배양 2세트 이상 권장의 이유는?",
+    "choices": [
+      "민감도 향상·오염 감별",
+      "비용만 증가 목적",
+      "배지 낭비만",
+      "시간 단축만",
+      "균종 변경"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "복수 세트로 진성균혈증과 오염을 구분하고 검출률을 높인다.",
+    "explainWrong": [
+      "",
+      "목적이 아님.",
+      "아님.",
+      "아님.",
+      "아님."
+    ]
+  },
+  {
+    "id": "mb07",
+    "stem": "호기성 혈액배지와 혐기성 배지를 함께 쓰는 이유는?",
+    "choices": [
+      "산소요구도가 다른 균을 모두 검출",
+      "혐기균만 증식",
+      "호기균만 증식",
+      "진균만",
+      "바이러스만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "호기·혐기 병을 쌍으로 접종하는 것이 표준이다.",
+    "explainWrong": [
+      "",
+      "둘 다.",
+      "둘 다.",
+      "별도배지.",
+      "세포배양."
+    ]
+  },
+  {
+    "id": "mb08",
+    "stem": "맥콘키(MacConkey) 한천의 선택·감별 원리는?",
+    "choices": [
+      "담즙염·크리스탈바이올렛으로 GP 억제, 유당발효 감별",
+      "혈액만 공급",
+      "고염만",
+      "저온만",
+      "혐기만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "유당발효균은 분홍집락, 비발효는 무색.",
+    "explainWrong": [
+      "",
+      "혈액한천.",
+      "만니톨솔트.",
+      "보관.",
+      "가스팩."
+    ]
+  },
+  {
+    "id": "mb09",
+    "stem": "혈액한천에서 β-용혈이란?",
+    "choices": [
+      "집락 주위 완전 투명 용혈대",
+      "부분 녹색 용혈",
+      "비용혈",
+      "색소만",
+      "협막만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "β는 완전용혈, α는 부분(녹색), γ는 비용혈.",
+    "explainWrong": [
+      "",
+      "α.",
+      "γ.",
+      "다른특성.",
+      "다른특성."
+    ]
+  },
+  {
+    "id": "mb10",
+    "stem": "초콜릿한천이 필요한 대표균은?",
+    "choices": [
+      "Haemophilus, Neisseria 일부",
+      "대장균만",
+      "포도상만",
+      "연쇄만",
+      "클로스트리듐만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "용해 혈액의 X·V인자 등이 요구균에 필요하다.",
+    "explainWrong": [
+      "",
+      "일반혈액/맥콘키.",
+      "일반.",
+      "일반.",
+      "혐기."
+    ]
+  },
+  {
+    "id": "mb11",
+    "stem": "Thayer-Martin 배지의 주된 목적균은?",
+    "choices": [
+      "Neisseria gonorrhoeae",
+      "대장균",
+      "녹농균",
+      "황색포도상",
+      "폐렴구균"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "항생제가 정상총·오염균을 억제해 임균 분리를 돕는다.",
+    "explainWrong": [
+      "",
+      "장내.",
+      "선택배지 다름.",
+      "만니톨.",
+      "혈액."
+    ]
+  },
+  {
+    "id": "mb12",
+    "stem": "만니톨염한천(MSA)이 선택하는 균속은?",
+    "choices": [
+      "Staphylococcus(고염)",
+      "Streptococcus만",
+      "Neisseria만",
+      "Haemophilus만",
+      "Mycobacterium만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "7.5% NaCl이 포도를 선택하고 만니톨발효로 S.aureus 감별.",
+    "explainWrong": [
+      "",
+      "저염.",
+      "초콜릿.",
+      "초콜릿.",
+      "LJ/항산."
+    ]
+  },
+  {
+    "id": "mb13",
+    "stem": "Catalase 시험 양성이면 거품이 나는 이유는?",
+    "choices": [
+      "H2O2 → H2O + O2",
+      "CO2만 발생",
+      "N2만",
+      "H2만",
+      "NH3만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Catalase가 산소를 발생시킨다. Staph(+)/Strep(-) 감별.",
+    "explainWrong": [
+      "",
+      "당발효.",
+      "탈질.",
+      "일부대사.",
+      "요소."
+    ]
+  },
+  {
+    "id": "mb14",
+    "stem": "Coagulase 양성이 시사하는 대표균은?",
+    "choices": [
+      "Staphylococcus aureus",
+      "S. epidermidis",
+      "S. saprophyticus",
+      "Streptococcus pyogenes",
+      "Enterococcus"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "응고효소는 S.aureus 동정의 고전표지이다.",
+    "explainWrong": [
+      "",
+      "음성.",
+      "음성.",
+      "연쇄.",
+      "장구균."
+    ]
+  },
+  {
+    "id": "mb15",
+    "stem": "Optochin 감수성이 특징인 균은?",
+    "choices": [
+      "Streptococcus pneumoniae",
+      "S. pyogenes",
+      "S. agalactiae",
+      "E. faecalis",
+      "Viridans군 전부"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "폐렴구균은 optochin에 감수, bile soluble.",
+    "explainWrong": [
+      "",
+      "A군.",
+      "B군.",
+      "장구균.",
+      "내성."
+    ]
+  },
+  {
+    "id": "mb16",
+    "stem": "Bacitracin 감수성으로 감별하는 대표균은?",
+    "choices": [
+      "Streptococcus pyogenes (GAS)",
+      "S. pneumoniae",
+      "S. agalactiae",
+      "Enterococcus",
+      "S. aureus"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "A군 연쇄는 bacitracin 감수성(확진은 latex/MALDI 등).",
+    "explainWrong": [
+      "",
+      "optochin.",
+      "CAMP.",
+      "내성.",
+      "catalase+."
+    ]
+  },
+  {
+    "id": "mb17",
+    "stem": "CAMP 시험 양성이 시사하는 것은?",
+    "choices": [
+      "Streptococcus agalactiae (GBS)",
+      "GAS만",
+      "폐렴구균만",
+      "임균만",
+      "수막구균만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "S.aureus β-lysin과의 상승용혈이 CAMP 반응이다.",
+    "explainWrong": [
+      "",
+      "bacitracin.",
+      "optochin.",
+      "Neisseria.",
+      "Neisseria."
+    ]
+  },
+  {
+    "id": "mb18",
+    "stem": "장구균을 연쇄구균과 감별하는 특징 중 하나는?",
+    "choices": [
+      "6.5% NaCl 성장·bile esculin 양성 등",
+      "optochin 감수만",
+      "bacitracin 감수만",
+      "catalase 강양성",
+      "코아굴라제 양성"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Enterococcus는 BE+/고염 성장이 전형.",
+    "explainWrong": [
+      "",
+      "폐렴구균.",
+      "GAS.",
+      "포도는 +.",
+      "포도."
+    ]
+  },
+  {
+    "id": "mb19",
+    "stem": "OXidase 양성인 대표 그람음성균은?",
+    "choices": [
+      "Pseudomonas aeruginosa",
+      "Escherichia coli",
+      "Klebsiella pneumoniae",
+      "Proteus mirabilis",
+      "Salmonella enterica(일반적으로)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Oxidase+는 녹농·나이세리아·비브리오 등에 유용.",
+    "explainWrong": [
+      "",
+      "음성.",
+      "음성.",
+      "음성.",
+      "음성."
+    ]
+  },
+  {
+    "id": "mb20",
+    "stem": "Indole 양성이 흔히 나타나는 장내세균은?",
+    "choices": [
+      "Escherichia coli",
+      "Klebsiella pneumoniae",
+      "Enterobacter 일부 전형적 음성",
+      "Proteus mirabilis",
+      "Salmonella"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "E.coli는 indole+로 Klebsiella(indole−)와 감별에 쓰인다.",
+    "explainWrong": [
+      "",
+      "음성.",
+      "대개 −.",
+      "−(indole).",
+      "−."
+    ]
+  },
+  {
+    "id": "mb21",
+    "stem": "요소분해효소(urease) 강양성의 대표균은?",
+    "choices": [
+      "Proteus, Helicobacter pylori 등",
+      "E.coli만",
+      "Shigella만",
+      "Salmonella만",
+      "임균만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Urease는 요소→암모니아로 pH↑. Proteus·H.pylori 유명.",
+    "explainWrong": [
+      "",
+      "대개 −.",
+      "−.",
+      "−.",
+      "−."
+    ]
+  },
+  {
+    "id": "mb22",
+    "stem": "삼당철(TSI) 배지에서 H2S 양성 소견은?",
+    "choices": [
+      "배지 흑화",
+      "붉은 사면만",
+      "노란 사면만",
+      "가스만",
+      "운동성만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "철황화물 흑색침전이 H2S를 나타낸다(Salmonella·Proteus 등).",
+    "explainWrong": [
+      "",
+      "알칼리.",
+      "산.",
+      "가스는 틈.",
+      "SIM."
+    ]
+  },
+  {
+    "id": "mb23",
+    "stem": "Salmonella와 Shigella 감별에 유용한 성상은?",
+    "choices": [
+      "운동성·H2S(살모넬라 +, 시겔라 − 전형)",
+      "둘 다 lactose 강발효",
+      "둘 다 oxidase+",
+      "둘 다 coagulase+",
+      "둘 다 catalase−"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Shigella는 비운동·H2S−, Salmonella는 운동·H2S+인 경우가 많다.",
+    "explainWrong": [
+      "",
+      "비발효/지연.",
+      "음성.",
+      "GP검사.",
+      "둘 다 +."
+    ]
+  },
+  {
+    "id": "mb24",
+    "stem": "Vibrio cholerae의 선택배지로 알려진 것은?",
+    "choices": [
+      "TCBS 한천",
+      "MacConkey만",
+      "MSA만",
+      "LJ만",
+      "Sabouraud만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "TCBS에서 황록집락 등 특징. 호염·알칼리 선호.",
+    "explainWrong": [
+      "",
+      "장내.",
+      "포도.",
+      "TB.",
+      "진균."
+    ]
+  },
+  {
+    "id": "mb25",
+    "stem": "Campylobacter 배양의 특수조건은?",
+    "choices": [
+      "미호기성·42℃ 선택배지",
+      "고혐기 60℃",
+      "호기 4℃만",
+      "이산화탄소 0%",
+      "고염 10%만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Campy는 microaerophilic, 42℃에서 잘 자란다.",
+    "explainWrong": [
+      "",
+      "아님.",
+      "아님.",
+      "일부 CO2.",
+      "비브리오."
+    ]
+  },
+  {
+    "id": "mb26",
+    "stem": "혐기성 배양 실패의 흔한 원인은?",
+    "choices": [
+      "산소노출·부적절한 수송·가스팩 실패",
+      "너무 빠른 접종만",
+      "배지 과다만",
+      "라벨만",
+      "온도계만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "혐기균은 산소에 민감해 전용 수송·신속처리가 필요하다.",
+    "explainWrong": [
+      "",
+      "오히려 지연이 문제.",
+      "부수.",
+      "행정.",
+      "점검항목."
+    ]
+  },
+  {
+    "id": "mb27",
+    "stem": "클로스트리디오이데스 디피실 감염 진단에 쓰이는 방법은?",
+    "choices": [
+      "독소/GDH 항원·NAAT 등",
+      "단순 혈액한천만으로 확진",
+      "Gram만으로 확진",
+      "oxidase만",
+      "catalase만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "대변독소·분자검사가 임상진단에 쓰인다.",
+    "explainWrong": [
+      "",
+      "특수.",
+      "비특이.",
+      "GN.",
+      "GP/GN."
+    ]
+  },
+  {
+    "id": "mb28",
+    "stem": "헬리코박터 파일로리 침습진단법 예는?",
+    "choices": [
+      "조직검사·신속요소분해효소시험·배양·PCR",
+      "혈당만",
+      "AST만",
+      "CK만",
+      "Troponin만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "위생검 urease·조직·배양이 침습법이다. 요소호기검사는 비침습.",
+    "explainWrong": [
+      "",
+      "화학.",
+      "화학.",
+      "화학.",
+      "화학."
+    ]
+  },
+  {
+    "id": "mb29",
+    "stem": "진균 배양에 흔히 쓰는 배지는?",
+    "choices": [
+      "Sabouraud dextrose agar",
+      "MacConkey",
+      "MSA",
+      "Thayer-Martin",
+      "TCBS"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "SDA가 진균 분리의 기본배지이다.",
+    "explainWrong": [
+      "",
+      "장내.",
+      "포도.",
+      "임균.",
+      "비브리오."
+    ]
+  },
+  {
+    "id": "mb30",
+    "stem": "칸디다와 크립토코쿠스 감별에 쓰이는 잉크도말은?",
+    "choices": [
+      "India ink(협막)",
+      "ZN",
+      "Gram만으로 충분 확진",
+      "PAS만으로 충분",
+      "GMS만으로 충분"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Cryptococcus 협막이 먹물도말에서 투명할로로 보인다(현재는 항원검사가 더 흔).",
+    "explainWrong": [
+      "",
+      "항산.",
+      "효모 감별 한계.",
+      "조직.",
+      "조직."
+    ]
+  },
+  {
+    "id": "mb31",
+    "stem": "피부사상균 검사에서 KOH 표본의 목적은?",
+    "choices": [
+      "각질 용해 후 균사·분생자 관찰",
+      "세균 배양",
+      "바이러스 배양",
+      "기생충 충란만",
+      "항산성만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "KOH로 각질을 녹여 진균 요소를 본다.",
+    "explainWrong": [
+      "",
+      "배지.",
+      "세포.",
+      "분변.",
+      "ZN."
+    ]
+  },
+  {
+    "id": "mb32",
+    "stem": "바이러스 검체 수송에 쓰이는 것은?",
+    "choices": [
+      "바이러스 수송배지(VTM/UTM)",
+      "증류수",
+      "생리식염수 장기방치",
+      "자일렌",
+      "포르말린 필수"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "냉장·적절한 VTM으로 신속 이송한다(분자검사는 프로토콜 따름).",
+    "explainWrong": [
+      "",
+      "생존저하.",
+      "부적합.",
+      "고정.",
+      "핵산손상 가능."
+    ]
+  },
+  {
+    "id": "mb33",
+    "stem": "PCR 오염을 줄이는 검사실 원칙은?",
+    "choices": [
+      "구역분리·단방향동선·음성대조·효소제거",
+      "한 공간에서 모든 단계",
+      "양성대조 생략",
+      "팁 재사용",
+      "뚜껑 개방 방치"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "앰플리콘 오염 방지 동선이 분자미생물의 핵심이다.",
+    "explainWrong": [
+      "",
+      "오염.",
+      "QC.",
+      "캐리오버.",
+      "에어로졸."
+    ]
+  },
+  {
+    "id": "mb34",
+    "stem": "항균제 감수성시험 디스크확산법(Kirby-Bauer)의 핵심 표준화 요소는?",
+    "choices": [
+      "배지·접종탁도·디스크역가·배양조건·저지대측정",
+      "임의 탁도",
+      "디스크 만료 무시",
+      "혐기 임의",
+      "자 대신 추정"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "CLSI/EUCAST 표준을 따라야 해석이 유효하다.",
+    "explainWrong": [
+      "",
+      "McFarland.",
+      "무효.",
+      "약제의존.",
+      "정확측정."
+    ]
+  },
+  {
+    "id": "mb35",
+    "stem": "MIC(최소억제농도)의 정의는?",
+    "choices": [
+      "육안상 성장을 억제하는 최소 항균제 농도",
+      "살균 확정 농도",
+      "혈중 최고농도",
+      "독성농도",
+      "배지 pH"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "MIC로 S/I/R을 판정한다. MBC는 살균농도.",
+    "explainWrong": [
+      "",
+      "MBC.",
+      "약동학.",
+      "독성.",
+      "환경."
+    ]
+  },
+  {
+    "id": "mb36",
+    "stem": "ESBL 생성 장내세균의 임상적 의미는?",
+    "choices": [
+      "광범위 베타락탐 내성·치료옵션 제한",
+      "항상 감수성",
+      "항산성과 동일",
+      "바이러스 내성",
+      "진균 내성"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "ESBL은 3세대 세팔로스포린 등을 분해한다. 검출·보고가 중요.",
+    "explainWrong": [
+      "",
+      "아님.",
+      "무관.",
+      "무관.",
+      "무관."
+    ]
+  },
+  {
+    "id": "mb37",
+    "stem": "MRSA 확인에 쓰이는 표지는?",
+    "choices": [
+      "mecA/mecC 또는 PBP2a, 옥사실린/세폭시틴 내성",
+      "catalase−",
+      "coagulase−",
+      "oxidase+",
+      "indole+"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "메티실린내성은 mecA 매개 PBP2a가 핵심이다.",
+    "explainWrong": [
+      "",
+      "포도는 +.",
+      "S.aureus는 +.",
+      "녹농.",
+      "대장."
+    ]
+  },
+  {
+    "id": "mb38",
+    "stem": "VRE(반코마이신내성 장구균) 검출이 중요한 이유는?",
+    "choices": [
+      "원내전파·치료제한·감염관리",
+      "항상 오염균으로만 무시",
+      "혈액배양 불필요",
+      "소독 불필요",
+      "격리 불필요"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "vanA/vanB 등 내성유전자와 접촉주의가 중요하다.",
+    "explainWrong": [
+      "",
+      "임상상황 따름.",
+      "적응.",
+      "필요.",
+      "필요시."
+    ]
+  },
+  {
+    "id": "mb39",
+    "stem": "카바페네마제 생성균(CPE) 관리의 핵심은?",
+    "choices": [
+      "신속검출·접촉격리·항생제관리",
+      "결과 지연 권장",
+      "공용병실 권장",
+      "손위생 생략",
+      "배지 재사용"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "CPE는 의료관련감염의 중대 위협이다.",
+    "explainWrong": [
+      "",
+      "위험.",
+      "전파.",
+      "핵심예방.",
+      "오염."
+    ]
+  },
+  {
+    "id": "mb40",
+    "stem": "요로감염 정량배양의 의의는?",
+    "choices": [
+      "집락수(CFU/mL)로 유의세균뇨 해석",
+      "정성만으로 충분",
+      "탁도만",
+      "냄새만",
+      "색만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "오염과 진성감염을 CFU와 임상으로 구분한다.",
+    "explainWrong": [
+      "",
+      "정량 중요.",
+      "비특이.",
+      "비특이.",
+      "비특이."
+    ]
+  },
+  {
+    "id": "mb41",
+    "stem": "객담 적정성 평가에 쓰이는 기준 예는?",
+    "choices": [
+      "편평상피·호중구 수로 타액오염 평가",
+      "색만",
+      "점도만",
+      "양만",
+      "냄새만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "상피세포 많고 호중구 적으면 부적절 검체로 반려한다.",
+    "explainWrong": [
+      "",
+      "보조.",
+      "보조.",
+      "보조.",
+      "보조."
+    ]
+  },
+  {
+    "id": "mb42",
+    "stem": "뇌척수액 세균검사에서 우선 시행할 것은?",
+    "choices": [
+      "신속 Gram·항원/분자·즉시 배양",
+      "다음날 일괄",
+      "원심 생략 항상",
+      "실온 장기",
+      "포르말린 고정 필수"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "수막염은 응급으로 도말·배양을 즉시 한다.",
+    "explainWrong": [
+      "",
+      "위험.",
+      "농축 유리.",
+      "생존↓.",
+      "배양 불가."
+    ]
+  },
+  {
+    "id": "mb43",
+    "stem": "성매개감염 Neisseria gonorrhoeae 배양 시 주의점은?",
+    "choices": [
+      "신속접종·CO2·선택배지·저온취약",
+      "실온 며칠 지연 OK",
+      "냉장고 장기 OK",
+      "건조도말만으로 배양대체",
+      "혐기필수"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "임균은 환경에 약해 현장접종·적절가스가 중요하다.",
+    "explainWrong": [
+      "",
+      "사망.",
+      "사망.",
+      "도말은 보조.",
+      "호기/CO2."
+    ]
+  },
+  {
+    "id": "mb44",
+    "stem": "결핵균 배양에 쓰이는 배지 예는?",
+    "choices": [
+      "Löwenstein-Jensen, MGIT 등",
+      "MacConkey",
+      "MSA",
+      "TCBS",
+      "Thayer-Martin"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "고체 LJ와 액체자동배양이 TB에 쓰인다.",
+    "explainWrong": [
+      "",
+      "장내.",
+      "포도.",
+      "비브리오.",
+      "임균."
+    ]
+  },
+  {
+    "id": "mb45",
+    "stem": "잠복결핵 진단에 쓰이는 면역검사는?",
+    "choices": [
+      "IGRA(인터페론감마방출검사) 또는 투베르쿨린",
+      "혈액배양만",
+      "소변배양만",
+      "객담 Gram만",
+      "인후도말만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "IGRA/TST는 잠복감염 선별에 쓰이며 활동성 확진은 아님.",
+    "explainWrong": [
+      "",
+      "활동성.",
+      "UTI.",
+      "일반세균.",
+      "인두."
+    ]
+  },
+  {
+    "id": "mb46",
+    "stem": "기생충 분변검사에서 농축법의 목적은?",
+    "choices": [
+      "충란·시스트 검출감도 향상",
+      "세균만 증균",
+      "바이러스만",
+      "진균만",
+      "항산성만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "포르말린-에테르 등 농축으로 소수 충란을 찾는다.",
+    "explainWrong": [
+      "",
+      "배지.",
+      "분자/배양.",
+      "진균.",
+      "ZN."
+    ]
+  },
+  {
+    "id": "mb47",
+    "stem": "세포테이프법(Scotch tape)으로 진단하는 기생충은?",
+    "choices": [
+      "요충(Enterobius)",
+      "회충만",
+      "편충만",
+      "간흡충만",
+      "폐흡충만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "항문 round에 산란하므로 아침 테이프법이 유용하다.",
+    "explainWrong": [
+      "",
+      "분변충란.",
+      "분변.",
+      "분변.",
+      "객담·분변."
+    ]
+  },
+  {
+    "id": "mb48",
+    "stem": "말라리아 신속항원검사의 한계로 적절한 것은?",
+    "choices": [
+      "저밀도원충·종감별·변이에서 위음성 가능",
+      "항상 도말보다 정확",
+      "종 확정 불필요",
+      "QC 불필요",
+      "여행력 무시"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "신속법은 보조이며 도말/PCR과 임상종합이 필요하다.",
+    "explainWrong": [
+      "",
+      "아님.",
+      "필요.",
+      "필요.",
+      "중요."
+    ]
+  },
+  {
+    "id": "mb49",
+    "stem": "멸균과 소독의 차이로 옳은 것은?",
+    "choices": [
+      "멸균은 모든 미생물·아포 제거, 소독은 병원체 감소",
+      "동일 개념",
+      "소독이 아포까지 항상 제거",
+      "멸균은 손위생만",
+      "소독은 고압증기만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Autoclave 등은 멸균, 알코올 손소독은 아포에 비효과적.",
+    "explainWrong": [
+      "",
+      "다름.",
+      "아님.",
+      "아님.",
+      "멸균법."
+    ]
+  },
+  {
+    "id": "mb50",
+    "stem": "고압증기멸균(autoclave)의 대표 조건은?",
+    "choices": [
+      "121℃ 15–20분(또는 동등 조건)",
+      "60℃ 1분",
+      "실온 1시간",
+      "100℃ 1초",
+      "200℃ 건열 1초만"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "포화증기 121℃·15psi 조건이 고전적이다(부하에 따라 연장).",
+    "explainWrong": [
+      "",
+      "저온소독.",
+      "불충분.",
+      "불충분.",
+      "건열은 더 고온·장시간."
+    ]
+  }
+]
