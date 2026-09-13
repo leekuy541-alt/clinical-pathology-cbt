@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0f1419" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>임상병리사 CBT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Home -->
+      <section id="screen-home" class="screen active" aria-label="홈">
+        <header class="app-header">
+          <h1>임상병리사 CBT</h1>
+          <p class="subtitle">국가고시 대비 · 컴퓨터기반 평가</p>
+        </header>
+        <ul id="subject-list" class="subject-list"></ul>
+        <p class="footer-note">문항을 선택하여 응시를 시작하십시오.</p>
+      </section>
+
+      <!-- Quiz -->
+      <section id="screen-quiz" class="screen" aria-label="퀴즈">
+        <div class="quiz-top">
+          <span id="progress-label" class="progress-label">Q 1/1</span>
+          <span id="score-label" class="score-label">점수 0</span>
+        </div>
+        <div class="progress-bar" aria-hidden="true">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <p id="question-stem" class="question-stem"></p>
+        <ul id="choices" class="choices"></ul>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <div class="actions">
+          <button type="button" id="btn-next" class="btn btn-primary btn-hidden" disabled>
+            다음 문제
+          </button>
+          <button type="button" id="btn-home" class="btn btn-secondary">처음으로</button>
+        </div>
+      </section>
+
+      <!-- End -->
+      <section id="screen-end" class="screen" aria-label="결과">
+        <div class="end-card">
+          <h2>응시 결과</h2>
+          <div id="end-score" class="end-score">0 <span>/ 0</span></div>
+          <p id="end-pct" class="end-pct"></p>
+          <p id="end-summary" class="end-summary"></p>
+        </div>
+        <div class="actions">
+          <button type="button" id="btn-retry-wrong" class="btn btn-primary">
+            틀린 문제 다시보기
+          </button>
+          <button type="button" id="btn-end-home" class="btn btn-secondary">처음으로</button>
+        </div>
+      </section>
+    </div>
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,488 @@
+/* 임상병리사 CBT — mobile-first, dark exam aesthetic */
+:root {
+  --bg: #0f1419;
+  --bg-elevated: #1a2332;
+  --bg-card: #1e2a3a;
+  --border: #2d3a4d;
+  --text: #e8eef4;
+  --text-muted: #8b9cb3;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --correct: #22c55e;
+  --correct-bg: rgba(34, 197, 94, 0.12);
+  --wrong: #ef4444;
+  --wrong-bg: rgba(239, 68, 68, 0.12);
+  --disabled: #4a5568;
+  --radius: 12px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --font: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+    system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100%;
+  min-height: 100dvh;
+  line-height: 1.55;
+  -webkit-tap-highlight-color: transparent;
+  padding: var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
+}
+
+#app {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  padding-bottom: max(16px, var(--safe-bottom));
+}
+
+/* —— Screens —— */
+.screen {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+  animation: fadeIn 0.2s ease;
+}
+
+.screen.active {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* —— Home —— */
+.app-header {
+  text-align: center;
+  padding: 24px 8px 8px;
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.app-header .subtitle {
+  margin-top: 6px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.subject-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.subject-btn {
+  width: 100%;
+  text-align: left;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.subject-btn:not(:disabled):active {
+  background: #243044;
+  border-color: var(--accent);
+}
+
+.subject-btn:not(:disabled):hover {
+  border-color: var(--accent);
+}
+
+.subject-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.subject-btn .name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.subject-btn .meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.subject-btn .badge {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.badge-ready {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+.badge-prep {
+  background: rgba(148, 163, 184, 0.15);
+  color: #94a3b8;
+}
+
+.footer-note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 8px 0 4px;
+}
+
+/* —— Quiz header —— */
+.quiz-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.progress-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.score-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.progress-bar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: -8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+  width: 0%;
+}
+
+/* —— Question —— */
+.question-stem {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.65;
+  padding: 8px 2px;
+}
+
+.choices {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choice-btn {
+  width: 100%;
+  text-align: left;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  min-height: 56px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: border-color 0.15s, background 0.15s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.choice-btn:not(:disabled):active {
+  background: #243044;
+}
+
+.choice-btn:disabled {
+  cursor: default;
+}
+
+.choice-num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.choice-text {
+  flex: 1;
+  padding-top: 3px;
+}
+
+.choice-btn.correct {
+  border-color: var(--correct);
+  background: var(--correct-bg);
+}
+
+.choice-btn.correct .choice-num {
+  background: var(--correct);
+  border-color: var(--correct);
+  color: #fff;
+}
+
+.choice-btn.wrong-selected {
+  border-color: var(--wrong);
+  background: var(--wrong-bg);
+}
+
+.choice-btn.wrong-selected .choice-num {
+  background: var(--wrong);
+  border-color: var(--wrong);
+  color: #fff;
+}
+
+.choice-btn.dimmed {
+  opacity: 0.45;
+}
+
+/* —— Feedback —— */
+.feedback {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-top: 4px;
+}
+
+.feedback.visible {
+  display: flex;
+}
+
+.feedback-result {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feedback-result.is-correct {
+  color: var(--correct);
+}
+
+.feedback-result.is-wrong {
+  color: var(--wrong);
+}
+
+.feedback-answer {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.feedback-section {
+  font-size: 0.875rem;
+}
+
+.feedback-section h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: none;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.feedback-section p,
+.feedback-section li {
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.wrong-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wrong-list li {
+  padding: 8px 10px;
+  background: var(--bg);
+  border-radius: 8px;
+  border-left: 3px solid var(--wrong);
+  font-size: 0.85rem;
+}
+
+.wrong-list .choice-ref {
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-right: 4px;
+}
+
+/* —— Actions —— */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 52px;
+  transition: background 0.15s, opacity 0.15s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.btn:active {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-hidden {
+  display: none;
+}
+
+/* —— End screen —— */
+.end-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.end-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.end-score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.end-score span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.end-pct {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.end-summary {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 480px) {
+  #app {
+    padding: 24px;
+  }
+
+  .app-header h1 {
+    font-size: 1.65rem;
+  }
+}
