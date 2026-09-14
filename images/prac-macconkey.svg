@@ -5,5 +5,5 @@
 <text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">MacConkey 배지</text>
 <circle cx="210" cy="150" r="95" fill="#fecaca" stroke="#64748b" stroke-width="3"/>
 <circle cx="170" cy="130" r="22" fill="#dc2626"/><circle cx="230" cy="145" r="20" fill="#dc2626"/><circle cx="200" cy="185" r="18" fill="#f8fafc" stroke="#94a3b8"/>
-<text x="210" y="265" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">유당발효(+)=분홍 / (−)=무색</text>
+<text x="210" y="265" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">집락 색 비교</text>
 </svg>

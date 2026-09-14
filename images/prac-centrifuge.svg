@@ -6,5 +6,5 @@
 <circle cx="210" cy="150" r="80" fill="#e2e8f0" stroke="#475569" stroke-width="3"/><circle cx="210" cy="150" r="15" fill="#64748b"/>
 <rect x="195" y="70" width="30" height="50" rx="4" fill="#3b82f6"/><rect x="195" y="180" width="30" height="50" rx="4" fill="#3b82f6"/>
 <rect x="120" y="135" width="50" height="30" rx="4" fill="#3b82f6"/><rect x="250" y="135" width="50" height="30" rx="4" fill="#3b82f6"/>
-<text x="210" y="260" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">대칭 균형 장착 필요</text>
+<text x="210" y="260" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">로터 장착</text>
 </svg>

@@ -11,5 +11,5 @@
 <text x="290" y="80" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#334155">Anti-B</text>
 <circle cx="290" cy="150" r="30" fill="#fecaca" opacity="0.35"/>
 <text x="290" y="210" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">응집(−)</text>
-<text x="210" y="255" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">판정: O형 (전방 Anti-A/−B 모두 −)</text>
+
 </svg>

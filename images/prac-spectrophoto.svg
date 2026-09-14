@@ -2,17 +2,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
   <rect width="100%" height="100%" fill="#f8fafc"/>
   <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
-<text x="210" y="24" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">분광광도계 광로</text>
+<text x="210" y="24" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">흡광 측정 광로</text>
 <rect x="30" y="100" width="50" height="40" fill="#fbbf24"/>
-<text x="55" y="160" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">광원</text>
+<text x="55" y="160" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">①</text>
 <rect x="100" y="95" width="40" height="50" fill="#93c5fd"/>
-<text x="120" y="160" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">단색화</text>
+<text x="120" y="160" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">②</text>
 <rect x="170" y="90" width="50" height="60" fill="#e2e8f0" stroke="#64748b"/>
-<text x="195" y="125" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">큐벳</text>
-<text x="195" y="170" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">시료</text>
+<text x="195" y="125" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">시료실</text>
+<text x="195" y="170" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">③</text>
 <rect x="250" y="100" width="50" height="40" fill="#86efac"/>
-<text x="275" y="160" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">검출기</text>
+<text x="275" y="160" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">④</text>
 <rect x="330" y="95" width="50" height="50" fill="#c4b5fd"/>
-<text x="355" y="160" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">표시</text>
-<text x="210" y="220" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">Beer 법칙: 흡광 ∝ 농도</text>
+<text x="355" y="160" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">⑤</text>
+<text x="210" y="220" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">흡광도 측정</text>
 </svg>

@@ -4,5 +4,5 @@
   <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
 <text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">백혈구 모식</text>
 <circle cx="210" cy="145" r="50" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/><circle cx="210" cy="145" r="38" fill="#1e3a8a"/>
-<text x="210" y="230" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#64748b">큰 원형핵 · 적은 세포질 → 림프구</text>
+
 </svg>

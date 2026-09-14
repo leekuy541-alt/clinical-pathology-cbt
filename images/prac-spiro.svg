@@ -5,7 +5,7 @@
 <text x="210" y="24" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">폐활량 곡선 모식</text>
 <line x1="50" y1="220" x2="380" y2="220" stroke="#94a3b8"/><line x1="50" y1="50" x2="50" y2="220" stroke="#94a3b8"/>
 <path d="M50 180 Q100 60 200 70 T350 100" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-<text x="70" y="120" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#16a34a">FVC</text>
-<text x="150" y="55" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#2563eb">FEV1</text>
-<text x="210" y="255" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">강제호기 유량-용적</text>
+<text x="70" y="120" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#16a34a">용적</text>
+<text x="150" y="55" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#2563eb">1초량</text>
+<text x="210" y="255" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">강제호기 곡선</text>
 </svg>

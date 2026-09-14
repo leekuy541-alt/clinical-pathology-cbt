@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
   <rect width="100%" height="100%" fill="#f8fafc"/>
   <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
-<text x="210" y="24" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">혈청단백전기영동 (정상)</text>
+<text x="210" y="24" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">혈청단백전기영동</text>
 <line x1="40" y1="220" x2="390" y2="220" stroke="#94a3b8"/>
 <path d="M60 220 C70 220 80 40 100 40 C120 40 125 200 140 200 C155 200 160 160 180 160 C200 160 205 190 225 190 C245 190 250 175 270 175 C290 175 300 185 320 185 C340 185 350 150 370 150 L370 220 Z" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
 <text x="100" y="245" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#334155">Alb</text>

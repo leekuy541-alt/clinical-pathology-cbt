@@ -6,5 +6,5 @@
 <circle cx="210" cy="145" r="60" fill="#fecdd3" stroke="#9f1239" stroke-width="2"/>
 <ellipse cx="190" cy="140" rx="20" ry="28" fill="#1e3a8a"/><ellipse cx="230" cy="140" rx="20" ry="28" fill="#1e3a8a"/>
 <circle cx="170" cy="170" r="8" fill="#e11d48"/><circle cx="210" cy="175" r="8" fill="#e11d48"/><circle cx="250" cy="165" r="8" fill="#e11d48"/>
-<text x="210" y="240" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#64748b">2엽핵 · 굵은 호산성 과립 → 호산구</text>
+
 </svg>

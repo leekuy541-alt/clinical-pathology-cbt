@@ -12,5 +12,5 @@
 <text x="232" y="120" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#334155">LEU</text>
 <text x="272" y="120" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#334155">NIT</text>
 <text x="312" y="120" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#334155">pH</text>
-<text x="210" y="160" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#64748b">패드를 표준색표와 비교 판독</text>
+<text x="210" y="160" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#64748b">패드 발색</text>
 </svg>

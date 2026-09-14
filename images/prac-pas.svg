@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img">
   <rect width="100%" height="100%" fill="#f8fafc"/>
   <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
-<text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">PAS 염색 모식</text>
+<text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">특수염색 모식</text>
 <circle cx="210" cy="140" r="70" fill="#fecaca"/><circle cx="190" cy="130" r="18" fill="#be123c"/><circle cx="230" cy="150" r="22" fill="#be123c"/>
-<text x="210" y="240" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#9f1239">당원·진균벽 등 = 자홍(magenta)</text>
+<text x="210" y="240" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#9f1239">자홍 반응</text>
 </svg>

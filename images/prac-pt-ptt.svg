@@ -4,10 +4,10 @@
   <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
 <text x="210" y="24" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">응고검사 경로 모식</text>
 <rect x="40" y="70" width="150" height="50" rx="6" fill="#dbeafe" stroke="#1d4ed8"/>
-<text x="115" y="100" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">외인성 → PT</text>
+<text x="115" y="100" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">경로①</text>
 <rect x="230" y="70" width="150" height="50" rx="6" fill="#fce7f3" stroke="#be185d"/>
-<text x="305" y="100" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">내인성 → aPTT</text>
+<text x="305" y="100" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">경로②</text>
 <path d="M115 120 L115 160 L305 160 L305 120" fill="none" stroke="#64748b" stroke-width="2"/>
 <rect x="135" y="160" width="150" height="50" rx="6" fill="#dcfce7" stroke="#166534"/>
-<text x="210" y="190" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">공통경로 → Fibrin</text>
+<text x="210" y="190" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#334155">경로③</text>
 </svg>

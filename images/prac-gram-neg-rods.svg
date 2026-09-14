@@ -4,8 +4,7 @@
   <rect x="1" y="1" width="418" height="278" fill="none" stroke="#cbd5e1" stroke-width="2" rx="8"/>
 <text x="210" y="28" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#334155">Gram 염색 모식도</text>
 <ellipse cx="100" cy="110" rx="40" ry="16" fill="#dc2626"/><ellipse cx="100" cy="150" rx="40" ry="16" fill="#dc2626"/><ellipse cx="100" cy="190" rx="40" ry="16" fill="#dc2626"/>
-<text x="100" y="235" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#b91c1c">분홍~적색(G−)</text>
-<text x="100" y="252" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748b">간균(rods)</text>
+
 <circle cx="300" cy="140" r="26" fill="#1e3a8a"/><circle cx="340" cy="140" r="26" fill="#1e3a8a"/>
-<text x="320" y="200" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#94a3b8">비교: G+ 구균</text>
+
 </svg>
