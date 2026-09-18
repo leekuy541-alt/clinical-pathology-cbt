@@ -261,6 +261,12 @@ body {
   gap: 10px;
 }
 
+.choices > li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .choice-btn {
   width: 100%;
   text-align: left;
@@ -334,6 +340,48 @@ body {
 
 .choice-btn.dimmed {
   opacity: 0.45;
+}
+
+/* —— Under-choice explain —— */
+.choice-explain {
+  margin: 0 2px 2px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  border-left: 3px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.choice-explain--correct {
+  border-left-color: var(--correct);
+  background: var(--correct-bg);
+}
+
+.choice-explain--wrong {
+  border-left-color: var(--wrong);
+  background: var(--wrong-bg);
+}
+
+.choice-explain-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.choice-explain--correct .choice-explain-label {
+  color: var(--correct);
+}
+
+.choice-explain--wrong .choice-explain-label {
+  color: var(--wrong);
+}
+
+.choice-explain-body {
+  margin: 0;
+  color: var(--text);
 }
 
 /* —— Feedback —— */

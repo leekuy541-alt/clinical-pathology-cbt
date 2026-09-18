@@ -612,7 +612,31 @@
     }
   }
 
-  function applyGradedState(q, selected) {
+  function clearChoiceExplains() {
+    el.choices.querySelectorAll(".choice-explain").forEach((node) => {
+      node.remove();
+    });
+  }
+
+  function insertChoiceExplain(li, kind, title, body) {
+    const div = document.createElement("div");
+    div.className = "choice-explain choice-explain--" + kind;
+    div.innerHTML =
+      '<div class="choice-explain-label">' +
+      escapeHtml(title) +
+      '</div><p class="choice-explain-body">' +
+      escapeHtml(body) +
+      "</p>";
+    li.appendChild(div);
+    return div;
+  }
+
+  /**
+   * Restore graded highlights + under-choice explanations.
+   * @param {{scroll?: boolean}} [opts] scroll=true scrolls correct choice into view (wrong answers).
+   */
+  function applyGradedState(q, selected, opts) {
+    opts = opts || {};
     const correct = q.answerIndex;
     const isCorrect = selected === correct;
     const buttons = el.choices.querySelectorAll(".choice-btn");
@@ -628,7 +652,50 @@
         btn.classList.add("dimmed");
       }
     });
-    renderFeedback(q, selected, isCorrect);
+    renderFeedback(q, selected, isCorrect, opts);
+  }
+
+  function renderFeedback(q, selected, isCorrect, opts) {
+    opts = opts || {};
+    clearChoiceExplains();
+
+    const correct = q.answerIndex;
+    const correctLabel = NUM_LABELS[correct];
+    const items = el.choices.querySelectorAll("li");
+    let correctExplainEl = null;
+
+    const correctLi = items[correct];
+    if (correctLi && q.explainCorrect) {
+      correctExplainEl = insertChoiceExplain(
+        correctLi,
+        "correct",
+        "정답 해설",
+        q.explainCorrect
+      );
+    }
+
+    if (!isCorrect && selected != null && selected !== correct) {
+      const why = (q.explainWrong && q.explainWrong[selected]) || "";
+      const wrongLi = items[selected];
+      if (wrongLi && why) {
+        insertChoiceExplain(wrongLi, "wrong", "오답 해설", why);
+      }
+    }
+
+    el.feedback.innerHTML =
+      '<div class="feedback-result ' +
+      (isCorrect ? "is-correct" : "is-wrong") +
+      '">' +
+      (isCorrect ? "정답" : "오답") +
+      '</div><p class="feedback-answer">정답: ' +
+      correctLabel +
+      "</p>";
+    el.feedback.classList.add("visible");
+
+    if (!isCorrect && opts.scroll && correctLi) {
+      const target = correctExplainEl || correctLi;
+      target.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
   }
 
   function renderQuestion() {
@@ -709,7 +776,7 @@
 
     recomputeScore();
     updateWrongRefsFromSession();
-    applyGradedState(q, selected);
+    applyGradedState(q, selected, { scroll: true });
     updateNavButtons();
   }
 
