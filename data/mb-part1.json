@@ -1,1002 +1,702 @@
 [
   {
     "id": "mb01",
-    "stem": "그람 염색에서 크리스탈바이올렛 다음 단계의 요오드 역할은?",
-    "choices": [
-      "매염",
-      "1차 염색",
-      "탈색",
-      "대비염색",
-      "수세"
-    ],
+    "stem": "그람염색에서 크리스탈바이올렛과 불용성 복합체를 형성하여 염색을 고정시키는 매염제는?",
+    "choices": ["루골(그람) 요오드액", "사프라닌 O", "아세톤-알코올", "석탄산 푹신", "메틸렌블루"],
     "answerIndex": 0,
-    "explainCorrect": "크리스탈바이올렛을 고정한다. 1차는 크리스탈바이올렛이다. 탈색은 알코올이다.",
+    "explainCorrect": "그람염색은 크리스탈바이올렛(1차 염색) → 요오드(매염) → 알코올 또는 아세톤-알코올(탈색) → 사프라닌(대비염색) 순서로 진행한다. 요오드는 크리스탈바이올렛과 결합해 크리스탈바이올렛-요오드 복합체를 만들고, 이 복합체가 두꺼운 펩티도글리칸층에 갇혀 그람양성균이 보라색을 유지한다.",
     "explainWrong": [
       "",
-      "1차 염색 — 1차는 크리스탈바이올렛이다.",
-      "탈색은 알코올이다.",
-      "대비염색 — 대비는 사프라닌이다.",
-      "수세는 중간 단계이다."
+      "사프라닌 O는 탈색 후 그람음성균을 붉게 물들이는 대비염색액이다.",
+      "아세톤-알코올은 탈색제로, 그람음성균의 외막 지질을 녹여 복합체를 빠져나가게 한다.",
+      "석탄산 푹신은 Ziehl-Neelsen 항산성 염색의 1차 염색액이며, 그람염색 변법에서 대비염색에 쓰이기도 하지만 매염 작용은 없다.",
+      "메틸렌블루는 항산성 염색의 대비염색액이나 단염색에 쓰이며 그람염색 단계에는 들어가지 않는다."
     ]
   },
   {
     "id": "mb02",
-    "stem": "탈색 후에도 보라를 유지하는 그람양성의 주된 이유는?",
-    "choices": [
-      "외막만 있어서",
-      "두꺼운 펩티도글리칸이 탈색에 저항해서",
-      "지질다당만 있어서",
-      "핵만 있어서",
-      "편모만 있어서"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "탈색 저항이다. 따라서 두꺼운 펩티도글리칸이 탈색에 저항해서이 가장 적절하다.",
+    "stem": "그람양성균의 세포벽에는 존재하지만 그람음성균의 세포벽에는 존재하지 않는 성분은?",
+    "choices": ["테이코산", "지질다당질(LPS)", "포린 단백질", "외막 인지질", "Braun 지질단백질"],
+    "answerIndex": 0,
+    "explainCorrect": "그람양성균은 두꺼운 펩티도글리칸층에 테이코산과 지질테이코산이 끼어 있는 구조이다. 테이코산은 세포벽에 음전하를 부여하고 숙주세포 부착에 관여한다. 그람음성균은 얇은 펩티도글리칸 바깥에 외막을 가지며 테이코산은 없다.",
     "explainWrong": [
-      "외막은 그람음성 이다.",
       "",
-      "지질다당만 있어서 — LPS는 그람음성 이다.",
-      "핵만 있어서 — 핵과 무관하다.",
-      "편모와 무관하다."
+      "지질다당질은 그람음성균 외막의 바깥층을 이루는 성분으로 내독소 활성을 가진다.",
+      "포린은 그람음성균 외막을 관통하는 통로 단백질로, 친수성 소분자와 일부 항생제가 이를 통해 들어간다.",
+      "외막 인지질은 그람음성균 외막 안쪽 층을 이루며 그람양성균에는 외막 자체가 없다.",
+      "Braun 지질단백질은 그람음성균의 외막과 펩티도글리칸층을 연결하는 단백질이다."
     ]
   },
   {
     "id": "mb03",
-    "stem": "그람 염색 탈색 후 사프라닌 대비에서 그람음성 색은?",
-    "choices": [
-      "보라색",
-      "파란색",
-      "분홍(사프라닌)",
-      "초록색",
-      "검은색"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "탈색 후 대비이다. 그람양성 색이다. 항산 배경에 가깝다.",
+    "stem": "그람음성균 지질다당질(LPS)에서 내독소의 독성(발열, 쇼크)을 나타내는 부위는?",
+    "choices": ["지질 A", "O-특이 다당질", "핵심 다당질", "펩티도글리칸", "주변세포질 단백질"],
+    "answerIndex": 0,
+    "explainCorrect": "LPS는 바깥쪽부터 O-특이 다당질, 핵심 다당질, 지질 A로 구성된다. 외막에 박혀 있는 지질 A가 내독소 활성의 본체로, 대식세포를 자극해 IL-1, TNF-α 분비를 유도하여 발열, 파종성 혈관내응고, 패혈성 쇼크를 일으킨다.",
     "explainWrong": [
-      "보라색 — 그람양성 색이다.",
-      "파란색 — 항산 배경에 가깝다.",
       "",
-      "초록색은 문항의 정의나 상황에 맞지 않는다.",
-      "검은색은 문항의 정의나 상황에 맞지 않는다."
+      "O-특이 다당질은 LPS의 가장 바깥 반복 당사슬로 균주별 O 항원(혈청형)을 결정한다.",
+      "핵심 다당질은 지질 A와 O 항원을 연결하는 부분으로 독성의 주체가 아니다.",
+      "펩티도글리칸은 세포벽의 형태를 유지하는 골격이며 LPS의 구성 성분이 아니다.",
+      "주변세포질 단백질은 내막과 외막 사이 공간에 있는 효소, 결합단백질 등으로 LPS와 무관하다."
     ]
   },
   {
     "id": "mb04",
-    "stem": "Ziehl-Neelsen 과정에서 탈색에 쓰는 시약은?",
-    "choices": [
-      "그람양성 구균",
-      "생리식염수",
-      "헤마톡실린",
-      "산성알코올",
-      "에오신"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "AFB이다. 물만으로는 부족하다. 등장액이다.",
+    "stem": "세균의 접합(conjugation) 과정에서 공여균과 수용균을 연결하여 플라스미드 DNA 전달 통로가 되는 구조물은?",
+    "choices": ["성선모(F 선모)", "편모", "협막", "보통선모", "아포"],
+    "answerIndex": 0,
+    "explainCorrect": "성선모는 F 플라스미드를 가진 공여균이 만드는 긴 관 모양의 선모로, 수용균에 결합한 뒤 두 세포를 끌어당겨 플라스미드 DNA가 전달되게 한다. 항생제 내성 유전자를 실은 R 플라스미드가 이 경로로 균 사이에 퍼진다.",
     "explainWrong": [
-      "그람양성 구균은 이 문항의 조건·정의에서는 옳지 않다.",
-      "생리식염수은 문항의 정의나 상황에 맞지 않는다.",
-      "헤마톡실린은 문항의 정의나 상황에 맞지 않는다.",
       "",
-      "에오신 — 세포질 염료이다."
+      "편모는 단백질(flagellin)로 된 운동 기관으로 H 항원을 구성하며 DNA 전달과 관계없다.",
+      "협막은 균체 바깥의 다당질 또는 폴리펩티드 층으로 식균작용 저항에 관여한다.",
+      "보통선모는 짧고 수가 많은 선모로 숙주 점막 상피세포 부착에 관여한다.",
+      "아포는 불리한 환경에서 형성되는 내구성 휴면 구조로 유전물질 전달 기능이 없다."
     ]
   },
   {
     "id": "mb05",
-    "stem": "객담 항산염색 양성일 때 우선 의심하는 균으로 가장 적절한 것은?",
-    "choices": [
-      "포도상구균",
-      "대장균",
-      "연쇄상구균",
-      "폐렴구균",
-      "결핵균"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "Mycobacterium이다. 그람양성 구균이다. 그람음성 간균이다.",
+    "stem": "세균 증식곡선에서 세대시간이 일정하게 유지되며 균의 형태와 염색성이 균일하여 생화학검사에 가장 적합한 시기는?",
+    "choices": ["대수기", "유도기", "정지기", "사멸기", "장기 생존기"],
+    "answerIndex": 0,
+    "explainCorrect": "대수기(대수증식기)에는 세균이 일정한 세대시간으로 기하급수적으로 분열한다. 대사 활성이 가장 높고 세포 형태와 염색성이 고르며, 세포벽 합성이 활발해 항생제 감수성도 가장 높다.",
     "explainWrong": [
-      "포도상구균 — 그람양성 구균이다.",
-      "대장균 — 그람음성 간균이다.",
-      "연쇄상구균 — 그람양성 사슬이다.",
-      "폐렴구균 — 그람양성 쌍구이다.",
-      ""
+      "",
+      "유도기는 새 환경에 적응하며 효소를 합성하는 시기로 균 수는 거의 늘지 않는다.",
+      "정지기는 영양 고갈과 대사산물 축적으로 증식과 사멸이 평형을 이루는 시기이며 아포 형성과 2차 대사산물 생성이 일어난다.",
+      "사멸기는 죽는 균 수가 늘어 생균 수가 감소하는 시기로 형태가 불규칙하고 그람 염색성이 변하기 쉽다.",
+      "장기 생존기는 사멸기 이후 소수의 균이 오래 살아남는 단계로 검사용 균으로 부적합하다."
     ]
   },
   {
     "id": "mb06",
-    "stem": "다음 소견에 가장 가까운 균은?\n- 그람양성 구균\n- 포도송이\n- 카탈라제 양성",
-    "choices": [
-      "포도상구균",
-      "연쇄상구균",
-      "폐렴구균",
-      "장구균",
-      "임균"
-    ],
+    "stem": "산소가 있으면 발육하지 못하는 편성혐기성 세균은?",
+    "choices": ["Bacteroides fragilis", "Pseudomonas aeruginosa", "Escherichia coli", "Staphylococcus aureus", "Campylobacter jejuni"],
     "answerIndex": 0,
-    "explainCorrect": "Staphylococcus이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "explainCorrect": "Bacteroides fragilis는 장관 정상균총의 대표적인 편성혐기성 그람음성간균으로 복강 내 농양의 주요 원인균이다. 산소가 있으면 생기는 독성 산소 대사물을 충분히 처리하지 못해 혐기 조건에서만 자란다. 20% 담즙에서 발육하는 특징이 있으며 BBE 배지에서 분리한다.",
     "explainWrong": [
       "",
-      "연쇄상구균 — 사슬·카탈라제− 관련 인접 오개념이다.",
-      "폐렴구균 — 쌍구·협막 관련 인접 오개념이다.",
-      "장구균 — 사슬/쌍·카탈라제− 관련 인접 오개념이다.",
-      "임균 — 그람음성 쌍구 관련 인접 오개념이다."
+      "Pseudomonas aeruginosa는 산소를 최종 전자수용체로 쓰는 편성호기성균이다.",
+      "Escherichia coli는 산소 유무와 관계없이 자라는 통성혐기성균이다.",
+      "Staphylococcus aureus는 통성혐기성균으로 호기·혐기 조건 모두에서 발육한다.",
+      "Campylobacter jejuni는 5% 정도의 낮은 산소 농도를 요구하는 미호기성균이다."
     ]
   },
   {
     "id": "mb07",
-    "stem": "임상미생물 동정·감수성 과정에서 연쇄상구균의 형태로 옳은 것은?",
-    "choices": [
-      "포도알",
-      "사슬알균",
-      "막대",
-      "나선",
-      "항산"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "Streptococcus이다. 이에 해당하는 것은 사슬알균이다.",
+    "stem": "Ziehl-Neelsen 항산성 염색에서 탈색에 사용하는 시약은?",
+    "choices": ["3% 염산 알코올", "아세톤-알코올", "그람 요오드액", "메틸렌블루", "5% 석탄산 수용액"],
+    "answerIndex": 0,
+    "explainCorrect": "Ziehl-Neelsen법은 석탄산 푹신을 가열 염색한 뒤 3% 염산 알코올로 탈색하고 메틸렌블루로 대비염색한다. 미콜산이 풍부한 항산균은 산 알코올에도 탈색되지 않아 붉게, 나머지 세균과 배경은 파랗게 보인다. 가열 대신 석탄산 농도를 높인 방법이 Kinyoun법이다.",
     "explainWrong": [
-      "포도상 이다.",
       "",
-      "막대만은 이 문항의 취지·정의에 맞지 않는다.",
-      "나선만 — 스피로헤타 이다.",
-      "항산만은 이 문항의 취지·정의에 맞지 않는다."
+      "아세톤-알코올은 그람염색의 탈색제로 산을 포함하지 않는다.",
+      "그람 요오드액은 그람염색의 매염제이다.",
+      "메틸렌블루는 항산성 염색의 대비염색액이다.",
+      "석탄산은 1차 염색액인 석탄산 푹신에 포함되어 염료의 세포벽 침투를 돕는 성분이다."
     ]
   },
   {
     "id": "mb08",
-    "stem": "임상미생물 동정·감수성 과정에서 대장균의 그람 형태는?",
-    "choices": [
-      "양성 알균",
-      "양성 막대",
-      "음성 막대",
-      "항산",
-      "나선"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "E. coli이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "Schaeffer-Fulton 아포염색에서 가열하며 사용하는 1차 염색액은?",
+    "choices": ["말라카이트 그린", "크리스탈바이올렛", "석탄산 푹신", "메틸렌블루", "묵즙"],
+    "answerIndex": 0,
+    "explainCorrect": "아포는 두꺼운 외피 때문에 일반 염색이 잘 되지 않으므로 말라카이트 그린을 가열하여 아포 안으로 침투시킨다. 물로 수세하면 영양세포의 염료만 빠지고, 사프라닌으로 대비염색하면 아포는 녹색, 영양세포는 붉은색으로 보인다.",
     "explainWrong": [
-      "양성 알균 — 구균 관련 인접 오개념이다.",
-      "양성 막대 — G+ 간균 관련 인접 오개념이다.",
       "",
-      "항산 관련 인접 오개념이다.",
-      "나선 — 스피로헤타 관련 인접 오개념이다."
+      "크리스탈바이올렛은 그람염색의 1차 염색액이다.",
+      "석탄산 푹신은 Ziehl-Neelsen 항산성 염색의 1차 염색액이다.",
+      "메틸렌블루는 항산성 염색의 대비염색이나 단염색에 사용한다.",
+      "묵즙은 협막을 관찰하는 음성염색에 사용한다."
     ]
   },
   {
     "id": "mb09",
-    "stem": "임상미생물 동정·감수성 과정에서 폐렴구균의 특징으로 옳은 것은?",
-    "choices": [
-      "음성 막대",
-      "항산",
-      "나선",
-      "양성 쌍알·협막",
-      "진균"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "S. pneumoniae이다. 따라서 양성 쌍알·협막이 가장 적절하다.",
+    "stem": "배경을 어둡게 물들여 균체 주위의 협막을 투명한 띠로 관찰하는 음성염색에 사용하는 것은?",
+    "choices": ["묵즙(India ink)", "말라카이트 그린", "석탄산 푹신", "루골 요오드액", "크리스탈바이올렛"],
+    "answerIndex": 0,
+    "explainCorrect": "협막은 수분이 많은 다당질이라 염료가 잘 붙지 않으므로 묵즙이나 니그로신으로 배경을 검게 만들어 관찰한다. 균체 주위에 밝게 비치는 헤일로가 협막이다. 폐렴알균, Klebsiella pneumoniae 등 협막이 병원성에 중요한 균에서 활용한다.",
     "explainWrong": [
-      "음성 막대만 — 장내세균 이다.",
-      "항산만은 이 문항의 취지·정의에 맞지 않는다.",
-      "나선만 — 스피로헤타 이다.",
       "",
-      "진균만은 이 문항의 취지·정의에 맞지 않는다."
+      "말라카이트 그린은 아포염색의 1차 염색액이다.",
+      "석탄산 푹신은 균체를 직접 붉게 물들이는 양성염색 시약이다.",
+      "루골 요오드액은 그람염색의 매염제이다.",
+      "크리스탈바이올렛은 Hiss 협막염색 등에 쓰이지만 균체와 협막을 직접 물들이는 방법이며 음성염색 시약은 아니다."
     ]
   },
   {
     "id": "mb10",
-    "stem": "임상미생물 동정·감수성 과정에서 임균의 그람·형태는?",
-    "choices": [
-      "양성 포도",
-      "양성 막대",
-      "항산",
-      "나선",
-      "음성 쌍알"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "Neisseria이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "Albert 염색 또는 Neisser 염색으로 균체 내 이염소체(metachromatic granule)를 관찰하여 추정 진단하는 세균은?",
+    "choices": ["Corynebacterium diphtheriae", "Listeria monocytogenes", "Bacillus anthracis", "Nocardia asteroides", "Clostridium perfringens"],
+    "answerIndex": 0,
+    "explainCorrect": "디프테리아균은 폴리인산으로 된 이염소체(Babes-Ernst 소체)를 가지며, Loeffler 혈청배지에서 배양하면 잘 형성된다. Albert 염색에서 균체는 녹색, 이염소체는 청흑색으로 보인다. 균이 V자·L자나 한자 모양(울타리 모양)으로 배열하는 것도 특징이다.",
     "explainWrong": [
-      "양성 포도 — 포도상 관련 인접 오개념이다.",
-      "양성 막대 — G+ 간균 관련 인접 오개념이다.",
-      "항산 관련 인접 오개념이다.",
-      "나선 — 스피로헤타 관련 인접 오개념이다.",
-      ""
+      "",
+      "Listeria monocytogenes는 짧은 그람양성간균으로 이염소체가 특징이 아니며 텀블링 운동으로 감별한다.",
+      "Bacillus anthracis는 대나무 마디 모양으로 연결된 대형 간균으로 아포와 협막이 특징이다.",
+      "Nocardia asteroides는 분지하는 가는 사상균 형태로 약한 항산성을 보인다.",
+      "Clostridium perfringens는 굵은 상자 모양 간균이며 혈액한천의 이중 용혈대가 특징이다."
     ]
   },
   {
     "id": "mb11",
-    "stem": "발열 환자에서 혈액배양을 하는 목적으로 옳은 것은?",
-    "choices": [
-      "균혈증을 검출한다",
-      "오염균만 키운다",
-      "바이러스만 키운다",
-      "진균만 키운다",
-      "기생충만 키운다"
-    ],
+    "stem": "그람염색에서 그람양성균이 그람음성균처럼 붉게 염색되는 원인은?",
+    "choices": ["탈색 시간이 너무 길었다", "도말이 너무 두꺼웠다", "탈색 시간이 너무 짧았다", "크리스탈바이올렛 염색 시간이 길었다", "사프라닌 염색 시간이 짧았다"],
     "answerIndex": 0,
-    "explainCorrect": "패혈 평가이다. 오염 방지와 반대이다.",
+    "explainCorrect": "과탈색하면 그람양성균의 크리스탈바이올렛-요오드 복합체까지 빠져나가 사프라닌에 붉게 염색된다. 오래 배양한 균, 세포벽이 손상된 균, 항생제 치료 중인 환자 검체에서도 같은 현상이 나타날 수 있다. 그람양성·음성 대조균을 함께 염색하여 탈색 정도를 확인한다.",
     "explainWrong": [
       "",
-      "오염균만 키운다 — 오염 방지와 반대이다.",
-      "바이러스만 키운다 — 바이러스는 세포배양이 관련 인접 오개념이다.",
-      "진균만 키운다 — 진균은 특수 배지 관련 인접 오개념이다.",
-      "기생충만 키운다 — 기생충은 도말 관련 인접 오개념이다."
+      "도말이 두꺼우면 탈색이 충분히 되지 않아 그람음성균이 양성처럼 보이는 반대 오류가 생긴다.",
+      "탈색 부족 역시 복합체가 남아 그람음성균이 보라색으로 보이는 원인이다.",
+      "1차 염색 시간을 늘리면 보라색이 더 진해질 뿐 양성균이 탈색되지는 않는다.",
+      "대비염색이 짧으면 그람음성균이 연하게 보일 뿐 그람양성균의 색에는 영향이 없다."
     ]
   },
   {
     "id": "mb12",
-    "stem": "혈액배양 채취 시 오염을 줄이는 방법으로 가장 적절한 것은?",
-    "choices": [
-      "소독을 생략한다고 본다",
-      "피부소독과 채혈 술기를 지킨다",
-      "뚜껑만 닦는다고 본다",
-      "라벨을 생략한다고 본다",
-      "공기를 많이 넣는다고 본다"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "무균이다. 오염이 는다. 불충분하다.",
+    "stem": "성인 패혈증 의심 환자에서 혈액배양을 할 때 배양병 1병당 권장 채혈량은?",
+    "choices": ["8~10 mL", "1~2 mL", "3~5 mL", "20~30 mL", "40~50 mL"],
+    "answerIndex": 0,
+    "explainCorrect": "성인 혈중 세균 수는 매우 적어 채혈량이 검출률을 좌우하므로 병당 8~10 mL, 호기·혐기병 한 세트에 약 20 mL를 넣는다. 서로 다른 부위에서 2~3세트를 채취하면 피부 오염균과 진짜 원인균을 구분하는 데도 도움이 된다. 혈액과 배지 비율은 대략 1:5~1:10을 유지한다.",
     "explainWrong": [
-      "소독을 생략한다고 본다은 이 문항의 조건·정의에서는 옳지 않다.",
       "",
-      "뚜껑만 닦는다고 본다은 이 문항의 조건·정의에서는 옳지 않다.",
-      "라벨을 생략한다고 본다 — 식별이 필수이다.",
-      "공기를 많이 넣는다고 본다은 호기/혐기 병은 정해진 대로."
+      "1~2 mL는 신생아·소아용 배양병에 해당하는 양으로 성인에서는 검출률이 크게 떨어진다.",
+      "3~5 mL는 성인 기준으로 부족하여 위음성 가능성이 높아진다.",
+      "20~30 mL를 한 병에 넣으면 혈액 비율이 지나치게 높아져 혈액의 항균 성분이 충분히 희석되지 않고 자동화 장비 판독에도 오류가 생긴다.",
+      "40~50 mL는 배양병 용량을 초과하는 양이다."
     ]
   },
   {
     "id": "mb13",
-    "stem": "장내세균을 MacConkey에 키웠을 때 분홍 집락이 의미하는 것은?",
-    "choices": [
-      "그람양성",
-      "진균",
-      "유당 발효 양성",
-      "바이러스",
-      "기생충"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "선택·분별이다. 그람양성은 억제되는 경우가 많다. 진균 배지가 아니다.",
+    "stem": "청결 채취한 중간뇨 정량배양에서 요로감염을 의미하는 고전적 기준(Kass) 집락수는?",
+    "choices": ["10⁵ CFU/mL 이상", "10¹ CFU/mL 이상", "10² CFU/mL 이상", "10³ CFU/mL 이상", "10⁷ CFU/mL 이상"],
+    "answerIndex": 0,
+    "explainCorrect": "중간뇨는 요도 입구의 정상균총에 어느 정도 오염되므로 Kass는 단일 균종 10⁵ CFU/mL 이상을 유의한 세균뇨로 정하였다. 정량배양은 보정 백금이(0.001 mL 또는 0.01 mL)로 접종하여 집락수에 희석배수를 곱해 계산한다. 소변은 채취 후 2시간 안에 배양하거나 냉장 보관한다.",
     "explainWrong": [
-      "그람양성은 억제되는 경우가 많다.",
-      "진균 배지가 아니다.",
       "",
-      "바이러스는 안 자란다.",
-      "기생충만 — 원충이 아니다."
+      "10¹ CFU/mL는 판정 기준으로 쓰지 않을 만큼 낮은 수이다.",
+      "10² CFU/mL는 증상이 뚜렷한 급성 방광염 여성이나 방광천자 검체 등 특수 상황에서 적용하는 낮은 기준이다.",
+      "10³ CFU/mL는 도뇨관 검체나 증상이 있는 남성에서 제안되는 기준으로 고전적 Kass 기준은 아니다.",
+      "10⁷ CFU/mL는 기준보다 지나치게 높아 이 값을 쓰면 대부분의 감염을 놓친다."
     ]
   },
   {
     "id": "mb14",
-    "stem": "장내세균을 MacConkey에 키웠을 때 무색 집락이면?",
-    "choices": [
-      "그람양성",
-      "진균",
-      "정상",
-      "유당 비발효 가능",
-      "오염"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "LF−이다. G−도 무색일 수 있다. 세균일 수 있다.",
+    "stem": "객담 그람염색 도말을 저배율(×100)로 관찰하였을 때 타액 오염이 심해 배양 검체로 부적합함을 나타내는 소견은?",
+    "choices": ["편평상피세포 25개 초과/시야", "백혈구 25개 초과/시야", "편평상피세포 10개 미만/시야", "폐포대식세포 관찰", "섬모원주상피세포 관찰"],
+    "answerIndex": 0,
+    "explainCorrect": "편평상피세포는 구강 점막에서 유래하므로 많을수록 타액이 섞였다는 뜻이다. 저배율 시야당 편평상피세포가 25개를 넘으면 부적합으로 재채취를 요청하고, 편평상피세포 10개 미만·백혈구 25개 이상이면 하기도 유래의 양호한 객담으로 판정한다.",
     "explainWrong": [
-      "그람양성 — G−도 무색일 수 있다.",
-      "진균 — 세균일 수 있다.",
-      "정상 — 해석이 필요하다.",
       "",
-      "오염 — 동정이 필요하다."
+      "백혈구가 많은 것은 하기도 염증 부위에서 나온 화농성 객담임을 뜻하므로 적합 소견이다.",
+      "편평상피세포가 적은 것은 구강 오염이 적다는 의미로 적합 소견이다.",
+      "폐포대식세포는 폐포 유래 세포로 하기도 검체임을 뒷받침한다.",
+      "섬모원주상피세포는 기관지 점막에서 떨어진 세포로 하기도에서 채취되었음을 보여준다."
     ]
   },
   {
     "id": "mb15",
-    "stem": "혈액한천에서 집락 주위가 완전히 맑으면 용혈 판정은?",
-    "choices": [
-      "α용혈",
-      "γ용혈",
-      "유당 발효",
-      "항산성",
-      "β용혈"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "완전용혈이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "세균성 수막염이 의심되는 환자의 뇌척수액 배양 검체 취급으로 옳은 것은?",
+    "choices": ["실온 상태로 즉시 검사실에 운반한다", "4℃에 냉장 보관한 후 운반한다", "-20℃에 냉동 보관한 후 운반한다", "붕산 보존제 용기에 담아 운반한다", "혐기성 수송배지에 넣어 다음 날 운반한다"],
+    "answerIndex": 0,
+    "explainCorrect": "수막염의 주요 원인균인 Neisseria meningitidis, Haemophilus influenzae, Streptococcus pneumoniae는 저온에 약해 냉장하면 사멸한다. 따라서 뇌척수액은 실온으로 즉시 운반하고, 곧바로 처리할 수 없으면 35℃ 배양기에 둔다. 응급 검체로 분류하여 그람염색 결과를 신속히 보고한다.",
     "explainWrong": [
-      "α용혈 — 녹색 불완전 관련 인접 오개념이다.",
-      "γ용혈 — 비용혈 관련 인접 오개념이다.",
-      "유당 발효 — MacConkey 관련 인접 오개념이다.",
-      "항산성 — AFB 관련 인접 오개념이다.",
-      ""
+      "",
+      "냉장은 수막알균, 헤모필루스 등 저온에 약한 균을 죽여 위음성을 만든다. 냉장은 바이러스 검사용 뇌척수액에 적용한다.",
+      "냉동하면 세균이 파괴되어 배양이 불가능해진다.",
+      "붕산 보존제는 소변 검체의 세균 증식을 억제하는 용도이며 뇌척수액에는 쓰지 않는다.",
+      "뇌척수액은 응급 검체이므로 운반을 미뤄서는 안 되며 혐기성 수송배지를 쓰지도 않는다."
     ]
   },
   {
     "id": "mb16",
-    "stem": "혈액한천에서 녹색 불완전 용혈을 부르는 이름은?",
-    "choices": [
-      "녹색 불완전 용혈",
-      "완전 투명",
-      "용혈 없음",
-      "분홍 집락",
-      "그람양성 구균"
-    ],
+    "stem": "혐기성 세균 배양용 검체로 적합한 것은?",
+    "choices": ["주사기로 흡인하여 혐기수송용기에 담은 농양 고름", "기침으로 뱉은 객담", "청결 채취한 중간뇨", "면봉으로 채취한 인두 도말", "면봉으로 채취한 질 분비물"],
     "answerIndex": 0,
-    "explainCorrect": "S. pneumoniae 등이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "explainCorrect": "혐기성균은 인체 점막 정상균총에 대량으로 존재하므로 정상균총에 오염되지 않은 무균 부위에서 채취한 검체만 혐기배양 대상이 된다. 농양이나 체액은 주사기로 흡인한 뒤 공기를 빼고 혐기수송용기에 옮겨 산소 노출을 막는다. 면봉보다 흡인물이나 조직이 훨씬 좋다.",
     "explainWrong": [
       "",
-      "완전 투명 — β 관련 인접 오개념이다.",
-      "용혈 없음 — γ 관련 인접 오개념이다.",
-      "분홍 집락 — MacConkey 관련 인접 오개념이다.",
-      "그람양성 구균은 이 문항의 조건·정의에서는 옳지 않다."
+      "객담은 구강의 혐기성 정상균총에 오염되므로 부적합하며, 필요하면 기관지 보호솔이나 경흉부 흡인 검체를 이용한다.",
+      "중간뇨는 요도 정상균총에 오염되므로 혐기배양하지 않는다. 필요할 때는 치골상부 방광천자 소변을 쓴다.",
+      "인두에는 혐기성 정상균총이 많아 분리된 균의 의미를 판단할 수 없다.",
+      "질에는 혐기성 정상균총이 풍부하여 면봉 검체는 혐기배양에 부적합하다."
     ]
   },
   {
     "id": "mb17",
-    "stem": "혈액한천에서 완전 투명 용혈을 보이는 대표 균은?",
-    "choices": [
-      "Staphylococcus aureus",
-      "화농연쇄상구균",
-      "Streptococcus pyogenes",
-      "Escherichia coli",
-      "Pseudomonas aeruginosa"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "완전용혈이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "티오글리콜산 액체배지에 접종한 세균이 배지 표면 부근에서만 발육하였다. 이 세균의 산소 요구성은?",
+    "choices": ["편성호기성", "편성혐기성", "통성혐기성", "미호기성", "내기성 혐기성"],
+    "answerIndex": 0,
+    "explainCorrect": "티오글리콜산나트륨은 환원제로 배지 깊은 곳을 혐기 상태로 만들고, 표면 쪽만 산소가 녹아 있어 배지 안에 산소 농도 기울기가 생긴다. 산소가 반드시 필요한 편성호기성균은 산소가 있는 표면층에서만 자란다. 레사주린 지시약이 표면 산화층을 분홍색으로 표시한다.",
     "explainWrong": [
-      "Staphylococcus aureus은 이 문항의 조건·정의에서는 옳지 않다.",
       "",
-      "Streptococcus pyogenes은 이 문항의 조건·정의에서는 옳지 않다.",
-      "Escherichia coli은 이 문항의 조건·정의에서는 옳지 않다.",
-      "Pseudomonas aeruginosa은 이 문항의 조건·정의에서는 옳지 않다."
+      "편성혐기성균은 산소가 없는 배지 바닥 쪽에서만 발육한다.",
+      "통성혐기성균은 배지 전체에서 자라며 에너지 효율이 좋은 표면 쪽이 더 짙다.",
+      "미호기성균은 표면보다 약간 아래, 산소가 낮은 농도로 있는 층에 띠 모양으로 자란다.",
+      "내기성 혐기성균은 산소를 이용하지 않지만 견딜 수 있어 배지 전체에 고르게 자란다."
     ]
   },
   {
     "id": "mb18",
-    "stem": "그람양성 구균에 H2O2를 떨어뜨려 거품이 날 때 우선 가까운 균은?",
-    "choices": [
-      "연쇄상구균",
-      "폐렴구균",
-      "포도상구균",
-      "연쇄",
-      "장구균(전형적 음성)"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "H2O2 거품이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "MacConkey 한천에서 분홍색 집락을 형성하고 EMB 한천에서 녹색 금속광택 집락을 형성하는 균은?",
+    "choices": ["Escherichia coli", "Shigella flexneri", "Salmonella Typhimurium", "Proteus mirabilis", "Pseudomonas aeruginosa"],
+    "answerIndex": 0,
+    "explainCorrect": "MacConkey 한천은 담즙산염과 크리스탈바이올렛으로 그람양성균을 억제하고, 유당분해균이 만든 산에 의해 뉴트럴레드 지시약이 붉게 변해 분홍색 집락이 된다. EMB 한천에서는 유당을 강하게 분해하는 대장균이 에오신-메틸렌블루 복합체 침전으로 녹색 금속광택을 낸다.",
     "explainWrong": [
-      "연쇄상구균 — 카탈라제− 관련 인접 오개념이다.",
-      "폐렴구균 — 카탈라제− 관련 인접 오개념이다.",
       "",
-      "연쇄은 문항의 정의나 상황에 맞지 않는다.",
-      "장구균(전형적 음성) — 장구균은 −이다."
+      "Shigella flexneri는 유당 비분해균이라 두 배지에서 모두 무색 집락을 만든다.",
+      "Salmonella Typhimurium은 유당을 분해하지 않아 무색 집락으로 자란다.",
+      "Proteus mirabilis는 유당 비분해균으로 무색 집락을 만들며, 혈액한천에서 swarming을 보인다.",
+      "Pseudomonas aeruginosa는 포도당도 발효하지 않는 비발효균으로 MacConkey에서 무색 집락을 만든다."
     ]
   },
   {
     "id": "mb19",
-    "stem": "혈장 응고시험이 양성이면 대표 균은?",
-    "choices": [
-      "그람양성 구균",
-      "대장균",
-      "녹농균",
-      "황색포도상구균",
-      "결핵균"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "S. aureus이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "SS(Salmonella-Shigella) 한천에서 무색 집락의 중심부가 검게 나타나는 균은?",
+    "choices": ["Salmonella Typhimurium", "Shigella flexneri", "Escherichia coli", "Klebsiella pneumoniae", "Yersinia enterocolitica"],
+    "answerIndex": 0,
+    "explainCorrect": "SS 한천은 유당 분해 여부와 H2S 생성을 함께 판정하는 선택·감별배지이다. 살모넬라는 유당을 분해하지 않아 무색이며, 티오황산나트륨에서 H2S를 만들어 구연산철과 반응해 집락 중심에 흑색 황화철이 침착한다. XLD, Hektoen 한천에서도 같은 원리로 흑색 중심 집락이 나타난다.",
     "explainWrong": [
-      "그람양성 구균은 이 문항의 조건·정의에서는 옳지 않다.",
-      "대장균 — 장내세균 관련 인접 오개념이다.",
-      "녹농균 — 비발효 관련 인접 오개념이다.",
       "",
-      "결핵균 — 항산 관련 인접 오개념이다."
+      "Shigella flexneri는 유당 비분해로 무색 집락을 만들지만 H2S를 생성하지 않아 검은 중심이 없다.",
+      "Escherichia coli는 SS 한천에서 대부분 억제되며, 자라더라도 유당을 분해해 분홍색 집락이 된다.",
+      "Klebsiella pneumoniae는 유당분해균으로 분홍색 점액성 집락을 만들고 H2S 음성이다.",
+      "Yersinia enterocolitica는 유당 비분해 무색 집락을 만들지만 H2S 음성이며 CIN 한천에서 더 잘 분리된다."
     ]
   },
   {
     "id": "mb20",
-    "stem": "시약이 수초 내 보라로 변하는 산화효소 양성의 예 균은?",
-    "choices": [
-      "대장균",
-      "황색포도상",
-      "화농연쇄",
-      "폐렴구균",
-      "녹농균"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "Oxidase이다. 장내세균은 대개 −이다. 그람양성이다.",
+    "stem": "TCBS 한천에서 백당(sucrose)을 분해하여 노란색 집락을 형성하는 균은?",
+    "choices": ["Vibrio cholerae", "Vibrio parahaemolyticus", "Vibrio vulnificus", "Campylobacter jejuni", "Shigella dysenteriae"],
+    "answerIndex": 0,
+    "explainCorrect": "TCBS(thiosulfate-citrate-bile salts-sucrose) 한천은 알칼리성(pH 8.6)과 담즙산염으로 장내 정상균총을 억제하는 비브리오 선택배지이다. 백당을 분해한 균은 산 생성으로 브롬티몰블루가 노란색으로 변한다. 콜레라균은 백당 분해 양성이라 노란 집락을 만든다.",
     "explainWrong": [
-      "대장균 — 장내세균은 대개 −이다.",
-      "황색포도상은 문항의 정의나 상황에 맞지 않는다.",
-      "화농연쇄은 문항의 정의나 상황에 맞지 않는다.",
-      "폐렴구균은 문항의 정의나 상황에 맞지 않는다.",
-      ""
+      "",
+      "Vibrio parahaemolyticus는 백당을 분해하지 못해 TCBS에서 청록색 집락을 만든다.",
+      "Vibrio vulnificus 역시 백당 비분해로 녹색 집락을 형성한다.",
+      "Campylobacter jejuni는 TCBS에서 거의 자라지 않으며 Skirrow 배지에서 미호기성으로 배양한다.",
+      "Shigella dysenteriae는 TCBS의 높은 pH와 담즙산염에 억제되며 백당도 분해하지 않는다."
     ]
   },
   {
     "id": "mb21",
-    "stem": "임상미생물 동정·감수성 과정에서 녹농균의 특징으로 옳은 것은?",
-    "choices": [
-      "녹색색소·산화효소+",
-      "그람양성알",
-      "항산",
-      "그람음성알",
-      "그람양성 구균"
-    ],
+    "stem": "NaCl이 없는 배지에서는 발육하지 못하는 호염성 균으로, 어패류 생식 후 급성 장염을 일으키고 Kanagawa 현상 양성인 균은?",
+    "choices": ["Vibrio parahaemolyticus", "Vibrio cholerae", "Aeromonas hydrophila", "Plesiomonas shigelloides", "Salmonella Enteritidis"],
     "answerIndex": 0,
-    "explainCorrect": "P. aeruginosa이다. 구균이 아니다. 항산이 아니다.",
+    "explainCorrect": "장염비브리오는 3~8% NaCl에서 잘 자라는 호염성균으로 여름철 해산물 식중독의 주요 원인이다. 환자 분리주는 내열성 직접용혈독(TDH)을 만들어 Wagatsuma 혈액한천에서 β용혈을 보이는데, 이를 Kanagawa 현상이라 한다. TCBS에서는 백당 비분해로 녹색 집락을 형성한다.",
     "explainWrong": [
       "",
-      "그람양성알은 문항의 정의나 상황에 맞지 않는다.",
-      "항산은 문항의 정의나 상황에 맞지 않는다.",
-      "그람음성알 — 폐렴구균 관련 인접 오개념이다.",
-      "그람양성 구균은 이 문항의 조건·정의에서는 옳지 않다."
+      "Vibrio cholerae는 비호염성으로 NaCl이 없는 배지에서도 자라며 쌀뜨물 같은 설사를 일으킨다.",
+      "Aeromonas hydrophila는 담수에 사는 옥시다아제 양성 간균으로 NaCl을 요구하지 않는다.",
+      "Plesiomonas shigelloides는 담수·어패류 관련 장염균이지만 호염성이 아니다.",
+      "Salmonella Enteritidis는 달걀·가금류 관련 식중독균으로 옥시다아제 음성이며 NaCl을 요구하지 않는다."
     ]
   },
   {
     "id": "mb22",
-    "stem": "고열·상대적 서맥 의심 환자의 혈액배양에서 장티푸스 원인균으로 옳은 것은?",
-    "choices": [
-      "황색포도상",
-      "Salmonella Typhi",
-      "화농연쇄",
-      "폐렴구균",
-      "임균"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "살모넬라이다. 피부 구균이다. 인두 연쇄이다. 따라서 Salmonella Typhi이 가장 적절하다.",
+    "stem": "비인두 면봉 검체를 Bordet-Gengou 배지나 Regan-Lowe 배지에 배양하여 수은방울 모양 집락을 확인하는 균은?",
+    "choices": ["Bordetella pertussis", "Haemophilus influenzae", "Legionella pneumophila", "Brucella abortus", "Neisseria meningitidis"],
+    "answerIndex": 0,
+    "explainCorrect": "백일해균은 지방산과 과산화물에 민감해 일반 배지에서 자라지 않으므로 감자-글리세롤-혈액 기반의 Bordet-Gengou 배지나 활성탄 기반의 Regan-Lowe 배지를 쓴다. 3~5일 후 작고 빛나는 수은방울 모양 집락이 나타난다. 검체는 칼슘알지네이트나 Dacron 면봉으로 비인두에서 채취한다.",
     "explainWrong": [
-      "황색포도상 — 피부 구균이다.",
       "",
-      "화농연쇄 — 인두 연쇄이다.",
-      "폐렴구균 — 폐 쌍구이다.",
-      "임균은 이 문항의 취지·정의에 맞지 않는다."
+      "Haemophilus influenzae는 X·V 인자를 공급하는 초콜릿한천에서 배양한다.",
+      "Legionella pneumophila는 L-시스테인과 철을 첨가한 BCYE 한천에서 배양한다.",
+      "Brucella abortus는 혈액·초콜릿한천이나 Brucella 한천에서 CO2를 공급해 느리게 배양하는 인수공통감염균이다.",
+      "Neisseria meningitidis는 혈액·초콜릿한천이나 Thayer-Martin 배지에서 분리한다."
     ]
   },
   {
     "id": "mb23",
-    "stem": "혈성 설사의 대변배양에서 이질 원인균으로 옳은 것은?",
-    "choices": [
-      "황색포도상",
-      "연쇄상",
-      "Shigella",
-      "폐렴구균",
-      "임균"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "이질이다. 구균이다. 구균이다.",
+    "stem": "냉각탑 물에서 전파되어 폐렴을 일으키며, 일반 혈액한천에서는 자라지 않아 BCYE 한천에서 배양하는 균은?",
+    "choices": ["Legionella pneumophila", "Bordetella pertussis", "Mycoplasma pneumoniae", "Campylobacter jejuni", "Yersinia enterocolitica"],
+    "answerIndex": 0,
+    "explainCorrect": "레지오넬라는 L-시스테인과 철염을 필수로 요구하므로 이를 첨가한 BCYE(buffered charcoal yeast extract) 한천에서 3~5일 배양한다. 활성탄은 독성 산소 대사물을 흡착한다. 집락은 간유리 모양이며, 소변 항원검사(혈청군 1)도 진단에 널리 쓰인다.",
     "explainWrong": [
-      "황색포도상은 문항의 정의나 상황에 맞지 않는다.",
-      "연쇄상은 문항의 정의나 상황에 맞지 않는다.",
       "",
-      "폐렴구균은 문항의 정의나 상황에 맞지 않는다.",
-      "임균은 문항의 정의나 상황에 맞지 않는다."
+      "Bordetella pertussis는 Bordet-Gengou 또는 Regan-Lowe 배지에서 배양하는 백일해균이다.",
+      "Mycoplasma pneumoniae는 세포벽이 없어 스테롤을 첨가한 PPLO 배지에서 배양한다.",
+      "Campylobacter jejuni는 Skirrow 배지 등에서 42℃ 미호기 조건으로 배양하는 장관 병원균이다.",
+      "Yersinia enterocolitica는 CIN 한천에서 분리하는 장내세균이다."
     ]
   },
   {
     "id": "mb24",
-    "stem": "수양성 설사 유행 시 TCBS에서 의심하는 콜레라 원인균은?",
-    "choices": [
-      "Escherichia coli",
-      "Salmonella Typhi",
-      "Shigella flexneri",
-      "Vibrio cholerae",
-      "Candida albicans"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "수양성 설사 유행과 TCBS 선택배지에서 의심하는 대표 균은 Vibrio cholerae이다.",
+    "stem": "CIN(cefsulodin-irgasan-novobiocin) 한천에서 붉은 중심과 투명한 가장자리를 가진 과녁(bull's-eye) 모양 집락을 형성하는 균은?",
+    "choices": ["Yersinia enterocolitica", "Campylobacter jejuni", "Vibrio parahaemolyticus", "Salmonella Typhimurium", "Shigella sonnei"],
+    "answerIndex": 0,
+    "explainCorrect": "Yersinia enterocolitica는 CIN 한천에서 만니톨을 분해해 중심이 붉은 과녁 모양 집락을 만든다. 4℃에서도 증식하여 냉장 농축배양이 가능하고, 25℃에서는 운동성이 있으나 37℃에서는 운동성이 없다. 충수염과 비슷한 우하복부 통증(가성충수염)을 일으킨다.",
     "explainWrong": [
-      "대장균은 EMB 등에서 달리 접근한다.",
-      "장티푸스는 다른 임상·배지 맥락이다.",
-      "시겔라는 이질형 설사 맥락이다.",
       "",
-      "칸디다는 진균이다."
+      "Campylobacter jejuni는 CIN이 아닌 Skirrow, CCDA 등의 배지에서 42℃ 미호기 배양한다.",
+      "Vibrio parahaemolyticus는 TCBS 한천에서 녹색 집락으로 분리한다.",
+      "Salmonella Typhimurium은 SS, XLD, Hektoen 한천에서 흑색 중심 집락으로 분리한다.",
+      "Shigella sonnei는 SS, XLD 한천에서 H2S 음성 무색 또는 붉은 집락으로 분리한다."
     ]
   },
   {
     "id": "mb25",
-    "stem": "위생검 우레아제 양성과 연관된 균으로 가장 적절한 것은?",
-    "choices": [
-      "Salmonella Typhi",
-      "Shigella",
-      "Vibrio cholerae",
-      "혐기성 그람양성막대",
-      "위염·궤양과 관련"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "H. pylori이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "Skirrow 배지에 접종하여 5% O2·10% CO2 환경, 42℃에서 배양하는 장관 병원균은?",
+    "choices": ["Campylobacter jejuni", "Yersinia enterocolitica", "Vibrio parahaemolyticus", "Salmonella Enteritidis", "Shigella sonnei"],
+    "answerIndex": 0,
+    "explainCorrect": "Campylobacter jejuni는 미호기성이며 42℃에서 잘 자라는 호열성균이라, 이 온도를 이용해 다른 장내균의 발육을 억제한다. 그람염색에서 갈매기 날개(S자) 모양의 그람음성 나선균으로 보이고 옥시다아제 양성, 마뇨산 가수분해 양성이다. 감염 후 Guillain-Barré 증후군과의 관련이 알려져 있다.",
     "explainWrong": [
-      "Salmonella Typhi.",
-      "Shigella.",
-      "Vibrio cholerae.",
-      "혐기성 그람양성막대.",
-      ""
+      "",
+      "Yersinia enterocolitica는 CIN 한천에서 25~30℃로 배양하며 저온 증식이 특징이다.",
+      "Vibrio parahaemolyticus는 TCBS 한천에서 호기 조건으로 배양하는 호염성균이다.",
+      "Salmonella Enteritidis는 통성혐기성으로 35~37℃ 일반 대기에서 SS, XLD 한천에 배양한다.",
+      "Shigella sonnei는 통성혐기성 장내세균으로 미호기 조건이 필요 없다."
     ]
   },
   {
     "id": "mb26",
-    "stem": "임상미생물 동정·감수성 과정에서 클로스트리디움의 특징으로 옳은 것은?",
-    "choices": [
-      "혐기성 그람양성막대",
-      "Shigella",
-      "Vibrio cholerae",
-      "위염·궤양과 관련",
-      "그람양성막대"
-    ],
+    "stem": "위 생검 조직을 이용한 신속 요소분해효소 검사(CLO test)로 감염 여부를 확인하는 나선형 그람음성균은?",
+    "choices": ["Helicobacter pylori", "Campylobacter jejuni", "Vibrio cholerae", "Proteus mirabilis", "Treponema pallidum"],
     "answerIndex": 0,
-    "explainCorrect": "아포이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "explainCorrect": "Helicobacter pylori는 매우 강한 요소분해효소를 만들어 요소를 암모니아로 분해하고, 이 암모니아로 위산을 중화하며 위점막에 정착한다. 요소와 pH 지시약이 든 배지에 생검 조직을 넣으면 수 분~수 시간 안에 붉게 변한다. 만성 위염, 소화성 궤양, 위암, MALT 림프종과 관련된다.",
     "explainWrong": [
       "",
-      "Shigella.",
-      "Vibrio cholerae.",
-      "위염·궤양과 관련.",
-      "그람양성막대은 문항의 정의나 상황에 맞지 않는다."
+      "Campylobacter jejuni는 요소분해효소 음성이며 장염을 일으킨다.",
+      "Vibrio cholerae는 곡선형 간균으로 요소분해효소 음성이고 소장에서 콜레라 독소로 설사를 일으킨다.",
+      "Proteus mirabilis는 요소분해효소 양성이지만 요로감염균이며 나선형이 아니다.",
+      "Treponema pallidum은 매독의 원인인 나선균으로 요소분해효소 검사와 관계없다."
     ]
   },
   {
     "id": "mb27",
-    "stem": "인후 위막 의심 도말에서 디프테리아 원인균으로 옳은 것은?",
-    "choices": [
-      "그람음성알",
-      "그람양성막대",
-      "항산",
-      "나선",
-      "진균"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "Corynebacterium이다. 구균이 아니다. 항산이 아니다.",
+    "stem": "창상 고름에서 분리된 균이 다음과 같은 성상을 보였다. 가장 가능성이 높은 균은?\n· 포도송이 모양 그람양성 알균\n· 카탈라아제 양성\n· 슬라이드·시험관 응고효소 양성\n· 만니톨 식염한천에서 노란색 집락(만니톨 분해)\n· 혈액한천에서 β용혈",
+    "choices": ["Staphylococcus aureus", "Staphylococcus epidermidis", "Staphylococcus saprophyticus", "Micrococcus luteus", "Streptococcus pyogenes"],
+    "answerIndex": 0,
+    "explainCorrect": "카탈라아제 양성인 그람양성 알균은 포도알균 계열이며, 그중 응고효소 양성은 황색포도알균의 핵심 표지이다. 황색포도알균은 7.5% NaCl이 든 만니톨 식염한천에서 자라며 만니톨을 분해해 페놀레드를 노랗게 바꾼다. DNase 양성, 황금색 색소도 보조 소견이다.",
     "explainWrong": [
-      "그람음성알은 문항의 정의나 상황에 맞지 않는다.",
       "",
-      "항산은 문항의 정의나 상황에 맞지 않는다.",
-      "나선 — 스피로헤타가 아니다.",
-      "진균은 문항의 정의나 상황에 맞지 않는다."
+      "Staphylococcus epidermidis는 응고효소 음성이고 만니톨을 분해하지 않아 분홍색 집락을 만든다.",
+      "Staphylococcus saprophyticus는 응고효소 음성 포도알균으로 novobiocin 내성이 특징이다.",
+      "Micrococcus luteus는 카탈라아제 양성이나 응고효소 음성이며 사분체 배열과 노란 색소, 바시트라신 감수성을 보인다.",
+      "Streptococcus pyogenes는 β용혈을 보이지만 카탈라아제 음성의 사슬 모양 알균이다."
     ]
   },
   {
     "id": "mb28",
-    "stem": "성기 궤양 의심 시 매독 원인 스피로헤타로 옳은 것은?",
-    "choices": [
-      "황색포도상",
-      "대장균",
-      "Treponema",
-      "결핵균",
-      "칸디다"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "스피로헤타이다. 구균이다. 장내세균이다.",
+    "stem": "젊은 여성의 급성 방광염 소변에서 분리된 응고효소 음성 포도알균이 novobiocin(5 μg) 디스크에 내성을 보였다. 이 균은?",
+    "choices": ["Staphylococcus saprophyticus", "Staphylococcus epidermidis", "Staphylococcus haemolyticus", "Staphylococcus lugdunensis", "Staphylococcus aureus"],
+    "answerIndex": 0,
+    "explainCorrect": "Staphylococcus saprophyticus는 성적으로 활발한 젊은 여성의 단순 요로감염에서 대장균 다음으로 흔한 원인균이다. 응고효소 음성 포도알균 가운데 novobiocin에 내성(억제대 16 mm 이하)을 보이는 점으로 다른 균과 감별한다.",
     "explainWrong": [
-      "황색포도상은 문항의 정의나 상황에 맞지 않는다.",
-      "대장균은 문항의 정의나 상황에 맞지 않는다.",
       "",
-      "결핵균은 문항의 정의나 상황에 맞지 않는다.",
-      "칸디다은 문항의 정의나 상황에 맞지 않는다."
+      "Staphylococcus epidermidis는 novobiocin 감수성이며 카테터·인공삽입물 관련 감염을 잘 일으킨다.",
+      "Staphylococcus haemolyticus는 novobiocin 감수성 응고효소 음성 포도알균이다.",
+      "Staphylococcus lugdunensis는 novobiocin 감수성이며 PYR 양성, 결합형 응고효소(clumping factor) 양성으로 황색포도알균과 혼동될 수 있다.",
+      "Staphylococcus aureus는 응고효소 양성이므로 조건에 맞지 않는다."
     ]
   },
   {
     "id": "mb29",
-    "stem": "KOH 도말에서 진균을 구분하는 기본 형태로 옳은 것은?",
-    "choices": [
-      "그람양성알",
-      "항산",
-      "나선",
-      "효모·사상균",
-      "바이러스"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "곰팡이이다. 세균 형태이다. 항산이다. 이에 해당하는 것은 효모·사상균이다.",
+    "stem": "인두염 환자 검체에서 분리된 β용혈 사슬알균이 바시트라신(0.04 U) 감수성, PYR 양성을 보였다. 이 균은?",
+    "choices": ["Streptococcus pyogenes", "Streptococcus agalactiae", "Enterococcus faecalis", "Streptococcus pneumoniae", "Streptococcus dysgalactiae"],
+    "answerIndex": 0,
+    "explainCorrect": "A군 사슬알균(Streptococcus pyogenes)은 β용혈 사슬알균 중 바시트라신 감수성과 PYR 양성을 동시에 보이는 균이다. 급성 인두염, 성홍열, 농가진을 일으키고 합병증으로 류마티스열과 사구체신염이 생길 수 있다. 스트렙토리신 O에 대한 항체(ASO)가 과거 감염의 지표가 된다.",
     "explainWrong": [
-      "그람양성알만 — 세균 형태이다.",
-      "항산만은 이 문항의 취지·정의에 맞지 않는다.",
-      "나선만 — 스피로헤타이다.",
       "",
-      "바이러스는 다른 계이다."
+      "Streptococcus agalactiae는 바시트라신 내성, PYR 음성이며 CAMP 양성이다.",
+      "Enterococcus faecalis는 PYR 양성이지만 대개 비용혈 또는 α용혈이고 바시트라신 내성이다.",
+      "Streptococcus pneumoniae는 α용혈을 보이며 옵토킨 감수성으로 감별한다.",
+      "Streptococcus dysgalactiae는 C·G군 β용혈 사슬알균으로 PYR 음성이다."
     ]
   },
   {
     "id": "mb30",
-    "stem": "구강·질 도말에서 출아 효모가 보일 때 가장 가까운 진균은?",
-    "choices": [
-      "항산균",
-      "그람양성 구균",
-      "바이러스",
-      "그람음성 간균",
-      "효모균"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "Candida이다. 항산이 아니다. 세균만은 아니다.",
+    "stem": "신생아 패혈증과 수막염의 주요 원인균으로 CAMP 시험 양성, 마뇨산 가수분해 양성인 그람양성 알균은?",
+    "choices": ["Streptococcus agalactiae", "Streptococcus pyogenes", "Enterococcus faecalis", "Streptococcus pneumoniae", "Streptococcus gallolyticus"],
+    "answerIndex": 0,
+    "explainCorrect": "B군 사슬알균(Streptococcus agalactiae)은 산모의 질·직장에 집락하다가 분만 중 신생아에게 전파된다. CAMP 인자가 황색포도알균의 β-용혈소와 상승작용을 일으켜 화살촉 모양의 용혈 증강을 만들고, 마뇨산을 가수분해한다. 바시트라신에는 내성이다.",
     "explainWrong": [
-      "항산균은 문항의 정의나 상황에 맞지 않는다.",
-      "그람양성 구균은 이 문항의 조건·정의에서는 옳지 않다.",
-      "바이러스은 문항의 정의나 상황에 맞지 않는다.",
-      "그람음성 간균은 이 문항의 조건·정의에서는 옳지 않다.",
-      ""
+      "",
+      "Streptococcus pyogenes는 CAMP 음성, 마뇨산 가수분해 음성이며 바시트라신 감수성이다.",
+      "Enterococcus faecalis는 담즙에스쿨린 양성, 6.5% NaCl 발육으로 감별한다.",
+      "Streptococcus pneumoniae는 옵토킨 감수성, 담즙용해 양성인 α용혈 쌍알균이다.",
+      "Streptococcus gallolyticus(S. bovis)는 담즙에스쿨린 양성인 D군 사슬알균으로 대장암과의 관련이 알려져 있다."
     ]
   },
   {
     "id": "mb31",
-    "stem": "면역저하 환자 객담에서 분기 균사가 보일 때 가장 가까운 진균은?",
-    "choices": [
-      "사상균",
-      "효모",
-      "세균",
-      "바이러스",
-      "원충"
-    ],
+    "stem": "대엽성 폐렴 환자의 객담에서 다음 균이 분리되었다. 이 균은?\n· 창끝(란셋) 모양의 그람양성 쌍알균\n· 혈액한천에서 α용혈, 중심이 함몰된 집락\n· 카탈라아제 음성\n· 옵토킨 감수성, 담즙용해 양성",
+    "choices": ["Streptococcus pneumoniae", "Streptococcus mitis", "Enterococcus faecalis", "Streptococcus agalactiae", "Staphylococcus aureus"],
     "answerIndex": 0,
-    "explainCorrect": "Aspergillus이다. 효모와 구별한다. 진균이다. 이에 해당하는 것은 사상균이다.",
+    "explainCorrect": "폐렴알균은 자가용해효소 때문에 집락 중심이 함몰되며, 담즙(데옥시콜산나트륨)을 가하면 자가용해가 촉진되어 녹는다. 옵토킨(ethylhydrocupreine) 디스크 주위에 14 mm 이상의 억제대가 생기는 것도 α용혈 녹색 사슬알균과의 감별점이다. 협막 팽화반응(Quellung)으로 혈청형을 확인할 수 있다.",
     "explainWrong": [
       "",
-      "효모와 구별한다.",
-      "세균만은 이 문항의 취지·정의에 맞지 않는다.",
-      "바이러스가 아니다.",
-      "원충이 아니다."
+      "Streptococcus mitis 등 녹색 사슬알균은 α용혈을 보이지만 옵토킨 내성이고 담즙에 녹지 않는다.",
+      "Enterococcus faecalis는 담즙에 용해되지 않고 오히려 담즙에스쿨린에서 발육한다.",
+      "Streptococcus agalactiae는 β용혈을 보이는 B군 사슬알균으로 CAMP 양성이다.",
+      "Staphylococcus aureus는 카탈라아제 양성인 포도송이 모양 알균이다."
     ]
   },
   {
     "id": "mb32",
-    "stem": "임상미생물 동정·감수성 과정에서 바이러스 배양이 어려운 이유는?",
-    "choices": [
-      "일반 한천만으로 가능해서",
-      "살아 있는 세포가 필요해서",
-      "그람 염색으로 대체 가능해서",
-      "항산 염색으로 대체 가능해서",
-      "실온 방치로 충분해서"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "바이러스 배양은 숙주세포 의존성이 커 일반 세균 배지로 대체하기 어렵다.",
+    "stem": "요로감염 환자 소변에서 분리된 균의 성상이 다음과 같다. 이 균은?\n· 짧은 사슬 또는 쌍으로 배열한 그람양성 알균\n· 카탈라아제 음성\n· 담즙에스쿨린 양성\n· 6.5% NaCl 액체배지에서 발육\n· PYR 양성",
+    "choices": ["Enterococcus faecalis", "Streptococcus gallolyticus", "Streptococcus agalactiae", "Streptococcus pneumoniae", "Staphylococcus saprophyticus"],
+    "answerIndex": 0,
+    "explainCorrect": "장알균은 40% 담즙 존재하에서 에스쿨린을 가수분해해 배지를 흑갈색으로 바꾸고, 6.5% NaCl이라는 높은 염 농도에서도 자란다. PYR 양성도 장알균의 특징이다. 여러 항생제에 내재 내성이 있으며 반코마이신 내성 장알균(VRE)이 병원감염에서 문제가 된다.",
     "explainWrong": [
-      "일반 한천만으로 키우기 어렵다.",
       "",
-      "그람 염색은 형태 관찰용이다.",
-      "항산 염색은 항산균용이다.",
-      "실온 방치로 배양을 대체하지 않는다."
+      "Streptococcus gallolyticus(D군 비장알균)는 담즙에스쿨린 양성이지만 6.5% NaCl에서 자라지 못하고 PYR 음성이다.",
+      "Streptococcus agalactiae는 담즙에스쿨린 음성이며 CAMP 시험과 마뇨산 가수분해로 동정한다.",
+      "Streptococcus pneumoniae는 담즙에 용해되는 균으로 담즙에스쿨린 배지에서 자라지 않는다.",
+      "Staphylococcus saprophyticus는 카탈라아제 양성인 포도알균이다."
     ]
   },
   {
     "id": "mb33",
-    "stem": "임상미생물 동정·감수성 과정에서 항생제감수성시험의 목적은?",
-    "choices": [
-      "혈액형을 본다",
-      "교차를 본다",
-      "치료약 선택을 돕는다",
-      "조직을 본다",
-      "심전도를 본다"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "AST이다. 수혈이다. 혈액은행이다.",
+    "stem": "혈액한천에서는 황색포도알균 획선 주위에서만 작은 집락이 자라는 위성현상을 보이고, X 인자와 V 인자를 모두 요구하는 균은?",
+    "choices": ["Haemophilus influenzae", "Haemophilus parainfluenzae", "Haemophilus ducreyi", "Bordetella pertussis", "Neisseria meningitidis"],
+    "answerIndex": 0,
+    "explainCorrect": "Haemophilus influenzae는 X 인자(헤민)와 V 인자(NAD)를 모두 필요로 한다. 혈액한천에는 X 인자가 있지만 V 인자는 적혈구 안에 있고 NAD 분해효소로 불활성화되어 부족하다. 황색포도알균이 적혈구를 용해하고 NAD를 분비하면 그 주변에서만 자라게 되며, 혈액을 가열해 두 인자를 유리시킨 초콜릿한천에서는 단독으로 잘 자란다.",
     "explainWrong": [
-      "혈액형을 본다은 이 문항의 조건·정의에서는 옳지 않다.",
-      "교차를 본다은 이 문항의 조건·정의에서는 옳지 않다.",
       "",
-      "조직을 본다은 이 문항의 조건·정의에서는 옳지 않다.",
-      "심전도를 본다은 이 문항의 조건·정의에서는 옳지 않다."
+      "Haemophilus parainfluenzae는 V 인자만 요구하며 X 인자는 필요 없다.",
+      "Haemophilus ducreyi는 X 인자만 요구하는 연성하감의 원인균이다.",
+      "Bordetella pertussis는 X·V 인자를 요구하지 않으며 Bordet-Gengou 배지에서 배양한다.",
+      "Neisseria meningitidis는 그람음성 쌍알균으로 혈액한천에서 단독으로 발육한다."
     ]
   },
   {
     "id": "mb34",
-    "stem": "디스크확산법에서 보는 것은?",
-    "choices": [
-      "집락 수",
-      "용혈대",
-      "유당 발효환",
-      "억제대",
-      "항산 양성환"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "감수성이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "수막염 환자의 뇌척수액에서 분리된 균의 성상이 다음과 같다. 이 균은?\n· 강낭콩 모양 그람음성 쌍알균\n· 옥시다아제 양성, 카탈라아제 양성\n· 포도당 분해 양성, 맥아당 분해 양성\n· 유당 분해 음성, 자당 분해 음성",
+    "choices": ["Neisseria meningitidis", "Neisseria gonorrhoeae", "Neisseria lactamica", "Moraxella catarrhalis", "Neisseria sicca"],
+    "answerIndex": 0,
+    "explainCorrect": "나이세리아 속은 CTA 당분해 배지에서 어떤 당을 산화 분해하는지로 동정한다. 수막알균은 포도당과 맥아당을 분해하고 유당과 자당은 분해하지 않는다. 임균은 포도당만 분해하므로 맥아당 분해 여부가 두 균을 가르는 핵심이다.",
     "explainWrong": [
-      "집락 수 — 평판 계수 관련 인접 오개념이다.",
-      "용혈대 — 혈액한천 용혈 관련 인접 오개념이다.",
-      "유당 발효환 — MacConkey 관련 인접 오개념이다.",
       "",
-      "항산 양성환 — AFB 염색 관련 인접 오개념이다."
+      "Neisseria gonorrhoeae는 포도당만 분해하고 맥아당은 분해하지 않는다.",
+      "Neisseria lactamica는 포도당·맥아당과 함께 유당도 분해하며 ONPG 양성이다.",
+      "Moraxella catarrhalis는 어떤 당도 분해하지 않으며 DNase 양성, 부티르산 에스테라제 양성이다.",
+      "Neisseria sicca는 포도당·맥아당 외에 자당도 분해하는 상기도 정상균총이다."
     ]
   },
   {
     "id": "mb35",
-    "stem": "항생제감수성시험에서 MIC가 의미하는 것으로 옳은 것은?",
-    "choices": [
-      "최대균수",
-      "최소살균농도",
-      "억제대 지름",
-      "내성 돌파점",
-      "최소억제농도"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "감수성 지표이다. 집락수가 아니다.",
+    "stem": "Escherichia coli의 IMViC 반응 결과(인돌 / MR / VP / 구연산염 순)로 옳은 것은?",
+    "choices": ["+ / + / − / −", "− / − / + / +", "− / + / − / +", "+ / − / + / −", "+ / + / + / +"],
+    "answerIndex": 0,
+    "explainCorrect": "대장균은 트립토판에서 인돌을 만들고(인돌 양성), 포도당을 혼합산으로 발효해 pH가 크게 떨어진다(MR 양성). 아세토인을 만들지 않아 VP 음성이고, 구연산염을 유일한 탄소원으로 이용하지 못해 구연산염 음성이다. MR과 VP는 대개 서로 반대 결과를 보인다.",
     "explainWrong": [
-      "최대균수 — 집락수가 아니다.",
-      "최소살균농도 — MBC는 살균 관련 인접 오개념이다.",
-      "억제대 지름 — 디스크법 관련 인접 오개념이다.",
-      "내성 돌파점 — breakpoint는 판정 기준 관련 인접 오개념이다.",
-      ""
+      "",
+      "− / − / + / +는 Klebsiella pneumoniae, Enterobacter 속의 전형적인 IMViC 양상이다.",
+      "− / + / − / +는 Salmonella, Citrobacter freundii 등에서 나타나는 양상이다.",
+      "대장균은 혼합산 발효로 MR 양성, 아세토인 비생성으로 VP 음성이므로 MR과 VP가 뒤바뀐 조합은 맞지 않는다.",
+      "MR과 VP가 동시에 양성인 경우는 드물며 대장균은 VP와 구연산염이 음성이다."
     ]
   },
   {
     "id": "mb36",
-    "stem": "황색포도상구균 동정 후 oxacillin/cefoxitin 내성으로 보고하는 의미는?",
-    "choices": [
-      "메티실린내성 황색포도상",
-      "반코마이신내성 장구균",
-      "ESBL 생성 장내세균",
-      "카르바페넴내성 장내세균",
-      "단순 칸디다 집락"
-    ],
+    "stem": "혈액한천 전면에 물결 모양으로 번져 나가는 swarming 현상을 보이고, 요소분해효소 양성, H2S 양성, 인돌 음성인 장내세균은?",
+    "choices": ["Proteus mirabilis", "Morganella morganii", "Klebsiella pneumoniae", "Salmonella Typhimurium", "Escherichia coli"],
     "answerIndex": 0,
-    "explainCorrect": "S. aureus에서 oxacillin/cefoxitin 내성은 MRSA를 의미한다.",
+    "explainCorrect": "Proteus 속은 주모성 편모가 발달하여 한천 표면을 동심원 물결 모양으로 덮으며 퍼지는 swarming을 보인다. 요소분해효소가 강해 소변을 알칼리화하고 스트루바이트 결석을 만들 수 있다. Proteus mirabilis는 인돌 음성, Proteus vulgaris는 인돌 양성으로 구별한다.",
     "explainWrong": [
       "",
-      "VRE는 장구균 내성 유형이다.",
-      "ESBL은 주로 장내세균이다.",
-      "CRE는 카르바페넴내성이다.",
-      "진균 집락과 다르다."
+      "Morganella morganii는 요소분해효소 양성이지만 swarming이 없고 H2S 음성, 인돌 양성이다.",
+      "Klebsiella pneumoniae는 비운동성이라 swarming을 보이지 않으며 H2S 음성이다.",
+      "Salmonella Typhimurium은 H2S 양성이지만 요소분해효소 음성이고 swarming이 없다.",
+      "Escherichia coli는 인돌 양성, 요소분해효소 음성, H2S 음성이다."
     ]
   },
   {
     "id": "mb37",
-    "stem": "장구균에서 반코마이신 내성으로 보고하는 의미는?",
-    "choices": [
-      "연쇄",
-      "반코마이신내성 장구균",
-      "대장균",
-      "녹농균",
-      "임균"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "내성이다. 연쇄와 구별한다. 장내세균이 아니다. 따라서 반코마이신내성 장구균이 가장 적절하다.",
+    "stem": "장티푸스 의심 환자의 혈액에서 분리된 그람음성간균의 성상이 다음과 같다. 이 균은?\n· TSI: 사면 알칼리(K) / 고층 산(A), 가스 음성\n· 사면과 고층 경계에 소량의 흑색 H2S\n· 운동성 양성, 옥시다아제 음성\n· 요소분해효소 음성, 인돌 음성",
+    "choices": ["Salmonella Typhi", "Shigella flexneri", "Escherichia coli", "Pseudomonas aeruginosa", "Klebsiella pneumoniae"],
+    "answerIndex": 0,
+    "explainCorrect": "K/A는 포도당만 발효하고 유당·자당은 발효하지 못한다는 뜻이다. 장티푸스균은 다른 살모넬라와 달리 가스를 만들지 않고 H2S도 경계부에 소량만 생성하는 것이 특징이다. 운동성 양성으로 비운동성인 시겔라와 구별한다.",
     "explainWrong": [
-      "연쇄와 구별한다.",
       "",
-      "대장균 — 장내세균이 아니다.",
-      "녹농균 — 비발효가 아니다.",
-      "임균 — 나이세리아가 아니다."
+      "Shigella flexneri도 K/A, 가스 음성이지만 H2S 음성이고 비운동성이다.",
+      "Escherichia coli는 유당을 발효해 A/A, 가스 양성이며 H2S 음성, 인돌 양성이다.",
+      "Pseudomonas aeruginosa는 포도당도 발효하지 않아 K/K를 보이며 옥시다아제 양성이다.",
+      "Klebsiella pneumoniae는 A/A, 가스 다량 생성이며 비운동성이고 H2S 음성이다."
     ]
   },
   {
     "id": "mb38",
-    "stem": "임상미생물 동정·감수성 과정에서 ESBL이 문제인 이유는?",
-    "choices": [
-      "메티실린만 내성",
-      "반코마이신만 내성",
-      "여러 β락탐에 내성을 보여서",
-      "카바페넴만 내성",
-      "아미노글리코사이드만 내성"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "장내세균이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "폐렴 환자 객담에서 분리된 균의 성상이 다음과 같다. 이 균은?\n· MacConkey 한천에서 분홍색의 끈적한 점액성 집락\n· TSI: A/A, 가스 다량, H2S 음성\n· 운동성 음성, 인돌 음성\n· VP 양성, 구연산염 양성",
+    "choices": ["Klebsiella pneumoniae", "Escherichia coli", "Enterobacter cloacae", "Shigella sonnei", "Salmonella Typhimurium"],
+    "answerIndex": 0,
+    "explainCorrect": "Klebsiella pneumoniae는 두꺼운 다당질 협막 때문에 점액성 집락을 만들고, 백금이로 들어 올리면 실처럼 늘어난다(string test). 유당을 발효하며 IMViC는 − − + + 이다. 비운동성이라는 점이 VP 양성으로 비슷한 Enterobacter와의 감별점이다.",
     "explainWrong": [
-      "메티실린만 내성은 이 문항의 조건·정의에서는 옳지 않다.",
-      "반코마이신만 내성은 이 문항의 조건·정의에서는 옳지 않다.",
       "",
-      "카바페넴만 내성은 이 문항의 조건·정의에서는 옳지 않다.",
-      "아미노글리코사이드만 내성은 이 문항의 조건·정의에서는 옳지 않다."
+      "Escherichia coli는 인돌 양성, VP 음성, 구연산염 음성이며 대부분 운동성이 있다.",
+      "Enterobacter cloacae는 A/A, 가스 양성, VP 양성으로 비슷하지만 운동성 양성이다.",
+      "Shigella sonnei는 유당을 늦게 발효하여 초기 TSI는 K/A이며 가스를 만들지 않는다.",
+      "Salmonella Typhimurium은 유당 비발효로 K/A이며 H2S 양성, 운동성 양성이다."
     ]
   },
   {
     "id": "mb39",
-    "stem": "임상미생물 동정·감수성 과정에서 손위생이 중요한 이유는?",
-    "choices": [
-      "그람양성 구균",
-      "그람음성 간균",
-      "속도만 우선한다",
-      "전파를 차단하려고",
-      "비용만 우선한다"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "감염관리이다. 미관이 아니다. 향이 아니다.",
+    "stem": "화상 창상에서 분리된 그람음성간균의 성상이 다음과 같다. 이 균은?\n· TSI: K/K, H2S 음성\n· 옥시다아제 양성, 운동성 양성\n· 배지를 청록색으로 물들이는 수용성 색소\n· 포도(옥수수 토르티야) 냄새, 42℃에서 발육",
+    "choices": ["Pseudomonas aeruginosa", "Acinetobacter baumannii", "Stenotrophomonas maltophilia", "Burkholderia cepacia", "Escherichia coli"],
+    "answerIndex": 0,
+    "explainCorrect": "TSI K/K는 당을 발효하지 않는 비발효균임을 뜻한다. 녹농균은 피오시아닌(청색)과 피오베르딘(황록색 형광)을 만들어 청록색을 띠고, 2-아미노아세토페논 때문에 특유의 포도 냄새가 난다. 42℃ 발육과 옥시다아제 양성이 다른 비발효균과의 감별점이다.",
     "explainWrong": [
-      "그람양성 구균은 이 문항의 조건·정의에서는 옳지 않다.",
-      "그람음성 간균은 이 문항의 조건·정의에서는 옳지 않다.",
-      "속도만 우선한다 — 속도만이 아니다.",
       "",
-      "비용만 우선한다 — 비용만이 아니다."
+      "Acinetobacter baumannii는 비발효균이지만 옥시다아제 음성, 비운동성인 구간균이며 색소를 만들지 않는다. 다제내성 병원감염균으로 중요하다.",
+      "Stenotrophomonas maltophilia는 옥시다아제 음성이고 카바페넴에 내재 내성인 비발효균이다.",
+      "Burkholderia cepacia는 옥시다아제가 약양성이고 노란 색소를 만들 수 있으며 청록색 색소나 포도 냄새가 없다.",
+      "Escherichia coli는 발효균으로 TSI A/A를 보이며 옥시다아제 음성이다."
     ]
   },
   {
     "id": "mb40",
-    "stem": "임상미생물 동정·감수성 과정에서 표준주의의 기본은?",
-    "choices": [
-      "건강한 사람만 위험하다",
-      "소아만 위험하다",
-      "노인만 위험하다",
-      "수술환자만 위험하다",
-      "모든 혈액을 위험으로 본다"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "Standard이다. 외양으로 제외하지 않는다. 전 연령이다.",
+    "stem": "신생아 수막염 환자 뇌척수액에서 분리된 균의 성상이 다음과 같다. 이 균은?\n· 짧은 그람양성간균\n· 혈액한천에서 좁은 β용혈\n· 카탈라아제 양성, 에스쿨린 가수분해 양성\n· 25℃에서 텀블링(tumbling) 운동, 반고체 배지에서 우산 모양 발육\n· 4℃ 냉장 온도에서도 증식",
+    "choices": ["Listeria monocytogenes", "Corynebacterium diphtheriae", "Erysipelothrix rhusiopathiae", "Streptococcus agalactiae", "Bacillus cereus"],
+    "answerIndex": 0,
+    "explainCorrect": "리스테리아는 25℃에서 편모가 발현되어 텀블링 운동과 반고체 배지의 우산 모양 발육을 보이며 37℃에서는 운동성이 약하다. 냉장 온도에서도 증식하므로 냉장 보관 유제품, 가공육 등을 통해 감염되고 임신부, 신생아, 면역저하자에게 수막염과 패혈증을 일으킨다. CAMP 시험도 양성이다.",
     "explainWrong": [
-      "건강한 사람만 위험하다 — 외양으로 제외하지 않는다.",
-      "소아만 위험하다은 이 문항의 조건·정의에서는 옳지 않다.",
-      "노인만 위험하다은 이 문항의 조건·정의에서는 옳지 않다.",
-      "수술환자만 위험하다 — 전 환자에게 기본이다.",
-      ""
+      "",
+      "Corynebacterium diphtheriae는 비운동성, 비용혈성이며 이염소체와 Tinsdale 배지의 갈색 달무리가 특징이다.",
+      "Erysipelothrix rhusiopathiae는 카탈라아제 음성, 비운동성이며 TSI에서 H2S를 생성한다.",
+      "Streptococcus agalactiae는 신생아 수막염을 일으키지만 카탈라아제 음성인 알균이다.",
+      "Bacillus cereus는 아포를 형성하는 대형 간균으로 넓은 β용혈을 보이며 냉장 증식 특성이 없다."
     ]
   },
   {
     "id": "mb41",
-    "stem": "임상미생물 동정·감수성 과정에서 생물안전캐비닛의 목적은?",
-    "choices": [
-      "에어로졸로부터 보호한다",
-      "채혈",
-      "원심",
-      "염색",
-      "박절"
-    ],
+    "stem": "아포와 D-글루탐산 폴리펩티드 협막을 가지며, 비운동성·비용혈성이고 집락 가장자리가 메두사 머리 모양인 대형 그람양성간균은?",
+    "choices": ["Bacillus anthracis", "Bacillus cereus", "Clostridium perfringens", "Listeria monocytogenes", "Corynebacterium diphtheriae"],
     "answerIndex": 0,
-    "explainCorrect": "BSC이다. 채혈대가 아니다. 원심기가 아니다. 따라서 에어로졸로부터 보호한다이 가장 적절하다.",
+    "explainCorrect": "탄저균은 균체가 사슬로 연결되어 대나무 마디 모양으로 보이며, 폴리펩티드 협막이 식균작용을 막는다. 같은 바실루스 속의 B. cereus와 달리 운동성이 없고 혈액한천에서 용혈을 보이지 않는다. 피부탄저, 폐탄저, 장탄저를 일으키며 생물테러 병원체로 분류된다.",
     "explainWrong": [
       "",
-      "채혈대가 아니다.",
-      "원심기가 아니다.",
-      "염색대가 아니다.",
-      "박절만 — 마이크로톰이 아니다."
+      "Bacillus cereus는 운동성이 있고 β용혈을 보이며 볶음밥 관련 구토형 식중독을 일으킨다.",
+      "Clostridium perfringens는 편성혐기성 비운동성 간균으로 이중 용혈대를 보인다.",
+      "Listeria monocytogenes는 아포와 협막이 없는 짧은 간균으로 텀블링 운동을 한다.",
+      "Corynebacterium diphtheriae는 아포가 없고 이염소체를 가진 곤봉 모양 간균이다."
     ]
   },
   {
     "id": "mb42",
-    "stem": "임상미생물 동정·감수성 과정에서 sharps 폐기는?",
-    "choices": [
-      "일반쓰레기",
-      "전용용기·재캡 금지",
-      "주머니",
-      "재사용",
-      "바닥"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "안전이다. 자상 위험이다. 자상 위험이다.",
+    "stem": "가스괴저 환자 조직에서 분리된 편성혐기성 그람양성간균이 혈액한천에서 이중 용혈대를 보이고 Nagler 반응 양성이었다. 이 균은?",
+    "choices": ["Clostridium perfringens", "Clostridium tetani", "Clostridium botulinum", "Clostridioides difficile", "Bacteroides fragilis"],
+    "answerIndex": 0,
+    "explainCorrect": "웰치균은 θ독소에 의한 안쪽의 완전 용혈대와 α독소에 의한 바깥쪽 불완전 용혈대가 겹쳐 이중 용혈대를 만든다. α독소는 레시티나아제로 난황 배지에서 혼탁대를 만드는데, 항α독소 혈청을 바른 쪽에서 이 반응이 억제되는 것이 Nagler 반응이다. 비운동성이며 배양에서 아포를 거의 관찰하기 어렵다.",
     "explainWrong": [
-      "일반쓰레기은 문항의 정의나 상황에 맞지 않는다.",
       "",
-      "주머니은 문항의 정의나 상황에 맞지 않는다.",
-      "재사용 금지이다.",
-      "바닥은 문항의 정의나 상황에 맞지 않는다."
+      "Clostridium tetani는 말단 구형 아포로 북채 모양을 보이며 이중 용혈대가 없다.",
+      "Clostridium botulinum은 신경독소로 이완성 마비를 일으키며 Nagler 반응 음성이다.",
+      "Clostridioides difficile은 항생제 관련 위막성 대장염의 원인이며 비용혈성이다.",
+      "Bacteroides fragilis는 그람음성간균으로 레시티나아제를 만들지 않는다."
     ]
   },
   {
     "id": "mb43",
-    "stem": "검체 채취 전 중요한 것은?",
-    "choices": [
-      "아무 부위",
-      "소독 생략",
-      "올바른 부위와 무균",
-      "라벨 생략",
-      "Staphylococcus aureus"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "적절성이다. 부위가 중요하다. 소독이 필요하다.",
+    "stem": "균체 말단에 둥근 아포가 위치하여 북채(drumstick) 모양으로 보이는 편성혐기성 그람양성간균은?",
+    "choices": ["Clostridium tetani", "Clostridium perfringens", "Clostridium botulinum", "Clostridioides difficile", "Bacillus anthracis"],
+    "answerIndex": 0,
+    "explainCorrect": "파상풍균은 균체 끝에 균체 폭보다 큰 구형 아포를 만들어 북채 또는 테니스 라켓 모양을 보인다. 오염된 상처로 아포가 들어가 혐기 상태에서 발아하면 테타노스파스민을 분비한다. 이 독소는 억제성 신경전달물질(글리신, GABA) 유리를 막아 개구장애, 후궁반장 같은 강직성 경련을 일으킨다.",
     "explainWrong": [
-      "아무 부위 — 부위가 중요하다.",
-      "소독 생략 — 소독이 필요하다.",
       "",
-      "라벨 생략 — 식별이 필수이다.",
-      "Staphylococcus aureus은 이 문항의 조건·정의에서는 옳지 않다."
+      "Clostridium perfringens는 아포를 거의 만들지 않으며 형성하더라도 중앙~아말단의 타원형이다.",
+      "Clostridium botulinum은 아말단에 타원형 아포를 만든다.",
+      "Clostridioides difficile은 아말단 타원형 아포를 형성한다.",
+      "Bacillus anthracis는 호기성균으로 중앙에 타원형 아포를 만들며 균체가 부풀지 않는다."
     ]
   },
   {
     "id": "mb44",
-    "stem": "EMB에서 금속광택 집락으로 가장 의심되는 균은?",
-    "choices": [
-      "Staphylococcus aureus",
-      "Pseudomonas aeruginosa",
-      "Candida albicans",
-      "Escherichia coli",
-      "Mycobacterium tuberculosis"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "EMB에서 금속광택 집락은 E. coli를 강하게 시사한다.",
+    "stem": "클린다마이신 투여 후 위막성 대장염이 발생한 환자의 대변을 CCFA(cycloserine-cefoxitin-fructose agar) 배지에 배양하여 분리하는 균은?",
+    "choices": ["Clostridioides difficile", "Clostridium perfringens", "Bacteroides fragilis", "Klebsiella oxytoca", "Clostridium botulinum"],
+    "answerIndex": 0,
+    "explainCorrect": "항생제로 장내 정상균총이 파괴되면 C. difficile이 과증식하여 독소 A(장독소)와 독소 B(세포독소)를 분비하고 위막성 대장염을 일으킨다. CCFA 배지에서 노란색의 간유리 모양 집락을 형성하고, 말똥 냄새(p-크레졸)와 자외선 아래 황록색 형광을 보인다. 진단에는 독소 또는 독소 유전자 검출이 중요하다.",
     "explainWrong": [
-      "황색포도상은 혈액한천 등에서 다룬다.",
-      "녹농균은 다른 집락·색소 특징이 있다.",
-      "칸디다는 진균이다.",
       "",
-      "결핵균은 항산·특수배지이다."
+      "Clostridium perfringens는 가스괴저와 식중독의 원인균으로 CCFA 배지를 쓰지 않는다.",
+      "Bacteroides fragilis는 BBE 배지에서 분리하는 그람음성 혐기성균으로 복강 내 농양을 일으킨다.",
+      "Klebsiella oxytoca는 항생제 관련 출혈성 대장염과 관련되지만 위막을 형성하지 않고 MacConkey 한천에서 분리한다.",
+      "Clostridium botulinum은 신경독소에 의한 이완성 마비를 일으키며 위막성 대장염과 무관하다."
     ]
   },
   {
     "id": "mb45",
-    "stem": "임상미생물 동정·감수성 과정에서 Chocolate agar가 필요한 이유로 가까운 것은?",
-    "choices": [
-      "그람양성만 배양",
-      "진균만 배양",
-      "바이러스만 배양",
-      "기생충만 배양",
-      "일부 영양요구균 배양"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "초콜릿한천은 용혈로 방출된 인자를 포함해 Haemophilus 등 영양요구균 배양에 쓴다.",
+    "stem": "세균의 외독소와 비교한 내독소의 특징으로 옳은 것은?",
+    "choices": ["열에 비교적 안정하다", "주로 그람양성균이 분비한다", "포르말린으로 톡소이드를 만든다", "화학적 본체가 단백질이다", "극미량으로도 치사량에 이른다"],
+    "answerIndex": 0,
+    "explainCorrect": "내독소는 그람음성균 외막의 LPS(지질 A)로 균이 죽거나 용해될 때 유리되며, 100℃에서 1시간 가열해도 활성이 남을 만큼 열에 안정하다. 항원성이 약해 톡소이드를 만들 수 없고, 독성은 외독소보다 약하지만 발열과 쇼크를 일으킨다.",
     "explainWrong": [
-      "그람양성 전용이 아니다.",
-      "진균 전용 배지가 아니다.",
-      "바이러스 배양이 아니다.",
-      "기생충 배양이 아니다.",
-      ""
+      "",
+      "외독소는 그람양성균과 일부 그람음성균이 분비하지만, 내독소는 그람음성균에만 있다.",
+      "포르말린 처리로 독성을 없애고 항원성을 남긴 톡소이드는 외독소(파상풍, 디프테리아)에 해당한다.",
+      "단백질로 이루어진 것은 외독소이며 내독소는 지질다당질이다.",
+      "보툴리눔 독소처럼 극미량으로 치명적인 것은 외독소의 특징이다."
     ]
   },
   {
     "id": "mb46",
-    "stem": "다음 소견에 가장 가까운 균은?\n- 카탈라제 +\n- 응고효소 +\n- 그람양성 포도알",
-    "choices": [
-      "S. aureus",
-      "S. epidermidis",
-      "S. pyogenes",
-      "E. faecalis",
-      "S. pneumoniae"
-    ],
+    "stem": "가정에서 만든 통조림을 먹은 후 복시, 연하곤란, 하행성 이완성 마비가 나타났다. 원인 독소의 작용 기전은?",
+    "choices": ["신경근접합부에서 아세틸콜린 유리 억제", "척수 억제성 신경전달물질 유리 억제", "아데닐산고리화효소 활성화로 cAMP 증가", "EF-2의 ADP-리보실화로 단백합성 억제", "60S 리보솜 불활성화로 단백합성 억제"],
     "answerIndex": 0,
-    "explainCorrect": "황색포도상이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "explainCorrect": "보툴리눔 독소는 운동신경 말단에서 아세틸콜린을 담은 소포가 세포막과 융합하는 데 필요한 SNARE 단백질을 절단한다. 그 결과 아세틸콜린이 분비되지 못해 뇌신경부터 아래로 내려가는 이완성 마비가 생긴다. 독소는 열에 약해 충분히 끓이면 불활성화된다.",
     "explainWrong": [
       "",
-      "S. epidermidis — CNS 관련 인접 오개념이다.",
-      "S. pyogenes — 연쇄 관련 인접 오개념이다.",
-      "E. faecalis — 장구균 관련 인접 오개념이다.",
-      "S. pneumoniae — 폐렴구균 관련 인접 오개념이다."
+      "글리신·GABA 유리를 막아 강직성 마비를 일으키는 것은 파상풍 독소(테타노스파스민)이다.",
+      "cAMP를 증가시켜 다량의 수양성 설사를 일으키는 것은 콜레라 독소와 대장균 이열성 장독소(LT)이다.",
+      "EF-2를 ADP-리보실화하는 것은 디프테리아 독소와 녹농균 외독소 A이다.",
+      "60S 리보솜의 28S rRNA를 불활성화하는 것은 시가독소와 장출혈성 대장균의 베로독소이다."
     ]
   },
   {
     "id": "mb47",
-    "stem": "다음 소견에 가장 가까운 균은?\n- 카탈라제 −\n- β용혈\n- A군 연쇄",
-    "choices": [
-      "S. aureus",
-      "S. pyogenes",
-      "S. pneumoniae",
-      "E. coli",
-      "P. aeruginosa"
-    ],
-    "answerIndex": 1,
-    "explainCorrect": "화농연쇄이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "Löwenstein-Jensen 배지에서 3주 이상 지나 건조하고 거친 담황색 집락을 형성하였고, 니아신 축적 양성·질산염 환원 양성인 항산균은?",
+    "choices": ["Mycobacterium tuberculosis", "Mycobacterium bovis", "Mycobacterium avium complex", "Mycobacterium kansasii", "Mycobacterium fortuitum"],
+    "answerIndex": 0,
+    "explainCorrect": "결핵균은 세대시간이 15~20시간으로 길어 계란 기반의 LJ 배지에서 집락이 보이기까지 3~8주가 걸리며, 거친 콜리플라워 모양 집락을 만든다. 니아신을 대사하지 못하고 축적하므로 니아신 시험 양성이며, 이는 비결핵항산균과의 대표적 감별점이다. 코드 인자로 인해 액체배지에서 새끼줄 모양 배열을 보인다.",
     "explainWrong": [
-      "S. aureus — 포도상 관련 인접 오개념이다.",
       "",
-      "S. pneumoniae — α용혈 관련 인접 오개념이다.",
-      "E. coli — 장내세균 관련 인접 오개념이다.",
-      "P. aeruginosa — 비발효 관련 인접 오개념이다."
+      "Mycobacterium bovis는 결핵균 복합체에 속하지만 니아신 음성, 질산염 환원 음성이다.",
+      "Mycobacterium avium complex는 니아신 음성인 비결핵항산균으로 매끄러운 집락을 만든다.",
+      "Mycobacterium kansasii는 질산염 환원 양성이지만 니아신 음성이며 빛을 쪼이면 노란 색소를 만드는 광발색균이다.",
+      "Mycobacterium fortuitum은 7일 이내에 집락을 형성하는 신속발육 비결핵항산균이다."
     ]
   },
   {
     "id": "mb48",
-    "stem": "다음 소견에 가장 가까운 균은?\n- 그람음성 막대\n- 산화효소 +\n- 녹색 색소",
-    "choices": [
-      "E. coli",
-      "K. pneumoniae",
-      "P. aeruginosa",
-      "S. aureus",
-      "S. pyogenes"
-    ],
-    "answerIndex": 2,
-    "explainCorrect": "녹농균이다. 같은 분류의 다른 선택지는 조건이 다르거나 인접 개념이다.",
+    "stem": "인공배지에서 배양되지 않아 병변 삼출액의 암시야현미경 관찰과 혈청검사(VDRL, FTA-ABS)로 진단하는 성매개 나선균은?",
+    "choices": ["Treponema pallidum", "Leptospira interrogans", "Borrelia burgdorferi", "Borrelia recurrentis", "Helicobacter pylori"],
+    "answerIndex": 0,
+    "explainCorrect": "매독균은 가늘고 촘촘한 나선균으로 일반 그람염색이나 인공배지 배양이 불가능하다. 1기 매독의 경성하감 삼출액을 암시야현미경으로 보면 나선형으로 회전하며 움직이는 균을 관찰할 수 있다. 비트레포네마 검사(VDRL, RPR)로 선별하고 트레포네마 검사(FTA-ABS, TPHA)로 확인한다.",
     "explainWrong": [
-      "E. coli — 장내세균 oxidase− 관련 인접 오개념이다.",
-      "K. pneumoniae — 장내세균 관련 인접 오개념이다.",
       "",
-      "S. aureus은 이 문항의 조건·정의에서는 옳지 않다.",
-      "S. pyogenes은 이 문항의 조건·정의에서는 옳지 않다."
+      "Leptospira interrogans는 끝이 갈고리 모양인 나선균으로 EMJH 배지에서 배양할 수 있으며 쥐 소변을 통해 감염된다.",
+      "Borrelia burgdorferi는 참진드기가 매개하는 라임병의 원인균으로 BSK 배지에서 배양 가능하다.",
+      "Borrelia recurrentis는 이가 매개하는 재귀열의 원인균으로 발열기 혈액 도말에서 관찰한다.",
+      "Helicobacter pylori는 위에 감염되는 나선형 간균으로 미호기 조건에서 배양할 수 있다."
     ]
   },
   {
     "id": "mb49",
-    "stem": "KOH 도말에서 균사가 보이면?",
-    "choices": [
-      "항산균",
-      "그람양성",
-      "바이러스",
-      "진균",
-      "정상 상피"
-    ],
-    "answerIndex": 3,
-    "explainCorrect": "진균 검사이다. 항산과 다르다. 그람과 다르다. 이에 해당하는 것은 진균이다.",
+    "stem": "세포벽이 없어 β-락탐계 항생제가 효과가 없고, 스테롤을 첨가한 배지에서 계란프라이 모양의 미세 집락을 형성하는 균은?",
+    "choices": ["Mycoplasma pneumoniae", "Chlamydia pneumoniae", "Legionella pneumophila", "Streptococcus pneumoniae", "Coxiella burnetii"],
+    "answerIndex": 0,
+    "explainCorrect": "마이코플라스마는 세포벽이 없고 세포막에 스테롤을 포함하는 가장 작은 자유생활 세균이다. 그람염색이 되지 않으며 일정한 형태가 없고, PPLO 배지에서 중심이 한천 속으로 파고든 계란프라이 모양 집락을 1~3주에 걸쳐 만든다. 비정형 폐렴을 일으키며 한랭응집소가 증가할 수 있다.",
     "explainWrong": [
-      "항산과 다르다.",
-      "그람과 다르다.",
-      "바이러스는 안 보인다.",
       "",
-      "정상 상피만 — 상피와 구별한다."
+      "Chlamydia pneumoniae는 세포 안에서만 증식하는 절대세포내기생균으로 인공배지에서 집락을 만들지 않는다.",
+      "Legionella pneumophila는 세포벽을 가진 그람음성간균으로 BCYE 한천에서 간유리 모양 집락을 만든다.",
+      "Streptococcus pneumoniae는 두꺼운 펩티도글리칸 세포벽을 가진 그람양성균으로 페니실린이 효과가 있다.",
+      "Coxiella burnetii는 Q열의 원인인 절대세포내기생균으로 인공배지에서 배양되지 않는다."
     ]
   },
   {
     "id": "mb50",
-    "stem": "ZN 염색에서 탈색 후에도 적색이면?",
-    "choices": [
-      "단순 그람양성",
-      "단순 그람음성",
-      "그람양성 구균",
-      "스피로헤타",
-      "항산균 양성"
-    ],
-    "answerIndex": 4,
-    "explainCorrect": "AFB+이다. 그람과 다르다. 그람과 다르다.",
+    "stem": "감염형인 기본소체와 증식형인 망상체로 이루어진 독특한 발육환을 가지며, McCoy 세포 배양에서 요오드 염색되는 글리코겐 봉입체를 형성하는 균은?",
+    "choices": ["Chlamydia trachomatis", "Orientia tsutsugamushi", "Mycoplasma genitalium", "Neisseria gonorrhoeae", "Ureaplasma urealyticum"],
+    "answerIndex": 0,
+    "explainCorrect": "클라미디아는 스스로 ATP를 만들지 못하는 절대세포내기생균이다. 세포 밖에서 안정한 기본소체가 숙주세포에 들어가 망상체로 바뀌어 이분열하고, 다시 기본소체로 성숙해 세포를 빠져나온다. C. trachomatis는 봉입체에 글리코겐이 있어 요오드로 갈색 염색되며, 트라코마, 비임균성 요도염, 신생아 결막염을 일으킨다.",
     "explainWrong": [
-      "단순 그람양성은 이 문항의 조건·정의에서는 옳지 않다.",
-      "단순 그람음성은 이 문항의 조건·정의에서는 옳지 않다.",
-      "그람양성 구균은 이 문항의 조건·정의에서는 옳지 않다.",
-      "스피로헤타 — 은염색·암시야 관련 인접 오개념이다.",
-      ""
+      "",
+      "Orientia tsutsugamushi는 털진드기 유충이 매개하는 쯔쯔가무시병의 원인균으로 숙주세포 세포질에서 직접 증식하며 기본소체·망상체 발육환이 없다.",
+      "Mycoplasma genitalium은 세포벽이 없는 균으로 세포 밖에서도 증식할 수 있다.",
+      "Neisseria gonorrhoeae는 인공배지(Thayer-Martin)에서 배양되는 그람음성 쌍알균이다.",
+      "Ureaplasma urealyticum은 요소를 분해하는 마이코플라스마과 균으로 무세포 배지에서 배양된다."
     ]
   }
 ]
