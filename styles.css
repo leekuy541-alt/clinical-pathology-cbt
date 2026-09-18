@@ -345,10 +345,10 @@ body {
 /* —— Under-choice explain —— */
 .choice-explain {
   margin: 0 2px 2px;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border-radius: 8px;
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  line-height: 1.6;
   border-left: 3px solid var(--border);
   background: var(--bg-elevated);
 }
@@ -382,6 +382,8 @@ body {
 .choice-explain-body {
   margin: 0;
   color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 /* —— Feedback —— */
@@ -419,6 +421,19 @@ body {
 .feedback-answer {
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+.feedback-why {
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.feedback-why-body {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text);
 }
 
 .feedback-section {

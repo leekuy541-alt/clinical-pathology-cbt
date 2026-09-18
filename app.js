@@ -682,6 +682,7 @@
       }
     }
 
+    var whyCorrect = q.explainCorrect || "";
     el.feedback.innerHTML =
       '<div class="feedback-result ' +
       (isCorrect ? "is-correct" : "is-wrong") +
@@ -689,7 +690,12 @@
       (isCorrect ? "정답" : "오답") +
       '</div><p class="feedback-answer">정답: ' +
       correctLabel +
-      "</p>";
+      "</p>" +
+      (whyCorrect
+        ? '<div class="feedback-section feedback-why"><h3>왜 정답인가</h3><p class="feedback-why-body">' +
+          escapeHtml(whyCorrect) +
+          "</p></div>"
+        : "");
     el.feedback.classList.add("visible");
 
     if (!isCorrect && opts.scroll && correctLi) {
