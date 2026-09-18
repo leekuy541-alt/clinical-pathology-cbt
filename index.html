@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>임상병리사 CBT</title>
-    <link rel="stylesheet" href="styles.css?v=20260918h" />
+    <link rel="stylesheet" href="styles.css?v=20260918i" />
   </head>
   <body>
     <div id="app">
@@ -49,7 +49,7 @@
               <span class="study-stat-label">오답</span>
             </div>
           </div>
-          <div class="study-dash-row">
+          <div class="study-dash-row study-metrics-row">
             <div class="study-acc">
               <span class="study-acc-label">정답률</span>
               <span class="study-acc-value" id="stat-accuracy">—</span>
@@ -58,9 +58,15 @@
               <span class="study-pass-label">합격 가능도 <em>연습 추정</em></span>
               <span class="study-pass-value" id="stat-pass">0%</span>
             </div>
+            <div class="study-seok">
+              <span class="study-seok-label">전국수석 가능도 <em>연습 추정</em></span>
+              <span class="study-seok-value" id="stat-seok">0%</span>
+            </div>
           </div>
-          <p class="study-pass-note" id="stat-pass-note">연습용 추정이며 공식 합격 예측이 아닙니다.</p>
+          <p class="study-pass-note" id="stat-pass-note">연습용 추정이며 공식 합격·순위 예측이 아닙니다.</p>
           <p class="study-tip" id="stat-tip">문항을 더 풀어보세요</p>
+          <p class="study-goal" id="stat-goal">목표: 전국수석</p>
+          <div class="study-coach" id="stat-coach" hidden></div>
           <div class="study-notebook-row">
             <button type="button" id="btn-notebook" class="btn-notebook">오답노트 (0)</button>
           </div>
@@ -191,6 +197,7 @@
           <div id="end-score" class="end-score">0 <span>/ 0 / 0</span></div>
           <p id="end-pct" class="end-pct"></p>
           <p id="end-pass-hint" class="end-pass-hint"></p>
+          <p id="end-seok-nudge" class="end-seok-nudge" hidden></p>
           <div id="end-analytics" class="end-analytics"></div>
           <div id="end-breakdown" class="end-breakdown"></div>
           <p id="end-summary" class="end-summary"></p>
@@ -206,7 +213,7 @@
         </div>
       </section>
     </div>
-    <script src="questions.js?v=20260918h"></script>
-    <script src="app.js?v=20260918h"></script>
+    <script src="questions.js?v=20260918i"></script>
+    <script src="app.js?v=20260918i"></script>
   </body>
 </html>

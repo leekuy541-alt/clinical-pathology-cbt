@@ -171,8 +171,12 @@
     statWrong: $("#stat-wrong"),
     statAccuracy: $("#stat-accuracy"),
     statPass: $("#stat-pass"),
+    statSeok: $("#stat-seok"),
     statPassNote: $("#stat-pass-note"),
     statTip: $("#stat-tip"),
+    statGoal: $("#stat-goal"),
+    statCoach: $("#stat-coach"),
+    endSeokNudge: $("#end-seok-nudge"),
     btnStatsReset: $("#btn-stats-reset"),
     btnNotebook: $("#btn-notebook"),
     notebook: $("#screen-notebook"),
@@ -510,6 +514,156 @@
       accuracy: accuracy,
       tip: tip,
       useRecent: useRecent,
+      weakest: weakest,
+      subjectsAttempted: subjectsAttempted,
+    };
+  }
+
+  /**
+   * 전국수석 가능도 (연습 추정) — NOT an official ranking prediction.
+   *
+   * Stricter than pass readiness; stays low until elite performance.
+   * Formula (clamp 0–99):
+   *   Prefer recent accuracy (7d if recentAttempted >= 15, else all-time)
+   *   accPts      = ((max(0, accuracy - 0.85) / 0.15) ** 1.5) * 42
+   *                 // ~0 below 85%; hard scale toward 90%+ (at 90%≈8, 95%≈26, 100%=42)
+   *   coveragePts = (subjectsAttempted / 9) * 18          // need full subject coverage
+   *   floorPts    = (subjects with ≥80% among attempted) / attempted * 22
+   *   volumePts   = min(14, totals.attempted / 50)         // hundreds of attempts
+   *   eliteGate   = (acc≥90% && full 9 subjects && all floors≥80%) ? 6 : 0
+   *   nbBonus     = open wrong-notebook items (if NOTEBOOK_KEY):
+   *                 0 open → +3; ≤8 → +1; else 0  (low pressure = slight bonus)
+   *   score = floor(sum), clamp 0–99; 0 if no attempts
+   */
+  function computeSeokReadiness(stats) {
+    const totals = stats.totals;
+    const allAttempted = totals.attempted || 0;
+    const allCorrect = totals.correct || 0;
+    const allAcc = allAttempted > 0 ? allCorrect / allAttempted : 0;
+
+    const weekKeys = lastNDayKeys(7);
+    const recent = sumWindow(stats, weekKeys);
+    const useRecent = recent.attempted >= 15;
+    const accuracy = useRecent
+      ? recent.correct / recent.attempted
+      : allAcc;
+
+    let subjectsAttempted = 0;
+    let floorHits = 0;
+    let floorDenom = 0;
+    let weakest = null;
+    STATS_SUBJECT_IDS.forEach((id) => {
+      const st = stats.bySubject[id];
+      if (!st || !st.attempted) return;
+      subjectsAttempted += 1;
+      const pct = st.correct / st.attempted;
+      floorDenom += 1;
+      if (pct >= 0.8) floorHits += 1;
+      if (
+        !weakest ||
+        pct < weakest.pct ||
+        (pct === weakest.pct && st.attempted > weakest.attempted)
+      ) {
+        weakest = { id: id, pct: pct, attempted: st.attempted };
+      }
+    });
+
+    const coverage = subjectsAttempted / STATS_SUBJECT_IDS.length;
+    const floorRate = floorDenom > 0 ? floorHits / floorDenom : 0;
+    const allFloorsMet = floorDenom > 0 && floorHits === floorDenom;
+
+    const t = Math.max(0, Math.min(1, (accuracy - 0.85) / 0.15));
+    const accPts = Math.pow(t, 1.5) * 42;
+    const coveragePts = coverage * 18;
+    const floorPts = floorRate * 22;
+    const volumePts = Math.min(14, allAttempted / 50);
+    const eliteGate =
+      accuracy >= 0.9 &&
+      subjectsAttempted === STATS_SUBJECT_IDS.length &&
+      allFloorsMet
+        ? 6
+        : 0;
+
+    let nbBonus = 0;
+    let notebookOpen = 0;
+    try {
+      const nb = loadNotebook();
+      notebookOpen = nb && Array.isArray(nb.items) ? nb.items.length : 0;
+      if (allAttempted > 0) {
+        if (notebookOpen === 0) nbBonus = 3;
+        else if (notebookOpen <= 8) nbBonus = 1;
+      }
+    } catch (_) {
+      nbBonus = 0;
+    }
+
+    let score = Math.floor(
+      accPts + coveragePts + floorPts + volumePts + eliteGate + nbBonus
+    );
+    if (allAttempted === 0) score = 0;
+    score = Math.max(0, Math.min(99, score));
+
+    // Tip coaches toward 수석
+    let tip = "수석 코칭: 문항을 더 풀어 기반을 쌓자";
+    if (allAttempted === 0) {
+      tip = "수석 코칭: 오늘 한 과목부터 시작하자";
+    } else if (notebookOpen >= 5) {
+      tip = "오답노트 " + notebookOpen + "문항 복습";
+    } else if (weakest && weakest.pct < 0.8) {
+      tip = "수석 코칭: 취약 " + subjectName(weakest.id) + " 집중";
+    } else if (subjectsAttempted < STATS_SUBJECT_IDS.length) {
+      tip = "전 과목 커버";
+    } else if (accuracy < 0.9) {
+      tip = "정답률 90%+ 유지";
+    } else if (notebookOpen > 0) {
+      tip = "오답노트 " + notebookOpen + "문항 복습";
+    } else {
+      tip = "수석 코칭: 고난도·취약 유형을 더 깎자";
+    }
+
+    // Warm but firm 선생님 voice — one actionable next step
+    let coach = "오늘은 기본 문항부터 차분히 풀어보자.";
+    if (allAttempted === 0) {
+      coach = "첫걸음이 중요해. 오늘은 한 과목만 제대로 풀자.";
+    } else if (notebookOpen >= 8) {
+      coach = "오늘은 오답노트부터 다시 풀자. 수석은 틀린 걸 끝까지 잡는 데서 나와.";
+    } else if (weakest && weakest.pct < 0.75) {
+      const wname = subjectName(weakest.id);
+      const sessionHint =
+        weakest.id === "clinical-chemistry" ||
+        weakest.id === "hematology" ||
+        weakest.id === "immuno-transfusion" ||
+        weakest.id === "microbiology"
+          ? " 2교시 위주로."
+          : weakest.id === "medical-law" ||
+              weakest.id === "public-health" ||
+              weakest.id === "anatomy" ||
+              weakest.id === "physiology"
+            ? " 1교시 위주로."
+            : "";
+      coach =
+        wname +
+        " 정답률이 낮아." +
+        sessionHint +
+        " 오늘은 여기부터 붙잡자.";
+    } else if (subjectsAttempted < STATS_SUBJECT_IDS.length) {
+      coach = "빈 과목이 남아 있어. 전 과목 커버 없이 수석은 어렵다고 생각해.";
+    } else if (accuracy < 0.9) {
+      coach = "정답률을 90% 위로 끌어올리자. 대충 맞힌 문항도 다시 봐.";
+    } else if (notebookOpen > 0) {
+      coach = "페이스는 좋아. 오답노트 " + notebookOpen + "문항만 오늘 비우자.";
+    } else {
+      coach = "훌륭해. 오늘은 약한 유형만 골라 한 세트 더 가자.";
+    }
+
+    return {
+      score: score,
+      accuracy: accuracy,
+      tip: tip,
+      coach: coach,
+      useRecent: useRecent,
+      weakest: weakest,
+      notebookOpen: notebookOpen,
     };
   }
 
@@ -717,6 +871,7 @@
     const wrong = stats.totals.wrong || 0;
     const accPct = attempted > 0 ? Math.round((correct / attempted) * 100) : null;
     const pass = computePassReadiness(stats);
+    const seok = computeSeokReadiness(stats);
 
     if (el.statDays) el.statDays.textContent = String(daysPracticed);
     if (el.statAttempted) el.statAttempted.textContent = String(attempted);
@@ -726,19 +881,31 @@
       el.statAccuracy.textContent = accPct === null ? "—" : accPct + "%";
     }
     if (el.statPass) el.statPass.textContent = pass.score + "%";
+    if (el.statSeok) el.statSeok.textContent = seok.score + "%";
     if (el.statPassNote) {
+      const recentBit = seok.useRecent
+        ? " (수석: 최근 7일 정답률 반영)"
+        : pass.useRecent
+          ? " (합격: 최근 7일 정답률 반영)"
+          : "";
       el.statPassNote.textContent =
-        "연습용 추정이며 공식 합격 예측이 아닙니다." +
-        (pass.useRecent ? " (최근 7일 정답률 반영)" : "");
+        "연습용 추정이며 공식 합격·순위 예측이 아닙니다." + recentBit;
     }
-    if (el.statTip) el.statTip.textContent = pass.tip;
+    if (el.statTip) el.statTip.textContent = seok.tip;
+    if (el.statGoal) el.statGoal.textContent = "목표: 전국수석";
+    if (el.statCoach) {
+      el.statCoach.hidden = false;
+      el.statCoach.innerHTML =
+        '<span class="study-coach-label">선생님</span>' +
+        escapeHtml(seok.coach);
+    }
     updateNotebookButton();
   }
 
   function onResetStats() {
     if (
       !window.confirm(
-        "학습 기록(일수·푼 문항·합격 가능도)을 모두 삭제할까요? 이 작업은 되돌릴 수 없습니다."
+        "학습 기록(일수·푼 문항·합격·수석 가능도)을 모두 삭제할까요? 이 작업은 되돌릴 수 없습니다."
       )
     ) {
       return;
@@ -1599,6 +1766,19 @@
       el.btnRetryWrong.classList.add("btn-primary");
       el.btnRetryWrong.classList.remove("btn-secondary");
     }
+
+    if (el.endSeokNudge) {
+      const seokNow = computeSeokReadiness(loadStudyStats());
+      const nudge = seokNow && seokNow.tip ? seokNow.tip : "";
+      if (nudge) {
+        el.endSeokNudge.hidden = false;
+        el.endSeokNudge.textContent = "수석까지 · " + nudge;
+      } else {
+        el.endSeokNudge.hidden = true;
+        el.endSeokNudge.textContent = "";
+      }
+    }
+
     showScreen("end");
   }
 
