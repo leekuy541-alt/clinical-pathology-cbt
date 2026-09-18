@@ -9,6 +9,7 @@
   const STORAGE_KEY = "cbt-exam-counts-v2";
   const STATS_KEY = "cbt-study-stats-v1";
   const NOTEBOOK_KEY = "cbt-wrong-notebook-v1";
+  const EXAM_DATE_KEY = "cbt-exam-date-v1";
   const SUBJECT_COUNT_PRESETS = [10, 20, 35, 50];
   /** 국시 필기 전공·공통 9과목 (합격 가능도 커버리지) */
   const STATS_SUBJECT_IDS = [
@@ -174,6 +175,12 @@
     statSeok: $("#stat-seok"),
     statPassNote: $("#stat-pass-note"),
     statTip: $("#stat-tip"),
+    statToday: $("#stat-today"),
+    statTodayAcc: $("#stat-today-acc"),
+    statStreak: $("#stat-streak"),
+    statDday: $("#stat-dday"),
+    inputExamDate: $("#input-exam-date"),
+    subjectProgress: $("#subject-progress"),
     statGoal: $("#stat-goal"),
     statCoach: $("#stat-coach"),
     endSeokNudge: $("#end-seok-nudge"),
@@ -859,6 +866,109 @@
     });
   }
 
+  /** 연속 학습일 — 오늘(또는 오늘 아직 안 풀었으면 어제)까지 이어진 연속 일수 */
+  function computeStreak(stats) {
+    const practiced = function (d) {
+      const rec = stats.days[d];
+      return !!(rec && (rec.attempted || 0) > 0);
+    };
+    const keyOf = function (offset) {
+      const now = new Date();
+      const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() - offset);
+      return (
+        d.getFullYear() +
+        "-" +
+        String(d.getMonth() + 1).padStart(2, "0") +
+        "-" +
+        String(d.getDate()).padStart(2, "0")
+      );
+    };
+    let offset = practiced(keyOf(0)) ? 0 : 1;
+    let streak = 0;
+    while (practiced(keyOf(offset))) {
+      streak += 1;
+      offset += 1;
+    }
+    return streak;
+  }
+
+  function loadExamDate() {
+    try {
+      const v = localStorage.getItem(EXAM_DATE_KEY);
+      return v && /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function saveExamDate(v) {
+    try {
+      if (v) localStorage.setItem(EXAM_DATE_KEY, v);
+      else localStorage.removeItem(EXAM_DATE_KEY);
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  function renderDday() {
+    if (!el.statDday) return;
+    const examDate = loadExamDate();
+    if (el.inputExamDate && examDate) el.inputExamDate.value = examDate;
+    if (!examDate) {
+      el.statDday.textContent = "미설정";
+      el.statDday.classList.remove("is-soon", "is-past");
+      return;
+    }
+    const parts = examDate.split("-").map(Number);
+    const target = new Date(parts[0], parts[1] - 1, parts[2]);
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const diff = Math.round((target - today) / 86400000);
+    el.statDday.classList.remove("is-soon", "is-past");
+    if (diff > 0) {
+      el.statDday.textContent = "D-" + diff;
+      if (diff <= 30) el.statDday.classList.add("is-soon");
+    } else if (diff === 0) {
+      el.statDday.textContent = "D-DAY";
+      el.statDday.classList.add("is-soon");
+    } else {
+      el.statDday.textContent = "종료 (D+" + -diff + ")";
+      el.statDday.classList.add("is-past");
+    }
+  }
+
+  /** 홈 대시보드 과목별 누적 정답률 바 — 행을 누르면 그 과목 연습 시작 */
+  function renderSubjectProgress(stats) {
+    if (!el.subjectProgress) return;
+    el.subjectProgress.innerHTML = "";
+    STATS_SUBJECT_IDS.forEach(function (id) {
+      const st = stats.bySubject[id];
+      const attempted = st ? st.attempted || 0 : 0;
+      const correct = st ? st.correct || 0 : 0;
+      const pct = attempted > 0 ? Math.round((correct / attempted) * 100) : null;
+      const row = document.createElement("button");
+      row.type = "button";
+      row.className = "subject-progress-row" + (pct === null ? " is-empty" : "");
+      const barClass =
+        pct === null ? "" : pct >= 70 ? "is-strong" : pct >= 40 ? "is-mid" : "is-weak";
+      row.innerHTML =
+        '<span class="sp-head"><span class="sp-name">' +
+        escapeHtml(subjectName(id)) +
+        '</span><span class="sp-score">' +
+        (pct === null ? "미응시" : correct + "/" + attempted + " · " + pct + "%") +
+        "</span></span>" +
+        '<span class="chart-bar-track"><span class="chart-bar-fill ' +
+        barClass +
+        '" style="width:' +
+        (pct === null ? 0 : pct) +
+        '%"></span></span>';
+      row.addEventListener("click", function () {
+        openCountPicker(id);
+      });
+      el.subjectProgress.appendChild(row);
+    });
+  }
+
   function renderStudyDashboard() {
     if (!el.studyDashboard) return;
     const stats = loadStudyStats();
@@ -892,6 +1002,17 @@
         "연습용 추정이며 공식 합격·순위 예측이 아닙니다." + recentBit;
     }
     if (el.statTip) el.statTip.textContent = seok.tip;
+    const todayRec = stats.days[todayKey()] || { attempted: 0, correct: 0 };
+    if (el.statToday) el.statToday.textContent = String(todayRec.attempted || 0);
+    if (el.statTodayAcc) {
+      el.statTodayAcc.textContent =
+        (todayRec.attempted || 0) > 0
+          ? Math.round(((todayRec.correct || 0) / todayRec.attempted) * 100) + "%"
+          : "—";
+    }
+    if (el.statStreak) el.statStreak.textContent = computeStreak(stats) + "일";
+    renderDday();
+    renderSubjectProgress(stats);
     if (el.statGoal) el.statGoal.textContent = "목표: 전국수석";
     if (el.statCoach) {
       el.statCoach.hidden = false;
@@ -986,6 +1107,7 @@
     allBtn.addEventListener("click", () => startSubjectPractice(id, bank.length));
     el.countOptions.appendChild(allBtn);
     showScreen("count");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function startSubjectPractice(id, n) {
@@ -1011,6 +1133,7 @@
     if (el.customCounts) el.customCounts.classList.remove("hidden");
     renderCustomCountInputs(defaultCounts());
     showScreen("exam-config");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function renderCustomCountInputs(state) {
@@ -1328,7 +1451,8 @@
     const isCorrect = selected === correct;
     const buttons = el.choices.querySelectorAll(".choice-btn");
     buttons.forEach((btn) => {
-      btn.disabled = false;
+      // 채점 후에는 잠금 — 정답 공개 후 재선택으로 통계가 부풀지 않도록
+      btn.disabled = true;
       btn.classList.remove("correct", "wrong-selected", "dimmed");
       const i = Number(btn.dataset.index);
       if (i === correct) {
@@ -1442,6 +1566,7 @@
   }
 
   function onAnswer(selected) {
+    if (answered) return; // 이미 채점된 문항은 재선택 불가
     const q = questionList[index];
     const correct = q.answerIndex;
     const isCorrect = selected === correct;
@@ -1634,11 +1759,11 @@
     }
 
     html +=
-      '<p class="insight-text"><strong>잘 맞춘 과목 TOP</strong>' +
+      '<p class="insight-text"><strong>잘 맞춘 과목 TOP</strong> ' +
       fmt(strong) +
       "</p>";
     html +=
-      '<p class="insight-text"><strong>취약 과목 TOP</strong>' +
+      '<p class="insight-text"><strong>취약 과목 TOP</strong> ' +
       fmt(weak) +
       "</p></div>";
     return html;
@@ -1780,6 +1905,7 @@
     }
 
     showScreen("end");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function resumeSession() {
@@ -1844,6 +1970,12 @@
   });
   if (el.btnStatsReset) {
     el.btnStatsReset.addEventListener("click", onResetStats);
+  }
+  if (el.inputExamDate) {
+    el.inputExamDate.addEventListener("change", function () {
+      saveExamDate(el.inputExamDate.value || null);
+      renderDday();
+    });
   }
   if (el.btnNotebook) {
     el.btnNotebook.addEventListener("click", openNotebook);

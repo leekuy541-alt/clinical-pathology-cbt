@@ -1208,6 +1208,151 @@ body {
   color: #fbbf24;
 }
 
+.study-today-row {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* —— D-day —— */
+.study-dday-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-elevated);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.study-dday-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.study-dday-input {
+  flex: 1;
+  min-width: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  color-scheme: dark;
+}
+
+.study-dday-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.study-dday-value.is-soon {
+  color: #fbbf24;
+}
+
+.study-dday-value.is-past {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* —— 과목별 누적 정답률 (홈) —— */
+.study-subjects-details {
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+
+.study-subjects-summary {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.study-subjects-summary::-webkit-details-marker {
+  display: none;
+}
+
+.study-subjects-summary::after {
+  content: " ▾";
+  opacity: 0.6;
+}
+
+.study-subjects-details[open] > .study-subjects-summary::after {
+  content: " ▴";
+}
+
+.subject-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.subject-progress-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text);
+  text-align: left;
+  transition: border-color 0.15s;
+}
+
+.subject-progress-row:hover,
+.subject-progress-row:active {
+  border-color: var(--accent);
+}
+
+.subject-progress-row.is-empty .sp-score {
+  color: var(--text-muted);
+}
+
+.sp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.sp-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.sp-score {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.subject-progress-row .chart-bar-track,
+.subject-progress-row .chart-bar-fill {
+  display: block;
+}
+
+.subject-progress-row .chart-bar-track {
+  height: 8px;
+}
+
+.study-subjects-note {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
 .study-pass-note {
   font-size: 0.68rem;
   color: var(--text-muted);

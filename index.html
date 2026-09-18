@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>임상병리사 CBT</title>
-    <link rel="stylesheet" href="styles.css?v=20260918i" />
+    <link rel="stylesheet" href="styles.css?v=20260919a" />
   </head>
   <body>
     <div id="app">
@@ -49,6 +49,20 @@
               <span class="study-stat-label">오답</span>
             </div>
           </div>
+          <div class="study-dash-row study-today-row">
+            <div class="study-acc">
+              <span class="study-acc-label">오늘 푼 문항</span>
+              <span class="study-acc-value" id="stat-today">0</span>
+            </div>
+            <div class="study-acc">
+              <span class="study-acc-label">오늘 정답률</span>
+              <span class="study-acc-value" id="stat-today-acc">—</span>
+            </div>
+            <div class="study-acc">
+              <span class="study-acc-label">연속 학습</span>
+              <span class="study-acc-value" id="stat-streak">0일</span>
+            </div>
+          </div>
           <div class="study-dash-row study-metrics-row">
             <div class="study-acc">
               <span class="study-acc-label">정답률</span>
@@ -64,6 +78,16 @@
             </div>
           </div>
           <p class="study-pass-note" id="stat-pass-note">연습용 추정이며 공식 합격·순위 예측이 아닙니다.</p>
+          <div class="study-dday-row">
+            <label for="input-exam-date" class="study-dday-label">시험일</label>
+            <input type="date" id="input-exam-date" class="study-dday-input" />
+            <span id="stat-dday" class="study-dday-value">미설정</span>
+          </div>
+          <details class="study-subjects-details">
+            <summary class="study-subjects-summary">과목별 누적 정답률</summary>
+            <div id="subject-progress" class="subject-progress"></div>
+            <p class="study-subjects-note">과목을 누르면 바로 연습을 시작합니다.</p>
+          </details>
           <p class="study-tip" id="stat-tip">문항을 더 풀어보세요</p>
           <p class="study-goal" id="stat-goal">목표: 전국수석</p>
           <div class="study-coach" id="stat-coach" hidden></div>
@@ -213,7 +237,7 @@
         </div>
       </section>
     </div>
-    <script src="questions.js?v=20260918i"></script>
-    <script src="app.js?v=20260918i"></script>
+    <script src="questions.js?v=20260919a"></script>
+    <script src="app.js?v=20260919a"></script>
   </body>
 </html>
