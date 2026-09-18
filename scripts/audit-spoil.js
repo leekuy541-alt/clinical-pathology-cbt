@@ -9,7 +9,12 @@ const path = require('path');
 const ABS = /항상|절대|모든|반드시|결코|전부|무조건|오직|전혀/;
 const TEMPLATE_EC = /이 개념을 선택지에 옮기면|따라서 정답은 「|이웃 선택지와 정의·적용 범위|이\(가\) 정답이다|은\(는\)|과\(와\)/;
 const TEMPLATE_EW = /인접해 보이지만 이 문항의 정의·상황에 맞지 않으므로 배제|같은 분류의와 인접한 다른 개념|은\(는\)|과\(와\)/;
-const JUNK_CHOICE = /가스여서|금속이어서|무관해서|색만|향만|가격만|관련 항목|우선 본다|만으로 충분|점심|벽색|게임 관련|사회관계망/;
+const JUNK_CHOICE = /가스여서|금속이어서|무관해서|색만 봐서|향만 봐서|점심 메뉴|벽색만|게임 관련 항목|사회관계망에 공개|미관만으로 충분|습관만으로 충분|키만으로 충분|시력만으로 충분|청력만으로 충분|옷색만으로 충분|환자를 바꾼다고 우선|라벨을 지운다고 우선/;
+const FILLER_JUNK = /강하게 진탕|실온에 하룻밤|완전 해동|가스여서|금속이어서|지방만 녹여|증발만|인슐린 잔류만|뚜껑을 연 채|반복 동결|광에 장시간|라벨 없이 보관|다른 첨가관과 혼합|가온 수조/;
+function correctLooksHandling(c) {
+  return /혼화|해동 후|차광|냉장 보관|가볍게 섞|뒤집|즉시 원심|방치하지/.test(c || '');
+}
+
 const ROOT = path.join(__dirname, '..');
 
 function loadQuestions() {
@@ -137,6 +142,8 @@ function main() {
   let lenRatioHits = 0;
   let tplHits = 0;
   let junkHits = 0;
+  let offCatFillerHits = 0;
+  const offCatEx = [];
   const absEx = [];
   const lenEx = [];
   const tplEx = [];
@@ -169,6 +176,15 @@ function main() {
         junkHits++;
         if (junkEx.length < 5) junkEx.push({ subj, id: q.id, choices: q.choices, ai });
       }
+      const handling = correctLooksHandling(q.choices[ai]);
+      const fillerOff = q.choices.some((c, i) => i !== ai && FILLER_JUNK.test(c || '') && !handling);
+      const lawLabMix =
+        (subj === 'medical-law' || subj === 'public-health') &&
+        q.choices.some((c, i) => i !== ai && FILLER_JUNK.test(c || ''));
+      if (fillerOff || lawLabMix) {
+        offCatFillerHits++;
+        if (offCatEx.length < 8) offCatEx.push({ subj, id: q.id, choices: q.choices, ai });
+      }
     }
   }
 
@@ -186,8 +202,10 @@ function main() {
   console.log('template explanation hits:', tplHits);
   tplEx.forEach((e) => console.log(' ', e.subj, e.id));
   console.log('junk/off-category choice hits:', junkHits);
+  console.log('off-category lab-filler hits:', offCatFillerHits);
+  offCatEx.forEach((e) => console.log(' ', e.subj, e.id));
   junkEx.forEach((e) => console.log(' ', e.subj, e.id));
-  console.log('TOTAL severe (abs+len+tpl+junk):', absHits + lenHits + tplHits + junkHits);
+  console.log('TOTAL severe (abs+len+tpl+junk+offcat):', absHits + lenHits + tplHits + junkHits + offCatFillerHits);
 
   const out = {
     svgSpoil: svgDetails.length,
@@ -196,11 +214,13 @@ function main() {
     lenRatioHits,
     tplHits,
     junkHits,
+    offCatFillerHits,
     svgDetails,
     absEx,
     lenEx,
     tplEx,
     junkEx,
+    offCatEx,
   };
   fs.writeFileSync(path.join(ROOT, 'scripts/audit-spoil-report.json'), JSON.stringify(out, null, 2));
   return out;
