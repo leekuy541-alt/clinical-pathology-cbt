@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>임상병리사 CBT</title>
-    <link rel="stylesheet" href="styles.css?v=20260919c" />
+    <link rel="stylesheet" href="styles.css?v=20260919d" />
   </head>
   <body>
     <div id="app">
@@ -83,17 +83,28 @@
             <input type="date" id="input-exam-date" class="study-dday-input" />
             <span id="stat-dday" class="study-dday-value">미설정</span>
           </div>
-          <details class="study-subjects-details">
-            <summary class="study-subjects-summary">과목별 누적 정답률</summary>
+          <section class="study-subjects-panel" aria-label="과목별 누적 정답률">
+            <h3 class="study-subjects-heading">과목별 누적 정답률</h3>
             <div id="subject-progress" class="subject-progress"></div>
             <p class="study-subjects-note">과목을 누르면 바로 연습을 시작합니다.</p>
-          </details>
+          </section>
           <p class="study-tip" id="stat-tip">문항을 더 풀어보세요</p>
           <p class="study-goal" id="stat-goal">목표: 전국수석</p>
           <div class="study-coach" id="stat-coach" hidden></div>
           <div class="study-notebook-row">
             <button type="button" id="btn-notebook" class="btn-notebook">오답노트 (0)</button>
           </div>
+        </section>
+
+        <section id="today-lesson" class="today-lesson" aria-label="오늘의 수업">
+          <div class="today-lesson-head">
+            <h2>오늘의 수업</h2>
+            <span class="today-lesson-badge">선생님</span>
+          </div>
+          <p id="lesson-coach" class="today-lesson-coach">약점과 오답을 보고 수업을 배정합니다.</p>
+          <ul id="lesson-plan" class="today-lesson-plan"></ul>
+          <button type="button" id="btn-today-lesson" class="btn btn-primary btn-today-lesson">수업 시작</button>
+          <p class="today-lesson-note">약점·오답 기준 자동 배정 · 약 15~25문항</p>
         </section>
 
         <h2 class="section-label">국시 유형 응시</h2>
@@ -237,7 +248,7 @@
         </div>
       </section>
     </div>
-    <script src="questions.js?v=20260919c"></script>
-    <script src="app.js?v=20260919c"></script>
+    <script src="questions.js?v=20260919d"></script>
+    <script src="app.js?v=20260919d"></script>
   </body>
 </html>
