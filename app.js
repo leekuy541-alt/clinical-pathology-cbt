@@ -8,6 +8,7 @@
   const NUM_LABELS = ["①", "②", "③", "④", "⑤"];
   const STORAGE_KEY = "cbt-exam-counts-v2";
   const STATS_KEY = "cbt-study-stats-v1";
+  const NOTEBOOK_KEY = "cbt-wrong-notebook-v1";
   const SUBJECT_COUNT_PRESETS = [10, 20, 35, 50];
   /** 국시 필기 전공·공통 9과목 (합격 가능도 커버리지) */
   const STATS_SUBJECT_IDS = [
@@ -94,7 +95,7 @@
   /** 실기(사진·도표형) 전용 은행 ID */
   const PRACTICAL_BANK_ID = "practical";
 
-  /** @type {'home'|'count'|'exam-config'|'quiz'|'end'} */
+  /** @type {'home'|'count'|'exam-config'|'quiz'|'end'|'notebook'} */
   let screen = "home";
   let subjectId = null;
   let questionList = [];
@@ -105,6 +106,8 @@
   let wrongRefs = [];
   /** 틀린 문제 다시보기 모드 */
   let reviewMode = false;
+  /** 오답노트에서 시작한 퀴즈 */
+  let notebookMode = false;
   /** 혼합/모의 시험 여부 */
   let examMode = false;
   /** @type {{subjectId:string,id:string,selected:number|null,correct:boolean,answered:boolean}[]} */
@@ -170,8 +173,13 @@
     statPass: $("#stat-pass"),
     statPassNote: $("#stat-pass-note"),
     statTip: $("#stat-tip"),
-    statSpark: $("#stat-spark"),
     btnStatsReset: $("#btn-stats-reset"),
+    btnNotebook: $("#btn-notebook"),
+    notebook: $("#screen-notebook"),
+    notebookList: $("#notebook-list"),
+    notebookEmpty: $("#notebook-empty"),
+    btnNotebookBack: $("#btn-notebook-back"),
+    btnNotebookQuizAll: $("#btn-notebook-quiz-all"),
   };
 
   function subjectName(id) {
@@ -186,6 +194,7 @@
     el.examConfig.classList.toggle("active", name === "exam-config");
     el.quiz.classList.toggle("active", name === "quiz");
     el.end.classList.toggle("active", name === "end");
+    if (el.notebook) el.notebook.classList.toggle("active", name === "notebook");
   }
 
   function escapeHtml(s) {
@@ -504,37 +513,196 @@
     };
   }
 
-  function renderSpark(stats) {
-    if (!el.statSpark) return;
-    const keys = lastNDayKeys(7);
-    let max = 1;
-    const vals = keys.map((k) => {
-      const d = stats.days[k];
-      const n = d ? d.attempted || 0 : 0;
-      if (n > max) max = n;
-      return n;
+  function emptyNotebook() {
+    return { items: [], updatedAt: null };
+  }
+
+  function loadNotebook() {
+    try {
+      const raw = localStorage.getItem(NOTEBOOK_KEY);
+      if (!raw) return emptyNotebook();
+      const data = JSON.parse(raw);
+      if (!data || typeof data !== "object") return emptyNotebook();
+      const items = Array.isArray(data.items) ? data.items : [];
+      return {
+        items: items.filter(function (it) {
+          return it && it.id != null && it.subjectId != null;
+        }),
+        updatedAt: data.updatedAt || null,
+      };
+    } catch (_) {
+      return emptyNotebook();
+    }
+  }
+
+  function saveNotebook(nb) {
+    try {
+      nb.updatedAt = new Date().toISOString();
+      localStorage.setItem(NOTEBOOK_KEY, JSON.stringify(nb));
+    } catch (_) {
+      /* ignore quota / private mode */
+    }
+  }
+
+  function notebookItemKey(subjectId, id) {
+    return String(subjectId) + "::" + String(id);
+  }
+
+  /**
+   * Upsert a wrong answer into the notebook (dedupe by subjectId+id).
+   * Keeps item until the user deletes it — correct later answers do not remove it.
+   */
+  function upsertWrongNotebookItem(q, sid, wrongChoice) {
+    if (!q || q.id == null) return;
+    const subjectId = sid || q.subjectId || "unknown";
+    const nb = loadNotebook();
+    const key = notebookItemKey(subjectId, q.id);
+    const now = new Date().toISOString();
+    let found = -1;
+    for (let i = 0; i < nb.items.length; i++) {
+      if (notebookItemKey(nb.items[i].subjectId, nb.items[i].id) === key) {
+        found = i;
+        break;
+      }
+    }
+    const base = {
+      id: q.id,
+      subjectId: subjectId,
+      stem: q.stem || "",
+      choices: Array.isArray(q.choices) ? q.choices.slice() : [],
+      answerIndex: typeof q.answerIndex === "number" ? q.answerIndex : 0,
+      explainCorrect: q.explainCorrect || "",
+      explainWrong: Array.isArray(q.explainWrong) ? q.explainWrong.slice() : [],
+      wrongChoice: wrongChoice,
+      savedAt: now,
+    };
+    if (q.image) base.image = q.image;
+    if (found >= 0) {
+      const prev = nb.items[found];
+      base.savedAt = now;
+      // Prefer richer snapshot from current question; keep prior image if missing
+      if (!base.image && prev.image) base.image = prev.image;
+      nb.items[found] = base;
+    } else {
+      nb.items.push(base);
+    }
+    saveNotebook(nb);
+    updateNotebookButton();
+  }
+
+  function removeNotebookItem(subjectId, id) {
+    const nb = loadNotebook();
+    const key = notebookItemKey(subjectId, id);
+    nb.items = nb.items.filter(function (it) {
+      return notebookItemKey(it.subjectId, it.id) !== key;
     });
-    el.statSpark.innerHTML = keys
-      .map((k, i) => {
-        const n = vals[i];
-        const h = n === 0 ? 4 : Math.max(6, Math.round((n / max) * 28));
-        const label = k.slice(5); // MM-DD
-        return (
-          '<div class="spark-col" title="' +
-          escapeHtml(label) +
-          ": " +
-          n +
-          '문항">' +
-          '<div class="spark-bar" style="height:' +
-          h +
-          'px"></div>' +
-          '<span class="spark-label">' +
-          escapeHtml(label.slice(3)) +
-          "</span>" +
-          "</div>"
-        );
-      })
-      .join("");
+    saveNotebook(nb);
+    updateNotebookButton();
+  }
+
+  function notebookItemToQuestion(it) {
+    const q = {
+      id: it.id,
+      stem: it.stem,
+      choices: Array.isArray(it.choices) ? it.choices.slice() : [],
+      answerIndex: it.answerIndex,
+      explainCorrect: it.explainCorrect || "",
+      explainWrong: Array.isArray(it.explainWrong) ? it.explainWrong.slice() : [],
+      subjectId: it.subjectId,
+      paperTag: "오답노트",
+    };
+    if (it.image) q.image = it.image;
+    return q;
+  }
+
+  function formatNotebookDate(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return y + "-" + m + "-" + day;
+  }
+
+  function updateNotebookButton() {
+    if (!el.btnNotebook) return;
+    const n = loadNotebook().items.length;
+    el.btnNotebook.textContent = "오답노트 (" + n + ")";
+  }
+
+  function renderNotebookScreen() {
+    const nb = loadNotebook();
+    const items = nb.items.slice().sort(function (a, b) {
+      return String(b.savedAt || "").localeCompare(String(a.savedAt || ""));
+    });
+    updateNotebookButton();
+    if (el.btnNotebookQuizAll) {
+      el.btnNotebookQuizAll.disabled = items.length === 0;
+    }
+    if (!el.notebookList) return;
+    el.notebookList.innerHTML = "";
+    if (el.notebookEmpty) {
+      el.notebookEmpty.hidden = items.length > 0;
+    }
+    items.forEach(function (it) {
+      const li = document.createElement("li");
+      li.className = "notebook-item";
+      const head = document.createElement("div");
+      head.className = "notebook-item-head";
+      const tag = document.createElement("span");
+      tag.className = "notebook-tag";
+      tag.textContent = subjectName(it.subjectId);
+      const date = document.createElement("span");
+      date.className = "notebook-date";
+      date.textContent = formatNotebookDate(it.savedAt);
+      head.appendChild(tag);
+      head.appendChild(date);
+      const stem = document.createElement("p");
+      stem.className = "notebook-stem";
+      stem.textContent = it.stem || "";
+      const actions = document.createElement("div");
+      actions.className = "notebook-item-actions";
+      const btnRetry = document.createElement("button");
+      btnRetry.type = "button";
+      btnRetry.className = "btn btn-primary";
+      btnRetry.textContent = "다시 풀기";
+      btnRetry.addEventListener("click", function () {
+        startNotebookQuiz([it]);
+      });
+      const btnDel = document.createElement("button");
+      btnDel.type = "button";
+      btnDel.className = "btn btn-secondary";
+      btnDel.textContent = "삭제";
+      btnDel.addEventListener("click", function () {
+        if (!window.confirm("이 문항을 오답노트에서 삭제할까요?")) return;
+        removeNotebookItem(it.subjectId, it.id);
+        renderNotebookScreen();
+      });
+      actions.appendChild(btnRetry);
+      actions.appendChild(btnDel);
+      li.appendChild(head);
+      li.appendChild(stem);
+      li.appendChild(actions);
+      el.notebookList.appendChild(li);
+    });
+  }
+
+  function openNotebook() {
+    renderNotebookScreen();
+    showScreen("notebook");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function startNotebookQuiz(items) {
+    if (!items || !items.length) return;
+    const list = shuffle(items.map(notebookItemToQuestion));
+    beginSession(list, {
+      examMode: false,
+      reviewMode: false,
+      notebookMode: true,
+      subjectId: null,
+    });
   }
 
   function renderStudyDashboard() {
@@ -564,7 +732,7 @@
         (pass.useRecent ? " (최근 7일 정답률 반영)" : "");
     }
     if (el.statTip) el.statTip.textContent = pass.tip;
-    renderSpark(stats);
+    updateNotebookButton();
   }
 
   function onResetStats() {
@@ -873,6 +1041,7 @@
     );
     examMode = !!opts.examMode;
     reviewMode = !!opts.reviewMode;
+    notebookMode = !!opts.notebookMode;
     subjectId = opts.subjectId || null;
     if (!reviewMode) {
       wrongRefs = [];
@@ -1052,7 +1221,7 @@
     answered = !!(prev && prev.answered);
 
     el.progressLabel.textContent =
-      (reviewMode ? "복습 " : "") + "Q " + n + "/" + total;
+      (reviewMode || notebookMode ? "복습 " : "") + "Q " + n + "/" + total;
     recomputeScore();
     el.progressFill.style.width = (n / total) * 100 + "%";
 
@@ -1121,6 +1290,35 @@
     answered = true;
 
     recordGradedAnswer(index, sid, isCorrect);
+    if (!isCorrect) {
+      // Prefer bank (unshuffled) snapshot so review re-shuffles cleanly
+      let snap = q;
+      let fromBank = null;
+      const banks = [];
+      if (typeof QUESTIONS !== "undefined") {
+        if (QUESTIONS[sid]) banks.push(QUESTIONS[sid]);
+        if (QUESTIONS[PRACTICAL_BANK_ID]) banks.push(QUESTIONS[PRACTICAL_BANK_ID]);
+      }
+      for (let bi = 0; bi < banks.length; bi++) {
+        fromBank = banks[bi].find(function (x) {
+          return x && x.id === q.id;
+        });
+        if (fromBank) break;
+      }
+      if (fromBank) {
+        snap = Object.assign({}, fromBank, { subjectId: sid });
+        if (q.isPractical) snap.isPractical = true;
+      } else {
+        // Strip session shuffle flag so next review can reshuffle
+        snap = Object.assign({}, q, { subjectId: sid });
+        delete snap._shuffled;
+      }
+      const wrongText =
+        typeof selected === "number" && q.choices && q.choices[selected] != null
+          ? q.choices[selected]
+          : selected;
+      upsertWrongNotebookItem(snap, sid, wrongText);
+    }
     recomputeScore();
     updateWrongRefsFromSession();
     applyGradedState(q, selected, { scroll: true });
@@ -1370,7 +1568,9 @@
       el.endPassHint.hidden = true;
     }
 
-    if (reviewMode) {
+    if (notebookMode) {
+      el.endSummary.textContent = "오답노트 복습을 완료했습니다.";
+    } else if (reviewMode) {
       el.endSummary.textContent = "틀린 문제 복습을 완료했습니다.";
     } else if (fromSubmit && analysis.attempted === 0) {
       el.endSummary.textContent = "응시한 문항이 없습니다.";
@@ -1391,7 +1591,7 @@
       el.btnResume.hidden = !canResume;
     }
     el.btnRetryWrong.style.display =
-      !reviewMode && wrongRefs.length > 0 ? "block" : "none";
+      !reviewMode && !notebookMode && wrongRefs.length > 0 ? "block" : "none";
     if (canResume && el.btnRetryWrong.style.display === "block") {
       el.btnRetryWrong.classList.remove("btn-primary");
       el.btnRetryWrong.classList.add("btn-secondary");
@@ -1419,6 +1619,7 @@
 
   function goHome() {
     reviewMode = false;
+    notebookMode = false;
     wrongRefs = [];
     subjectId = null;
     examMode = false;
@@ -1463,6 +1664,19 @@
   });
   if (el.btnStatsReset) {
     el.btnStatsReset.addEventListener("click", onResetStats);
+  }
+  if (el.btnNotebook) {
+    el.btnNotebook.addEventListener("click", openNotebook);
+  }
+  if (el.btnNotebookBack) {
+    el.btnNotebookBack.addEventListener("click", goHome);
+  }
+  if (el.btnNotebookQuizAll) {
+    el.btnNotebookQuizAll.addEventListener("click", function () {
+      const items = loadNotebook().items;
+      if (!items.length) return;
+      startNotebookQuiz(items);
+    });
   }
 
   renderHome();
