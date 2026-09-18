@@ -665,37 +665,17 @@
     let correctExplainEl = null;
 
     const correctLi = items[correct];
-    if (correctLi && q.explainCorrect) {
+    const whyCorrect = q.explainCorrect || "";
+    if (correctLi && whyCorrect) {
       correctExplainEl = insertChoiceExplain(
         correctLi,
         "correct",
         "정답 해설",
-        q.explainCorrect
+        whyCorrect
       );
     }
 
-    var whyCorrect = q.explainCorrect || "";
-    var scrollTarget = null;
-
-    if (!isCorrect && selected != null && selected !== correct) {
-      const why = (q.explainWrong && q.explainWrong[selected]) || "";
-      const wrongLi = items[selected];
-      if (wrongLi) {
-        if (why) {
-          insertChoiceExplain(wrongLi, "wrong", "오답 해설", why);
-        }
-        // Full correct-reason under the choice the user just tapped.
-        if (whyCorrect) {
-          scrollTarget = insertChoiceExplain(
-            wrongLi,
-            "correct",
-            "왜 정답인가",
-            whyCorrect
-          );
-        }
-      }
-    }
-
+    // Compact result only — do not repeat the explanation here.
     el.feedback.innerHTML =
       '<div class="feedback-result ' +
       (isCorrect ? "is-correct" : "is-wrong") +
@@ -703,23 +683,13 @@
       (isCorrect ? "정답" : "오답") +
       '</div><p class="feedback-answer">정답: ' +
       correctLabel +
-      " " +
-      escapeHtml(q.choices[correct] || "") +
-      "</p>" +
-      (whyCorrect
-        ? '<div class="feedback-section feedback-why"><h3>왜 정답인가</h3><p class="feedback-why-body">' +
-          escapeHtml(whyCorrect) +
-          "</p></div>"
-        : "");
+      "</p>";
     el.feedback.classList.add("visible");
 
-    if (opts.scroll) {
-      scrollTarget = scrollTarget || correctExplainEl || el.feedback;
-      if (scrollTarget) {
-        setTimeout(function () {
-          scrollTarget.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, 30);
-      }
+    if (opts.scroll && correctExplainEl) {
+      setTimeout(function () {
+        correctExplainEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 30);
     }
   }
 
