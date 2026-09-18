@@ -424,9 +424,12 @@ body {
 }
 
 .feedback-why {
-  margin-top: 4px;
-  padding-top: 10px;
-  border-top: 1px solid var(--border);
+  margin-top: 8px;
+  padding: 12px;
+  border-top: none;
+  border-radius: 10px;
+  background: var(--correct-bg);
+  border: 1px solid var(--correct);
 }
 
 .feedback-why-body {
