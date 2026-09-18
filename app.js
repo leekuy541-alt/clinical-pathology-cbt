@@ -10,6 +10,7 @@
   const STATS_KEY = "cbt-study-stats-v1";
   const NOTEBOOK_KEY = "cbt-wrong-notebook-v1";
   const EXAM_DATE_KEY = "cbt-exam-date-v1";
+  const TODAY_LESSON_KEY = "cbt-today-lesson-v1";
   const SUBJECT_COUNT_PRESETS = [10, 20, 35, 50];
   /** 국시 필기 전공·공통 9과목 (합격 가능도 커버리지) */
   const STATS_SUBJECT_IDS = [
@@ -191,6 +192,10 @@
     notebookEmpty: $("#notebook-empty"),
     btnNotebookBack: $("#btn-notebook-back"),
     btnNotebookQuizAll: $("#btn-notebook-quiz-all"),
+    todayLesson: $("#today-lesson"),
+    lessonCoach: $("#lesson-coach"),
+    lessonPlan: $("#lesson-plan"),
+    btnTodayLesson: $("#btn-today-lesson"),
   };
 
   function subjectName(id) {
@@ -866,6 +871,291 @@
     });
   }
 
+  function todayLessonDateKey() {
+    try {
+      return new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Asia/Seoul",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }).format(new Date());
+    } catch (_) {
+      return todayKey();
+    }
+  }
+
+  function loadTodayLessonCache() {
+    try {
+      const raw = localStorage.getItem(TODAY_LESSON_KEY);
+      if (!raw) return null;
+      const data = JSON.parse(raw);
+      if (!data || typeof data !== "object") return null;
+      if (data.date !== todayLessonDateKey()) return null;
+      return data;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function saveTodayLessonCache(meta) {
+    try {
+      localStorage.setItem(
+        TODAY_LESSON_KEY,
+        JSON.stringify({
+          date: todayLessonDateKey(),
+          coach: meta.coach || "",
+          planLines: Array.isArray(meta.planLines) ? meta.planLines.slice() : [],
+          paperTag: meta.paperTag || "오늘의 수업",
+        })
+      );
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  function lessonTagQuestion(q, sid, label) {
+    const out = Object.assign({}, q, {
+      subjectId: sid,
+      paperTag: "오늘의 수업 · " + label,
+    });
+    return out;
+  }
+
+  function pickReadySubjectIds() {
+    return STATS_SUBJECT_IDS.filter(function (id) {
+      return (QUESTIONS[id] || []).length > 0;
+    });
+  }
+
+  /**
+   * Curated tutor assignment: notebook + weakest / starter / coverage mix.
+   * Target ~15–25 items. Plan text cached per Seoul calendar day.
+   */
+  function buildTodayLesson() {
+    const stats = loadStudyStats();
+    const seok = computeSeokReadiness(stats);
+    const nb = loadNotebook();
+    const attempted = (stats.totals && stats.totals.attempted) || 0;
+    const list = [];
+    const planLines = [];
+    const used = {};
+    let coach = seok.coach || "오늘은 선생님이 고른 세트부터 가자.";
+
+    function markUsed(sid, id) {
+      used[String(sid) + "::" + String(id)] = true;
+    }
+    function isUsed(sid, id) {
+      return !!used[String(sid) + "::" + String(id)];
+    }
+
+    function addNotebookPortion(cap) {
+      const items = Array.isArray(nb.items) ? nb.items.slice() : [];
+      if (!items.length) return 0;
+      const take = Math.min(items.length, Math.max(1, cap));
+      const picked = sampleN(items, take);
+      picked.forEach(function (it) {
+        markUsed(it.subjectId, it.id);
+        const q = notebookItemToQuestion(it);
+        q.paperTag = "오늘의 수업 · 오답노트";
+        list.push(q);
+      });
+      if (picked.length) {
+        planLines.push("오답노트 " + picked.length + "문항");
+      }
+      return picked.length;
+    }
+
+    function addSubjectSample(sid, n, labelPrefix) {
+      const bank = QUESTIONS[sid] || [];
+      if (!bank.length || n <= 0) return 0;
+      const available = bank.filter(function (q) {
+        return !isUsed(sid, q.id);
+      });
+      const picked = sampleN(available, n);
+      const label = subjectName(sid);
+      picked.forEach(function (q) {
+        markUsed(sid, q.id);
+        list.push(lessonTagQuestion(q, sid, label));
+      });
+      if (picked.length) {
+        planLines.push(
+          (labelPrefix ? labelPrefix + " " : "") + label + " " + picked.length + "문항"
+        );
+      }
+      return picked.length;
+    }
+
+    function addPracticalSample(n) {
+      const bank = QUESTIONS[PRACTICAL_BANK_ID] || [];
+      if (!bank.length || n <= 0) return 0;
+      const picked = sampleN(bank, n);
+      picked.forEach(function (q) {
+        const sid = q.major || PRACTICAL_BANK_ID;
+        list.push(
+          Object.assign({}, q, {
+            subjectId: sid,
+            paperTag: "오늘의 수업 · 실기",
+            isPractical: true,
+          })
+        );
+      });
+      if (picked.length) {
+        planLines.push("실기 " + picked.length + "문항");
+      }
+      return picked.length;
+    }
+
+    function undercoveredSubjectId() {
+      let best = null;
+      let bestAtt = Infinity;
+      pickReadySubjectIds().forEach(function (id) {
+        const st = stats.bySubject[id];
+        const att = st ? st.attempted || 0 : 0;
+        if (att < bestAtt) {
+          bestAtt = att;
+          best = id;
+        }
+      });
+      return best;
+    }
+
+    if (attempted === 0 && (!nb.items || nb.items.length === 0)) {
+      const starters = ["medical-law", "anatomy"].filter(function (id) {
+        return (QUESTIONS[id] || []).length > 0;
+      });
+      const sid = starters[0] || pickReadySubjectIds()[0] || null;
+      if (sid) {
+        addSubjectSample(sid, 15, "입문");
+        coach =
+          "첫걸음이 중요해. 오늘은 " +
+          subjectName(sid) +
+          "부터 차분히 풀어보자.";
+      }
+    } else if (seok.notebookOpen >= 1 && nb.items && nb.items.length > 0) {
+      // Notebook first, capped ~8–12 of the mix
+      const nbCap = Math.min(12, nb.items.length);
+      addNotebookPortion(nbCap);
+      const room = Math.max(0, 25 - list.length);
+      if (seok.weakest && (QUESTIONS[seok.weakest.id] || []).length > 0 && room > 0) {
+        const weakTake = Math.min(15, Math.max(list.length >= 15 ? Math.min(10, room) : 10, room));
+        addSubjectSample(seok.weakest.id, Math.min(weakTake, room), "약점");
+      }
+      if (list.length < 15) {
+        const fillId =
+          undercoveredSubjectId() ||
+          (seok.weakest && seok.weakest.id) ||
+          pickReadySubjectIds()[0];
+        if (fillId) {
+          addSubjectSample(fillId, 15 - list.length, "보충");
+        }
+      }
+      coach = seok.coach;
+    } else if (seok.weakest && seok.weakest.pct < 0.8) {
+      addSubjectSample(seok.weakest.id, 15, "약점");
+      if ((QUESTIONS[PRACTICAL_BANK_ID] || []).length > 0 && list.length < 20) {
+        addPracticalSample(Math.min(5, 25 - list.length));
+      }
+      coach = seok.coach;
+    } else {
+      // All strong + empty notebook: undercovered / weakest-ish 15 + optional 실기 5
+      const pickId =
+        undercoveredSubjectId() ||
+        (seok.weakest && seok.weakest.id) ||
+        pickReadySubjectIds()[0];
+      if (pickId) {
+        addSubjectSample(pickId, 15, "집중");
+      }
+      if ((QUESTIONS[PRACTICAL_BANK_ID] || []).length > 0) {
+        addPracticalSample(5);
+      }
+      coach = seok.coach || "페이스는 좋아. 오늘은 약한 유형과 실기를 섞어 한 세트 가자.";
+    }
+
+    if (list.length === 0) {
+      const fallback = pickReadySubjectIds()[0];
+      if (fallback) {
+        addSubjectSample(fallback, 15, "입문");
+        coach = "오늘은 " + subjectName(fallback) + "부터 시작하자.";
+      }
+    }
+
+    let finalList = shuffle(list);
+    if (finalList.length > 25) {
+      finalList = finalList.slice(0, 25);
+    }
+
+    return {
+      list: finalList,
+      planLines: planLines,
+      coach: coach,
+      paperTag: "오늘의 수업",
+    };
+  }
+
+  function resolveTodayLessonMeta() {
+    const cached = loadTodayLessonCache();
+    if (cached && cached.planLines && cached.planLines.length) {
+      return {
+        coach: cached.coach,
+        planLines: cached.planLines,
+        paperTag: cached.paperTag || "오늘의 수업",
+        fromCache: true,
+      };
+    }
+    const built = buildTodayLesson();
+    saveTodayLessonCache(built);
+    return {
+      coach: built.coach,
+      planLines: built.planLines,
+      paperTag: built.paperTag,
+      list: built.list,
+      fromCache: false,
+    };
+  }
+
+  function renderTodayLesson() {
+    if (!el.todayLesson) return;
+    const meta = resolveTodayLessonMeta();
+    if (el.lessonCoach) {
+      el.lessonCoach.textContent = meta.coach || "약점과 오답을 보고 수업을 배정합니다.";
+    }
+    if (el.lessonPlan) {
+      el.lessonPlan.innerHTML = "";
+      (meta.planLines || []).forEach(function (line) {
+        const li = document.createElement("li");
+        li.textContent = line;
+        el.lessonPlan.appendChild(li);
+      });
+      if (!(meta.planLines && meta.planLines.length)) {
+        const li = document.createElement("li");
+        li.textContent = "준비된 문항으로 수업을 구성합니다.";
+        el.lessonPlan.appendChild(li);
+      }
+    }
+    if (el.btnTodayLesson) {
+      const ready = pickReadySubjectIds().length > 0 ||
+        (QUESTIONS[PRACTICAL_BANK_ID] || []).length > 0 ||
+        loadNotebook().items.length > 0;
+      el.btnTodayLesson.disabled = !ready;
+    }
+  }
+
+  function startTodayLesson() {
+    const built = buildTodayLesson();
+    // Keep same-day plan text stable; list may refresh on start
+    const cached = loadTodayLessonCache();
+    if (!cached) {
+      saveTodayLessonCache(built);
+    }
+    if (!built.list || !built.list.length) return;
+    beginSession(built.list, {
+      examMode: false,
+      reviewMode: false,
+      notebookMode: false,
+      subjectId: null,
+    });
+  }
+
   /** 연속 학습일 — 오늘(또는 오늘 아직 안 풀었으면 어제)까지 이어진 연속 일수 */
   function computeStreak(stats) {
     const practiced = function (d) {
@@ -1021,6 +1311,7 @@
         escapeHtml(seok.coach);
     }
     updateNotebookButton();
+    renderTodayLesson();
   }
 
   function onResetStats() {
@@ -1860,8 +2151,15 @@
       el.endPassHint.hidden = true;
     }
 
+    const isTodayLessonSession = questionList.some(function (q) {
+      return q && q.paperTag && String(q.paperTag).indexOf("오늘의 수업") === 0;
+    });
+
     if (notebookMode) {
       el.endSummary.textContent = "오답노트 복습을 완료했습니다.";
+    } else if (isTodayLessonSession) {
+      el.endSummary.textContent =
+        "오늘의 수업 완료. 오답노트 확인하고 내일도 이어서.";
     } else if (reviewMode) {
       el.endSummary.textContent = "틀린 문제 복습을 완료했습니다.";
     } else if (fromSubmit && analysis.attempted === 0) {
@@ -1989,6 +2287,9 @@
       if (!items.length) return;
       startNotebookQuiz(items);
     });
+  }
+  if (el.btnTodayLesson) {
+    el.btnTodayLesson.addEventListener("click", startTodayLesson);
   }
 
   renderHome();

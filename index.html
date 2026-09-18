@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>임상병리사 CBT</title>
-    <link rel="stylesheet" href="styles.css?v=20260919b" />
+    <link rel="stylesheet" href="styles.css?v=20260918j" />
   </head>
   <body>
     <div id="app">
@@ -94,6 +94,17 @@
           <div class="study-notebook-row">
             <button type="button" id="btn-notebook" class="btn-notebook">오답노트 (0)</button>
           </div>
+        </section>
+
+        <section id="today-lesson" class="today-lesson" aria-label="오늘의 수업">
+          <div class="today-lesson-head">
+            <h2>오늘의 수업</h2>
+            <span class="today-lesson-badge">선생님</span>
+          </div>
+          <p id="lesson-coach" class="today-lesson-coach">약점과 오답을 보고 수업을 배정합니다.</p>
+          <ul id="lesson-plan" class="today-lesson-plan"></ul>
+          <button type="button" id="btn-today-lesson" class="btn btn-primary btn-today-lesson">수업 시작</button>
+          <p class="today-lesson-note">약점·오답 기준 자동 배정 · 약 15~25문항</p>
         </section>
 
         <h2 class="section-label">국시 유형 응시</h2>
@@ -237,7 +248,7 @@
         </div>
       </section>
     </div>
-    <script src="questions.js?v=20260919b"></script>
-    <script src="app.js?v=20260919b"></script>
+    <script src="questions.js?v=20260918j"></script>
+    <script src="app.js?v=20260918j"></script>
   </body>
 </html>
