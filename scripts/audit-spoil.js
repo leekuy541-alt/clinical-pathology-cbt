@@ -6,7 +6,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const ABS = /항상|절대|모든|반드시|결코|전부|무조건/;
+const ABS = /항상|절대|모든|반드시|결코|전부|무조건|오직|전혀/;
+const TEMPLATE_EC = /이 개념을 선택지에 옮기면|따라서 정답은 「|이웃 선택지와 정의·적용 범위|이\(가\) 정답이다|은\(는\)|과\(와\)/;
+const TEMPLATE_EW = /인접해 보이지만 이 문항의 정의·상황에 맞지 않으므로 배제|같은 분류의와 인접한 다른 개념|은\(는\)|과\(와\)/;
+const JUNK_CHOICE = /가스여서|금속이어서|무관해서|색만|향만|가격만|관련 항목|우선 본다|만으로 충분|점심|벽색|게임 관련|사회관계망/;
 const ROOT = path.join(__dirname, '..');
 
 function loadQuestions() {
@@ -131,8 +134,13 @@ function main() {
 
   let absHits = 0;
   let lenHits = 0;
+  let lenRatioHits = 0;
+  let tplHits = 0;
+  let junkHits = 0;
   const absEx = [];
   const lenEx = [];
+  const tplEx = [];
+  const junkEx = [];
   for (const [subj, arr] of Object.entries(Q)) {
     for (const q of arr) {
       const ai = q.answerIndex;
@@ -145,6 +153,21 @@ function main() {
       if (isLenSevere(q.choices, ai)) {
         lenHits++;
         if (lenEx.length < 5) lenEx.push({ subj, id: q.id, choices: q.choices, ai });
+      }
+      const lens = q.choices.map(ulen);
+      const cL = lens[ai];
+      const wrongLens = lens.filter((_, i) => i !== ai).sort((a, b) => a - b);
+      const med = wrongLens[Math.floor(wrongLens.length / 2)] || 1;
+      if (cL / med > 1.6 && cL - med >= 6) lenRatioHits++;
+      const ec = q.explainCorrect || '';
+      const ew = (q.explainWrong || []).join('\n');
+      if (TEMPLATE_EC.test(ec) || TEMPLATE_EW.test(ew)) {
+        tplHits++;
+        if (tplEx.length < 5) tplEx.push({ subj, id: q.id });
+      }
+      if (q.choices.some((c, i) => i !== ai && JUNK_CHOICE.test(c || ''))) {
+        junkHits++;
+        if (junkEx.length < 5) junkEx.push({ subj, id: q.id, choices: q.choices, ai });
       }
     }
   }
@@ -159,9 +182,26 @@ function main() {
   absEx.forEach((e) => console.log(' ', e.subj, e.id));
   console.log('severe length outliers:', lenHits);
   lenEx.forEach((e) => console.log(' ', e.subj, e.id));
-  console.log('TOTAL pattern hits (abs+len):', absHits + lenHits);
+  console.log('length ratio >1.6 vs median wrong:', lenRatioHits);
+  console.log('template explanation hits:', tplHits);
+  tplEx.forEach((e) => console.log(' ', e.subj, e.id));
+  console.log('junk/off-category choice hits:', junkHits);
+  junkEx.forEach((e) => console.log(' ', e.subj, e.id));
+  console.log('TOTAL severe (abs+len+tpl+junk):', absHits + lenHits + tplHits + junkHits);
 
-  const out = { svgSpoil: svgDetails.length, absHits, lenHits, svgDetails, absEx, lenEx };
+  const out = {
+    svgSpoil: svgDetails.length,
+    absHits,
+    lenHits,
+    lenRatioHits,
+    tplHits,
+    junkHits,
+    svgDetails,
+    absEx,
+    lenEx,
+    tplEx,
+    junkEx,
+  };
   fs.writeFileSync(path.join(ROOT, 'scripts/audit-spoil-report.json'), JSON.stringify(out, null, 2));
   return out;
 }
