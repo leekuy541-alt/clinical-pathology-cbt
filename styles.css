@@ -1259,32 +1259,18 @@ body {
   font-size: 0.8rem;
 }
 
-/* —— 과목별 누적 정답률 (홈) —— */
-.study-subjects-details {
+/* —— 과목별 누적 정답률 (홈, 항상 펼침) —— */
+.study-subjects-panel {
   border-top: 1px dashed var(--border);
   padding-top: 10px;
+  margin-top: 4px;
 }
 
-.study-subjects-summary {
+.study-subjects-heading {
+  margin: 0;
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--text-muted);
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-}
-
-.study-subjects-summary::-webkit-details-marker {
-  display: none;
-}
-
-.study-subjects-summary::after {
-  content: " ▾";
-  opacity: 0.6;
-}
-
-.study-subjects-details[open] > .study-subjects-summary::after {
-  content: " ▴";
 }
 
 .subject-progress {

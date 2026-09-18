@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>임상병리사 CBT</title>
-    <link rel="stylesheet" href="styles.css?v=20260918j" />
+    <link rel="stylesheet" href="styles.css?v=20260918k" />
   </head>
   <body>
     <div id="app">
@@ -83,11 +83,11 @@
             <input type="date" id="input-exam-date" class="study-dday-input" />
             <span id="stat-dday" class="study-dday-value">미설정</span>
           </div>
-          <details class="study-subjects-details">
-            <summary class="study-subjects-summary">과목별 누적 정답률</summary>
+          <section class="study-subjects-panel" aria-label="과목별 누적 정답률">
+            <h3 class="study-subjects-heading">과목별 누적 정답률</h3>
             <div id="subject-progress" class="subject-progress"></div>
             <p class="study-subjects-note">과목을 누르면 바로 연습을 시작합니다.</p>
-          </details>
+          </section>
           <p class="study-tip" id="stat-tip">문항을 더 풀어보세요</p>
           <p class="study-goal" id="stat-goal">목표: 전국수석</p>
           <div class="study-coach" id="stat-coach" hidden></div>
@@ -248,7 +248,7 @@
         </div>
       </section>
     </div>
-    <script src="questions.js?v=20260918j"></script>
-    <script src="app.js?v=20260918j"></script>
+    <script src="questions.js?v=20260918k"></script>
+    <script src="app.js?v=20260918k"></script>
   </body>
 </html>
