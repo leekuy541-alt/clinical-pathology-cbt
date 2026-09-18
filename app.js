@@ -7,7 +7,20 @@
 
   const NUM_LABELS = ["①", "②", "③", "④", "⑤"];
   const STORAGE_KEY = "cbt-exam-counts-v2";
+  const STATS_KEY = "cbt-study-stats-v1";
   const SUBJECT_COUNT_PRESETS = [10, 20, 35, 50];
+  /** 국시 필기 전공·공통 9과목 (합격 가능도 커버리지) */
+  const STATS_SUBJECT_IDS = [
+    "medical-law",
+    "public-health",
+    "anatomy",
+    "histopathology",
+    "physiology",
+    "clinical-chemistry",
+    "hematology",
+    "immuno-transfusion",
+    "microbiology",
+  ];
 
   /** 영점 템플릿 */
   const ZERO_COUNTS = {
@@ -100,6 +113,11 @@
   let midSubmit = false;
   /** pending subject for count picker */
   let pendingSubjectId = null;
+  /**
+   * Session-local map: question index → { correct, subjectId }
+   * Prevents double-counting the same item in one session when re-grading.
+   */
+  let sessionStatsRecorded = {};
 
   const $ = (sel) => document.querySelector(sel);
   const el = {
@@ -143,6 +161,17 @@
     btnExamBack: $("#btn-exam-back"),
     btnToggleCustom: $("#btn-toggle-custom"),
     btnExamStart: $("#btn-exam-start"),
+    studyDashboard: $("#study-dashboard"),
+    statDays: $("#stat-days"),
+    statAttempted: $("#stat-attempted"),
+    statCorrect: $("#stat-correct"),
+    statWrong: $("#stat-wrong"),
+    statAccuracy: $("#stat-accuracy"),
+    statPass: $("#stat-pass"),
+    statPassNote: $("#stat-pass-note"),
+    statTip: $("#stat-tip"),
+    statSpark: $("#stat-spark"),
+    btnStatsReset: $("#btn-stats-reset"),
   };
 
   function subjectName(id) {
@@ -231,6 +260,326 @@
     }
   }
 
+
+  function emptyStats() {
+    return {
+      days: {},
+      totals: { attempted: 0, correct: 0, wrong: 0 },
+      bySubject: {},
+      updatedAt: null,
+    };
+  }
+
+  function loadStudyStats() {
+    try {
+      const raw = localStorage.getItem(STATS_KEY);
+      if (!raw) return emptyStats();
+      const data = JSON.parse(raw);
+      if (!data || typeof data !== "object") return emptyStats();
+      return {
+        days: data.days && typeof data.days === "object" ? data.days : {},
+        totals: {
+          attempted: Math.max(0, Number(data.totals && data.totals.attempted) || 0),
+          correct: Math.max(0, Number(data.totals && data.totals.correct) || 0),
+          wrong: Math.max(0, Number(data.totals && data.totals.wrong) || 0),
+        },
+        bySubject:
+          data.bySubject && typeof data.bySubject === "object" ? data.bySubject : {},
+        updatedAt: data.updatedAt || null,
+      };
+    } catch (_) {
+      return emptyStats();
+    }
+  }
+
+  function saveStudyStats(stats) {
+    try {
+      stats.updatedAt = new Date().toISOString();
+      localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+    } catch (_) {
+      /* ignore quota / private mode */
+    }
+  }
+
+  function todayKey() {
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return y + "-" + m + "-" + day;
+  }
+
+  function ensureDay(stats, key) {
+    if (!stats.days[key]) {
+      stats.days[key] = { attempted: 0, correct: 0, wrong: 0 };
+    }
+    return stats.days[key];
+  }
+
+  function ensureSubject(stats, sid) {
+    if (!stats.bySubject[sid]) {
+      stats.bySubject[sid] = { attempted: 0, correct: 0 };
+    }
+    return stats.bySubject[sid];
+  }
+
+  /**
+   * Record one graded answer into cumulative study stats.
+   * Same session index is not double-counted; re-grade adjusts correct/wrong only.
+   */
+  function recordGradedAnswer(sessionIndex, subjectId, isCorrect) {
+    const sid = subjectId || "unknown";
+    const prev = sessionStatsRecorded[sessionIndex];
+    if (prev && prev.correct === isCorrect && prev.subjectId === sid) {
+      return;
+    }
+
+    const stats = loadStudyStats();
+    const day = ensureDay(stats, todayKey());
+    const sub = ensureSubject(stats, sid);
+
+    if (!prev) {
+      stats.totals.attempted += 1;
+      day.attempted += 1;
+      sub.attempted += 1;
+      if (isCorrect) {
+        stats.totals.correct += 1;
+        day.correct += 1;
+        sub.correct += 1;
+      } else {
+        stats.totals.wrong += 1;
+        day.wrong += 1;
+      }
+    } else {
+      // Re-grade same item in this session: flip correctness, keep attempted.
+      if (prev.correct && !isCorrect) {
+        stats.totals.correct -= 1;
+        day.correct -= 1;
+        const prevSub = ensureSubject(stats, prev.subjectId);
+        prevSub.correct = Math.max(0, prevSub.correct - 1);
+        stats.totals.wrong += 1;
+        day.wrong += 1;
+      } else if (!prev.correct && isCorrect) {
+        stats.totals.wrong = Math.max(0, stats.totals.wrong - 1);
+        day.wrong = Math.max(0, day.wrong - 1);
+        stats.totals.correct += 1;
+        day.correct += 1;
+        sub.correct += 1;
+        if (prev.subjectId !== sid) {
+          const prevSub = ensureSubject(stats, prev.subjectId);
+          /* attempted stays on original subject if subject somehow changes */
+        }
+      }
+      // Clamp non-negative
+      stats.totals.correct = Math.max(0, stats.totals.correct);
+      stats.totals.wrong = Math.max(0, stats.totals.wrong);
+      day.correct = Math.max(0, day.correct);
+      day.wrong = Math.max(0, day.wrong);
+    }
+
+    sessionStatsRecorded[sessionIndex] = { correct: isCorrect, subjectId: sid };
+    saveStudyStats(stats);
+  }
+
+  /** Flush any answered-but-not-yet-recorded items (mid-submit / full end safety). */
+  function syncSessionStats() {
+    sessionAnswers.forEach((a, i) => {
+      if (!a || !a.answered) return;
+      const q = questionList[i] || {};
+      const sid = a.subjectId || q.subjectId || subjectId || "unknown";
+      recordGradedAnswer(i, sid, !!a.correct);
+    });
+  }
+
+  function clearStudyStats() {
+    sessionStatsRecorded = {};
+    try {
+      localStorage.removeItem(STATS_KEY);
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  function sumWindow(stats, dayKeys) {
+    let attempted = 0;
+    let correct = 0;
+    dayKeys.forEach((k) => {
+      const d = stats.days[k];
+      if (!d) return;
+      attempted += d.attempted || 0;
+      correct += d.correct || 0;
+    });
+    return { attempted: attempted, correct: correct };
+  }
+
+  function lastNDayKeys(n) {
+    const keys = [];
+    const now = new Date();
+    for (let i = n - 1; i >= 0; i--) {
+      const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() - i);
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, "0");
+      const day = String(d.getDate()).padStart(2, "0");
+      keys.push(y + "-" + m + "-" + day);
+    }
+    return keys;
+  }
+
+  /**
+   * 합격 가능도 (연습 추정) — NOT an official prediction.
+   *
+   * Formula (clamp 0–99):
+   *   accuracy = recent7d accuracy if recentAttempted >= 10, else all-time
+   *   accPts      = accuracy * 55          // 0–55  (국시 총점 60% 바에 가중)
+   *   coveragePts = (subjectsAttempted/9) * 20  // 0–20
+   *   floorPts    = avg(subject meets ~40% floor among attempted subjects) * 15  // 0–15
+   *   volumePts   = min(9, totals.attempted / 40)  // 0–9 volume bonus (cap)
+   *   barBonus    = (accuracy >= 0.60 ? 5 : 0)     // overall ≥60% nudge
+   *   score = floor(accPts + coveragePts + floorPts + volumePts + barBonus)
+   */
+  function computePassReadiness(stats) {
+    const totals = stats.totals;
+    const allAttempted = totals.attempted || 0;
+    const allCorrect = totals.correct || 0;
+    const allAcc = allAttempted > 0 ? allCorrect / allAttempted : 0;
+
+    const weekKeys = lastNDayKeys(7);
+    const recent = sumWindow(stats, weekKeys);
+    const useRecent = recent.attempted >= 10;
+    const accuracy = useRecent
+      ? recent.correct / recent.attempted
+      : allAcc;
+
+    let subjectsAttempted = 0;
+    let floorHits = 0;
+    let floorDenom = 0;
+    let weakest = null; // { id, pct, attempted }
+    STATS_SUBJECT_IDS.forEach((id) => {
+      const st = stats.bySubject[id];
+      if (!st || !st.attempted) return;
+      subjectsAttempted += 1;
+      const pct = st.correct / st.attempted;
+      floorDenom += 1;
+      if (pct >= 0.4) floorHits += 1;
+      if (
+        !weakest ||
+        pct < weakest.pct ||
+        (pct === weakest.pct && st.attempted > weakest.attempted)
+      ) {
+        weakest = { id: id, pct: pct, attempted: st.attempted };
+      }
+    });
+
+    const coverage = subjectsAttempted / STATS_SUBJECT_IDS.length;
+    const floorRate = floorDenom > 0 ? floorHits / floorDenom : 0;
+
+    const accPts = accuracy * 55;
+    const coveragePts = coverage * 20;
+    const floorPts = floorRate * 15;
+    const volumePts = Math.min(9, allAttempted / 40);
+    const barBonus = accuracy >= 0.6 ? 5 : 0;
+
+    let score = Math.floor(accPts + coveragePts + floorPts + volumePts + barBonus);
+    if (allAttempted === 0) score = 0;
+    score = Math.max(0, Math.min(99, score));
+
+    let tip = "문항을 더 풀어보세요";
+    if (allAttempted === 0) {
+      tip = "문항을 더 풀어보세요";
+    } else if (weakest && weakest.pct < 0.6) {
+      tip = "취약: " + subjectName(weakest.id);
+    } else if (subjectsAttempted < STATS_SUBJECT_IDS.length) {
+      tip = "여러 과목을 골고루 풀어보세요";
+    } else if (accuracy < 0.6) {
+      tip = "정답률을 60% 이상으로 올려보세요";
+    } else {
+      tip = "좋은 페이스입니다. 꾸준히 복습하세요";
+    }
+
+    return {
+      score: score,
+      accuracy: accuracy,
+      tip: tip,
+      useRecent: useRecent,
+    };
+  }
+
+  function renderSpark(stats) {
+    if (!el.statSpark) return;
+    const keys = lastNDayKeys(7);
+    let max = 1;
+    const vals = keys.map((k) => {
+      const d = stats.days[k];
+      const n = d ? d.attempted || 0 : 0;
+      if (n > max) max = n;
+      return n;
+    });
+    el.statSpark.innerHTML = keys
+      .map((k, i) => {
+        const n = vals[i];
+        const h = n === 0 ? 4 : Math.max(6, Math.round((n / max) * 28));
+        const label = k.slice(5); // MM-DD
+        return (
+          '<div class="spark-col" title="' +
+          escapeHtml(label) +
+          ": " +
+          n +
+          '문항">' +
+          '<div class="spark-bar" style="height:' +
+          h +
+          'px"></div>' +
+          '<span class="spark-label">' +
+          escapeHtml(label.slice(3)) +
+          "</span>" +
+          "</div>"
+        );
+      })
+      .join("");
+  }
+
+  function renderStudyDashboard() {
+    if (!el.studyDashboard) return;
+    const stats = loadStudyStats();
+    const daysPracticed = Object.keys(stats.days).filter((k) => {
+      const d = stats.days[k];
+      return d && (d.attempted || 0) > 0;
+    }).length;
+    const attempted = stats.totals.attempted || 0;
+    const correct = stats.totals.correct || 0;
+    const wrong = stats.totals.wrong || 0;
+    const accPct = attempted > 0 ? Math.round((correct / attempted) * 100) : null;
+    const pass = computePassReadiness(stats);
+
+    if (el.statDays) el.statDays.textContent = String(daysPracticed);
+    if (el.statAttempted) el.statAttempted.textContent = String(attempted);
+    if (el.statCorrect) el.statCorrect.textContent = String(correct);
+    if (el.statWrong) el.statWrong.textContent = String(wrong);
+    if (el.statAccuracy) {
+      el.statAccuracy.textContent = accPct === null ? "—" : accPct + "%";
+    }
+    if (el.statPass) el.statPass.textContent = pass.score + "%";
+    if (el.statPassNote) {
+      el.statPassNote.textContent =
+        "연습용 추정이며 공식 합격 예측이 아닙니다." +
+        (pass.useRecent ? " (최근 7일 정답률 반영)" : "");
+    }
+    if (el.statTip) el.statTip.textContent = pass.tip;
+    renderSpark(stats);
+  }
+
+  function onResetStats() {
+    if (
+      !window.confirm(
+        "학습 기록(일수·푼 문항·합격 가능도)을 모두 삭제할까요? 이 작업은 되돌릴 수 없습니다."
+      )
+    ) {
+      return;
+    }
+    clearStudyStats();
+    renderStudyDashboard();
+  }
+
+
   function defaultCounts() {
     const saved = loadSavedCounts();
     if (saved && saved.counts) {
@@ -247,6 +596,7 @@
   }
 
   function renderHome() {
+    renderStudyDashboard();
     el.subjectList.innerHTML = "";
     SUBJECTS.forEach((sub) => {
       const li = document.createElement("li");
@@ -535,6 +885,7 @@
       answered: false,
     }));
     midSubmit = false;
+    sessionStatsRecorded = {};
     index = 0;
     score = 0;
     answered = false;
@@ -769,6 +1120,7 @@
     };
     answered = true;
 
+    recordGradedAnswer(index, sid, isCorrect);
     recomputeScore();
     updateWrongRefsFromSession();
     applyGradedState(q, selected, { scroll: true });
@@ -950,6 +1302,7 @@
   function showEnd(opts) {
     const fromSubmit = !!(opts && opts.fromSubmit);
     midSubmit = fromSubmit;
+    syncSessionStats();
     const analysis = computeAnalysis();
     const pct =
       analysis.attempted > 0
@@ -1108,6 +1461,9 @@
       applyPreset(btn.getAttribute("data-preset"));
     });
   });
+  if (el.btnStatsReset) {
+    el.btnStatsReset.addEventListener("click", onResetStats);
+  }
 
   renderHome();
 })();

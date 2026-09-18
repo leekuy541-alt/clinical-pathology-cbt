@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>임상병리사 CBT</title>
-    <link rel="stylesheet" href="styles.css?v=20260918f" />
+    <link rel="stylesheet" href="styles.css?v=20260918g" />
   </head>
   <body>
     <div id="app">
@@ -25,6 +25,44 @@
           국시원 공시: 필기 215(법규20+이론I 80+이론II 115) + 실기 65 = 280.
           과목 내부 배분은 <strong>관례 배분(참고)</strong>입니다.
         </p>
+
+        <section id="study-dashboard" class="study-dashboard" aria-label="학습 현황">
+          <div class="study-dash-head">
+            <h2 class="study-dash-title">학습 현황</h2>
+            <button type="button" id="btn-stats-reset" class="btn-stats-reset">기록 초기화</button>
+          </div>
+          <div class="study-dash-grid">
+            <div class="study-stat">
+              <span class="study-stat-value" id="stat-days">0</span>
+              <span class="study-stat-label">학습일수</span>
+            </div>
+            <div class="study-stat">
+              <span class="study-stat-value" id="stat-attempted">0</span>
+              <span class="study-stat-label">푼 문항</span>
+            </div>
+            <div class="study-stat">
+              <span class="study-stat-value" id="stat-correct">0</span>
+              <span class="study-stat-label">정답</span>
+            </div>
+            <div class="study-stat">
+              <span class="study-stat-value" id="stat-wrong">0</span>
+              <span class="study-stat-label">오답</span>
+            </div>
+          </div>
+          <div class="study-dash-row">
+            <div class="study-acc">
+              <span class="study-acc-label">정답률</span>
+              <span class="study-acc-value" id="stat-accuracy">—</span>
+            </div>
+            <div class="study-pass">
+              <span class="study-pass-label">합격 가능도 <em>연습 추정</em></span>
+              <span class="study-pass-value" id="stat-pass">0%</span>
+            </div>
+          </div>
+          <p class="study-pass-note" id="stat-pass-note">연습용 추정이며 공식 합격 예측이 아닙니다.</p>
+          <p class="study-tip" id="stat-tip">문항을 더 풀어보세요</p>
+          <div class="study-spark" id="stat-spark" aria-hidden="true"></div>
+        </section>
 
         <h2 class="section-label">국시 유형 응시</h2>
         <div class="preset-list home-presets">
@@ -149,7 +187,7 @@
         </div>
       </section>
     </div>
-    <script src="questions.js?v=20260918f"></script>
-    <script src="app.js?v=20260918f"></script>
+    <script src="questions.js?v=20260918g"></script>
+    <script src="app.js?v=20260918g"></script>
   </body>
 </html>
