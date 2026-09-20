@@ -31,6 +31,7 @@ const QUESTIONS = {
   'immuno-transfusion': loadParts('it'),
   microbiology: loadParts('mb'),
   practical: loadOne('practical'),
+  'midterm-law': [...loadOne('midterm-part1'), ...loadOne('midterm-part2')],
 };
 
 const SUBJECTS = [
@@ -44,6 +45,7 @@ const SUBJECTS = [
   { id: 'immuno-transfusion', name: '면역혈청학·수혈의학', status: 'ready', description: '혈액형·항체·교차·수혈반응·혈청학' },
   { id: 'microbiology', name: '임상미생물학', status: 'ready', description: '염색·배양·동정·감수성·감염관리' },
   { id: 'practical', name: '실기(사진·도표형)', status: 'ready', description: '국시 3교시형 이미지·도표 MCQ' },
+  { id: 'midterm-law', name: '3-2 중간 · 의료관계법규', status: 'ready', description: '수업 요약본 전용 출제 (의료법·의료기사법·지역보건법)' },
 ];
 
 const MIN_COUNTS = {
@@ -57,6 +59,7 @@ const MIN_COUNTS = {
   'immuno-transfusion': 100,
   microbiology: 100,
   practical: 80,
+  'midterm-law': 80,
 };
 
 const errors = [];
@@ -97,6 +100,7 @@ for (const [key, arr] of Object.entries(QUESTIONS)) {
     out += '    {\n';
     out += `      id: ${esc(q.id)},\n`;
     out += `      stem: ${esc(q.stem)},\n`;
+    if (q.law) out += `      law: ${esc(q.law)},\n`;
     if (q.image) out += `      image: ${esc(q.image)},\n`;
     if (q.major) out += `      major: ${esc(q.major)},\n`;
     out += `      choices: ${esc(q.choices)},\n`;

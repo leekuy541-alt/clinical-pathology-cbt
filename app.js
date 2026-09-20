@@ -749,6 +749,7 @@
       savedAt: now,
     };
     if (q.image) base.image = q.image;
+    if (q.law) base.law = q.law;
     if (found >= 0) {
       const prev = nb.items[found];
       base.savedAt = now;
@@ -784,6 +785,7 @@
       paperTag: "오답노트",
     };
     if (it.image) q.image = it.image;
+    if (it.law) q.law = it.law;
     return q;
   }
 
@@ -1822,7 +1824,20 @@
     recomputeScore();
     el.progressFill.style.width = (n / total) * 100 + "%";
 
-    if ((examMode || q.paperTag) && q.paperTag) {
+    if (q.law) {
+      el.questionTag.hidden = false;
+      var tag = String(q.law);
+      if (q.paperTag) {
+        var pt = String(q.paperTag);
+        // Avoid redundant "의료법 · 의료법" style tags
+        if (pt.indexOf(tag) === -1) {
+          tag = pt + " · " + tag;
+        } else {
+          tag = pt;
+        }
+      }
+      el.questionTag.textContent = tag;
+    } else if ((examMode || q.paperTag) && q.paperTag) {
       el.questionTag.hidden = false;
       el.questionTag.textContent = q.paperTag;
     } else {
