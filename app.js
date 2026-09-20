@@ -97,6 +97,9 @@
   /** 실기(사진·도표형) 전용 은행 ID */
   const PRACTICAL_BANK_ID = "practical";
 
+  /** 학교 시험 대비 전용 은행 (국시 모의·대시보드 과목 지표에서 제외) */
+  const MIDTERM_BANK_ID = "midterm-law";
+
   /** @type {'home'|'count'|'exam-config'|'quiz'|'end'|'notebook'} */
   let screen = "home";
   let subjectId = null;
@@ -187,6 +190,9 @@
     endSeokNudge: $("#end-seok-nudge"),
     btnStatsReset: $("#btn-stats-reset"),
     btnNotebook: $("#btn-notebook"),
+    midtermCard: $("#midterm-card"),
+    btnMidterm: $("#btn-midterm"),
+    midtermCount: $("#midterm-count"),
     notebook: $("#screen-notebook"),
     notebookList: $("#notebook-list"),
     notebookEmpty: $("#notebook-empty"),
@@ -1344,8 +1350,17 @@
 
   function renderHome() {
     renderStudyDashboard();
+    // 중간고사 대비 카드 — 은행이 있을 때만 노출
+    if (el.midtermCard) {
+      const mid = QUESTIONS[MIDTERM_BANK_ID] || [];
+      el.midtermCard.hidden = mid.length === 0;
+      if (el.midtermCount) {
+        el.midtermCount.textContent = mid.length ? mid.length + "문항" : "";
+      }
+    }
     el.subjectList.innerHTML = "";
     SUBJECTS.forEach((sub) => {
+      if (sub.id === MIDTERM_BANK_ID) return; // 전용 카드로만 진입
       const li = document.createElement("li");
       const btn = document.createElement("button");
       btn.type = "button";
@@ -2277,6 +2292,11 @@
   }
   if (el.btnNotebook) {
     el.btnNotebook.addEventListener("click", openNotebook);
+  }
+  if (el.btnMidterm) {
+    el.btnMidterm.addEventListener("click", function () {
+      openCountPicker(MIDTERM_BANK_ID);
+    });
   }
   if (el.btnNotebookBack) {
     el.btnNotebookBack.addEventListener("click", goHome);

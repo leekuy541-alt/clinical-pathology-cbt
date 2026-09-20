@@ -1520,6 +1520,54 @@ body {
   }
 }
 
+/* —— 중간고사 대비 카드 —— */
+.midterm-card[hidden] {
+  display: none;
+}
+
+.midterm-label {
+  color: #fcd34d;
+}
+
+.btn-midterm {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.14) 0%, rgba(217, 119, 6, 0.10) 100%);
+  color: var(--text);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.btn-midterm:hover,
+.btn-midterm:active {
+  border-color: #fbbf24;
+  background: rgba(251, 191, 36, 0.2);
+}
+
+.midterm-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.midterm-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.midterm-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fcd34d;
+}
+
 /* 국시 유형 홈 프리셋 */
 .home-presets {
   display: flex;

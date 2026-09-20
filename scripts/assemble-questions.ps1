@@ -29,6 +29,7 @@ $QUESTIONS = [ordered]@{
   "immuno-transfusion" = @(Load-Parts "it")
   "microbiology"       = @(Load-Parts "mb")
   "practical"          = @(Load-Json "data/practical.json")
+  "midterm-law"        = @(Load-Json "data/midterm-part1.json") + @(Load-Json "data/midterm-part2.json")
 }
 
 $SUBJECTS_JSON = @'
@@ -42,7 +43,8 @@ $SUBJECTS_JSON = @'
   { "id": "hematology", "name": "혈액학", "status": "ready", "description": "혈구·응고·도말·혈액종양" },
   { "id": "immuno-transfusion", "name": "면역혈청학·수혈의학", "status": "ready", "description": "혈액형·항체·교차·수혈반응·혈청학" },
   { "id": "microbiology", "name": "임상미생물학", "status": "ready", "description": "염색·배양·동정·감수성·감염관리" },
-  { "id": "practical", "name": "실기(사진·도표형)", "status": "ready", "description": "국시 3교시형 이미지·도표 MCQ" }
+  { "id": "practical", "name": "실기(사진·도표형)", "status": "ready", "description": "국시 3교시형 이미지·도표 MCQ" },
+  { "id": "midterm-law", "name": "3-2 중간 · 의료관계법규", "status": "ready", "description": "수업 요약본 전용 출제 (의료법·의료기사법·지역보건법)" }
 ]
 '@
 
@@ -50,6 +52,7 @@ $MIN_COUNTS = @{
   "medical-law" = 80; "public-health" = 50; "anatomy" = 50; "histopathology" = 100
   "physiology" = 100; "clinical-chemistry" = 100; "hematology" = 100
   "immuno-transfusion" = 100; "microbiology" = 100; "practical" = 80
+  "midterm-law" = 80
 }
 
 # ---- validate ----
