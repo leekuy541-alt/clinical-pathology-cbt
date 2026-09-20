@@ -1058,5 +1058,25 @@
       "동정이 확인되지 않은 검체를 처리하면 오류가 결과 보고까지 이어질 수 있다.",
       "수술 검체는 다시 얻을 수 없으므로 폐기는 돌이킬 수 없는 손실을 낳는다."
     ]
+  },
+  {
+    "id": "hp104",
+    "stem": "조직 절편에서 글리코겐(glycogen)과 중성점액(neutral mucin)을 자홍색으로 염색하며, 디아스타제(diastase) 소화 후 염색하여 글리코겐과 다른 PAS 양성 물질을 감별하는 특수염색은?",
+    "choices": [
+      "과요오드산-Schiff(PAS) 염색",
+      "Masson 삼색염색(trichrome)",
+      "은염색(Gomori methenamine silver, GMS)",
+      "항산성 염색(Ziehl-Neelsen)",
+      "톨루이딘블루(toluidine blue) 염색"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "과요오드산-Schiff(PAS) 염색은 과요오드산이 글리콜기를 알데히드로 산화하고 Schiff 시약이 자홍색을 나타낸다. 글리코겐은 디아스타제(diastase)로 소화되면 PAS 음성이 되어, 소화되지 않는 중성점액·기저막·진균 세포벽 등과 감별한다.",
+    "explainWrong": [
+      "",
+      "Masson 삼색염색(trichrome)은 콜라겐을 청색(또는 녹색), 근육·세포질을 적색으로 구분하는 염색이다.",
+      "GMS는 진균 세포벽과 Pneumocystis 등을 흑갈색으로 염색하는 은염색이다.",
+      "Ziehl-Neelsen은 항산균(acid-fast bacilli)의 세포벽 지질을 붉게 염색한다.",
+      "톨루이딘블루(toluidine blue)는 비만세포 과립 등의 이염색성(metachromasia) 관찰에 쓰인다."
+    ]
   }
 ]

@@ -414,5 +414,13 @@
 "answerIndex": 0,
 "explainCorrect": "주사침 자상(needlestick injury) 후에는 상처를 흐르는 물과 비누로 씻고 즉시 보고하여 노출자와 노출원의 혈청 검사를 받는다. 노출자에게 B형 간염 면역이 없으면 가능한 빨리(24시간 이내 권장) B형 간염 면역글로불린(HBIG)과 백신을 투여한다.",
 "explainWrong": ["", "상처를 세게 짜거나 입으로 빠는 행위는 조직 손상과 점막 노출을 늘릴 수 있어 권장되지 않는다.", "강한 소독제 원액은 피부 조직을 손상시키며 감염 예방 효과가 입증되지 않았다.", "보고가 늦어지면 면역글로불린과 예방조치의 적기를 놓친다.", "주사침 뚜껑을 다시 씌우는 것은 자상의 주요 원인이며 사용한 주사침은 손상성 의료폐기물 전용 용기에 버려야 한다."]
+},
+{
+"id": "mb103",
+"stem": "객담 배양에서 분리된 그람음성 간균이 MacConkey 한천에서 무색 집락을 형성하고, 산화효소(oxidase) 검사 양성이며 포도당을 발효하지 않았다. 가장 가능성이 큰 균은?",
+"choices": ["Escherichia coli", "Klebsiella pneumoniae", "Pseudomonas aeruginosa", "Proteus mirabilis", "Salmonella Typhi"],
+"answerIndex": 2,
+"explainCorrect": "Pseudomonas aeruginosa는 포도당 비발효 그람음성 간균으로 MacConkey 한천에서 유당(lactose)을 분해하지 않아 무색 집락을 보이며 산화효소(oxidase) 양성이다. 녹농균 특유의 청록색 색소(pyocyanin)와 포도향 냄새도 감별에 도움이 된다.",
+"explainWrong": ["E. coli는 산화효소(oxidase) 음성이며 대개 MacConkey에서 유당 분해로 분홍·적색 집락을 형성한다.", "K. pneumoniae는 산화효소(oxidase) 음성이고 유당 분해 양성으로 MacConkey에서 점액성 분홍 집락을 보인다.", "", "P. mirabilis는 산화효소(oxidase) 음성이며 유당 비분해이지만 배지 전면에 확산 증식(swarming)하는 것이 특징이다.", "Salmonella Typhi는 산화효소(oxidase) 음성이고 유당 비분해인 Enterobacteriaceae에 속한다."]
 }
 ]
