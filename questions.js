@@ -3390,6 +3390,14 @@ var QUESTIONS = {
       explainCorrect: "골도역치는 정상인데 기도역치가 올라가 40 dB의 기도-골도 차이(air-bone gap)가 생긴 것은 외이나 중이에서 소리 전달이 막힌 전음성 난청(conductive hearing loss)의 전형적 소견이다. 중이염, 고막 천공, 이경화증(otosclerosis), 귀지 폐색 등이 원인이 된다.",
       explainWrong: ["","감각신경성 난청(sensorineural hearing loss)은 기도와 골도 역치가 함께 비슷하게 올라가 기도-골도 차이(air-bone gap)가 거의 없다.","혼합성 난청(mixed hearing loss)은 골도역치도 비정상으로 올라가면서 기도-골도 차이가 함께 있는 경우이다.","기도역치 50 dB는 정상 범위를 벗어나므로 정상 청력으로 판정할 수 없다.","기능성 난청(functional hearing loss)은 반복 검사 결과가 일관되지 않거나 객관적 검사와 맞지 않을 때 의심하며, 이처럼 전형적인 기도-골도 차이가 뚜렷한 경우와 다르다."],
     },
+    {
+      id: "ph104",
+      stem: "맥박산소측정기(pulse oximeter)로 측정한 산소포화도(SpO2)가 실제 동맥혈 산소포화도(SaO2)보다 낮게 나올 수 있는 상황은?",
+      choices: ["일산화탄소 중독(carboxyhemoglobin 증가)","손톱에 어두운 매니큐어를 바른 경우","중등도 빈혈(Hb 9 g/dL)만 있는 경우","피부색이 어두운 경우만으로","실온에서 손가락이 따뜻한 경우"],
+      answerIndex: 1,
+      explainCorrect: "맥박산소측정기는 손가락·귓불 등에서 적색광과 적외선의 흡광 비율로 SpO2를 추정한다. 어두운 매니큐어·인조 손톱·심한 말초 관류 저하(저체온, 저혈압)는 광신호 전달을 방해해 SpO2가 실제보다 낮게 나오거나 측정이 불안정해질 수 있다. 가능하면 매니큐어를 제거하거나 다른 부위를 측정한다.",
+      explainWrong: ["일산화탄소헤모글로빈(COHb)은 맥박산소측정기에서 옥시헤모글로빈과 비슷하게 읽혀 SpO2가 실제 산소운반 능력보다 높게 나오는 전형적 오류이다.","","중등도 빈혈만으로는 포화도(%) 자체는 크게 변하지 않으며, SpO2가 체계적으로 낮아지는 주된 원인은 아니다.","피부색만으로 SpO2가 의미 있게 낮아진다고 단정하기 어렵고, 국시에서 강조하는 대표적 간섭 요인은 매니큐어·관류 저하·이상혈색소 등이다.","손가락이 따뜻하면 말초 관류가 좋아져 신호 품질이 개선되므로 SpO2가 낮게 나오는 원인이 아니다."],
+    },
   ],
   "clinical-chemistry": [
     {
@@ -4215,6 +4223,14 @@ var QUESTIONS = {
       answerIndex: 0,
       explainCorrect: "민감도(sensitivity)는 실제 질환자 중 검사에서 양성으로 나온 비율로, 진양성(TP) ÷ (진양성 + 위음성) = 72 ÷ 80 = 90%이다. 민감도가 높은 검사는 위음성이 적어 질환을 배제하는 선별검사에 유리하다.",
       explainWrong: ["","80%는 비질환자 중 음성 비율인 특이도(96 ÷ 120)이다.","75%는 양성 결과 중 실제 질환자 비율인 양성예측도(72 ÷ 96)이다.","92%는 음성 결과 중 실제 비질환자 비율인 음성예측도(96 ÷ 104)에 해당한다.","72%는 진양성(TP) 수를 그대로 백분율로 옮긴 착오이다."],
+    },
+    {
+      id: "cc104",
+      stem: "동맥혈가스분석에서 Na+ 140 mmol/L, Cl− 104 mmol/L, HCO3− 24 mmol/L였다. 음이온차(anion gap)와 가장 적절한 해석은?",
+      choices: ["4 mmol/L — 감소된 음이온차","8 mmol/L — 정상 하한","12 mmol/L — 정상 음이온차","16 mmol/L — 증가된 음이온차","20 mmol/L — 현저히 증가된 음이온차"],
+      answerIndex: 2,
+      explainCorrect: "음이온차(anion gap, AG)는 Na+ − (Cl− + HCO3−)로 계산한다. 140 − (104 + 24) = 12 mmol/L이며, 일반적으로 약 8~12(또는 12±4) mmol/L을 정상으로 본다. 정상 음이온차 산증은 설사, 생리식염수 과다투여, 세뇨관성 산증(RTA) 등이고, 증가 음이온차 산증은 젖산산증·케톤산증·요독증·중독 등이다.",
+      explainWrong: ["4 mmol/L은 계산값보다 작고, 감소된 음이온차는 저알부민혈증 등에서 보일 수 있으나 이 수치와 맞지 않는다.","8 mmol/L은 정상 범위의 하한에 가깝지만, 이 증례의 계산값은 12 mmol/L이다.","","16 mmol/L은 계산값보다 크며, 젖산산증·케톤산증 등 증가 음이온차 산증을 시사하는 수준이다.","20 mmol/L은 현저히 증가된 음이온차로, 이 증례의 전해질·중탄산염 수치와 맞지 않는다."],
     },
   ],
   "hematology": [
@@ -5042,6 +5058,14 @@ var QUESTIONS = {
       explainCorrect: "t-PA는 피브린에 결합한 플라스미노겐(plasminogen)을 효율적으로 플라스민(plasmin)으로 바꿔 혈전을 녹인다. 플라스민은 피브린과 피브리노겐을 분해해 FDP를 만들고, 교차결합 피브린에서는 D-dimer가 생긴다.",
       explainWrong: ["","α2-안티플라스민(α2-antiplasmin)은 유리 플라스민을 빠르게 불활성화하는 억제 단백이다.","PAI-1은 t-PA와 u-PA를 억제해 섬유소용해를 제동한다.","안티트롬빈(AT)은 트롬빈과 Xa 등을 억제하는 응고 억제 단백이다.","트롬보모듈린(thrombomodulin)은 트롬빈과 결합해 단백 C(protein C)를 활성화하는 내피세포 막단백이다."],
     },
+    {
+      id: "he104",
+      stem: "말초혈액도말에서 호중구의 핵이 2엽으로만 분엽되어 안경 모양(pince-nez)을 보이는 세포가 다수 관찰되었다. 가장 관련 깊은 이상은?",
+      choices: ["골수소핵(Howell-Jolly body)","독성과립(toxic granulation)","펠거-휘엣 이상(Pelger-Huët anomaly)","도흘소체(Döhle body)","아우어 막대(Auer rod)"],
+      answerIndex: 2,
+      explainCorrect: "펠거-휘엣 이상(Pelger-Huët anomaly)은 호중구 핵의 분엽이 잘되지 않아 2엽(pince-nez, 안경 모양) 또는 둥근 핵이 특징이다. 선천성과 후천성(가성 펠거-휘엣, 골수이형성증후군·약물 등)이 있으며, 분엽 부전만으로 기능을 단정하지는 않는다. 감염에서 보이는 좌방이동(band form 증가)과 감별한다.",
+      explainWrong: ["골수소핵(Howell-Jolly body)은 적혈구 내 DNA 잔유물로, 비장기능저하·무비장에서 흔히 보인다.","독성과립(toxic granulation)은 중증 감염·염증에서 호중구 세포질 과립이 진하게 보이는 소견이다.","","도흘소체(Döhle body)는 호중구 가장자리의 하늘색 RNA 잔유 영역으로 감염·화상 등에서 독성과립과 함께 보일 수 있다.","아우어 막대(Auer rod)는 골수모세포 등에서 보이는 붉은 막대 모양 봉입체로 급성전골수구성백혈병(APL) 등에서 중요하다."],
+    },
   ],
   "immuno-transfusion": [
     {
@@ -5859,6 +5883,14 @@ var QUESTIONS = {
       answerIndex: 0,
       explainCorrect: "자가수혈은 수술 전 자기 혈액을 미리 예치하거나 수술 중 흘린 혈액을 회수하거나 급성 등용량 혈액희석(ANH)으로 자신의 혈액을 사용하는 방법이다. 다른 사람의 적혈구 항원에 노출되지 않아 동종면역(alloimmunization)과 수혈 전파 감염을 피할 수 있다. 희귀 혈액형이나 여러 동종항체(alloantibody)를 가진 환자에게 특히 유용하다.",
       explainWrong: ["","예치 혈액도 채혈·보관 과정에서 세균이 오염될 수 있다.","다른 환자의 예치 혈액과 뒤바뀌는 사고를 막기 위해 확인 절차는 똑같이 필요하다.","빈혈이 있으면 수술 전 헌혈로 빈혈이 악화되므로 자가 예치에 적합하지 않다.","예치한 혈액도 동종 혈액과 마찬가지로 보관 중 저장 손상(storage lesion)이 생긴다."],
+    },
+    {
+      id: "it103",
+      stem: " Duffy 혈액형 항원(Fya, Fyb)이 모두 음성인 적혈구(Fy(a−b−))가 어떤 병원체에 대한 저항성과 관련되는가?",
+      choices: ["Plasmodium falciparum","Plasmodium vivax","Babesia microti","Trypanosoma cruzi","Toxoplasma gondii"],
+      answerIndex: 1,
+      explainCorrect: "Plasmodium vivax(삼일열원충)는 적혈구 침입에 Duffy 항원(ACKR1)을 수용체로 이용한다. Fy(a−b−) 표현형은 서아프리카 기원 인구에서 흔하며 vivax 말라리아에 대한 자연 저항성과 관련된다. 반면 falciparum은 다른 침입 경로를 쓰므로 Duffy 음성과의 관계는 vivax만큼 직접적이지 않다.",
+      explainWrong: ["Plasmodium falciparum(열대열원충)은 Duffy 항원에 의존하지 않으며, 중증 말라리아의 주원인이다.","","Babesia microti는 진드기 매개 적혈구 기생 원충으로 Duffy 항원 음성과의 전형적 저항성 연관은 없다.","Trypanosoma cruzi는 샤가스병의 원인으로 주로 곤충 매개이며 적혈구 Duffy와 직접 관련되지 않는다.","Toxoplasma gondii는 조직 포자충으로 적혈구 Duffy 표현형과 관련되지 않는다."],
     },
   ],
   "microbiology": [
@@ -6685,6 +6717,14 @@ var QUESTIONS = {
       answerIndex: 2,
       explainCorrect: "Pseudomonas aeruginosa는 포도당 비발효 그람음성 간균으로 MacConkey 한천에서 유당(lactose)을 분해하지 않아 무색 집락을 보이며 산화효소(oxidase) 양성이다. 녹농균 특유의 청록색 색소(pyocyanin)와 포도향 냄새도 감별에 도움이 된다.",
       explainWrong: ["E. coli는 산화효소(oxidase) 음성이며 대개 MacConkey에서 유당 분해로 분홍·적색 집락을 형성한다.","K. pneumoniae는 산화효소(oxidase) 음성이고 유당 분해 양성으로 MacConkey에서 점액성 분홍 집락을 보인다.","","P. mirabilis는 산화효소(oxidase) 음성이며 유당 비분해이지만 배지 전면에 확산 증식(swarming)하는 것이 특징이다.","Salmonella Typhi는 산화효소(oxidase) 음성이고 유당 비분해인 Enterobacteriaceae에 속한다."],
+    },
+    {
+      id: "mb104",
+      stem: "혈액한천에서 β용혈을 보이는 그람양성 구균이 카탈라제(catalase) 양성이고 응고효소(coagulase) 양성이었다. 가장 가능성이 큰 균은?",
+      choices: ["Staphylococcus aureus","Staphylococcus epidermidis","Streptococcus pyogenes","Enterococcus faecalis","Streptococcus pneumoniae"],
+      answerIndex: 0,
+      explainCorrect: "포도알균(Staphylococcus)은 카탈라제 양성으로 연쇄알균·장구균(카탈라제 음성)과 구분한다. 응고효소 양성은 Staphylococcus aureus의 핵심 동정 소견이며, 혈액한천에서 흔히 β용혈을 보인다. 피부·연부조직 감염, 농양, 식중독, 원내감염의 중요 원인균이다.",
+      explainWrong: ["","Staphylococcus epidermidis는 카탈라제 양성이지만 응고효소 음성이며, 보통 용혈이 약하거나 없다.","Streptococcus pyogenes(A군)는 β용혈이지만 카탈라제 음성이라 포도알균과 구분된다.","Enterococcus faecalis는 보통 비용혈 또는 α용혈이며 카탈라제 음성(또는 약양성 위양성)이고 응고효소 양성이 아니다.","Streptococcus pneumoniae는 α용혈 연쇄알균으로 카탈라제 음성이며 옵토킨(optochin) 감수성·쓸개즙 용해로 동정한다."],
     },
   ],
   "practical": [

@@ -1,426 +1,1082 @@
 [
-{
-"id": "mb51",
-"stem": "세균 세포벽 펩티도글리칸(peptidoglycan) 전구체의 D-Ala-D-Ala 말단에 결합하여 세포벽 합성을 억제하는 항균제는?",
-"choices": ["반코마이신(vancomycin)", "젠타마이신(gentamicin)", "에리스로마이신(erythromycin)", "시프로플록사신(ciprofloxacin)", "설파메톡사졸(sulfamethoxazole)"],
-"answerIndex": 0,
-"explainCorrect": "반코마이신(vancomycin)은 글리코펩티드계(glycopeptide)로 펩티도글리칸(peptidoglycan) 전구체의 D-Ala-D-Ala 말단에 결합해 당전이(transglycosylation)와 펩티드 교차결합(transpeptidation)을 막는다. 분자가 커서 그람음성균 외막(outer membrane)을 통과하지 못하므로 주로 그람양성균에 쓰인다.",
-"explainWrong": ["", "젠타마이신(gentamicin)은 아미노글리코사이드(aminoglycoside)로 리보솜 30S 소단위에 결합해 단백질 합성을 억제한다.", "에리스로마이신(erythromycin)은 마크로라이드(macrolide)로 50S 소단위에 결합해 펩티드 사슬 신장을 막는다.", "시프로플록사신(ciprofloxacin)은 퀴놀론계(quinolone)로 DNA gyrase와 topoisomerase IV를 억제해 핵산 합성을 방해한다.", "설파메톡사졸(sulfamethoxazole)은 PABA와 경쟁해 엽산(folic acid) 합성을 억제하는 설폰아마이드(sulfonamide)이다."]
-},
-{
-"id": "mb52",
-"stem": "리보솜 30S 소단위에 결합하여 mRNA 판독 오류를 일으키고 살균적(bactericidal)으로 작용하는 항균제는?",
-"choices": ["젠타마이신(gentamicin)", "에리스로마이신(erythromycin)", "클린다마이신(clindamycin)", "클로람페니콜(chloramphenicol)", "반코마이신(vancomycin)"],
-"answerIndex": 0,
-"explainCorrect": "젠타마이신(gentamicin)·아미카신(amikacin)·토브라마이신(tobramycin) 같은 아미노글리코사이드(aminoglycoside)는 30S 소단위에 결합해 유전암호를 잘못 읽게 만들고 살균 작용을 나타낸다. 세포 내 유입에 산소 의존적 수송이 필요하므로 혐기성균(anaerobe)에는 효과가 없다.",
-"explainWrong": ["", "에리스로마이신(erythromycin)은 50S 소단위의 23S rRNA에 결합하며 대체로 정균적(bacteriostatic)으로 작용한다.", "클린다마이신(clindamycin)은 린코사마이드(lincosamide)로 50S 소단위에 결합해 단백질 합성을 억제한다.", "클로람페니콜(chloramphenicol)은 50S 소단위의 펩티딜전이효소(peptidyl transferase)를 억제하는 정균제(bacteriostatic agent)이다.", "반코마이신(vancomycin)은 리보솜이 아니라 세포벽 합성 단계를 억제한다."]
-},
-{
-"id": "mb53",
-"stem": "세균의 DNA gyrase(topoisomerase II)와 topoisomerase IV를 억제하여 DNA 복제를 방해하는 항균제 계열은?",
-"choices": ["퀴놀론계(quinolones)", "마크로라이드계(macrolides)", "아미노글리코사이드계(aminoglycosides)", "세팔로스포린계(cephalosporins)", "폴리믹신계(polymyxins)"],
-"answerIndex": 0,
-"explainCorrect": "시프로플록사신(ciprofloxacin)·레보플록사신(levofloxacin) 등 퀴놀론계(quinolones)는 DNA gyrase와 topoisomerase IV를 억제해 DNA 초나선(supercoiling) 조절과 복제를 막는다. 내성은 주로 gyrA·parC 유전자의 점돌연변이(point mutation)로 생긴다.",
-"explainWrong": ["", "마크로라이드계(macrolides)는 50S 리보솜에 결합해 단백질 합성을 억제한다.", "아미노글리코사이드계(aminoglycosides)는 30S 리보솜에 작용하는 단백질 합성 억제제이다.", "세팔로스포린계(cephalosporins)는 PBP(penicillin-binding protein)에 결합해 세포벽 교차결합을 억제하는 β-락탐(β-lactam) 항균제이다.", "폴리믹신계(polymyxins)는 그람음성균 외막의 지질다당류(LPS)와 결합해 세포막을 손상시킨다."]
-},
-{
-"id": "mb54",
-"stem": "PABA(para-aminobenzoic acid)와 구조가 유사하여 디하이드로프테로산 합성효소(dihydropteroate synthase)를 경쟁적으로 억제하는 항균제는?",
-"choices": ["설폰아마이드(sulfonamide)", "페니실린(penicillin)", "테트라사이클린(tetracycline)", "리팜핀(rifampin)", "메트로니다졸(metronidazole)"],
-"answerIndex": 0,
-"explainCorrect": "설폰아마이드(sulfonamide)는 PABA의 구조 유사체로 디하이드로프테로산 합성효소(dihydropteroate synthase)를 억제해 세균의 엽산(folic acid) 합성을 차단한다. 디하이드로엽산 환원효소(DHFR)를 억제하는 트리메토프림(trimethoprim)과 병용하면 연속 두 단계를 막아 상승효과를 얻는다.",
-"explainWrong": ["", "페니실린(penicillin)은 PBP(penicillin-binding protein)에 결합해 펩티도글리칸(peptidoglycan) 교차결합을 억제한다.", "테트라사이클린(tetracycline)은 30S 소단위에 결합해 aminoacyl-tRNA의 부착을 막는다.", "리팜핀(rifampin)은 DNA 의존성 RNA 중합효소(RNA polymerase)를 억제해 전사를 방해한다.", "메트로니다졸(metronidazole)은 혐기 환경에서 환원되어 생긴 독성 대사체가 DNA를 손상시킨다."]
-},
-{
-"id": "mb55",
-"stem": "비까다로운(nonfastidious) 호기성 세균의 디스크 확산법(Kirby-Bauer법)에 표준 배지로 사용하는 것은?",
-"choices": ["Mueller-Hinton 한천", "혈액 한천(blood agar)", "초콜릿 한천(chocolate agar)", "MacConkey 한천", "Thayer-Martin 한천"],
-"answerIndex": 0,
-"explainCorrect": "Mueller-Hinton 한천은 설폰아마이드(sulfonamide)·트리메토프림(trimethoprim)을 방해하는 티미딘(thymidine) 함량이 낮고 로트 간 재현성이 좋아 감수성 검사(susceptibility test) 표준 배지로 쓰인다. 폐렴사슬알균(Streptococcus pneumoniae)처럼 까다로운 균은 양혈액(sheep blood)을 5% 첨가한 Mueller-Hinton 한천을 사용한다.",
-"explainWrong": ["", "혈액 한천(blood agar)은 용혈(hemolysis) 관찰과 일반 분리배양용이며 성분이 표준화되어 있지 않아 감수성 판정 기준에 쓰지 않는다.", "초콜릿 한천(chocolate agar)은 헤모필루스(Haemophilus)·임균(Neisseria gonorrhoeae) 같은 까다로운 균의 분리배양용이다.", "MacConkey 한천은 그람음성 장내세균(Enterobacterales)을 선택·감별하는 배지로 억제 물질이 들어 있다.", "Thayer-Martin 한천은 항균제가 첨가된 임균(Neisseria gonorrhoeae) 선택배지이다."]
-},
-{
-"id": "mb56",
-"stem": "디스크 확산법(disk diffusion)의 표준 시험 조건으로 옳은 것은?",
-"choices": ["접종균 0.5 McFarland, 한천 두께 4mm, 35°C에서 16~18시간 배양", "접종균 2.0 McFarland, 한천 두께 4mm, 35°C에서 16~18시간 배양", "접종균 0.5 McFarland, 한천 두께 8mm, 35°C에서 16~18시간 배양", "접종균 0.5 McFarland, 한천 두께 4mm, 25°C에서 48시간 배양", "접종균 0.5 McFarland, 한천 두께 4mm, 35°C 5% CO2에서 72시간 배양"],
-"answerIndex": 0,
-"explainCorrect": "0.5 McFarland 탁도(약 1.5×10^8 CFU/mL)로 균액을 맞춰 한천 두께 4mm의 Mueller-Hinton 한천에 도말하고 디스크를 올린 뒤 35°C 대기 조건에서 16~18시간 배양하여 억제대(inhibition zone) 직경을 잰다. 검사의 정확성은 E. coli ATCC 25922, S. aureus ATCC 25923 같은 표준균주(reference strain)의 억제대가 허용범위 안에 드는지로 관리한다.",
-"explainWrong": ["", "접종량이 많으면 억제대(inhibition zone)가 작아져 거짓 내성(false resistance)으로 판정될 수 있다.", "한천이 두꺼우면 항균제가 수직으로 더 퍼져 억제대(inhibition zone)가 작아진다.", "25°C는 표준 온도보다 낮아 성장 속도와 확산이 달라지고 판정 기준을 적용할 수 없다.", "비까다로운(nonfastidious) 균은 CO2를 넣지 않으며 CO2는 배지 pH를 낮춰 일부 항균제 활성을 변화시킨다."]
-},
-{
-"id": "mb57",
-"stem": "희석법(dilution method) 감수성 검사에서 18~24시간 배양 후 육안적으로 세균 증식을 억제하는 항균제의 최저 농도를 무엇이라 하는가?",
-"choices": ["최소억제농도(MIC)", "최소살균농도(MBC)", "판정기준치(breakpoint)", "억제대 직경(zone diameter)", "최고혈중농도(Cmax)"],
-"answerIndex": 0,
-"explainCorrect": "MIC는 눈에 보이는 성장이 없는 가장 낮은 항균제 농도로, 액체희석법(broth dilution)이나 한천희석법(agar dilution)으로 측정한다. 측정된 MIC를 판정기준치(breakpoint)와 비교해 감수성·중간·내성(S·I·R)을 판정한다.",
-"explainWrong": ["", "MBC는 MIC 이상 농도의 시험관을 계대하여 초기 접종균의 99.9% 이상이 사멸한 최저 농도이다.", "판정기준치(breakpoint)는 MIC나 억제대(inhibition zone) 크기를 감수성·내성으로 나누는 기준값이다.", "억제대 직경(zone diameter)은 디스크 확산법(disk diffusion)에서 측정하는 값으로 희석법의 결과가 아니다.", "최고혈중농도(Cmax)는 투약 후 환자 혈중에서 도달하는 약물 농도로 약동학(pharmacokinetics) 지표이다."]
-},
-{
-"id": "mb58",
-"stem": "항균제 농도 기울기가 형성된 플라스틱 띠를 한천 위에 올려놓고, 타원형 억제대(inhibition zone)가 띠와 만나는 지점의 눈금으로 MIC를 읽는 검사법은?",
-"choices": ["E-test(농도 기울기 띠 검사)", "디스크 확산법(disk diffusion)", "액체 미량희석법(broth microdilution)", "한천 희석법(agar dilution)", "D-zone 시험"],
-"answerIndex": 0,
-"explainCorrect": "E-test는 띠에 연속적인 항균제 농도 기울기가 있어 디스크 확산법(disk diffusion)처럼 간편하게 도말한 뒤 MIC 값을 직접 읽을 수 있다. 억제대(inhibition zone) 가장자리가 띠와 교차하는 눈금이 MIC이다.",
-"explainWrong": ["", "디스크 확산법(disk diffusion)은 억제대(inhibition zone) 직경을 재어 범주로 판정할 뿐 MIC를 직접 읽지 않는다.", "액체 미량희석법(broth microdilution)은 마이크로플레이트의 단계 희석 웰에서 혼탁 여부로 MIC를 정한다.", "한천 희석법(agar dilution)은 농도별로 항균제를 섞은 여러 장의 평판에 균을 접종하는 방법이다.", "D-zone 시험은 유도성 클린다마이신(clindamycin) 내성을 확인하는 디스크 근접 배치 검사이다."]
-},
-{
-"id": "mb59",
-"stem": "황색포도알균(Staphylococcus aureus)의 메티실린(methicillin) 내성(mecA 매개)을 디스크 확산법(disk diffusion)으로 검출할 때 사용하는 디스크는?",
-"choices": ["세폭시틴(cefoxitin)", "세프타지딤(ceftazidime)", "이미페넴(imipenem)", "에리스로마이신(erythromycin)", "암피실린(ampicillin)"],
-"answerIndex": 0,
-"explainCorrect": "세폭시틴(cefoxitin)은 mecA 발현을 강하게 유도하여 옥사실린(oxacillin)보다 메티실린(methicillin) 내성을 더 정확히 반영하므로 대리 디스크로 쓰인다. MRSA는 mecA 유전자가 β-락탐(β-lactam) 친화도가 낮은 PBP2a를 만들어 거의 모든 β-락탐에 내성을 보인다.",
-"explainWrong": ["", "세프타지딤(ceftazidime)은 그람음성균의 ESBL(extended-spectrum β-lactamase) 선별에 쓰이는 3세대 세팔로스포린(cephalosporin)이다.", "이미페넴(imipenem)은 카바페넴(carbapenem)으로 장내세균(Enterobacterales)의 카바페넴 내성 선별에 쓰인다.", "에리스로마이신(erythromycin)은 D-test에서 클린다마이신(clindamycin) 디스크와 짝을 이루어 유도성 내성을 확인할 때 쓴다.", "암피실린(ampicillin)은 포도알균 대부분이 페니실린분해효소(penicillinase)를 생성해 내성이므로 메티실린(methicillin) 내성 판정에 쓰지 않는다."]
-},
-{
-"id": "mb60",
-"stem": "요로감염(UTI) 환자에서 분리된 대장균(Escherichia coli)의 세포탁심(cefotaxime)·세프타지딤(ceftazidime) 디스크를 아목시실린-클라불란산(amoxicillin-clavulanate) 디스크 옆에 배치했더니, 두 디스크의 억제대가 클라불란산 디스크 쪽으로 확장되었다. 추정되는 내성기전은?",
-"choices": ["확장스펙트럼 β-락타마아제(ESBL) 생성", "AmpC β-락타마아제 과생성", "카바페넴분해효소(KPC) 생성", "PBP2a 생성", "외막 포린(porin) 단백 소실"],
-"answerIndex": 0,
-"explainCorrect": "이중디스크 상승시험(DDST)에서 클라불란산(clavulanic acid) 쪽으로 억제대가 확장되는 것은 3세대 세팔로스포린(cephalosporin)을 분해하는 효소가 클라불란산에 억제된다는 뜻으로 ESBL 양성이다. ESBL 생성균은 페니실린(penicillin)과 3세대 세팔로스포린, 아즈트레오남(aztreonam)에 내성이지만 세파마이신(cephamycin)과 카바페넴(carbapenem)에는 대개 감수성이다.",
-"explainWrong": ["", "AmpC는 클라불란산(clavulanic acid)에 억제되지 않아 상승효과가 나타나지 않으며 세폭시틴(cefoxitin)에도 내성을 보인다.", "KPC는 카바페넴(carbapenem)을 분해하는 효소로 mCIM 같은 카바페넴 불활성화 검사로 확인한다.", "PBP2a는 황색포도알균(Staphylococcus aureus)의 메티실린(methicillin) 내성 기전으로 β-락타마아제 억제제(β-lactamase inhibitor)와 무관하다.", "포린(porin) 소실은 약물 유입을 줄이는 기전이라 클라불란산(clavulanic acid)에 의한 억제대 확장을 설명하지 못한다."]
-},
-{
-"id": "mb61",
-"stem": "에리스로마이신(erythromycin) 내성, 클린다마이신(clindamycin) 감수성으로 판정된 황색포도알균(Staphylococcus aureus)에서 두 디스크를 가까이 놓고 배양했더니 에리스로마이신 쪽 클린다마이신 억제대가 편평해져 D자 모양이 되었다. 옳은 해석은?",
-"choices": ["erm 유전자에 의한 유도성 클린다마이신(clindamycin) 내성", "msrA 유출펌프(efflux pump)에 의한 마크로라이드(macrolide) 단독 내성", "mecA 유전자에 의한 메티실린(methicillin) 내성", "vanA 유전자에 의한 반코마이신(vancomycin) 내성", "β-락타마아제에 의한 페니실린(penicillin) 내성"],
-"answerIndex": 0,
-"explainCorrect": "D-test 양성은 에리스로마이신(erythromycin)이 erm 메틸화효소(methylase)를 유도해 클린다마이신(clindamycin) 결합 부위까지 변형시켰다는 의미이다. 이 경우 시험관에서 감수성으로 보여도 치료 중 내성이 나타날 수 있으므로 클린다마이신 내성으로 보고한다.",
-"explainWrong": ["", "msrA 유출펌프(efflux pump)는 마크로라이드(macrolide)만 배출하므로 클린다마이신(clindamycin) 억제대가 둥글게 유지되어 D-test 음성이다.", "mecA는 PBP2a를 만들어 β-락탐(β-lactam) 내성을 일으키며 D자 억제대와 관계없다.", "vanA는 장알균(Enterococcus) 등에서 세포벽 전구체를 바꿔 글리코펩티드(glycopeptide) 내성을 일으킨다.", "β-락타마아제는 페니실린(penicillin)을 분해할 뿐 린코사마이드(lincosamide) 억제대 모양에 영향을 주지 않는다."]
-},
-{
-"id": "mb62",
-"stem": "장알균(Enterococcus)에서 반코마이신(vancomycin)과 테이코플라닌(teicoplanin) 모두에 고도 내성을 일으키며 플라스미드(plasmid)로 전달되는 내성 유전자형은?",
-"choices": ["vanA", "vanB", "vanC", "mecA", "blaKPC"],
-"answerIndex": 0,
-"explainCorrect": "vanA형은 세포벽 전구체 말단을 D-Ala-D-Lac으로 바꿔 반코마이신(vancomycin)과 테이코플라닌(teicoplanin) 모두에 고도 내성을 보인다. 전이성 유전요소(mobile genetic element)로 퍼지기 때문에 감염관리에서 가장 중요한 VRE 유형이다.",
-"explainWrong": ["", "vanB형은 반코마이신(vancomycin)에는 내성이지만 테이코플라닌(teicoplanin)에는 대개 감수성이다.", "vanC형은 E. gallinarum·E. casseliflavus가 선천적으로 가진 저도 반코마이신(vancomycin) 내성이다.", "mecA는 포도알균(Staphylococcus)의 메티실린(methicillin) 내성 유전자로 PBP2a를 암호화한다.", "blaKPC는 장내세균(Enterobacterales)의 카바페넴분해효소(carbapenemase) 유전자이다."]
-},
-{
-"id": "mb63",
-"stem": "카바페넴 내성 장내세균(CRE)에서 카바페넴분해효소(carbapenemase) 생성 여부를 확인하는 표현형 검사는?",
-"choices": ["변형 카바페넴 불활성화법(mCIM)", "이중디스크 상승시험(DDST)", "D-zone 시험", "세폭시틴(cefoxitin) 디스크 선별시험", "PBP2a 라텍스 응집시험(latex agglutination test)"],
-"answerIndex": 0,
-"explainCorrect": "mCIM은 시험균 부유액에 메로페넴(meropenem) 디스크를 담가 두었다가 감수성 표준균주(reference strain)를 도말한 평판에 올려, 디스크 활성이 사라져 억제대가 작아지면 카바페넴분해효소(carbapenemase) 양성으로 판정한다. 카바페넴분해효소 생성 장내세균(CPE)은 전파력이 커서 접촉주의(contact precautions) 격리 대상이다.",
-"explainWrong": ["", "이중디스크 상승시험(DDST)은 클라불란산(clavulanic acid)을 이용해 ESBL을 확인하는 방법이다.", "D-zone 시험은 포도알균(Staphylococcus)의 유도성 클린다마이신(clindamycin) 내성을 확인한다.", "세폭시틴(cefoxitin) 디스크 선별시험은 황색포도알균(Staphylococcus aureus)의 mecA 매개 메티실린(methicillin) 내성을 검출한다.", "PBP2a 라텍스 응집시험(latex agglutination test)은 MRSA의 변형 페니실린결합단백을 직접 검출한다."]
-},
-{
-"id": "mb64",
-"stem": "배지와 수술기구 멸균에 사용하는 고압증기멸균(autoclaving)의 표준 조건은?",
-"choices": ["121°C, 15psi, 15분 이상", "100°C, 대기압, 30분", "160°C, 대기압, 2시간", "121°C, 대기압, 15분", "80°C, 15psi, 30분"],
-"answerIndex": 0,
-"explainCorrect": "고압증기멸균기(autoclave)는 약 15psi(1기압 추가)의 포화증기(saturated steam)로 121°C를 만들어 15분 이상 유지한다. 습열(moist heat)은 단백질을 효율적으로 변성시켜 세균 아포(spore)까지 사멸시키며, 부피가 크면 시간을 늘린다.",
-"explainWrong": ["", "100°C 끓이기나 유통증기(flowing steam)는 영양형 세균은 죽이지만 아포(spore)를 확실히 제거하지 못한다.", "160°C에서 2시간은 건열멸균(dry heat sterilization) 조건이다.", "대기압에서는 증기 온도가 100°C를 넘지 못하므로 121°C에 도달할 수 없다.", "80°C는 저온살균(pasteurization) 수준으로 아포(spore)를 사멸시키지 못한다."]
-},
-{
-"id": "mb65",
-"stem": "고압증기멸균기(autoclave)의 멸균 효과를 확인하는 생물학적 지표(biological indicator)로 사용하는 균은?",
-"choices": ["Geobacillus stearothermophilus 아포(spore)", "Bacillus atrophaeus 아포(spore)", "Escherichia coli ATCC 25922", "Staphylococcus aureus ATCC 25923", "Pseudomonas aeruginosa ATCC 27853"],
-"answerIndex": 0,
-"explainCorrect": "Geobacillus stearothermophilus의 아포(spore)는 습열(moist heat)에 대한 저항성이 커서 고압증기멸균(autoclaving)과 과산화수소 플라스마 멸균(hydrogen peroxide plasma sterilization)의 생물학적 지표(biological indicator)로 쓰인다. 멸균 후 55~60°C에서 배양하여 증식이 없으면 멸균이 적절했다고 판단한다.",
-"explainWrong": ["", "Bacillus atrophaeus 아포(spore)는 건열멸균(dry heat sterilization)과 EO(ethylene oxide)가스 멸균의 생물학적 지표(biological indicator)이다.", "E. coli ATCC 25922는 그람음성균 감수성 검사의 정도관리(QC) 표준균주(reference strain)이다.", "S. aureus ATCC 25923은 디스크 확산법(disk diffusion) 정도관리(QC) 표준균주이며 아포(spore)를 만들지 않는다.", "P. aeruginosa ATCC 27853은 비발효(nonfermenting) 그람음성균 감수성 정도관리(QC)에 쓰는 표준균주이다."]
-},
-{
-"id": "mb66",
-"stem": "유리 피펫·시험관 같은 유리기구와 분말, 오일류처럼 증기가 침투하기 어려운 물품의 멸균에 적합한 방법은?",
-"choices": ["건열멸균(dry heat sterilization)", "고압증기멸균(autoclaving)", "여과멸균(filtration sterilization)", "자외선(UV) 조사", "70% 알코올 침지"],
-"answerIndex": 0,
-"explainCorrect": "건열멸균(dry heat sterilization)은 160~170°C에서 1~2시간 처리하며 미생물 단백질을 산화시켜 사멸시킨다. 수분이 필요 없어 유리기구, 금속, 분말, 오일류에 적합하지만 습열(moist heat)보다 효율이 낮아 더 높은 온도와 긴 시간이 필요하다.",
-"explainWrong": ["", "고압증기멸균(autoclaving)은 증기가 오일이나 분말 내부로 침투하지 못해 이런 물품에 부적합하다.", "여과멸균(filtration sterilization)은 열에 약한 액체에 쓰는 방법으로 고체 기구에는 적용할 수 없다.", "자외선(UV)은 투과력이 약해 표면이나 공기 소독에만 쓰인다.", "70% 알코올은 소독제(disinfectant)로 아포(spore)를 죽이지 못하므로 멸균 방법이 아니다."]
-},
-{
-"id": "mb67",
-"stem": "혈청, 항생제 용액, 요소 첨가 용액처럼 열에 불안정한 액체를 멸균할 때 사용하는 방법과 필터 공극 크기로 옳은 것은?",
-"choices": ["여과멸균(filtration sterilization), 0.22μm", "여과멸균(filtration sterilization), 5μm", "고압증기멸균(autoclaving), 121°C", "건열멸균(dry heat sterilization), 160°C", "간헐멸균(tyndallization), 100°C"],
-"answerIndex": 0,
-"explainCorrect": "열에 약한 액체는 0.22μm(또는 0.2μm) 공극의 막 필터(membrane filter)로 걸러 세균을 제거한다. 다만 바이러스와 일부 마이코플라스마(Mycoplasma)는 통과할 수 있다는 한계가 있다.",
-"explainWrong": ["", "5μm 필터는 대부분의 세균이 통과하므로 멸균 목적으로 쓸 수 없다.", "고압증기멸균(autoclaving)은 혈청 단백질이나 항생제, 요소를 변성·분해시킨다.", "건열멸균(dry heat sterilization)은 고온이 길게 가해져 액체 성분을 파괴한다.", "간헐멸균(tyndallization)은 가열을 반복하는 방법으로 열에 불안정한 항생제·요소에는 부적합하다."]
-},
-{
-"id": "mb68",
-"stem": "열과 습기에 약한 플라스틱 의료기구를 저온에서 멸균할 수 있으나, 발암성 잔류가스 때문에 멸균 후 충분한 통기(aeration)가 필요한 방법은?",
-"choices": ["산화에틸렌(EO) 가스 멸균", "감마선(gamma ray) 멸균", "고압증기멸균(autoclaving)", "건열멸균(dry heat sterilization)", "자외선(UV) 멸균"],
-"answerIndex": 0,
-"explainCorrect": "EO 가스는 알킬화(alkylation) 작용으로 핵산과 단백질을 변성시켜 아포(spore)까지 사멸시키며 50~60°C 정도의 저온에서 멸균한다. 독성·발암성·가연성이 있어 멸균 후 긴 통기 시간이 필요하다.",
-"explainWrong": ["", "감마선(gamma ray)은 일회용 플라스틱 제품을 대량 멸균하지만 잔류가스가 없어 통기가 필요하지 않다.", "고압증기멸균(autoclaving)은 121°C 습열(moist heat)을 사용하므로 열에 약한 기구에 쓸 수 없다.", "건열멸균(dry heat sterilization)은 160°C 이상의 고온이 필요해 플라스틱이 변형된다.", "자외선(UV)은 투과력이 약해 포장된 기구 내부를 멸균할 수 없다."]
-},
-{
-"id": "mb69",
-"stem": "에탄올(ethanol)을 피부 및 기구 표면 소독에 사용할 때 가장 효과적인 농도는?",
-"choices": ["70%", "20%", "40%", "95%", "100%"],
-"answerIndex": 0,
-"explainCorrect": "70% 에탄올(ethanol)은 적당한 수분이 있어 세포 안으로 잘 침투하고 단백질을 효과적으로 변성시킨다. 영양형 세균과 외피 바이러스(enveloped virus)에는 효과적이지만 세균 아포(spore)는 죽이지 못한다.",
-"explainWrong": ["", "20%는 농도가 너무 낮아 단백질 변성 효과가 부족하다.", "40%는 70%보다 살균력이 떨어져 표준 소독 농도로 쓰지 않는다.", "95%는 표면 단백질을 급격히 응고시켜 막을 형성하므로 내부 침투가 떨어진다.", "무수 알코올(absolute alcohol)은 수분이 없어 단백질 변성이 잘 일어나지 않고 빠르게 증발한다."]
-},
-{
-"id": "mb70",
-"stem": "병원성 미생물을 제거하거나 감염력을 없애지만 세균 아포(spore)까지 모두 사멸시키지는 못하는 처리를 무엇이라 하는가?",
-"choices": ["소독(disinfection)", "멸균(sterilization)", "방부(antisepsis)", "무균조작(aseptic technique)", "세척(cleaning)"],
-"answerIndex": 0,
-"explainCorrect": "소독(disinfection)은 무생물 표면이나 기구의 병원성 미생물을 제거하는 과정으로 아포(spore)까지 완전히 없애지는 못한다. 차아염소산나트륨(sodium hypochlorite), 알코올, 요오드 화합물 등이 대표적인 소독제(disinfectant)이며, 피부 같은 생체 조직에 쓰는 것은 따로 피부소독제(antiseptic)라 한다.",
-"explainWrong": ["", "멸균(sterilization)은 아포를 포함한 모든 미생물을 완전히 사멸·제거하는 과정이다.", "방부(antisepsis)는 미생물의 증식을 억제해 부패를 막는 것으로 반드시 사멸시키지는 않는다.", "무균조작(aseptic technique)은 오염을 막기 위한 작업 방법이지 미생물 제거 처리가 아니다.", "세척(cleaning)은 유기물과 오염물을 물리적으로 씻어내는 전처리 과정이다."]
-},
-{
-"id": "mb71",
-"stem": "진균(fungi) 분리배양에 가장 널리 쓰이며, 낮은 pH(약 5.6)와 높은 포도당 농도로 세균 증식을 억제하는 배지는?",
-"choices": ["Sabouraud dextrose 한천", "Mueller-Hinton 한천", "TCBS 한천", "Löwenstein-Jensen 배지", "Thayer-Martin 한천"],
-"answerIndex": 0,
-"explainCorrect": "Sabouraud dextrose 한천은 산성 pH와 고농도 포도당(glucose)으로 진균 성장에 유리하며, 선택성을 높이기 위해 클로람페니콜(chloramphenicol)과 사이클로헥시미드(cycloheximide)를 첨가하기도 한다. 진균은 보통 25~30°C에서 수일~수주간 배양한다.",
-"explainWrong": ["", "Mueller-Hinton 한천은 항균제 감수성 검사(susceptibility test) 표준 배지이다.", "TCBS 한천은 비브리오(Vibrio) 선택배지로 알칼리성 pH를 가진다.", "Löwenstein-Jensen 배지는 결핵균(Mycobacterium tuberculosis) 배양용 계란 배지이다.", "Thayer-Martin 한천은 임균(Neisseria gonorrhoeae) 분리용 선택배지이다."]
-},
-{
-"id": "mb72",
-"stem": "손발톱이나 피부 인설 검체에서 진균 균사(hyphae)를 관찰하기 위해 각질(keratin)을 녹이는 직접검경 시약은?",
-"choices": ["10~20% 수산화칼륨(KOH)", "묵즙(India ink)", "락토페놀 코튼블루(LPCB)", "Ziehl-Neelsen 염색액", "Giemsa 염색액"],
-"answerIndex": 0,
-"explainCorrect": "KOH는 케라틴(keratin)과 세포 잔해를 녹여 투명하게 만들고 알칼리에 강한 진균 세포벽은 남겨 균사(hyphae)와 포자(spore)가 잘 보이게 한다. 피부사상균증(dermatophytosis)이나 칸디다증(candidiasis)의 신속 진단에 흔히 쓰인다.",
-"explainWrong": ["", "묵즙(India ink)은 배경을 검게 물들여 크립토코쿠스(Cryptococcus)의 협막(capsule)을 관찰하는 음성염색(negative stain)이다.", "락토페놀 코튼블루(LPCB)는 배양된 곰팡이 집락의 분생자(conidia) 구조를 관찰할 때 쓰는 염색액으로 각질을 녹이지 않는다.", "Ziehl-Neelsen 염색은 결핵균(Mycobacterium tuberculosis) 같은 항산성균(acid-fast bacteria) 검출용이다.", "Giemsa 염색은 말라리아 원충(Plasmodium)이나 혈액세포 관찰에 주로 쓰인다."]
-},
-{
-"id": "mb73",
-"stem": "AIDS 환자의 뇌척수액(CSF)에서 크립토코쿠스 뇌수막염(cryptococcal meningitis)이 의심될 때, 효모(yeast) 주위의 두꺼운 협막(capsule)을 투명한 띠로 관찰하는 검사법은?",
-"choices": ["묵즙(India ink) 도말", "KOH 도말", "그람 염색(Gram stain)", "Ziehl-Neelsen 염색", "GMS 염색"],
-"answerIndex": 0,
-"explainCorrect": "묵즙(India ink) 도말은 배경만 검게 물드는 음성염색(negative stain)이어서 다당류 협막(capsule)이 효모 주위에 밝은 달무리처럼 보인다. 민감도(sensitivity)가 완전하지 않아 뇌척수액 크립토코쿠스 항원(CrAg) 검사를 함께 시행한다.",
-"explainWrong": ["", "KOH는 각질 검체를 녹여 균사(hyphae)를 보는 방법으로 협막(capsule) 관찰에 적합하지 않다.", "그람 염색(Gram stain)에서 효모(yeast)는 양성으로 염색되지만 협막은 뚜렷이 드러나지 않는다.", "Ziehl-Neelsen 염색은 항산성균(acid-fast bacteria) 검출용이다.", "GMS(Grocott methenamine silver) 염색은 조직 속 진균 세포벽을 검게 물들이며 협막 자체를 보여주지 않는다."]
-},
-{
-"id": "mb74",
-"stem": "효모(yeast) 집락을 사람 혈청에 접종하여 37°C에서 2~3시간 배양했더니, 효모에서 수축 없이 뻗어 나온 짧은 관 모양 구조가 관찰되었다. 가장 가능성이 높은 균은?",
-"choices": ["Candida albicans", "Candida glabrata", "Cryptococcus neoformans", "Candida tropicalis", "Saccharomyces cerevisiae"],
-"answerIndex": 0,
-"explainCorrect": "발아관 시험(germ tube test) 양성은 C. albicans(와 C. dubliniensis)를 신속히 추정하는 소견이다. C. albicans는 옥수수가루-Tween 80 한천(cornmeal-Tween 80 agar)에서 두꺼운 벽의 후막포자(chlamydospore)를 만들고 CHROMagar에서 녹색 집락을 형성한다.",
-"explainWrong": ["", "C. glabrata는 가성균사(pseudohyphae)를 만들지 않는 작은 효모로 발아관(germ tube) 시험 음성이다.", "C. neoformans는 협막(capsule)이 있는 효모로 발아관(germ tube)을 만들지 않고 요소분해효소(urease) 양성이다.", "C. tropicalis는 가성균사(pseudohyphae)를 만들 수 있으나 기부가 잘록한 가성발아관(pseudo-germ tube)이라 음성으로 판정한다.", "S. cerevisiae는 출아(budding) 효모로 발아관(germ tube) 시험 음성이다."]
-},
-{
-"id": "mb75",
-"stem": "비둘기 배설물과 관련된 협막(capsule) 효모로, 요소분해효소(urease) 양성이며 페놀산화효소(phenol oxidase) 때문에 birdseed 한천에서 갈색 집락을 만드는 진균은?",
-"choices": ["Cryptococcus neoformans", "Candida albicans", "Candida krusei", "Histoplasma capsulatum", "Malassezia furfur"],
-"answerIndex": 0,
-"explainCorrect": "C. neoformans는 비둘기 배설물로 오염된 흙에서 흡입되어 폐를 거쳐 면역저하자에게 뇌수막염(meningitis)을 일으킨다. 요소분해효소(urease) 양성과 페놀산화효소(phenol oxidase)에 의한 멜라닌(melanin) 생성이 중요한 동정 특성이다.",
-"explainWrong": ["", "C. albicans는 요소분해효소(urease) 음성이며 발아관(germ tube)과 후막포자(chlamydospore)를 형성한다.", "C. krusei는 플루코나졸(fluconazole)에 선천 내성인 칸디다(Candida)로 협막이 없다.", "H. capsulatum은 새와 박쥐 배설물과 관련되지만 이형성(dimorphic) 곰팡이이며 협막 효모가 아니다.", "M. furfur는 지질 요구성 효모로 어루러기(tinea versicolor)를 일으키며 협막이 없다."]
-},
-{
-"id": "mb76",
-"stem": "호중구(neutrophil) 감소 환자의 폐 조직에서 격벽이 있는 가는 균사(septate hyphae)가 45° 예각으로 이분지하는 것이 관찰되었다. 배양 시 분생자병(conidiophore) 끝이 부풀어 분생자두(conidial head)를 형성하는 진균은?",
-"choices": ["Aspergillus fumigatus", "Rhizopus oryzae", "Candida albicans", "Cryptococcus neoformans", "Pneumocystis jirovecii"],
-"answerIndex": 0,
-"explainCorrect": "아스페르길루스(Aspergillus)는 격벽 균사(septate hyphae)가 규칙적인 45° 예각으로 갈라지는 것이 조직 소견의 특징이다. 배양하면 분생자병(conidiophore) 끝의 정낭(vesicle) 위에 경자(phialide)와 분생자(conidia) 사슬이 늘어선 분생자두(conidial head)를 관찰할 수 있다.",
-"explainWrong": ["", "Rhizopus는 격벽이 거의 없는 넓은 리본 모양 균사가 직각으로 분지하며 포자낭(sporangium)을 만든다.", "C. albicans는 조직에서 효모와 가성균사(pseudohyphae)로 보이며 분생자두(conidial head)를 만들지 않는다.", "C. neoformans는 협막(capsule)이 있는 출아(budding) 효모로 균사를 거의 형성하지 않는다.", "P. jirovecii는 배양이 되지 않으며 GMS(Grocott methenamine silver) 염색에서 포낭(cyst) 형태로 관찰된다."]
-},
-{
-"id": "mb77",
-"stem": "당뇨병성 케톤산증(DKA) 환자의 부비동 괴사 조직에서 격벽(septum)이 거의 없는 넓은 리본 모양 균사가 불규칙하게 직각으로 분지하는 것이 관찰되었다. 원인 진균으로 가장 가능성이 높은 것은?",
-"choices": ["Rhizopus 속(털곰팡이목)", "Aspergillus flavus", "Candida albicans", "Fusarium solani", "Trichophyton rubrum"],
-"answerIndex": 0,
-"explainCorrect": "Rhizopus·Mucor 같은 털곰팡이목(Mucorales) 진균은 무격벽 균사(aseptate hyphae)를 가지며 케톤산증(ketoacidosis) 환자에서 비뇌형 털곰팡이증(rhinocerebral mucormycosis)을 일으킨다. 혈관을 침범해 괴사를 빠르게 진행시키며 배양 시 포자낭병(sporangiophore) 끝에 포자낭(sporangium)을 형성한다.",
-"explainWrong": ["", "Aspergillus flavus는 가늘고 격벽(septum)이 있는 균사가 45° 예각으로 분지한다.", "C. albicans는 조직에서 효모와 가성균사(pseudohyphae)로 보이며 넓은 무격벽 균사를 만들지 않는다.", "Fusarium은 격벽 균사(septate hyphae)를 가지며 낫 모양 대분생자(macroconidia)가 특징이다.", "T. rubrum은 피부사상균(dermatophyte)으로 각질층에만 감염하고 혈관 침범 괴사를 일으키지 않는다."]
-},
-{
-"id": "mb78",
-"stem": "고양이와 접촉한 소아의 두부백선(tinea capitis)에서 Wood 등(Wood's lamp) 검사 시 녹황색 형광이 관찰되었고, 배양에서 벽이 두껍고 거친 방추형 대분생자(macroconidia)가 다수 관찰되었다. 원인균은?",
-"choices": ["Microsporum canis", "Trichophyton rubrum", "Trichophyton mentagrophytes", "Epidermophyton floccosum", "Malassezia furfur"],
-"answerIndex": 0,
-"explainCorrect": "Microsporum 속은 두껍고 거친 벽을 가진 방추형 대분생자(macroconidia)가 특징이며 모발과 피부를 침범한다. M. canis는 고양이·개에서 옮는 동물친화성(zoophilic) 피부사상균(dermatophyte)으로 감염 모발이 Wood 등(Wood's lamp)에서 녹황색 형광을 낸다.",
-"explainWrong": ["", "T. rubrum은 대분생자(macroconidia)가 드물고 가늘며 벽이 얇은 연필 모양이고 눈물방울 모양 소분생자(microconidia)가 주로 보인다.", "T. mentagrophytes는 포도송이 모양 소분생자(microconidia)와 나선균사(spiral hyphae)가 특징이다.", "E. floccosum은 곤봉 모양의 매끈한 대분생자(macroconidia)만 만들고 모발을 침범하지 않는다.", "M. furfur는 어루러기(tinea versicolor)를 일으키는 지질 요구성 효모로 대분생자(macroconidia)를 만들지 않는다."]
-},
-{
-"id": "mb79",
-"stem": "CD4 T세포가 크게 감소한 HIV 감염자의 기관지폐포세척액(BAL)을 GMS(Grocott methenamine silver) 염색했더니, 검게 염색된 찌그러진 탁구공 모양의 포낭(cyst)이 관찰되었다. 원인체는?",
-"choices": ["Pneumocystis jirovecii", "Cryptococcus neoformans", "Histoplasma capsulatum", "Candida glabrata", "Aspergillus fumigatus"],
-"answerIndex": 0,
-"explainCorrect": "Pneumocystis jirovecii는 일반 배지에서 배양되지 않아 GMS 염색, Giemsa 염색, 면역형광 염색(immunofluorescence stain)으로 진단한다. 면역저하 환자에서 간질성 폐렴(interstitial pneumonia)을 일으키며 트리메토프림-설파메톡사졸(TMP-SMX)로 치료·예방한다.",
-"explainWrong": ["", "C. neoformans는 출아(budding)하는 협막(capsule) 효모로 묵즙(India ink) 도말에서 협막이 관찰된다.", "H. capsulatum은 대식세포(macrophage) 안에 들어 있는 2~4μm의 작은 출아 효모로 보인다.", "C. glabrata는 작은 출아(budding) 효모로 Sabouraud 배지에서 잘 배양된다.", "A. fumigatus는 격벽 균사(septate hyphae)가 45° 예각으로 분지하는 곰팡이이다."]
-},
-{
-"id": "mb80",
-"stem": "25°C 배양에서는 균사형(mold form)으로 자라 표면에 돌기가 있는 결절성 대분생자(tuberculate macroconidia)를 만들고, 37°C 배양 및 조직 내에서는 대식세포(macrophage) 안의 작은 효모형(yeast form)으로 존재하는 진균은?",
-"choices": ["Histoplasma capsulatum", "Sporothrix schenckii", "Candida albicans", "Cryptococcus neoformans", "Aspergillus niger"],
-"answerIndex": 0,
-"explainCorrect": "Histoplasma capsulatum은 온도에 따라 균사형(mold form)과 효모형(yeast form)이 바뀌는 이형성 진균(dimorphic fungus)이다. 25°C의 균사형에서 결절성(tuberculate) 대분생자(macroconidia)가 특징적이며, 새·박쥐 배설물의 포자를 흡입해 감염된다.",
-"explainWrong": ["", "Sporothrix schenckii도 이형성 진균(dimorphic fungus)이지만 균사형에서 꽃잎 모양으로 배열된 작은 분생자(conidia)를 만들고 조직에서는 시가 모양 효모로 보인다.", "C. albicans는 효모와 가성균사(pseudohyphae)를 오가지만 온도 의존 이형성 진균이 아니며 결절성 대분생자가 없다.", "C. neoformans는 온도와 무관하게 협막(capsule) 효모로 자란다.", "A. niger는 검은 분생자두(conidial head)를 만드는 곰팡이로 효모형으로 전환되지 않는다."]
-},
-{
-"id": "mb81",
-"stem": "바이러스를 감수성 세포에 접종하여 배양했을 때 세포의 원형화, 거대세포 형성, 단층에서의 탈락 등 현미경적 형태 변화가 나타나는 현상은?",
-"choices": ["세포병변효과(CPE)", "혈구응집(hemagglutination)", "간섭현상(interference)", "형질전환(transformation)", "혈구흡착(hemadsorption)"],
-"answerIndex": 0,
-"explainCorrect": "세포병변효과(CPE)는 바이러스 증식으로 배양세포가 손상되어 나타나는 형태 변화로, 배양된 바이러스를 확인하는 기본 지표이다. 출현 속도와 모양(합포체, 포도송이 모양 등)이 바이러스 추정 동정에 도움이 된다.",
-"explainWrong": ["", "혈구응집(hemagglutination)은 바이러스 표면 단백이 적혈구를 서로 엉기게 하는 현상으로 세포 형태 변화가 아니다.", "간섭현상(interference)은 한 바이러스 감염이 다른 바이러스의 증식을 억제하는 현상이다.", "형질전환(transformation)은 종양 바이러스가 세포를 무한 증식 상태로 바꾸는 것으로 세포 파괴와 반대 양상이다.", "혈구흡착(hemadsorption)은 감염세포 표면에 발현된 바이러스 단백에 적혈구가 달라붙는 현상이다."]
-},
-{
-"id": "mb82",
-"stem": "바이러스 감염 초기에 가장 먼저 상승하여 단일 혈청 검체로 급성 감염을 진단하는 데 이용하는 항체는?",
-"choices": ["IgM", "IgG", "IgA", "IgE", "IgD"],
-"answerIndex": 0,
-"explainCorrect": "IgM은 1차 면역반응(primary immune response)에서 가장 먼저 나타나고 수주~수개월 뒤 감소하므로 양성이면 최근 감염을 시사한다. IgG로 판정할 때는 급성기와 회복기 짝혈청(paired sera)에서 항체가가 4배 이상 상승해야 최근 감염으로 판정한다.",
-"explainWrong": ["", "IgG는 늦게 올라와 오래 지속되므로 단일 검체 양성은 과거 감염이나 예방접종과 구분되지 않는다.", "IgA는 점막 면역(mucosal immunity)의 주된 항체로 급성 감염의 표준 혈청 지표가 아니다.", "IgE는 알레르기와 기생충 감염에서 증가한다.", "IgD는 B세포 표면 수용체로 작용하며 혈청 진단에 거의 쓰이지 않는다."]
-},
-{
-"id": "mb83",
-"stem": "사람면역결핍바이러스(HIV)가 gp120을 통해 결합하여 감염시키는 주요 표적세포 표면 분자는?",
-"choices": ["CD4", "CD8", "CD19", "CD20", "CD56"],
-"answerIndex": 0,
-"explainCorrect": "HIV는 외피 당단백(envelope glycoprotein) gp120이 CD4에 결합하고 CCR5 또는 CXCR4를 보조수용체(coreceptor)로 이용해 도움 T세포(helper T cell)와 대식세포(macrophage)에 침입한다. 역전사효소(reverse transcriptase)를 가진 레트로바이러스(retrovirus)로, CD4 T세포 수 감소가 질병 진행의 지표가 된다.",
-"explainWrong": ["", "CD8은 세포독성 T세포(cytotoxic T cell)의 표지로 HIV의 주된 수용체가 아니다.", "CD19는 B세포 표지로 HIV 결합과 무관하다.", "CD20은 성숙 B세포 표지로 리툭시맙(rituximab)의 표적이다.", "CD56은 자연살해세포(NK cell)의 표지이다."]
-},
-{
-"id": "mb84",
-"stem": "인플루엔자 A 바이러스에서 서로 다른 아형(subtype)의 바이러스가 한 세포에 동시 감염되어 분절 유전체가 재편성(reassortment)됨으로써 새로운 HA(hemagglutinin) 또는 NA(neuraminidase) 아형이 출현하고 대유행(pandemic)을 일으키는 변이는?",
-"choices": ["항원 대변이(antigenic shift)", "항원 소변이(antigenic drift)", "표현형 혼합(phenotypic mixing)", "결손 간섭 입자(defective interfering particle) 형성", "잠복감염(latent infection)의 재활성화(reactivation)"],
-"answerIndex": 0,
-"explainCorrect": "인플루엔자 A는 8개 분절(segmented) RNA 유전체를 가져 사람·조류·돼지 바이러스 사이에서 분절 재편성(reassortment)이 일어날 수 있다. 그 결과 인구 집단이 면역을 갖지 못한 새 HA(hemagglutinin)·NA(neuraminidase) 아형이 나타나 세계적 대유행(pandemic)을 일으킨다.",
-"explainWrong": ["", "항원 소변이(antigenic drift)는 HA·NA 유전자의 점돌연변이(point mutation)가 누적된 작은 변화로 매년 계절 유행과 백신 균주 교체의 원인이다.", "표현형 혼합(phenotypic mixing)은 동시 감염 시 한 바이러스의 유전체가 다른 바이러스의 외피에 포장되는 일시적 현상으로 유전되지 않는다.", "결손 간섭 입자(defective interfering particle)는 유전체 일부가 빠진 불완전 입자로 대유행의 원인이 아니다.", "잠복 후 재활성화(reactivation)는 헤르페스바이러스군(Herpesviridae)의 특징이다."]
-},
-{
-"id": "mb85",
-"stem": "혈액과 성접촉, 수직감염(vertical transmission)으로 전파되며 간염바이러스 중 유일하게 DNA 유전체를 가진 바이러스는?",
-"choices": ["B형 간염바이러스(HBV)", "A형 간염바이러스(HAV)", "C형 간염바이러스(HCV)", "D형 간염바이러스(HDV)", "E형 간염바이러스(HEV)"],
-"answerIndex": 0,
-"explainCorrect": "HBV는 부분 이중가닥 DNA를 가진 헤파드나바이러스(Hepadnavirus)로 복제 과정에 역전사(reverse transcription)를 거친다. HBsAg은 감염 표지, anti-HBs는 면역 획득, HBeAg은 높은 증식력과 전염성을 의미한다.",
-"explainWrong": ["", "HAV는 RNA 바이러스로 분변-경구(fecal-oral) 경로로 전파되며 만성화하지 않는다.", "HCV는 혈액으로 전파되지만 RNA 바이러스이며 만성화율이 높다.", "HDV는 RNA 결손 바이러스(defective virus)로 증식에 HBV의 HBsAg이 필요하다.", "HEV는 분변-경구(fecal-oral)로 전파되는 RNA 바이러스로 임신부에서 치명률이 높다."]
-},
-{
-"id": "mb86",
-"stem": "소아기에 수두(varicella)를 일으킨 뒤 감각신경절(sensory ganglion)에 잠복해 있다가 고령이나 면역저하 시 재활성화되어 피부분절(dermatome)을 따라 수포성 발진(vesicular rash)을 일으키는 바이러스는?",
-"choices": ["수두-대상포진바이러스(VZV)", "거대세포바이러스(CMV)", "Epstein-Barr 바이러스(EBV)", "사람유두종바이러스(HPV)", "홍역바이러스(measles virus)"],
-"answerIndex": 0,
-"explainCorrect": "VZV는 헤르페스바이러스군(Herpesviridae)에 속하며 초감염 후 척수후근(dorsal root) 등 감각신경절(sensory ganglion)에 잠복하다가 재활성화되어 대상포진(herpes zoster)을 일으킨다. 헤르페스바이러스군은 모두 외피가 있는 이중가닥 DNA 바이러스로 평생 잠복감염을 유지한다.",
-"explainWrong": ["", "CMV도 헤르페스군이지만 주로 백혈구·상피세포에 잠복하며 올빼미 눈(owl's eye) 모양 핵내 봉입체가 특징이다.", "EBV는 B림프구에 잠복하며 전염단핵구증(infectious mononucleosis)과 버킷림프종(Burkitt lymphoma)·비인두암(nasopharyngeal carcinoma)과 관련된다.", "HPV는 상피세포에 감염해 사마귀와 자궁경부암을 일으키는 유두종바이러스(Papillomaviridae)이며, 신경절에 잠복하는 헤르페스군이 아니다.", "홍역바이러스(measles virus)는 RNA 파라믹소바이러스(Paramyxovirus)로 급성 발진성 질환을 일으키며 신경절 잠복 후 대상포진 양상으로 재발하지 않는다."]
-},
-{
-"id": "mb87",
-"stem": "영유아의 겨울철 급성 위장관염(gastroenteritis)의 주요 원인으로, 이중 캡시드(capsid) 구조와 11개 분절의 이중가닥 RNA 유전체를 가진 바이러스는?",
-"choices": ["로타바이러스(rotavirus)", "노로바이러스(norovirus)", "장관 아데노바이러스(40·41형)", "아스트로바이러스(astrovirus)", "엔테로바이러스(enterovirus)"],
-"answerIndex": 0,
-"explainCorrect": "로타바이러스(rotavirus)는 레오바이러스과(Reoviridae)에 속하며 11개 분절 dsRNA를 가진 외피(envelope) 없는 바이러스로 5세 미만 영유아 설사의 대표적 원인이다. 대변 검체에서 항원 검사(EIA, 면역크로마토그래피)나 RT-PCR로 진단하며 경구 생백신(live vaccine)이 있다.",
-"explainWrong": ["", "노로바이러스(norovirus)는 단일가닥 RNA 칼리시바이러스(Calicivirus)로 전 연령의 집단 식중독과 겨울철 구토·설사를 일으킨다.", "장관 아데노바이러스(enteric adenovirus)는 이중가닥 DNA 바이러스로 분절 유전체가 없다.", "아스트로바이러스(astrovirus)는 별 모양의 단일가닥 RNA 바이러스로 비교적 경한 설사를 일으킨다.", "엔테로바이러스(enterovirus)는 단일가닥 RNA 피코르나바이러스(Picornavirus)로 장에서 증식하지만 주로 수족구병(HFMD)·무균성 뇌수막염(aseptic meningitis)을 일으킨다."]
-},
-{
-"id": "mb88",
-"stem": "자궁경부 편평상피암(squamous cell carcinoma)의 주요 원인으로, 16형과 18형이 고위험형으로 분류되는 바이러스는?",
-"choices": ["사람유두종바이러스(HPV)", "단순헤르페스바이러스 2형(HSV-2)", "Epstein-Barr 바이러스(EBV)", "B형 간염바이러스(HBV)", "사람 T세포 백혈병바이러스 1형(HTLV-1)"],
-"answerIndex": 0,
-"explainCorrect": "고위험 HPV의 E6·E7 단백은 각각 p53과 Rb 종양억제단백(tumor suppressor protein)을 불활성화하여 자궁경부 상피의 악성화를 일으킨다. 자궁경부 세포검사(Pap test)와 함께 HPV DNA 검사로 선별하며 백신으로 예방할 수 있다.",
-"explainWrong": ["", "HSV-2는 생식기 헤르페스(genital herpes)를 일으키며 자궁경부암의 주된 원인 바이러스로 인정되지 않는다.", "EBV는 버킷림프종(Burkitt lymphoma), 비인두암(nasopharyngeal carcinoma), 호지킨림프종(Hodgkin lymphoma)과 관련된다.", "HBV는 만성 간염을 거쳐 간세포암(HCC)과 관련된다.", "HTLV-1은 성인 T세포 백혈병·림프종(ATLL)의 원인 레트로바이러스(retrovirus)이다."]
-},
-{
-"id": "mb89",
-"stem": "점액혈변을 보이는 환자의 신선한 대변 직접도말에서 위족(pseudopodia)으로 활발히 움직이며 세포질 내에 적혈구를 탐식한 영양형(trophozoite)이 관찰되었다. 포낭(cyst)은 성숙하면 4개의 핵을 가진다. 원인 원충은?",
-"choices": ["이질아메바(Entamoeba histolytica)", "대장아메바(Entamoeba coli)", "람블편모충(Giardia lamblia)", "대장섬모충(Balantidium coli)", "작은와포자충(Cryptosporidium parvum)"],
-"answerIndex": 0,
-"explainCorrect": "이질아메바(Entamoeba histolytica) 영양형(trophozoite)은 적혈구를 탐식하는 것이 병원성의 특징이며, 대장 점막에 플라스크 모양 궤양(flask-shaped ulcer)을 만들고 간농양(liver abscess)을 일으킬 수 있다. 성숙 포낭(cyst)은 4핵이며 막대 모양 유염색체(chromatoid body)를 가진다.",
-"explainWrong": ["", "대장아메바(Entamoeba coli)는 비병원성으로 적혈구를 탐식하지 않고 성숙 포낭(cyst)은 8핵이다.", "람블편모충(Giardia lamblia)은 배 모양 영양형에 핵 2개와 흡착판(sucking disk)을 가진 편모충이다.", "대장섬모충(Balantidium coli)은 체표에 섬모가 있고 큰 콩팥 모양 대핵(macronucleus)을 가진 섬모충이다.", "작은와포자충(Cryptosporidium parvum)은 항산성 염색(acid-fast stain)으로 보이는 작은 난포낭(oocyst)을 배출하며 위족(pseudopodia) 운동을 하지 않는다."]
-},
-{
-"id": "mb90",
-"stem": "지방변(steatorrhea)과 흡수장애를 호소하는 여행자의 대변 또는 십이지장액에서 좌우대칭의 배 모양 영양형(trophozoite)이 관찰되었다. 핵 2개와 복측 흡착판(sucking disk)을 가져 원숭이 얼굴처럼 보이는 원충은?",
-"choices": ["람블편모충(Giardia lamblia)", "질트리코모나스(Trichomonas vaginalis)", "이질아메바(Entamoeba histolytica)", "메닐편모충(Chilomastix mesnili)", "대장섬모충(Balantidium coli)"],
-"answerIndex": 0,
-"explainCorrect": "람블편모충(Giardia lamblia)은 흡착판(sucking disk)으로 십이지장·공장 점막에 붙어 흡수장애와 지방변(steatorrhea)을 일으킨다. 오염된 물의 포낭(cyst) 섭취로 감염되며 포낭은 타원형에 핵 4개를 가진다.",
-"explainWrong": ["", "질트리코모나스(Trichomonas vaginalis)는 비뇨생식기에 기생하며 파동막(undulating membrane)이 있고 핵은 1개이다.", "이질아메바(Entamoeba histolytica)는 위족(pseudopodia)으로 움직이는 아메바로 편모와 흡착판이 없다.", "메닐편모충(Chilomastix mesnili)은 비대칭의 서양배 모양으로 핵 1개와 나선형 홈을 가진 비병원성 편모충이다.", "대장섬모충(Balantidium coli)은 섬모로 움직이며 콩팥 모양 대핵(macronucleus)을 가진다."]
-},
-{
-"id": "mb91",
-"stem": "악취가 나는 거품 섞인 질분비물을 생리식염수에 섞어 즉시 검경했더니 파동막(undulating membrane)과 편모로 경련하듯 움직이는 서양배 모양 원충이 관찰되었다. 포낭(cyst) 시기가 없는 이 원충은?",
-"choices": ["질트리코모나스(Trichomonas vaginalis)", "람블편모충(Giardia lamblia)", "톡소포자충(Toxoplasma gondii)", "이질아메바(Entamoeba histolytica)", "작은와포자충(Cryptosporidium parvum)"],
-"answerIndex": 0,
-"explainCorrect": "질트리코모나스(Trichomonas vaginalis)는 영양형(trophozoite)만 존재하며 성접촉으로 전파되어 질염과 요도염을 일으킨다. 검체가 식으면 운동성이 떨어지므로 채취 즉시 생리식염수 습식표본(wet mount)으로 관찰한다.",
-"explainWrong": ["", "람블편모충(Giardia lamblia)은 장관 기생 편모충으로 포낭(cyst) 시기가 있다.", "톡소포자충(Toxoplasma gondii)은 세포 내 기생 포자충으로 고양이가 종숙주(definitive host)이며 편모 운동을 하지 않는다.", "이질아메바(Entamoeba histolytica)는 대장에 기생하며 위족(pseudopodia)으로 움직이고 포낭을 형성한다.", "작은와포자충(Cryptosporidium parvum)은 장 상피세포에 기생하며 난포낭(oocyst) 형태로 대변에서 검출된다."]
-},
-{
-"id": "mb92",
-"stem": "아프리카 여행 후 고열과 의식저하를 보이는 환자의 박막 혈액도말(thin blood smear)에서 크기가 정상인 적혈구 안에 가느다란 반지형(ring form) 원충이 여러 개씩 들어 있고, 바나나 모양의 생식모세포(gametocyte)가 관찰되었다. 원인은?",
-"choices": ["열대열원충(Plasmodium falciparum)", "삼일열원충(Plasmodium vivax)", "사일열원충(Plasmodium malariae)", "난형열원충(Plasmodium ovale)", "바베시아(Babesia microti)"],
-"answerIndex": 0,
-"explainCorrect": "열대열원충(Plasmodium falciparum)은 모든 연령의 적혈구에 감염해 원충혈증(parasitemia)이 높고, 한 적혈구의 다중감염과 초승달(바나나) 모양 생식모세포(gametocyte)가 특징이다. 감염 적혈구가 미세혈관에 붙어 뇌말라리아(cerebral malaria)를 일으킬 수 있어 가장 위험하다.",
-"explainWrong": ["", "삼일열원충(Plasmodium vivax)은 감염 적혈구가 커지고 Schüffner 반점이 보이며 생식모세포(gametocyte)는 둥글다.", "사일열원충(Plasmodium malariae)은 적혈구 크기가 정상이지만 띠 모양 영양형(band form)과 국화꽃 모양 분열체(rosette schizont)가 특징이다.", "난형열원충(Plasmodium ovale)은 감염 적혈구가 타원형으로 변하고 가장자리가 톱니 모양이 된다.", "바베시아(Babesia)는 진드기 매개 원충으로 사면체 배열(몰타 십자)이 특징이며 생식모세포(gametocyte)를 만들지 않는다."]
-},
-{
-"id": "mb93",
-"stem": "국내 휴전선 인근에서 토착 발생하는 말라리아로, 감염된 적혈구가 커지고 Schüffner 반점이 나타나며 간에 휴면체(hypnozoite)를 형성하여 재발을 일으키는 원충은?",
-"choices": ["삼일열원충(Plasmodium vivax)", "열대열원충(Plasmodium falciparum)", "사일열원충(Plasmodium malariae)", "원숭이열원충(Plasmodium knowlesi)", "톡소포자충(Toxoplasma gondii)"],
-"answerIndex": 0,
-"explainCorrect": "삼일열원충(Plasmodium vivax)은 망상적혈구(reticulocyte)에 주로 감염해 적혈구가 커지고 붉은 Schüffner 반점이 보인다. 간의 휴면체(hypnozoite) 때문에 재발하므로 프리마퀸(primaquine) 치료가 필요하며, 진단은 원충 검출에 유리한 후층도말(thick smear)과 종 감별에 유리한 박층도말(thin smear)을 함께 본다.",
-"explainWrong": ["", "열대열원충(Plasmodium falciparum)은 적혈구 크기가 정상이고 휴면체(hypnozoite)를 만들지 않는다.", "사일열원충(Plasmodium malariae)은 늙은 적혈구에 감염하며 적혈구 비대나 Schüffner 반점이 없다.", "원숭이열원충(Plasmodium knowlesi)은 동남아시아 원숭이 말라리아로 매일 열발작을 일으키며 휴면체(hypnozoite)가 없다.", "톡소포자충(Toxoplasma gondii)은 말라리아 원충이 아니며 적혈구에 감염하지 않는다."]
-},
-{
-"id": "mb94",
-"stem": "밤에 항문 주위 가려움을 호소하는 유치원생에게 아침 배변 전 셀로판테이프(cellophane tape)를 항문 주위에 붙였다 떼어 검경하는 검사법으로 진단하는 기생충은?",
-"choices": ["요충(Enterobius vermicularis)", "회충(Ascaris lumbricoides)", "편충(Trichuris trichiura)", "구충(Ancylostoma duodenale)", "분선충(Strongyloides stercoralis)"],
-"answerIndex": 0,
-"explainCorrect": "요충(Enterobius vermicularis) 암컷은 밤에 항문 밖으로 나와 주름에 알을 낳으므로 대변보다 항문주위 도말(perianal swab)에서 충란(egg)이 잘 검출된다. 충란은 한쪽이 편평한 비대칭 타원형이며 가족·집단 내 전파가 흔하다.",
-"explainWrong": ["", "회충(Ascaris lumbricoides)은 소장에 기생하며 대변 검사에서 두꺼운 단백막(albuminous coat)을 가진 충란으로 진단한다.", "편충(Trichuris trichiura)은 대장에 기생하며 대변에서 양 끝에 마개가 있는 충란으로 진단한다.", "구충(Ancylostoma duodenale)은 대변에서 얇은 껍질 안에 난할(cleavage)된 세포가 보이는 충란으로 진단한다.", "분선충(Strongyloides stercoralis)은 대변에서 충란보다 간상유충(rhabditiform larva)이 주로 검출된다."]
-},
-{
-"id": "mb95",
-"stem": "대변 검사에서 갈색의 레몬(또는 술통) 모양이며 양 끝에 투명한 마개(polar plug)가 있는 충란이 관찰되었다. 해당 기생충은?",
-"choices": ["편충(Trichuris trichiura)", "회충(Ascaris lumbricoides)", "요충(Enterobius vermicularis)", "구충(Necator americanus)", "간흡충(Clonorchis sinensis)"],
-"answerIndex": 0,
-"explainCorrect": "편충(Trichuris trichiura) 충란은 양극에 마개(polar plug)가 있는 술통 모양으로 쉽게 식별된다. 성충은 앞쪽이 채찍처럼 가늘어 대장 점막에 파고들며 심한 감염 시 직장탈출(rectal prolapse)을 일으킬 수 있다.",
-"explainWrong": ["", "회충(Ascaris lumbricoides) 수정란은 두꺼운 껍질에 울퉁불퉁한 단백막(albuminous coat)이 있고 불수정란은 길쭉하고 불규칙하다.", "요충(Enterobius vermicularis) 충란은 한쪽이 편평한 비대칭 타원형으로 마개가 없다.", "구충(Necator americanus) 충란은 얇고 투명한 껍질 안에 4~8세포기 난할(cleavage)이 보인다.", "간흡충(Clonorchis sinensis) 충란은 매우 작고 한쪽 끝에 어깨가 뚜렷한 뚜껑(operculum)이 있다."]
-},
-{
-"id": "mb96",
-"stem": "대변 속 원충 포낭(cyst)과 흡충(trematode)·조충(cestode)·선충(nematode)의 충란을 폭넓게 농축하여 검출하는 데 가장 널리 쓰이는 집란법(concentration method)은?",
-"choices": ["포르말린-에테르 침전법(formalin-ether sedimentation)", "황산아연 부유법(zinc sulfate flotation)", "포화식염수 부유법(saturated brine flotation)", "Kato-Katz 후층도말법(thick smear)", "셀로판테이프(cellophane tape) 항문주위 도말법"],
-"answerIndex": 0,
-"explainCorrect": "포르말린-에테르 침전법(formalin-ether sedimentation)은 포르말린으로 고정한 뒤 에테르(또는 에틸아세테이트)로 지방과 부스러기를 제거하고 원심하여 침전물을 검경한다. 무거운 흡충란(trematode egg)과 뚜껑(operculum) 있는 충란까지 대부분 회수할 수 있어 표준 집란법(concentration method)으로 쓰인다.",
-"explainWrong": ["", "황산아연 부유법(zinc sulfate flotation)은 원충 포낭(cyst) 검출에 좋으나 무거운 흡충란(trematode egg)과 뚜껑 있는 충란은 뜨지 않거나 변형된다.", "포화식염수 부유법(saturated brine flotation)은 구충란(hookworm egg)처럼 가벼운 충란에 유리하지만 흡충란은 가라앉아 놓친다.", "Kato-Katz법은 충란 수를 세어 감염 강도를 평가하는 후층도말법(thick smear)으로 원충 포낭 검출에는 부적합하다.", "셀로판테이프(cellophane tape) 도말법은 요충란(pinworm egg) 검출을 위한 항문주위 검사이다."]
-},
-{
-"id": "mb97",
-"stem": "민물고기 회를 즐겨 먹은 50대 남성이 우상복부 불편감과 황달(jaundice)을 보였다. 영상검사에서 간내 담관(bile duct) 확장이 있었고, 대변에서 길이 약 30μm의 황갈색 충란이 관찰되었는데 한쪽 끝에 어깨가 뚜렷한 뚜껑(operculum)이, 반대쪽 끝에 작은 돌기가 있었다. 원인 기생충은?",
-"choices": ["간흡충(Clonorchis sinensis)", "요코가와흡충(Metagonimus yokogawai)", "폐흡충(Paragonimus westermani)", "광절열두조충(Diphyllobothrium latum)", "무구조충(Taenia saginata)"],
-"answerIndex": 0,
-"explainCorrect": "간흡충(Clonorchis sinensis)은 제1중간숙주(first intermediate host) 쇠우렁이(Parafossarulus manchouricus), 제2중간숙주(second intermediate host) 참붕어(Pseudorasbora parva) 등 민물고기를 거치며, 피낭유충(metacercaria)이 든 생선을 날로 먹으면 감염되어 담관에 기생한다. 충란은 인체 기생 흡충란 중 가장 작은 편이고 뚜껑(operculum)의 어깨와 뒤쪽 작은 돌기가 특징이며, 만성 감염은 담관암(cholangiocarcinoma)의 위험인자이다.",
-"explainWrong": ["", "요코가와흡충(Metagonimus yokogawai)도 은어 등 민물고기로 감염되고 충란이 비슷하게 작지만 소장에 기생하며 뚜껑의 어깨가 뚜렷하지 않고 담관 확장을 일으키지 않는다.", "폐흡충(Paragonimus westermani)은 가재·게로 감염되며 충란이 80μm 이상으로 크고 주로 객담(sputum)에서 검출된다.", "광절열두조충(Diphyllobothrium latum)은 민물고기로 감염되지만 조충으로, 충란은 약 65μm 크기에 뚜껑(operculum)이 있고 소장에 기생해 빈혈을 일으킨다.", "무구조충(Taenia saginata)은 소고기로 감염되며 충란은 뚜껑 없이 방사상 줄무늬가 있는 두꺼운 껍질을 가진다."]
-},
-{
-"id": "mb98",
-"stem": "민물 가재나 참게를 날로 또는 덜 익혀 먹은 후 만성 기침과 혈담이 지속되는 환자의 객담(sputum)에서 크고 뚜껑(operculum)이 있는 황갈색 충란이 발견되었다. 원인 기생충은?",
-"choices": ["폐흡충(Paragonimus westermani)", "간흡충(Clonorchis sinensis)", "요코가와흡충(Metagonimus yokogawai)", "회충(Ascaris lumbricoides)", "유구조충(Taenia solium)"],
-"answerIndex": 0,
-"explainCorrect": "폐흡충(Paragonimus westermani)은 다슬기(Semisulcospira libertina)를 제1중간숙주(first intermediate host), 가재·게를 제2중간숙주(second intermediate host)로 하며 폐에 충낭을 만들어 결핵과 비슷한 증상을 보인다. 충란은 객담이나 삼킨 객담이 섞인 대변에서 검출되며 뚜껑(operculum) 반대쪽 껍질이 두꺼운 것이 특징이다.",
-"explainWrong": ["", "간흡충(Clonorchis sinensis)은 민물고기로 감염되어 담관에 기생하며 충란은 대변에서 검출된다.", "요코가와흡충(Metagonimus yokogawai)은 은어로 감염되어 소장에 기생한다.", "회충(Ascaris lumbricoides)은 유충이 폐를 이행하며 기침을 일으킬 수 있으나 충란을 섭취해 감염되고 객담에서 뚜껑 있는 충란이 나오지 않는다.", "유구조충(Taenia solium)은 돼지고기로 감염되는 조충으로 충란에 뚜껑(operculum)이 없다."]
-},
-{
-"id": "mb99",
-"stem": "두절(scolex)에 4개의 흡반(sucker)과 갈고리(hooklet)가 있고 덜 익힌 돼지고기로 감염되며, 사람이 충란을 섭취하면 뇌·근육 등에 유충이 자리 잡는 낭미충증(cysticercosis)을 일으킬 수 있는 조충은?",
-"choices": ["유구조충(Taenia solium)", "무구조충(Taenia saginata)", "광절열두조충(Diphyllobothrium latum)", "왜소조충(Hymenolepis nana)", "단방조충(Echinococcus granulosus)"],
-"answerIndex": 0,
-"explainCorrect": "유구조충(Taenia solium)은 사람이 종숙주(definitive host)이면서 충란을 삼키면 중간숙주(intermediate host)가 되어 낭미충증(cysticercosis)이 생길 수 있고, 뇌낭미충증(neurocysticercosis)은 경련의 원인이 된다. 편절(proglottid)의 자궁 측지(uterine branch) 수가 7~13개로 무구조충(Taenia saginata)보다 적은 것이 감별점이다.",
-"explainWrong": ["", "무구조충(Taenia saginata)은 소고기로 감염되며 두절(scolex)에 갈고리가 없고 사람에서 낭미충증(cysticercosis)을 거의 일으키지 않는다.", "광절열두조충(Diphyllobothrium latum)은 민물고기로 감염되며 두절에 흡구(bothria)가 있고 비타민 B12 결핍성 빈혈을 일으킨다.", "왜소조충(Hymenolepis nana)은 중간숙주(intermediate host) 없이 충란 섭취로 직접 감염되는 작은 조충이다.", "단방조충(Echinococcus granulosus)은 개가 종숙주(definitive host)이며 사람에게 간·폐의 포충낭(hydatid cyst)을 형성한다."]
-},
-{
-"id": "mb100",
-"stem": "음압(negative pressure)이 유지되는 1인실 격리와 N95 호흡기 착용이 필요한 공기주의(airborne precautions) 격리 대상 질환은?",
-"choices": ["활동성 폐결핵(active pulmonary tuberculosis)", "인플루엔자(influenza)", "MRSA 창상감염", "Clostridioides difficile 장염", "백일해(pertussis)"],
-"answerIndex": 0,
-"explainCorrect": "공기주의(airborne precautions)는 5μm 이하의 비말핵(droplet nuclei)이 공기 중에 오래 떠다니며 먼 거리까지 전파되는 병원체에 적용하며 결핵, 홍역(measles), 수두(varicella)가 대표적이다. 음압격리실(negative pressure isolation room)을 쓰고 의료진은 N95 이상 호흡기를 착용하며, 모든 격리의 기본은 표준주의(standard precautions)와 손위생(hand hygiene)이다.",
-"explainWrong": ["", "인플루엔자(influenza)는 큰 비말로 가까운 거리에서 전파되므로 비말주의(droplet precautions)와 수술용 마스크를 적용한다.", "MRSA는 손과 환경을 통한 접촉으로 전파되므로 접촉주의(contact precautions)를 적용한다.", "C. difficile은 아포(spore)가 환경에 남아 접촉으로 전파되며 알코올 손소독제보다 물과 비누 손씻기가 필요하다.", "백일해(pertussis)는 비말로 전파되는 세균 감염으로 비말주의(droplet precautions) 대상이다."]
-},
-{
-"id": "mb101",
-"stem": "결핵균 배양이나 검체 분주처럼 에어로졸이 생기는 작업을 할 때 전면 흡입 기류와 HEPA 필터로 걸러진 하향 기류를 이용해 작업자, 환경, 검체를 모두 보호하는 장비는?",
-"choices": ["Class II 생물안전작업대(BSC)", "Class I 생물안전작업대(BSC)", "수평층류 클린벤치(horizontal laminar flow clean bench)", "화학용 흄후드(chemical fume hood)", "개방형 실험대(open bench)"],
-"answerIndex": 0,
-"explainCorrect": "Class II 생물안전작업대(BSC)는 전면 개구부로 공기를 빨아들여 작업자를 보호하고, HEPA 필터를 거친 하향 기류로 작업면의 검체를 보호하며, 배기도 HEPA 필터로 걸러 환경을 보호한다. 임상미생물검사실에서 가장 널리 쓰인다.",
-"explainWrong": ["", "Class I은 작업자와 환경은 보호하지만 여과되지 않은 실내 공기가 작업면으로 들어오므로 검체를 보호하지 못한다.", "수평층류 클린벤치(horizontal laminar flow clean bench)는 여과된 공기를 작업자 쪽으로 내보내 제품만 보호하므로 감염성 물질 취급에 쓰면 안 된다.", "화학용 흄후드(chemical fume hood)는 유해 증기를 배출하는 장비로 HEPA 필터가 없어 미생물 에어로졸을 거르지 못한다.", "개방형 실험대(open bench)에서는 에어로졸이 그대로 퍼져 작업자 감염 위험이 크다."]
-},
-{
-"id": "mb102",
-"stem": "채혈 후 HBsAg 양성 환자의 혈액이 묻은 주사침에 손가락을 찔렸다. 가장 먼저 해야 할 적절한 조치는?",
-"choices": ["상처를 흐르는 물과 비누로 씻고 즉시 감염관리 부서에 보고한다", "상처를 세게 짜내어 피를 빼낸 뒤 입으로 빨아낸다", "상처에 차아염소산나트륨(sodium hypochlorite) 원액을 부어 소독한다", "발열 같은 증상이 나타날 때까지 경과를 지켜본 뒤 보고한다", "사용한 주사침에 뚜껑을 다시 씌워 일반 폐기물로 버린다"],
-"answerIndex": 0,
-"explainCorrect": "주사침 자상(needlestick injury) 후에는 상처를 흐르는 물과 비누로 씻고 즉시 보고하여 노출자와 노출원의 혈청 검사를 받는다. 노출자에게 B형 간염 면역이 없으면 가능한 빨리(24시간 이내 권장) B형 간염 면역글로불린(HBIG)과 백신을 투여한다.",
-"explainWrong": ["", "상처를 세게 짜거나 입으로 빠는 행위는 조직 손상과 점막 노출을 늘릴 수 있어 권장되지 않는다.", "강한 소독제 원액은 피부 조직을 손상시키며 감염 예방 효과가 입증되지 않았다.", "보고가 늦어지면 면역글로불린과 예방조치의 적기를 놓친다.", "주사침 뚜껑을 다시 씌우는 것은 자상의 주요 원인이며 사용한 주사침은 손상성 의료폐기물 전용 용기에 버려야 한다."]
-},
-{
-"id": "mb103",
-"stem": "객담 배양에서 분리된 그람음성 간균이 MacConkey 한천에서 무색 집락을 형성하고, 산화효소(oxidase) 검사 양성이며 포도당을 발효하지 않았다. 가장 가능성이 큰 균은?",
-"choices": ["Escherichia coli", "Klebsiella pneumoniae", "Pseudomonas aeruginosa", "Proteus mirabilis", "Salmonella Typhi"],
-"answerIndex": 2,
-"explainCorrect": "Pseudomonas aeruginosa는 포도당 비발효 그람음성 간균으로 MacConkey 한천에서 유당(lactose)을 분해하지 않아 무색 집락을 보이며 산화효소(oxidase) 양성이다. 녹농균 특유의 청록색 색소(pyocyanin)와 포도향 냄새도 감별에 도움이 된다.",
-"explainWrong": ["E. coli는 산화효소(oxidase) 음성이며 대개 MacConkey에서 유당 분해로 분홍·적색 집락을 형성한다.", "K. pneumoniae는 산화효소(oxidase) 음성이고 유당 분해 양성으로 MacConkey에서 점액성 분홍 집락을 보인다.", "", "P. mirabilis는 산화효소(oxidase) 음성이며 유당 비분해이지만 배지 전면에 확산 증식(swarming)하는 것이 특징이다.", "Salmonella Typhi는 산화효소(oxidase) 음성이고 유당 비분해인 Enterobacteriaceae에 속한다."]
-}
+  {
+    "id": "mb51",
+    "stem": "세균 세포벽 펩티도글리칸(peptidoglycan) 전구체의 D-Ala-D-Ala 말단에 결합하여 세포벽 합성을 억제하는 항균제는?",
+    "choices": [
+      "반코마이신(vancomycin)",
+      "젠타마이신(gentamicin)",
+      "에리스로마이신(erythromycin)",
+      "시프로플록사신(ciprofloxacin)",
+      "설파메톡사졸(sulfamethoxazole)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "반코마이신(vancomycin)은 글리코펩티드계(glycopeptide)로 펩티도글리칸(peptidoglycan) 전구체의 D-Ala-D-Ala 말단에 결합해 당전이(transglycosylation)와 펩티드 교차결합(transpeptidation)을 막는다. 분자가 커서 그람음성균 외막(outer membrane)을 통과하지 못하므로 주로 그람양성균에 쓰인다.",
+    "explainWrong": [
+      "",
+      "젠타마이신(gentamicin)은 아미노글리코사이드(aminoglycoside)로 리보솜 30S 소단위에 결합해 단백질 합성을 억제한다.",
+      "에리스로마이신(erythromycin)은 마크로라이드(macrolide)로 50S 소단위에 결합해 펩티드 사슬 신장을 막는다.",
+      "시프로플록사신(ciprofloxacin)은 퀴놀론계(quinolone)로 DNA gyrase와 topoisomerase IV를 억제해 핵산 합성을 방해한다.",
+      "설파메톡사졸(sulfamethoxazole)은 PABA와 경쟁해 엽산(folic acid) 합성을 억제하는 설폰아마이드(sulfonamide)이다."
+    ]
+  },
+  {
+    "id": "mb52",
+    "stem": "리보솜 30S 소단위에 결합하여 mRNA 판독 오류를 일으키고 살균적(bactericidal)으로 작용하는 항균제는?",
+    "choices": [
+      "젠타마이신(gentamicin)",
+      "에리스로마이신(erythromycin)",
+      "클린다마이신(clindamycin)",
+      "클로람페니콜(chloramphenicol)",
+      "반코마이신(vancomycin)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "젠타마이신(gentamicin)·아미카신(amikacin)·토브라마이신(tobramycin) 같은 아미노글리코사이드(aminoglycoside)는 30S 소단위에 결합해 유전암호를 잘못 읽게 만들고 살균 작용을 나타낸다. 세포 내 유입에 산소 의존적 수송이 필요하므로 혐기성균(anaerobe)에는 효과가 없다.",
+    "explainWrong": [
+      "",
+      "에리스로마이신(erythromycin)은 50S 소단위의 23S rRNA에 결합하며 대체로 정균적(bacteriostatic)으로 작용한다.",
+      "클린다마이신(clindamycin)은 린코사마이드(lincosamide)로 50S 소단위에 결합해 단백질 합성을 억제한다.",
+      "클로람페니콜(chloramphenicol)은 50S 소단위의 펩티딜전이효소(peptidyl transferase)를 억제하는 정균제(bacteriostatic agent)이다.",
+      "반코마이신(vancomycin)은 리보솜이 아니라 세포벽 합성 단계를 억제한다."
+    ]
+  },
+  {
+    "id": "mb53",
+    "stem": "세균의 DNA gyrase(topoisomerase II)와 topoisomerase IV를 억제하여 DNA 복제를 방해하는 항균제 계열은?",
+    "choices": [
+      "퀴놀론계(quinolones)",
+      "마크로라이드계(macrolides)",
+      "아미노글리코사이드계(aminoglycosides)",
+      "세팔로스포린계(cephalosporins)",
+      "폴리믹신계(polymyxins)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "시프로플록사신(ciprofloxacin)·레보플록사신(levofloxacin) 등 퀴놀론계(quinolones)는 DNA gyrase와 topoisomerase IV를 억제해 DNA 초나선(supercoiling) 조절과 복제를 막는다. 내성은 주로 gyrA·parC 유전자의 점돌연변이(point mutation)로 생긴다.",
+    "explainWrong": [
+      "",
+      "마크로라이드계(macrolides)는 50S 리보솜에 결합해 단백질 합성을 억제한다.",
+      "아미노글리코사이드계(aminoglycosides)는 30S 리보솜에 작용하는 단백질 합성 억제제이다.",
+      "세팔로스포린계(cephalosporins)는 PBP(penicillin-binding protein)에 결합해 세포벽 교차결합을 억제하는 β-락탐(β-lactam) 항균제이다.",
+      "폴리믹신계(polymyxins)는 그람음성균 외막의 지질다당류(LPS)와 결합해 세포막을 손상시킨다."
+    ]
+  },
+  {
+    "id": "mb54",
+    "stem": "PABA(para-aminobenzoic acid)와 구조가 유사하여 디하이드로프테로산 합성효소(dihydropteroate synthase)를 경쟁적으로 억제하는 항균제는?",
+    "choices": [
+      "설폰아마이드(sulfonamide)",
+      "페니실린(penicillin)",
+      "테트라사이클린(tetracycline)",
+      "리팜핀(rifampin)",
+      "메트로니다졸(metronidazole)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "설폰아마이드(sulfonamide)는 PABA의 구조 유사체로 디하이드로프테로산 합성효소(dihydropteroate synthase)를 억제해 세균의 엽산(folic acid) 합성을 차단한다. 디하이드로엽산 환원효소(DHFR)를 억제하는 트리메토프림(trimethoprim)과 병용하면 연속 두 단계를 막아 상승효과를 얻는다.",
+    "explainWrong": [
+      "",
+      "페니실린(penicillin)은 PBP(penicillin-binding protein)에 결합해 펩티도글리칸(peptidoglycan) 교차결합을 억제한다.",
+      "테트라사이클린(tetracycline)은 30S 소단위에 결합해 aminoacyl-tRNA의 부착을 막는다.",
+      "리팜핀(rifampin)은 DNA 의존성 RNA 중합효소(RNA polymerase)를 억제해 전사를 방해한다.",
+      "메트로니다졸(metronidazole)은 혐기 환경에서 환원되어 생긴 독성 대사체가 DNA를 손상시킨다."
+    ]
+  },
+  {
+    "id": "mb55",
+    "stem": "비까다로운(nonfastidious) 호기성 세균의 디스크 확산법(Kirby-Bauer법)에 표준 배지로 사용하는 것은?",
+    "choices": [
+      "Mueller-Hinton 한천",
+      "혈액 한천(blood agar)",
+      "초콜릿 한천(chocolate agar)",
+      "MacConkey 한천",
+      "Thayer-Martin 한천"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Mueller-Hinton 한천은 설폰아마이드(sulfonamide)·트리메토프림(trimethoprim)을 방해하는 티미딘(thymidine) 함량이 낮고 로트 간 재현성이 좋아 감수성 검사(susceptibility test) 표준 배지로 쓰인다. 폐렴사슬알균(Streptococcus pneumoniae)처럼 까다로운 균은 양혈액(sheep blood)을 5% 첨가한 Mueller-Hinton 한천을 사용한다.",
+    "explainWrong": [
+      "",
+      "혈액 한천(blood agar)은 용혈(hemolysis) 관찰과 일반 분리배양용이며 성분이 표준화되어 있지 않아 감수성 판정 기준에 쓰지 않는다.",
+      "초콜릿 한천(chocolate agar)은 헤모필루스(Haemophilus)·임균(Neisseria gonorrhoeae) 같은 까다로운 균의 분리배양용이다.",
+      "MacConkey 한천은 그람음성 장내세균(Enterobacterales)을 선택·감별하는 배지로 억제 물질이 들어 있다.",
+      "Thayer-Martin 한천은 항균제가 첨가된 임균(Neisseria gonorrhoeae) 선택배지이다."
+    ]
+  },
+  {
+    "id": "mb56",
+    "stem": "디스크 확산법(disk diffusion)의 표준 시험 조건으로 옳은 것은?",
+    "choices": [
+      "접종균 0.5 McFarland, 한천 두께 4mm, 35°C에서 16~18시간 배양",
+      "접종균 2.0 McFarland, 한천 두께 4mm, 35°C에서 16~18시간 배양",
+      "접종균 0.5 McFarland, 한천 두께 8mm, 35°C에서 16~18시간 배양",
+      "접종균 0.5 McFarland, 한천 두께 4mm, 25°C에서 48시간 배양",
+      "접종균 0.5 McFarland, 한천 두께 4mm, 35°C 5% CO2에서 72시간 배양"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "0.5 McFarland 탁도(약 1.5×10^8 CFU/mL)로 균액을 맞춰 한천 두께 4mm의 Mueller-Hinton 한천에 도말하고 디스크를 올린 뒤 35°C 대기 조건에서 16~18시간 배양하여 억제대(inhibition zone) 직경을 잰다. 검사의 정확성은 E. coli ATCC 25922, S. aureus ATCC 25923 같은 표준균주(reference strain)의 억제대가 허용범위 안에 드는지로 관리한다.",
+    "explainWrong": [
+      "",
+      "접종량이 많으면 억제대(inhibition zone)가 작아져 거짓 내성(false resistance)으로 판정될 수 있다.",
+      "한천이 두꺼우면 항균제가 수직으로 더 퍼져 억제대(inhibition zone)가 작아진다.",
+      "25°C는 표준 온도보다 낮아 성장 속도와 확산이 달라지고 판정 기준을 적용할 수 없다.",
+      "비까다로운(nonfastidious) 균은 CO2를 넣지 않으며 CO2는 배지 pH를 낮춰 일부 항균제 활성을 변화시킨다."
+    ]
+  },
+  {
+    "id": "mb57",
+    "stem": "희석법(dilution method) 감수성 검사에서 18~24시간 배양 후 육안적으로 세균 증식을 억제하는 항균제의 최저 농도를 무엇이라 하는가?",
+    "choices": [
+      "최소억제농도(MIC)",
+      "최소살균농도(MBC)",
+      "판정기준치(breakpoint)",
+      "억제대 직경(zone diameter)",
+      "최고혈중농도(Cmax)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "MIC는 눈에 보이는 성장이 없는 가장 낮은 항균제 농도로, 액체희석법(broth dilution)이나 한천희석법(agar dilution)으로 측정한다. 측정된 MIC를 판정기준치(breakpoint)와 비교해 감수성·중간·내성(S·I·R)을 판정한다.",
+    "explainWrong": [
+      "",
+      "MBC는 MIC 이상 농도의 시험관을 계대하여 초기 접종균의 99.9% 이상이 사멸한 최저 농도이다.",
+      "판정기준치(breakpoint)는 MIC나 억제대(inhibition zone) 크기를 감수성·내성으로 나누는 기준값이다.",
+      "억제대 직경(zone diameter)은 디스크 확산법(disk diffusion)에서 측정하는 값으로 희석법의 결과가 아니다.",
+      "최고혈중농도(Cmax)는 투약 후 환자 혈중에서 도달하는 약물 농도로 약동학(pharmacokinetics) 지표이다."
+    ]
+  },
+  {
+    "id": "mb58",
+    "stem": "항균제 농도 기울기가 형성된 플라스틱 띠를 한천 위에 올려놓고, 타원형 억제대(inhibition zone)가 띠와 만나는 지점의 눈금으로 MIC를 읽는 검사법은?",
+    "choices": [
+      "E-test(농도 기울기 띠 검사)",
+      "디스크 확산법(disk diffusion)",
+      "액체 미량희석법(broth microdilution)",
+      "한천 희석법(agar dilution)",
+      "D-zone 시험"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "E-test는 띠에 연속적인 항균제 농도 기울기가 있어 디스크 확산법(disk diffusion)처럼 간편하게 도말한 뒤 MIC 값을 직접 읽을 수 있다. 억제대(inhibition zone) 가장자리가 띠와 교차하는 눈금이 MIC이다.",
+    "explainWrong": [
+      "",
+      "디스크 확산법(disk diffusion)은 억제대(inhibition zone) 직경을 재어 범주로 판정할 뿐 MIC를 직접 읽지 않는다.",
+      "액체 미량희석법(broth microdilution)은 마이크로플레이트의 단계 희석 웰에서 혼탁 여부로 MIC를 정한다.",
+      "한천 희석법(agar dilution)은 농도별로 항균제를 섞은 여러 장의 평판에 균을 접종하는 방법이다.",
+      "D-zone 시험은 유도성 클린다마이신(clindamycin) 내성을 확인하는 디스크 근접 배치 검사이다."
+    ]
+  },
+  {
+    "id": "mb59",
+    "stem": "황색포도알균(Staphylococcus aureus)의 메티실린(methicillin) 내성(mecA 매개)을 디스크 확산법(disk diffusion)으로 검출할 때 사용하는 디스크는?",
+    "choices": [
+      "세폭시틴(cefoxitin)",
+      "세프타지딤(ceftazidime)",
+      "이미페넴(imipenem)",
+      "에리스로마이신(erythromycin)",
+      "암피실린(ampicillin)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "세폭시틴(cefoxitin)은 mecA 발현을 강하게 유도하여 옥사실린(oxacillin)보다 메티실린(methicillin) 내성을 더 정확히 반영하므로 대리 디스크로 쓰인다. MRSA는 mecA 유전자가 β-락탐(β-lactam) 친화도가 낮은 PBP2a를 만들어 거의 모든 β-락탐에 내성을 보인다.",
+    "explainWrong": [
+      "",
+      "세프타지딤(ceftazidime)은 그람음성균의 ESBL(extended-spectrum β-lactamase) 선별에 쓰이는 3세대 세팔로스포린(cephalosporin)이다.",
+      "이미페넴(imipenem)은 카바페넴(carbapenem)으로 장내세균(Enterobacterales)의 카바페넴 내성 선별에 쓰인다.",
+      "에리스로마이신(erythromycin)은 D-test에서 클린다마이신(clindamycin) 디스크와 짝을 이루어 유도성 내성을 확인할 때 쓴다.",
+      "암피실린(ampicillin)은 포도알균 대부분이 페니실린분해효소(penicillinase)를 생성해 내성이므로 메티실린(methicillin) 내성 판정에 쓰지 않는다."
+    ]
+  },
+  {
+    "id": "mb60",
+    "stem": "요로감염(UTI) 환자에서 분리된 대장균(Escherichia coli)의 세포탁심(cefotaxime)·세프타지딤(ceftazidime) 디스크를 아목시실린-클라불란산(amoxicillin-clavulanate) 디스크 옆에 배치했더니, 두 디스크의 억제대가 클라불란산 디스크 쪽으로 확장되었다. 추정되는 내성기전은?",
+    "choices": [
+      "확장스펙트럼 β-락타마아제(ESBL) 생성",
+      "AmpC β-락타마아제 과생성",
+      "카바페넴분해효소(KPC) 생성",
+      "PBP2a 생성",
+      "외막 포린(porin) 단백 소실"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "이중디스크 상승시험(DDST)에서 클라불란산(clavulanic acid) 쪽으로 억제대가 확장되는 것은 3세대 세팔로스포린(cephalosporin)을 분해하는 효소가 클라불란산에 억제된다는 뜻으로 ESBL 양성이다. ESBL 생성균은 페니실린(penicillin)과 3세대 세팔로스포린, 아즈트레오남(aztreonam)에 내성이지만 세파마이신(cephamycin)과 카바페넴(carbapenem)에는 대개 감수성이다.",
+    "explainWrong": [
+      "",
+      "AmpC는 클라불란산(clavulanic acid)에 억제되지 않아 상승효과가 나타나지 않으며 세폭시틴(cefoxitin)에도 내성을 보인다.",
+      "KPC는 카바페넴(carbapenem)을 분해하는 효소로 mCIM 같은 카바페넴 불활성화 검사로 확인한다.",
+      "PBP2a는 황색포도알균(Staphylococcus aureus)의 메티실린(methicillin) 내성 기전으로 β-락타마아제 억제제(β-lactamase inhibitor)와 무관하다.",
+      "포린(porin) 소실은 약물 유입을 줄이는 기전이라 클라불란산(clavulanic acid)에 의한 억제대 확장을 설명하지 못한다."
+    ]
+  },
+  {
+    "id": "mb61",
+    "stem": "에리스로마이신(erythromycin) 내성, 클린다마이신(clindamycin) 감수성으로 판정된 황색포도알균(Staphylococcus aureus)에서 두 디스크를 가까이 놓고 배양했더니 에리스로마이신 쪽 클린다마이신 억제대가 편평해져 D자 모양이 되었다. 옳은 해석은?",
+    "choices": [
+      "erm 유전자에 의한 유도성 클린다마이신(clindamycin) 내성",
+      "msrA 유출펌프(efflux pump)에 의한 마크로라이드(macrolide) 단독 내성",
+      "mecA 유전자에 의한 메티실린(methicillin) 내성",
+      "vanA 유전자에 의한 반코마이신(vancomycin) 내성",
+      "β-락타마아제에 의한 페니실린(penicillin) 내성"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "D-test 양성은 에리스로마이신(erythromycin)이 erm 메틸화효소(methylase)를 유도해 클린다마이신(clindamycin) 결합 부위까지 변형시켰다는 의미이다. 이 경우 시험관에서 감수성으로 보여도 치료 중 내성이 나타날 수 있으므로 클린다마이신 내성으로 보고한다.",
+    "explainWrong": [
+      "",
+      "msrA 유출펌프(efflux pump)는 마크로라이드(macrolide)만 배출하므로 클린다마이신(clindamycin) 억제대가 둥글게 유지되어 D-test 음성이다.",
+      "mecA는 PBP2a를 만들어 β-락탐(β-lactam) 내성을 일으키며 D자 억제대와 관계없다.",
+      "vanA는 장알균(Enterococcus) 등에서 세포벽 전구체를 바꿔 글리코펩티드(glycopeptide) 내성을 일으킨다.",
+      "β-락타마아제는 페니실린(penicillin)을 분해할 뿐 린코사마이드(lincosamide) 억제대 모양에 영향을 주지 않는다."
+    ]
+  },
+  {
+    "id": "mb62",
+    "stem": "장알균(Enterococcus)에서 반코마이신(vancomycin)과 테이코플라닌(teicoplanin) 모두에 고도 내성을 일으키며 플라스미드(plasmid)로 전달되는 내성 유전자형은?",
+    "choices": [
+      "vanA",
+      "vanB",
+      "vanC",
+      "mecA",
+      "blaKPC"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "vanA형은 세포벽 전구체 말단을 D-Ala-D-Lac으로 바꿔 반코마이신(vancomycin)과 테이코플라닌(teicoplanin) 모두에 고도 내성을 보인다. 전이성 유전요소(mobile genetic element)로 퍼지기 때문에 감염관리에서 가장 중요한 VRE 유형이다.",
+    "explainWrong": [
+      "",
+      "vanB형은 반코마이신(vancomycin)에는 내성이지만 테이코플라닌(teicoplanin)에는 대개 감수성이다.",
+      "vanC형은 E. gallinarum·E. casseliflavus가 선천적으로 가진 저도 반코마이신(vancomycin) 내성이다.",
+      "mecA는 포도알균(Staphylococcus)의 메티실린(methicillin) 내성 유전자로 PBP2a를 암호화한다.",
+      "blaKPC는 장내세균(Enterobacterales)의 카바페넴분해효소(carbapenemase) 유전자이다."
+    ]
+  },
+  {
+    "id": "mb63",
+    "stem": "카바페넴 내성 장내세균(CRE)에서 카바페넴분해효소(carbapenemase) 생성 여부를 확인하는 표현형 검사는?",
+    "choices": [
+      "변형 카바페넴 불활성화법(mCIM)",
+      "이중디스크 상승시험(DDST)",
+      "D-zone 시험",
+      "세폭시틴(cefoxitin) 디스크 선별시험",
+      "PBP2a 라텍스 응집시험(latex agglutination test)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "mCIM은 시험균 부유액에 메로페넴(meropenem) 디스크를 담가 두었다가 감수성 표준균주(reference strain)를 도말한 평판에 올려, 디스크 활성이 사라져 억제대가 작아지면 카바페넴분해효소(carbapenemase) 양성으로 판정한다. 카바페넴분해효소 생성 장내세균(CPE)은 전파력이 커서 접촉주의(contact precautions) 격리 대상이다.",
+    "explainWrong": [
+      "",
+      "이중디스크 상승시험(DDST)은 클라불란산(clavulanic acid)을 이용해 ESBL을 확인하는 방법이다.",
+      "D-zone 시험은 포도알균(Staphylococcus)의 유도성 클린다마이신(clindamycin) 내성을 확인한다.",
+      "세폭시틴(cefoxitin) 디스크 선별시험은 황색포도알균(Staphylococcus aureus)의 mecA 매개 메티실린(methicillin) 내성을 검출한다.",
+      "PBP2a 라텍스 응집시험(latex agglutination test)은 MRSA의 변형 페니실린결합단백을 직접 검출한다."
+    ]
+  },
+  {
+    "id": "mb64",
+    "stem": "배지와 수술기구 멸균에 사용하는 고압증기멸균(autoclaving)의 표준 조건은?",
+    "choices": [
+      "121°C, 15psi, 15분 이상",
+      "100°C, 대기압, 30분",
+      "160°C, 대기압, 2시간",
+      "121°C, 대기압, 15분",
+      "80°C, 15psi, 30분"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "고압증기멸균기(autoclave)는 약 15psi(1기압 추가)의 포화증기(saturated steam)로 121°C를 만들어 15분 이상 유지한다. 습열(moist heat)은 단백질을 효율적으로 변성시켜 세균 아포(spore)까지 사멸시키며, 부피가 크면 시간을 늘린다.",
+    "explainWrong": [
+      "",
+      "100°C 끓이기나 유통증기(flowing steam)는 영양형 세균은 죽이지만 아포(spore)를 확실히 제거하지 못한다.",
+      "160°C에서 2시간은 건열멸균(dry heat sterilization) 조건이다.",
+      "대기압에서는 증기 온도가 100°C를 넘지 못하므로 121°C에 도달할 수 없다.",
+      "80°C는 저온살균(pasteurization) 수준으로 아포(spore)를 사멸시키지 못한다."
+    ]
+  },
+  {
+    "id": "mb65",
+    "stem": "고압증기멸균기(autoclave)의 멸균 효과를 확인하는 생물학적 지표(biological indicator)로 사용하는 균은?",
+    "choices": [
+      "Geobacillus stearothermophilus 아포(spore)",
+      "Bacillus atrophaeus 아포(spore)",
+      "Escherichia coli ATCC 25922",
+      "Staphylococcus aureus ATCC 25923",
+      "Pseudomonas aeruginosa ATCC 27853"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Geobacillus stearothermophilus의 아포(spore)는 습열(moist heat)에 대한 저항성이 커서 고압증기멸균(autoclaving)과 과산화수소 플라스마 멸균(hydrogen peroxide plasma sterilization)의 생물학적 지표(biological indicator)로 쓰인다. 멸균 후 55~60°C에서 배양하여 증식이 없으면 멸균이 적절했다고 판단한다.",
+    "explainWrong": [
+      "",
+      "Bacillus atrophaeus 아포(spore)는 건열멸균(dry heat sterilization)과 EO(ethylene oxide)가스 멸균의 생물학적 지표(biological indicator)이다.",
+      "E. coli ATCC 25922는 그람음성균 감수성 검사의 정도관리(QC) 표준균주(reference strain)이다.",
+      "S. aureus ATCC 25923은 디스크 확산법(disk diffusion) 정도관리(QC) 표준균주이며 아포(spore)를 만들지 않는다.",
+      "P. aeruginosa ATCC 27853은 비발효(nonfermenting) 그람음성균 감수성 정도관리(QC)에 쓰는 표준균주이다."
+    ]
+  },
+  {
+    "id": "mb66",
+    "stem": "유리 피펫·시험관 같은 유리기구와 분말, 오일류처럼 증기가 침투하기 어려운 물품의 멸균에 적합한 방법은?",
+    "choices": [
+      "건열멸균(dry heat sterilization)",
+      "고압증기멸균(autoclaving)",
+      "여과멸균(filtration sterilization)",
+      "자외선(UV) 조사",
+      "70% 알코올 침지"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "건열멸균(dry heat sterilization)은 160~170°C에서 1~2시간 처리하며 미생물 단백질을 산화시켜 사멸시킨다. 수분이 필요 없어 유리기구, 금속, 분말, 오일류에 적합하지만 습열(moist heat)보다 효율이 낮아 더 높은 온도와 긴 시간이 필요하다.",
+    "explainWrong": [
+      "",
+      "고압증기멸균(autoclaving)은 증기가 오일이나 분말 내부로 침투하지 못해 이런 물품에 부적합하다.",
+      "여과멸균(filtration sterilization)은 열에 약한 액체에 쓰는 방법으로 고체 기구에는 적용할 수 없다.",
+      "자외선(UV)은 투과력이 약해 표면이나 공기 소독에만 쓰인다.",
+      "70% 알코올은 소독제(disinfectant)로 아포(spore)를 죽이지 못하므로 멸균 방법이 아니다."
+    ]
+  },
+  {
+    "id": "mb67",
+    "stem": "혈청, 항생제 용액, 요소 첨가 용액처럼 열에 불안정한 액체를 멸균할 때 사용하는 방법과 필터 공극 크기로 옳은 것은?",
+    "choices": [
+      "여과멸균(filtration sterilization), 0.22μm",
+      "여과멸균(filtration sterilization), 5μm",
+      "고압증기멸균(autoclaving), 121°C",
+      "건열멸균(dry heat sterilization), 160°C",
+      "간헐멸균(tyndallization), 100°C"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "열에 약한 액체는 0.22μm(또는 0.2μm) 공극의 막 필터(membrane filter)로 걸러 세균을 제거한다. 다만 바이러스와 일부 마이코플라스마(Mycoplasma)는 통과할 수 있다는 한계가 있다.",
+    "explainWrong": [
+      "",
+      "5μm 필터는 대부분의 세균이 통과하므로 멸균 목적으로 쓸 수 없다.",
+      "고압증기멸균(autoclaving)은 혈청 단백질이나 항생제, 요소를 변성·분해시킨다.",
+      "건열멸균(dry heat sterilization)은 고온이 길게 가해져 액체 성분을 파괴한다.",
+      "간헐멸균(tyndallization)은 가열을 반복하는 방법으로 열에 불안정한 항생제·요소에는 부적합하다."
+    ]
+  },
+  {
+    "id": "mb68",
+    "stem": "열과 습기에 약한 플라스틱 의료기구를 저온에서 멸균할 수 있으나, 발암성 잔류가스 때문에 멸균 후 충분한 통기(aeration)가 필요한 방법은?",
+    "choices": [
+      "산화에틸렌(EO) 가스 멸균",
+      "감마선(gamma ray) 멸균",
+      "고압증기멸균(autoclaving)",
+      "건열멸균(dry heat sterilization)",
+      "자외선(UV) 멸균"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "EO 가스는 알킬화(alkylation) 작용으로 핵산과 단백질을 변성시켜 아포(spore)까지 사멸시키며 50~60°C 정도의 저온에서 멸균한다. 독성·발암성·가연성이 있어 멸균 후 긴 통기 시간이 필요하다.",
+    "explainWrong": [
+      "",
+      "감마선(gamma ray)은 일회용 플라스틱 제품을 대량 멸균하지만 잔류가스가 없어 통기가 필요하지 않다.",
+      "고압증기멸균(autoclaving)은 121°C 습열(moist heat)을 사용하므로 열에 약한 기구에 쓸 수 없다.",
+      "건열멸균(dry heat sterilization)은 160°C 이상의 고온이 필요해 플라스틱이 변형된다.",
+      "자외선(UV)은 투과력이 약해 포장된 기구 내부를 멸균할 수 없다."
+    ]
+  },
+  {
+    "id": "mb69",
+    "stem": "에탄올(ethanol)을 피부 및 기구 표면 소독에 사용할 때 가장 효과적인 농도는?",
+    "choices": [
+      "70%",
+      "20%",
+      "40%",
+      "95%",
+      "100%"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "70% 에탄올(ethanol)은 적당한 수분이 있어 세포 안으로 잘 침투하고 단백질을 효과적으로 변성시킨다. 영양형 세균과 외피 바이러스(enveloped virus)에는 효과적이지만 세균 아포(spore)는 죽이지 못한다.",
+    "explainWrong": [
+      "",
+      "20%는 농도가 너무 낮아 단백질 변성 효과가 부족하다.",
+      "40%는 70%보다 살균력이 떨어져 표준 소독 농도로 쓰지 않는다.",
+      "95%는 표면 단백질을 급격히 응고시켜 막을 형성하므로 내부 침투가 떨어진다.",
+      "무수 알코올(absolute alcohol)은 수분이 없어 단백질 변성이 잘 일어나지 않고 빠르게 증발한다."
+    ]
+  },
+  {
+    "id": "mb70",
+    "stem": "병원성 미생물을 제거하거나 감염력을 없애지만 세균 아포(spore)까지 모두 사멸시키지는 못하는 처리를 무엇이라 하는가?",
+    "choices": [
+      "소독(disinfection)",
+      "멸균(sterilization)",
+      "방부(antisepsis)",
+      "무균조작(aseptic technique)",
+      "세척(cleaning)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "소독(disinfection)은 무생물 표면이나 기구의 병원성 미생물을 제거하는 과정으로 아포(spore)까지 완전히 없애지는 못한다. 차아염소산나트륨(sodium hypochlorite), 알코올, 요오드 화합물 등이 대표적인 소독제(disinfectant)이며, 피부 같은 생체 조직에 쓰는 것은 따로 피부소독제(antiseptic)라 한다.",
+    "explainWrong": [
+      "",
+      "멸균(sterilization)은 아포를 포함한 모든 미생물을 완전히 사멸·제거하는 과정이다.",
+      "방부(antisepsis)는 미생물의 증식을 억제해 부패를 막는 것으로 반드시 사멸시키지는 않는다.",
+      "무균조작(aseptic technique)은 오염을 막기 위한 작업 방법이지 미생물 제거 처리가 아니다.",
+      "세척(cleaning)은 유기물과 오염물을 물리적으로 씻어내는 전처리 과정이다."
+    ]
+  },
+  {
+    "id": "mb71",
+    "stem": "진균(fungi) 분리배양에 가장 널리 쓰이며, 낮은 pH(약 5.6)와 높은 포도당 농도로 세균 증식을 억제하는 배지는?",
+    "choices": [
+      "Sabouraud dextrose 한천",
+      "Mueller-Hinton 한천",
+      "TCBS 한천",
+      "Löwenstein-Jensen 배지",
+      "Thayer-Martin 한천"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Sabouraud dextrose 한천은 산성 pH와 고농도 포도당(glucose)으로 진균 성장에 유리하며, 선택성을 높이기 위해 클로람페니콜(chloramphenicol)과 사이클로헥시미드(cycloheximide)를 첨가하기도 한다. 진균은 보통 25~30°C에서 수일~수주간 배양한다.",
+    "explainWrong": [
+      "",
+      "Mueller-Hinton 한천은 항균제 감수성 검사(susceptibility test) 표준 배지이다.",
+      "TCBS 한천은 비브리오(Vibrio) 선택배지로 알칼리성 pH를 가진다.",
+      "Löwenstein-Jensen 배지는 결핵균(Mycobacterium tuberculosis) 배양용 계란 배지이다.",
+      "Thayer-Martin 한천은 임균(Neisseria gonorrhoeae) 분리용 선택배지이다."
+    ]
+  },
+  {
+    "id": "mb72",
+    "stem": "손발톱이나 피부 인설 검체에서 진균 균사(hyphae)를 관찰하기 위해 각질(keratin)을 녹이는 직접검경 시약은?",
+    "choices": [
+      "10~20% 수산화칼륨(KOH)",
+      "묵즙(India ink)",
+      "락토페놀 코튼블루(LPCB)",
+      "Ziehl-Neelsen 염색액",
+      "Giemsa 염색액"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "KOH는 케라틴(keratin)과 세포 잔해를 녹여 투명하게 만들고 알칼리에 강한 진균 세포벽은 남겨 균사(hyphae)와 포자(spore)가 잘 보이게 한다. 피부사상균증(dermatophytosis)이나 칸디다증(candidiasis)의 신속 진단에 흔히 쓰인다.",
+    "explainWrong": [
+      "",
+      "묵즙(India ink)은 배경을 검게 물들여 크립토코쿠스(Cryptococcus)의 협막(capsule)을 관찰하는 음성염색(negative stain)이다.",
+      "락토페놀 코튼블루(LPCB)는 배양된 곰팡이 집락의 분생자(conidia) 구조를 관찰할 때 쓰는 염색액으로 각질을 녹이지 않는다.",
+      "Ziehl-Neelsen 염색은 결핵균(Mycobacterium tuberculosis) 같은 항산성균(acid-fast bacteria) 검출용이다.",
+      "Giemsa 염색은 말라리아 원충(Plasmodium)이나 혈액세포 관찰에 주로 쓰인다."
+    ]
+  },
+  {
+    "id": "mb73",
+    "stem": "AIDS 환자의 뇌척수액(CSF)에서 크립토코쿠스 뇌수막염(cryptococcal meningitis)이 의심될 때, 효모(yeast) 주위의 두꺼운 협막(capsule)을 투명한 띠로 관찰하는 검사법은?",
+    "choices": [
+      "묵즙(India ink) 도말",
+      "KOH 도말",
+      "그람 염색(Gram stain)",
+      "Ziehl-Neelsen 염색",
+      "GMS 염색"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "묵즙(India ink) 도말은 배경만 검게 물드는 음성염색(negative stain)이어서 다당류 협막(capsule)이 효모 주위에 밝은 달무리처럼 보인다. 민감도(sensitivity)가 완전하지 않아 뇌척수액 크립토코쿠스 항원(CrAg) 검사를 함께 시행한다.",
+    "explainWrong": [
+      "",
+      "KOH는 각질 검체를 녹여 균사(hyphae)를 보는 방법으로 협막(capsule) 관찰에 적합하지 않다.",
+      "그람 염색(Gram stain)에서 효모(yeast)는 양성으로 염색되지만 협막은 뚜렷이 드러나지 않는다.",
+      "Ziehl-Neelsen 염색은 항산성균(acid-fast bacteria) 검출용이다.",
+      "GMS(Grocott methenamine silver) 염색은 조직 속 진균 세포벽을 검게 물들이며 협막 자체를 보여주지 않는다."
+    ]
+  },
+  {
+    "id": "mb74",
+    "stem": "효모(yeast) 집락을 사람 혈청에 접종하여 37°C에서 2~3시간 배양했더니, 효모에서 수축 없이 뻗어 나온 짧은 관 모양 구조가 관찰되었다. 가장 가능성이 높은 균은?",
+    "choices": [
+      "Candida albicans",
+      "Candida glabrata",
+      "Cryptococcus neoformans",
+      "Candida tropicalis",
+      "Saccharomyces cerevisiae"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "발아관 시험(germ tube test) 양성은 C. albicans(와 C. dubliniensis)를 신속히 추정하는 소견이다. C. albicans는 옥수수가루-Tween 80 한천(cornmeal-Tween 80 agar)에서 두꺼운 벽의 후막포자(chlamydospore)를 만들고 CHROMagar에서 녹색 집락을 형성한다.",
+    "explainWrong": [
+      "",
+      "C. glabrata는 가성균사(pseudohyphae)를 만들지 않는 작은 효모로 발아관(germ tube) 시험 음성이다.",
+      "C. neoformans는 협막(capsule)이 있는 효모로 발아관(germ tube)을 만들지 않고 요소분해효소(urease) 양성이다.",
+      "C. tropicalis는 가성균사(pseudohyphae)를 만들 수 있으나 기부가 잘록한 가성발아관(pseudo-germ tube)이라 음성으로 판정한다.",
+      "S. cerevisiae는 출아(budding) 효모로 발아관(germ tube) 시험 음성이다."
+    ]
+  },
+  {
+    "id": "mb75",
+    "stem": "비둘기 배설물과 관련된 협막(capsule) 효모로, 요소분해효소(urease) 양성이며 페놀산화효소(phenol oxidase) 때문에 birdseed 한천에서 갈색 집락을 만드는 진균은?",
+    "choices": [
+      "Cryptococcus neoformans",
+      "Candida albicans",
+      "Candida krusei",
+      "Histoplasma capsulatum",
+      "Malassezia furfur"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "C. neoformans는 비둘기 배설물로 오염된 흙에서 흡입되어 폐를 거쳐 면역저하자에게 뇌수막염(meningitis)을 일으킨다. 요소분해효소(urease) 양성과 페놀산화효소(phenol oxidase)에 의한 멜라닌(melanin) 생성이 중요한 동정 특성이다.",
+    "explainWrong": [
+      "",
+      "C. albicans는 요소분해효소(urease) 음성이며 발아관(germ tube)과 후막포자(chlamydospore)를 형성한다.",
+      "C. krusei는 플루코나졸(fluconazole)에 선천 내성인 칸디다(Candida)로 협막이 없다.",
+      "H. capsulatum은 새와 박쥐 배설물과 관련되지만 이형성(dimorphic) 곰팡이이며 협막 효모가 아니다.",
+      "M. furfur는 지질 요구성 효모로 어루러기(tinea versicolor)를 일으키며 협막이 없다."
+    ]
+  },
+  {
+    "id": "mb76",
+    "stem": "호중구(neutrophil) 감소 환자의 폐 조직에서 격벽이 있는 가는 균사(septate hyphae)가 45° 예각으로 이분지하는 것이 관찰되었다. 배양 시 분생자병(conidiophore) 끝이 부풀어 분생자두(conidial head)를 형성하는 진균은?",
+    "choices": [
+      "Aspergillus fumigatus",
+      "Rhizopus oryzae",
+      "Candida albicans",
+      "Cryptococcus neoformans",
+      "Pneumocystis jirovecii"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "아스페르길루스(Aspergillus)는 격벽 균사(septate hyphae)가 규칙적인 45° 예각으로 갈라지는 것이 조직 소견의 특징이다. 배양하면 분생자병(conidiophore) 끝의 정낭(vesicle) 위에 경자(phialide)와 분생자(conidia) 사슬이 늘어선 분생자두(conidial head)를 관찰할 수 있다.",
+    "explainWrong": [
+      "",
+      "Rhizopus는 격벽이 거의 없는 넓은 리본 모양 균사가 직각으로 분지하며 포자낭(sporangium)을 만든다.",
+      "C. albicans는 조직에서 효모와 가성균사(pseudohyphae)로 보이며 분생자두(conidial head)를 만들지 않는다.",
+      "C. neoformans는 협막(capsule)이 있는 출아(budding) 효모로 균사를 거의 형성하지 않는다.",
+      "P. jirovecii는 배양이 되지 않으며 GMS(Grocott methenamine silver) 염색에서 포낭(cyst) 형태로 관찰된다."
+    ]
+  },
+  {
+    "id": "mb77",
+    "stem": "당뇨병성 케톤산증(DKA) 환자의 부비동 괴사 조직에서 격벽(septum)이 거의 없는 넓은 리본 모양 균사가 불규칙하게 직각으로 분지하는 것이 관찰되었다. 원인 진균으로 가장 가능성이 높은 것은?",
+    "choices": [
+      "Rhizopus 속(털곰팡이목)",
+      "Aspergillus flavus",
+      "Candida albicans",
+      "Fusarium solani",
+      "Trichophyton rubrum"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Rhizopus·Mucor 같은 털곰팡이목(Mucorales) 진균은 무격벽 균사(aseptate hyphae)를 가지며 케톤산증(ketoacidosis) 환자에서 비뇌형 털곰팡이증(rhinocerebral mucormycosis)을 일으킨다. 혈관을 침범해 괴사를 빠르게 진행시키며 배양 시 포자낭병(sporangiophore) 끝에 포자낭(sporangium)을 형성한다.",
+    "explainWrong": [
+      "",
+      "Aspergillus flavus는 가늘고 격벽(septum)이 있는 균사가 45° 예각으로 분지한다.",
+      "C. albicans는 조직에서 효모와 가성균사(pseudohyphae)로 보이며 넓은 무격벽 균사를 만들지 않는다.",
+      "Fusarium은 격벽 균사(septate hyphae)를 가지며 낫 모양 대분생자(macroconidia)가 특징이다.",
+      "T. rubrum은 피부사상균(dermatophyte)으로 각질층에만 감염하고 혈관 침범 괴사를 일으키지 않는다."
+    ]
+  },
+  {
+    "id": "mb78",
+    "stem": "고양이와 접촉한 소아의 두부백선(tinea capitis)에서 Wood 등(Wood's lamp) 검사 시 녹황색 형광이 관찰되었고, 배양에서 벽이 두껍고 거친 방추형 대분생자(macroconidia)가 다수 관찰되었다. 원인균은?",
+    "choices": [
+      "Microsporum canis",
+      "Trichophyton rubrum",
+      "Trichophyton mentagrophytes",
+      "Epidermophyton floccosum",
+      "Malassezia furfur"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Microsporum 속은 두껍고 거친 벽을 가진 방추형 대분생자(macroconidia)가 특징이며 모발과 피부를 침범한다. M. canis는 고양이·개에서 옮는 동물친화성(zoophilic) 피부사상균(dermatophyte)으로 감염 모발이 Wood 등(Wood's lamp)에서 녹황색 형광을 낸다.",
+    "explainWrong": [
+      "",
+      "T. rubrum은 대분생자(macroconidia)가 드물고 가늘며 벽이 얇은 연필 모양이고 눈물방울 모양 소분생자(microconidia)가 주로 보인다.",
+      "T. mentagrophytes는 포도송이 모양 소분생자(microconidia)와 나선균사(spiral hyphae)가 특징이다.",
+      "E. floccosum은 곤봉 모양의 매끈한 대분생자(macroconidia)만 만들고 모발을 침범하지 않는다.",
+      "M. furfur는 어루러기(tinea versicolor)를 일으키는 지질 요구성 효모로 대분생자(macroconidia)를 만들지 않는다."
+    ]
+  },
+  {
+    "id": "mb79",
+    "stem": "CD4 T세포가 크게 감소한 HIV 감염자의 기관지폐포세척액(BAL)을 GMS(Grocott methenamine silver) 염색했더니, 검게 염색된 찌그러진 탁구공 모양의 포낭(cyst)이 관찰되었다. 원인체는?",
+    "choices": [
+      "Pneumocystis jirovecii",
+      "Cryptococcus neoformans",
+      "Histoplasma capsulatum",
+      "Candida glabrata",
+      "Aspergillus fumigatus"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Pneumocystis jirovecii는 일반 배지에서 배양되지 않아 GMS 염색, Giemsa 염색, 면역형광 염색(immunofluorescence stain)으로 진단한다. 면역저하 환자에서 간질성 폐렴(interstitial pneumonia)을 일으키며 트리메토프림-설파메톡사졸(TMP-SMX)로 치료·예방한다.",
+    "explainWrong": [
+      "",
+      "C. neoformans는 출아(budding)하는 협막(capsule) 효모로 묵즙(India ink) 도말에서 협막이 관찰된다.",
+      "H. capsulatum은 대식세포(macrophage) 안에 들어 있는 2~4μm의 작은 출아 효모로 보인다.",
+      "C. glabrata는 작은 출아(budding) 효모로 Sabouraud 배지에서 잘 배양된다.",
+      "A. fumigatus는 격벽 균사(septate hyphae)가 45° 예각으로 분지하는 곰팡이이다."
+    ]
+  },
+  {
+    "id": "mb80",
+    "stem": "25°C 배양에서는 균사형(mold form)으로 자라 표면에 돌기가 있는 결절성 대분생자(tuberculate macroconidia)를 만들고, 37°C 배양 및 조직 내에서는 대식세포(macrophage) 안의 작은 효모형(yeast form)으로 존재하는 진균은?",
+    "choices": [
+      "Histoplasma capsulatum",
+      "Sporothrix schenckii",
+      "Candida albicans",
+      "Cryptococcus neoformans",
+      "Aspergillus niger"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Histoplasma capsulatum은 온도에 따라 균사형(mold form)과 효모형(yeast form)이 바뀌는 이형성 진균(dimorphic fungus)이다. 25°C의 균사형에서 결절성(tuberculate) 대분생자(macroconidia)가 특징적이며, 새·박쥐 배설물의 포자를 흡입해 감염된다.",
+    "explainWrong": [
+      "",
+      "Sporothrix schenckii도 이형성 진균(dimorphic fungus)이지만 균사형에서 꽃잎 모양으로 배열된 작은 분생자(conidia)를 만들고 조직에서는 시가 모양 효모로 보인다.",
+      "C. albicans는 효모와 가성균사(pseudohyphae)를 오가지만 온도 의존 이형성 진균이 아니며 결절성 대분생자가 없다.",
+      "C. neoformans는 온도와 무관하게 협막(capsule) 효모로 자란다.",
+      "A. niger는 검은 분생자두(conidial head)를 만드는 곰팡이로 효모형으로 전환되지 않는다."
+    ]
+  },
+  {
+    "id": "mb81",
+    "stem": "바이러스를 감수성 세포에 접종하여 배양했을 때 세포의 원형화, 거대세포 형성, 단층에서의 탈락 등 현미경적 형태 변화가 나타나는 현상은?",
+    "choices": [
+      "세포병변효과(CPE)",
+      "혈구응집(hemagglutination)",
+      "간섭현상(interference)",
+      "형질전환(transformation)",
+      "혈구흡착(hemadsorption)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "세포병변효과(CPE)는 바이러스 증식으로 배양세포가 손상되어 나타나는 형태 변화로, 배양된 바이러스를 확인하는 기본 지표이다. 출현 속도와 모양(합포체, 포도송이 모양 등)이 바이러스 추정 동정에 도움이 된다.",
+    "explainWrong": [
+      "",
+      "혈구응집(hemagglutination)은 바이러스 표면 단백이 적혈구를 서로 엉기게 하는 현상으로 세포 형태 변화가 아니다.",
+      "간섭현상(interference)은 한 바이러스 감염이 다른 바이러스의 증식을 억제하는 현상이다.",
+      "형질전환(transformation)은 종양 바이러스가 세포를 무한 증식 상태로 바꾸는 것으로 세포 파괴와 반대 양상이다.",
+      "혈구흡착(hemadsorption)은 감염세포 표면에 발현된 바이러스 단백에 적혈구가 달라붙는 현상이다."
+    ]
+  },
+  {
+    "id": "mb82",
+    "stem": "바이러스 감염 초기에 가장 먼저 상승하여 단일 혈청 검체로 급성 감염을 진단하는 데 이용하는 항체는?",
+    "choices": [
+      "IgM",
+      "IgG",
+      "IgA",
+      "IgE",
+      "IgD"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "IgM은 1차 면역반응(primary immune response)에서 가장 먼저 나타나고 수주~수개월 뒤 감소하므로 양성이면 최근 감염을 시사한다. IgG로 판정할 때는 급성기와 회복기 짝혈청(paired sera)에서 항체가가 4배 이상 상승해야 최근 감염으로 판정한다.",
+    "explainWrong": [
+      "",
+      "IgG는 늦게 올라와 오래 지속되므로 단일 검체 양성은 과거 감염이나 예방접종과 구분되지 않는다.",
+      "IgA는 점막 면역(mucosal immunity)의 주된 항체로 급성 감염의 표준 혈청 지표가 아니다.",
+      "IgE는 알레르기와 기생충 감염에서 증가한다.",
+      "IgD는 B세포 표면 수용체로 작용하며 혈청 진단에 거의 쓰이지 않는다."
+    ]
+  },
+  {
+    "id": "mb83",
+    "stem": "사람면역결핍바이러스(HIV)가 gp120을 통해 결합하여 감염시키는 주요 표적세포 표면 분자는?",
+    "choices": [
+      "CD4",
+      "CD8",
+      "CD19",
+      "CD20",
+      "CD56"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "HIV는 외피 당단백(envelope glycoprotein) gp120이 CD4에 결합하고 CCR5 또는 CXCR4를 보조수용체(coreceptor)로 이용해 도움 T세포(helper T cell)와 대식세포(macrophage)에 침입한다. 역전사효소(reverse transcriptase)를 가진 레트로바이러스(retrovirus)로, CD4 T세포 수 감소가 질병 진행의 지표가 된다.",
+    "explainWrong": [
+      "",
+      "CD8은 세포독성 T세포(cytotoxic T cell)의 표지로 HIV의 주된 수용체가 아니다.",
+      "CD19는 B세포 표지로 HIV 결합과 무관하다.",
+      "CD20은 성숙 B세포 표지로 리툭시맙(rituximab)의 표적이다.",
+      "CD56은 자연살해세포(NK cell)의 표지이다."
+    ]
+  },
+  {
+    "id": "mb84",
+    "stem": "인플루엔자 A 바이러스에서 서로 다른 아형(subtype)의 바이러스가 한 세포에 동시 감염되어 분절 유전체가 재편성(reassortment)됨으로써 새로운 HA(hemagglutinin) 또는 NA(neuraminidase) 아형이 출현하고 대유행(pandemic)을 일으키는 변이는?",
+    "choices": [
+      "항원 대변이(antigenic shift)",
+      "항원 소변이(antigenic drift)",
+      "표현형 혼합(phenotypic mixing)",
+      "결손 간섭 입자(defective interfering particle) 형성",
+      "잠복감염(latent infection)의 재활성화(reactivation)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "인플루엔자 A는 8개 분절(segmented) RNA 유전체를 가져 사람·조류·돼지 바이러스 사이에서 분절 재편성(reassortment)이 일어날 수 있다. 그 결과 인구 집단이 면역을 갖지 못한 새 HA(hemagglutinin)·NA(neuraminidase) 아형이 나타나 세계적 대유행(pandemic)을 일으킨다.",
+    "explainWrong": [
+      "",
+      "항원 소변이(antigenic drift)는 HA·NA 유전자의 점돌연변이(point mutation)가 누적된 작은 변화로 매년 계절 유행과 백신 균주 교체의 원인이다.",
+      "표현형 혼합(phenotypic mixing)은 동시 감염 시 한 바이러스의 유전체가 다른 바이러스의 외피에 포장되는 일시적 현상으로 유전되지 않는다.",
+      "결손 간섭 입자(defective interfering particle)는 유전체 일부가 빠진 불완전 입자로 대유행의 원인이 아니다.",
+      "잠복 후 재활성화(reactivation)는 헤르페스바이러스군(Herpesviridae)의 특징이다."
+    ]
+  },
+  {
+    "id": "mb85",
+    "stem": "혈액과 성접촉, 수직감염(vertical transmission)으로 전파되며 간염바이러스 중 유일하게 DNA 유전체를 가진 바이러스는?",
+    "choices": [
+      "B형 간염바이러스(HBV)",
+      "A형 간염바이러스(HAV)",
+      "C형 간염바이러스(HCV)",
+      "D형 간염바이러스(HDV)",
+      "E형 간염바이러스(HEV)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "HBV는 부분 이중가닥 DNA를 가진 헤파드나바이러스(Hepadnavirus)로 복제 과정에 역전사(reverse transcription)를 거친다. HBsAg은 감염 표지, anti-HBs는 면역 획득, HBeAg은 높은 증식력과 전염성을 의미한다.",
+    "explainWrong": [
+      "",
+      "HAV는 RNA 바이러스로 분변-경구(fecal-oral) 경로로 전파되며 만성화하지 않는다.",
+      "HCV는 혈액으로 전파되지만 RNA 바이러스이며 만성화율이 높다.",
+      "HDV는 RNA 결손 바이러스(defective virus)로 증식에 HBV의 HBsAg이 필요하다.",
+      "HEV는 분변-경구(fecal-oral)로 전파되는 RNA 바이러스로 임신부에서 치명률이 높다."
+    ]
+  },
+  {
+    "id": "mb86",
+    "stem": "소아기에 수두(varicella)를 일으킨 뒤 감각신경절(sensory ganglion)에 잠복해 있다가 고령이나 면역저하 시 재활성화되어 피부분절(dermatome)을 따라 수포성 발진(vesicular rash)을 일으키는 바이러스는?",
+    "choices": [
+      "수두-대상포진바이러스(VZV)",
+      "거대세포바이러스(CMV)",
+      "Epstein-Barr 바이러스(EBV)",
+      "사람유두종바이러스(HPV)",
+      "홍역바이러스(measles virus)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "VZV는 헤르페스바이러스군(Herpesviridae)에 속하며 초감염 후 척수후근(dorsal root) 등 감각신경절(sensory ganglion)에 잠복하다가 재활성화되어 대상포진(herpes zoster)을 일으킨다. 헤르페스바이러스군은 모두 외피가 있는 이중가닥 DNA 바이러스로 평생 잠복감염을 유지한다.",
+    "explainWrong": [
+      "",
+      "CMV도 헤르페스군이지만 주로 백혈구·상피세포에 잠복하며 올빼미 눈(owl's eye) 모양 핵내 봉입체가 특징이다.",
+      "EBV는 B림프구에 잠복하며 전염단핵구증(infectious mononucleosis)과 버킷림프종(Burkitt lymphoma)·비인두암(nasopharyngeal carcinoma)과 관련된다.",
+      "HPV는 상피세포에 감염해 사마귀와 자궁경부암을 일으키는 유두종바이러스(Papillomaviridae)이며, 신경절에 잠복하는 헤르페스군이 아니다.",
+      "홍역바이러스(measles virus)는 RNA 파라믹소바이러스(Paramyxovirus)로 급성 발진성 질환을 일으키며 신경절 잠복 후 대상포진 양상으로 재발하지 않는다."
+    ]
+  },
+  {
+    "id": "mb87",
+    "stem": "영유아의 겨울철 급성 위장관염(gastroenteritis)의 주요 원인으로, 이중 캡시드(capsid) 구조와 11개 분절의 이중가닥 RNA 유전체를 가진 바이러스는?",
+    "choices": [
+      "로타바이러스(rotavirus)",
+      "노로바이러스(norovirus)",
+      "장관 아데노바이러스(40·41형)",
+      "아스트로바이러스(astrovirus)",
+      "엔테로바이러스(enterovirus)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "로타바이러스(rotavirus)는 레오바이러스과(Reoviridae)에 속하며 11개 분절 dsRNA를 가진 외피(envelope) 없는 바이러스로 5세 미만 영유아 설사의 대표적 원인이다. 대변 검체에서 항원 검사(EIA, 면역크로마토그래피)나 RT-PCR로 진단하며 경구 생백신(live vaccine)이 있다.",
+    "explainWrong": [
+      "",
+      "노로바이러스(norovirus)는 단일가닥 RNA 칼리시바이러스(Calicivirus)로 전 연령의 집단 식중독과 겨울철 구토·설사를 일으킨다.",
+      "장관 아데노바이러스(enteric adenovirus)는 이중가닥 DNA 바이러스로 분절 유전체가 없다.",
+      "아스트로바이러스(astrovirus)는 별 모양의 단일가닥 RNA 바이러스로 비교적 경한 설사를 일으킨다.",
+      "엔테로바이러스(enterovirus)는 단일가닥 RNA 피코르나바이러스(Picornavirus)로 장에서 증식하지만 주로 수족구병(HFMD)·무균성 뇌수막염(aseptic meningitis)을 일으킨다."
+    ]
+  },
+  {
+    "id": "mb88",
+    "stem": "자궁경부 편평상피암(squamous cell carcinoma)의 주요 원인으로, 16형과 18형이 고위험형으로 분류되는 바이러스는?",
+    "choices": [
+      "사람유두종바이러스(HPV)",
+      "단순헤르페스바이러스 2형(HSV-2)",
+      "Epstein-Barr 바이러스(EBV)",
+      "B형 간염바이러스(HBV)",
+      "사람 T세포 백혈병바이러스 1형(HTLV-1)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "고위험 HPV의 E6·E7 단백은 각각 p53과 Rb 종양억제단백(tumor suppressor protein)을 불활성화하여 자궁경부 상피의 악성화를 일으킨다. 자궁경부 세포검사(Pap test)와 함께 HPV DNA 검사로 선별하며 백신으로 예방할 수 있다.",
+    "explainWrong": [
+      "",
+      "HSV-2는 생식기 헤르페스(genital herpes)를 일으키며 자궁경부암의 주된 원인 바이러스로 인정되지 않는다.",
+      "EBV는 버킷림프종(Burkitt lymphoma), 비인두암(nasopharyngeal carcinoma), 호지킨림프종(Hodgkin lymphoma)과 관련된다.",
+      "HBV는 만성 간염을 거쳐 간세포암(HCC)과 관련된다.",
+      "HTLV-1은 성인 T세포 백혈병·림프종(ATLL)의 원인 레트로바이러스(retrovirus)이다."
+    ]
+  },
+  {
+    "id": "mb89",
+    "stem": "점액혈변을 보이는 환자의 신선한 대변 직접도말에서 위족(pseudopodia)으로 활발히 움직이며 세포질 내에 적혈구를 탐식한 영양형(trophozoite)이 관찰되었다. 포낭(cyst)은 성숙하면 4개의 핵을 가진다. 원인 원충은?",
+    "choices": [
+      "이질아메바(Entamoeba histolytica)",
+      "대장아메바(Entamoeba coli)",
+      "람블편모충(Giardia lamblia)",
+      "대장섬모충(Balantidium coli)",
+      "작은와포자충(Cryptosporidium parvum)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "이질아메바(Entamoeba histolytica) 영양형(trophozoite)은 적혈구를 탐식하는 것이 병원성의 특징이며, 대장 점막에 플라스크 모양 궤양(flask-shaped ulcer)을 만들고 간농양(liver abscess)을 일으킬 수 있다. 성숙 포낭(cyst)은 4핵이며 막대 모양 유염색체(chromatoid body)를 가진다.",
+    "explainWrong": [
+      "",
+      "대장아메바(Entamoeba coli)는 비병원성으로 적혈구를 탐식하지 않고 성숙 포낭(cyst)은 8핵이다.",
+      "람블편모충(Giardia lamblia)은 배 모양 영양형에 핵 2개와 흡착판(sucking disk)을 가진 편모충이다.",
+      "대장섬모충(Balantidium coli)은 체표에 섬모가 있고 큰 콩팥 모양 대핵(macronucleus)을 가진 섬모충이다.",
+      "작은와포자충(Cryptosporidium parvum)은 항산성 염색(acid-fast stain)으로 보이는 작은 난포낭(oocyst)을 배출하며 위족(pseudopodia) 운동을 하지 않는다."
+    ]
+  },
+  {
+    "id": "mb90",
+    "stem": "지방변(steatorrhea)과 흡수장애를 호소하는 여행자의 대변 또는 십이지장액에서 좌우대칭의 배 모양 영양형(trophozoite)이 관찰되었다. 핵 2개와 복측 흡착판(sucking disk)을 가져 원숭이 얼굴처럼 보이는 원충은?",
+    "choices": [
+      "람블편모충(Giardia lamblia)",
+      "질트리코모나스(Trichomonas vaginalis)",
+      "이질아메바(Entamoeba histolytica)",
+      "메닐편모충(Chilomastix mesnili)",
+      "대장섬모충(Balantidium coli)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "람블편모충(Giardia lamblia)은 흡착판(sucking disk)으로 십이지장·공장 점막에 붙어 흡수장애와 지방변(steatorrhea)을 일으킨다. 오염된 물의 포낭(cyst) 섭취로 감염되며 포낭은 타원형에 핵 4개를 가진다.",
+    "explainWrong": [
+      "",
+      "질트리코모나스(Trichomonas vaginalis)는 비뇨생식기에 기생하며 파동막(undulating membrane)이 있고 핵은 1개이다.",
+      "이질아메바(Entamoeba histolytica)는 위족(pseudopodia)으로 움직이는 아메바로 편모와 흡착판이 없다.",
+      "메닐편모충(Chilomastix mesnili)은 비대칭의 서양배 모양으로 핵 1개와 나선형 홈을 가진 비병원성 편모충이다.",
+      "대장섬모충(Balantidium coli)은 섬모로 움직이며 콩팥 모양 대핵(macronucleus)을 가진다."
+    ]
+  },
+  {
+    "id": "mb91",
+    "stem": "악취가 나는 거품 섞인 질분비물을 생리식염수에 섞어 즉시 검경했더니 파동막(undulating membrane)과 편모로 경련하듯 움직이는 서양배 모양 원충이 관찰되었다. 포낭(cyst) 시기가 없는 이 원충은?",
+    "choices": [
+      "질트리코모나스(Trichomonas vaginalis)",
+      "람블편모충(Giardia lamblia)",
+      "톡소포자충(Toxoplasma gondii)",
+      "이질아메바(Entamoeba histolytica)",
+      "작은와포자충(Cryptosporidium parvum)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "질트리코모나스(Trichomonas vaginalis)는 영양형(trophozoite)만 존재하며 성접촉으로 전파되어 질염과 요도염을 일으킨다. 검체가 식으면 운동성이 떨어지므로 채취 즉시 생리식염수 습식표본(wet mount)으로 관찰한다.",
+    "explainWrong": [
+      "",
+      "람블편모충(Giardia lamblia)은 장관 기생 편모충으로 포낭(cyst) 시기가 있다.",
+      "톡소포자충(Toxoplasma gondii)은 세포 내 기생 포자충으로 고양이가 종숙주(definitive host)이며 편모 운동을 하지 않는다.",
+      "이질아메바(Entamoeba histolytica)는 대장에 기생하며 위족(pseudopodia)으로 움직이고 포낭을 형성한다.",
+      "작은와포자충(Cryptosporidium parvum)은 장 상피세포에 기생하며 난포낭(oocyst) 형태로 대변에서 검출된다."
+    ]
+  },
+  {
+    "id": "mb92",
+    "stem": "아프리카 여행 후 고열과 의식저하를 보이는 환자의 박막 혈액도말(thin blood smear)에서 크기가 정상인 적혈구 안에 가느다란 반지형(ring form) 원충이 여러 개씩 들어 있고, 바나나 모양의 생식모세포(gametocyte)가 관찰되었다. 원인은?",
+    "choices": [
+      "열대열원충(Plasmodium falciparum)",
+      "삼일열원충(Plasmodium vivax)",
+      "사일열원충(Plasmodium malariae)",
+      "난형열원충(Plasmodium ovale)",
+      "바베시아(Babesia microti)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "열대열원충(Plasmodium falciparum)은 모든 연령의 적혈구에 감염해 원충혈증(parasitemia)이 높고, 한 적혈구의 다중감염과 초승달(바나나) 모양 생식모세포(gametocyte)가 특징이다. 감염 적혈구가 미세혈관에 붙어 뇌말라리아(cerebral malaria)를 일으킬 수 있어 가장 위험하다.",
+    "explainWrong": [
+      "",
+      "삼일열원충(Plasmodium vivax)은 감염 적혈구가 커지고 Schüffner 반점이 보이며 생식모세포(gametocyte)는 둥글다.",
+      "사일열원충(Plasmodium malariae)은 적혈구 크기가 정상이지만 띠 모양 영양형(band form)과 국화꽃 모양 분열체(rosette schizont)가 특징이다.",
+      "난형열원충(Plasmodium ovale)은 감염 적혈구가 타원형으로 변하고 가장자리가 톱니 모양이 된다.",
+      "바베시아(Babesia)는 진드기 매개 원충으로 사면체 배열(몰타 십자)이 특징이며 생식모세포(gametocyte)를 만들지 않는다."
+    ]
+  },
+  {
+    "id": "mb93",
+    "stem": "국내 휴전선 인근에서 토착 발생하는 말라리아로, 감염된 적혈구가 커지고 Schüffner 반점이 나타나며 간에 휴면체(hypnozoite)를 형성하여 재발을 일으키는 원충은?",
+    "choices": [
+      "삼일열원충(Plasmodium vivax)",
+      "열대열원충(Plasmodium falciparum)",
+      "사일열원충(Plasmodium malariae)",
+      "원숭이열원충(Plasmodium knowlesi)",
+      "톡소포자충(Toxoplasma gondii)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "삼일열원충(Plasmodium vivax)은 망상적혈구(reticulocyte)에 주로 감염해 적혈구가 커지고 붉은 Schüffner 반점이 보인다. 간의 휴면체(hypnozoite) 때문에 재발하므로 프리마퀸(primaquine) 치료가 필요하며, 진단은 원충 검출에 유리한 후층도말(thick smear)과 종 감별에 유리한 박층도말(thin smear)을 함께 본다.",
+    "explainWrong": [
+      "",
+      "열대열원충(Plasmodium falciparum)은 적혈구 크기가 정상이고 휴면체(hypnozoite)를 만들지 않는다.",
+      "사일열원충(Plasmodium malariae)은 늙은 적혈구에 감염하며 적혈구 비대나 Schüffner 반점이 없다.",
+      "원숭이열원충(Plasmodium knowlesi)은 동남아시아 원숭이 말라리아로 매일 열발작을 일으키며 휴면체(hypnozoite)가 없다.",
+      "톡소포자충(Toxoplasma gondii)은 말라리아 원충이 아니며 적혈구에 감염하지 않는다."
+    ]
+  },
+  {
+    "id": "mb94",
+    "stem": "밤에 항문 주위 가려움을 호소하는 유치원생에게 아침 배변 전 셀로판테이프(cellophane tape)를 항문 주위에 붙였다 떼어 검경하는 검사법으로 진단하는 기생충은?",
+    "choices": [
+      "요충(Enterobius vermicularis)",
+      "회충(Ascaris lumbricoides)",
+      "편충(Trichuris trichiura)",
+      "구충(Ancylostoma duodenale)",
+      "분선충(Strongyloides stercoralis)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "요충(Enterobius vermicularis) 암컷은 밤에 항문 밖으로 나와 주름에 알을 낳으므로 대변보다 항문주위 도말(perianal swab)에서 충란(egg)이 잘 검출된다. 충란은 한쪽이 편평한 비대칭 타원형이며 가족·집단 내 전파가 흔하다.",
+    "explainWrong": [
+      "",
+      "회충(Ascaris lumbricoides)은 소장에 기생하며 대변 검사에서 두꺼운 단백막(albuminous coat)을 가진 충란으로 진단한다.",
+      "편충(Trichuris trichiura)은 대장에 기생하며 대변에서 양 끝에 마개가 있는 충란으로 진단한다.",
+      "구충(Ancylostoma duodenale)은 대변에서 얇은 껍질 안에 난할(cleavage)된 세포가 보이는 충란으로 진단한다.",
+      "분선충(Strongyloides stercoralis)은 대변에서 충란보다 간상유충(rhabditiform larva)이 주로 검출된다."
+    ]
+  },
+  {
+    "id": "mb95",
+    "stem": "대변 검사에서 갈색의 레몬(또는 술통) 모양이며 양 끝에 투명한 마개(polar plug)가 있는 충란이 관찰되었다. 해당 기생충은?",
+    "choices": [
+      "편충(Trichuris trichiura)",
+      "회충(Ascaris lumbricoides)",
+      "요충(Enterobius vermicularis)",
+      "구충(Necator americanus)",
+      "간흡충(Clonorchis sinensis)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "편충(Trichuris trichiura) 충란은 양극에 마개(polar plug)가 있는 술통 모양으로 쉽게 식별된다. 성충은 앞쪽이 채찍처럼 가늘어 대장 점막에 파고들며 심한 감염 시 직장탈출(rectal prolapse)을 일으킬 수 있다.",
+    "explainWrong": [
+      "",
+      "회충(Ascaris lumbricoides) 수정란은 두꺼운 껍질에 울퉁불퉁한 단백막(albuminous coat)이 있고 불수정란은 길쭉하고 불규칙하다.",
+      "요충(Enterobius vermicularis) 충란은 한쪽이 편평한 비대칭 타원형으로 마개가 없다.",
+      "구충(Necator americanus) 충란은 얇고 투명한 껍질 안에 4~8세포기 난할(cleavage)이 보인다.",
+      "간흡충(Clonorchis sinensis) 충란은 매우 작고 한쪽 끝에 어깨가 뚜렷한 뚜껑(operculum)이 있다."
+    ]
+  },
+  {
+    "id": "mb96",
+    "stem": "대변 속 원충 포낭(cyst)과 흡충(trematode)·조충(cestode)·선충(nematode)의 충란을 폭넓게 농축하여 검출하는 데 가장 널리 쓰이는 집란법(concentration method)은?",
+    "choices": [
+      "포르말린-에테르 침전법(formalin-ether sedimentation)",
+      "황산아연 부유법(zinc sulfate flotation)",
+      "포화식염수 부유법(saturated brine flotation)",
+      "Kato-Katz 후층도말법(thick smear)",
+      "셀로판테이프(cellophane tape) 항문주위 도말법"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "포르말린-에테르 침전법(formalin-ether sedimentation)은 포르말린으로 고정한 뒤 에테르(또는 에틸아세테이트)로 지방과 부스러기를 제거하고 원심하여 침전물을 검경한다. 무거운 흡충란(trematode egg)과 뚜껑(operculum) 있는 충란까지 대부분 회수할 수 있어 표준 집란법(concentration method)으로 쓰인다.",
+    "explainWrong": [
+      "",
+      "황산아연 부유법(zinc sulfate flotation)은 원충 포낭(cyst) 검출에 좋으나 무거운 흡충란(trematode egg)과 뚜껑 있는 충란은 뜨지 않거나 변형된다.",
+      "포화식염수 부유법(saturated brine flotation)은 구충란(hookworm egg)처럼 가벼운 충란에 유리하지만 흡충란은 가라앉아 놓친다.",
+      "Kato-Katz법은 충란 수를 세어 감염 강도를 평가하는 후층도말법(thick smear)으로 원충 포낭 검출에는 부적합하다.",
+      "셀로판테이프(cellophane tape) 도말법은 요충란(pinworm egg) 검출을 위한 항문주위 검사이다."
+    ]
+  },
+  {
+    "id": "mb97",
+    "stem": "민물고기 회를 즐겨 먹은 50대 남성이 우상복부 불편감과 황달(jaundice)을 보였다. 영상검사에서 간내 담관(bile duct) 확장이 있었고, 대변에서 길이 약 30μm의 황갈색 충란이 관찰되었는데 한쪽 끝에 어깨가 뚜렷한 뚜껑(operculum)이, 반대쪽 끝에 작은 돌기가 있었다. 원인 기생충은?",
+    "choices": [
+      "간흡충(Clonorchis sinensis)",
+      "요코가와흡충(Metagonimus yokogawai)",
+      "폐흡충(Paragonimus westermani)",
+      "광절열두조충(Diphyllobothrium latum)",
+      "무구조충(Taenia saginata)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "간흡충(Clonorchis sinensis)은 제1중간숙주(first intermediate host) 쇠우렁이(Parafossarulus manchouricus), 제2중간숙주(second intermediate host) 참붕어(Pseudorasbora parva) 등 민물고기를 거치며, 피낭유충(metacercaria)이 든 생선을 날로 먹으면 감염되어 담관에 기생한다. 충란은 인체 기생 흡충란 중 가장 작은 편이고 뚜껑(operculum)의 어깨와 뒤쪽 작은 돌기가 특징이며, 만성 감염은 담관암(cholangiocarcinoma)의 위험인자이다.",
+    "explainWrong": [
+      "",
+      "요코가와흡충(Metagonimus yokogawai)도 은어 등 민물고기로 감염되고 충란이 비슷하게 작지만 소장에 기생하며 뚜껑의 어깨가 뚜렷하지 않고 담관 확장을 일으키지 않는다.",
+      "폐흡충(Paragonimus westermani)은 가재·게로 감염되며 충란이 80μm 이상으로 크고 주로 객담(sputum)에서 검출된다.",
+      "광절열두조충(Diphyllobothrium latum)은 민물고기로 감염되지만 조충으로, 충란은 약 65μm 크기에 뚜껑(operculum)이 있고 소장에 기생해 빈혈을 일으킨다.",
+      "무구조충(Taenia saginata)은 소고기로 감염되며 충란은 뚜껑 없이 방사상 줄무늬가 있는 두꺼운 껍질을 가진다."
+    ]
+  },
+  {
+    "id": "mb98",
+    "stem": "민물 가재나 참게를 날로 또는 덜 익혀 먹은 후 만성 기침과 혈담이 지속되는 환자의 객담(sputum)에서 크고 뚜껑(operculum)이 있는 황갈색 충란이 발견되었다. 원인 기생충은?",
+    "choices": [
+      "폐흡충(Paragonimus westermani)",
+      "간흡충(Clonorchis sinensis)",
+      "요코가와흡충(Metagonimus yokogawai)",
+      "회충(Ascaris lumbricoides)",
+      "유구조충(Taenia solium)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "폐흡충(Paragonimus westermani)은 다슬기(Semisulcospira libertina)를 제1중간숙주(first intermediate host), 가재·게를 제2중간숙주(second intermediate host)로 하며 폐에 충낭을 만들어 결핵과 비슷한 증상을 보인다. 충란은 객담이나 삼킨 객담이 섞인 대변에서 검출되며 뚜껑(operculum) 반대쪽 껍질이 두꺼운 것이 특징이다.",
+    "explainWrong": [
+      "",
+      "간흡충(Clonorchis sinensis)은 민물고기로 감염되어 담관에 기생하며 충란은 대변에서 검출된다.",
+      "요코가와흡충(Metagonimus yokogawai)은 은어로 감염되어 소장에 기생한다.",
+      "회충(Ascaris lumbricoides)은 유충이 폐를 이행하며 기침을 일으킬 수 있으나 충란을 섭취해 감염되고 객담에서 뚜껑 있는 충란이 나오지 않는다.",
+      "유구조충(Taenia solium)은 돼지고기로 감염되는 조충으로 충란에 뚜껑(operculum)이 없다."
+    ]
+  },
+  {
+    "id": "mb99",
+    "stem": "두절(scolex)에 4개의 흡반(sucker)과 갈고리(hooklet)가 있고 덜 익힌 돼지고기로 감염되며, 사람이 충란을 섭취하면 뇌·근육 등에 유충이 자리 잡는 낭미충증(cysticercosis)을 일으킬 수 있는 조충은?",
+    "choices": [
+      "유구조충(Taenia solium)",
+      "무구조충(Taenia saginata)",
+      "광절열두조충(Diphyllobothrium latum)",
+      "왜소조충(Hymenolepis nana)",
+      "단방조충(Echinococcus granulosus)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "유구조충(Taenia solium)은 사람이 종숙주(definitive host)이면서 충란을 삼키면 중간숙주(intermediate host)가 되어 낭미충증(cysticercosis)이 생길 수 있고, 뇌낭미충증(neurocysticercosis)은 경련의 원인이 된다. 편절(proglottid)의 자궁 측지(uterine branch) 수가 7~13개로 무구조충(Taenia saginata)보다 적은 것이 감별점이다.",
+    "explainWrong": [
+      "",
+      "무구조충(Taenia saginata)은 소고기로 감염되며 두절(scolex)에 갈고리가 없고 사람에서 낭미충증(cysticercosis)을 거의 일으키지 않는다.",
+      "광절열두조충(Diphyllobothrium latum)은 민물고기로 감염되며 두절에 흡구(bothria)가 있고 비타민 B12 결핍성 빈혈을 일으킨다.",
+      "왜소조충(Hymenolepis nana)은 중간숙주(intermediate host) 없이 충란 섭취로 직접 감염되는 작은 조충이다.",
+      "단방조충(Echinococcus granulosus)은 개가 종숙주(definitive host)이며 사람에게 간·폐의 포충낭(hydatid cyst)을 형성한다."
+    ]
+  },
+  {
+    "id": "mb100",
+    "stem": "음압(negative pressure)이 유지되는 1인실 격리와 N95 호흡기 착용이 필요한 공기주의(airborne precautions) 격리 대상 질환은?",
+    "choices": [
+      "활동성 폐결핵(active pulmonary tuberculosis)",
+      "인플루엔자(influenza)",
+      "MRSA 창상감염",
+      "Clostridioides difficile 장염",
+      "백일해(pertussis)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "공기주의(airborne precautions)는 5μm 이하의 비말핵(droplet nuclei)이 공기 중에 오래 떠다니며 먼 거리까지 전파되는 병원체에 적용하며 결핵, 홍역(measles), 수두(varicella)가 대표적이다. 음압격리실(negative pressure isolation room)을 쓰고 의료진은 N95 이상 호흡기를 착용하며, 모든 격리의 기본은 표준주의(standard precautions)와 손위생(hand hygiene)이다.",
+    "explainWrong": [
+      "",
+      "인플루엔자(influenza)는 큰 비말로 가까운 거리에서 전파되므로 비말주의(droplet precautions)와 수술용 마스크를 적용한다.",
+      "MRSA는 손과 환경을 통한 접촉으로 전파되므로 접촉주의(contact precautions)를 적용한다.",
+      "C. difficile은 아포(spore)가 환경에 남아 접촉으로 전파되며 알코올 손소독제보다 물과 비누 손씻기가 필요하다.",
+      "백일해(pertussis)는 비말로 전파되는 세균 감염으로 비말주의(droplet precautions) 대상이다."
+    ]
+  },
+  {
+    "id": "mb101",
+    "stem": "결핵균 배양이나 검체 분주처럼 에어로졸이 생기는 작업을 할 때 전면 흡입 기류와 HEPA 필터로 걸러진 하향 기류를 이용해 작업자, 환경, 검체를 모두 보호하는 장비는?",
+    "choices": [
+      "Class II 생물안전작업대(BSC)",
+      "Class I 생물안전작업대(BSC)",
+      "수평층류 클린벤치(horizontal laminar flow clean bench)",
+      "화학용 흄후드(chemical fume hood)",
+      "개방형 실험대(open bench)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "Class II 생물안전작업대(BSC)는 전면 개구부로 공기를 빨아들여 작업자를 보호하고, HEPA 필터를 거친 하향 기류로 작업면의 검체를 보호하며, 배기도 HEPA 필터로 걸러 환경을 보호한다. 임상미생물검사실에서 가장 널리 쓰인다.",
+    "explainWrong": [
+      "",
+      "Class I은 작업자와 환경은 보호하지만 여과되지 않은 실내 공기가 작업면으로 들어오므로 검체를 보호하지 못한다.",
+      "수평층류 클린벤치(horizontal laminar flow clean bench)는 여과된 공기를 작업자 쪽으로 내보내 제품만 보호하므로 감염성 물질 취급에 쓰면 안 된다.",
+      "화학용 흄후드(chemical fume hood)는 유해 증기를 배출하는 장비로 HEPA 필터가 없어 미생물 에어로졸을 거르지 못한다.",
+      "개방형 실험대(open bench)에서는 에어로졸이 그대로 퍼져 작업자 감염 위험이 크다."
+    ]
+  },
+  {
+    "id": "mb102",
+    "stem": "채혈 후 HBsAg 양성 환자의 혈액이 묻은 주사침에 손가락을 찔렸다. 가장 먼저 해야 할 적절한 조치는?",
+    "choices": [
+      "상처를 흐르는 물과 비누로 씻고 즉시 감염관리 부서에 보고한다",
+      "상처를 세게 짜내어 피를 빼낸 뒤 입으로 빨아낸다",
+      "상처에 차아염소산나트륨(sodium hypochlorite) 원액을 부어 소독한다",
+      "발열 같은 증상이 나타날 때까지 경과를 지켜본 뒤 보고한다",
+      "사용한 주사침에 뚜껑을 다시 씌워 일반 폐기물로 버린다"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "주사침 자상(needlestick injury) 후에는 상처를 흐르는 물과 비누로 씻고 즉시 보고하여 노출자와 노출원의 혈청 검사를 받는다. 노출자에게 B형 간염 면역이 없으면 가능한 빨리(24시간 이내 권장) B형 간염 면역글로불린(HBIG)과 백신을 투여한다.",
+    "explainWrong": [
+      "",
+      "상처를 세게 짜거나 입으로 빠는 행위는 조직 손상과 점막 노출을 늘릴 수 있어 권장되지 않는다.",
+      "강한 소독제 원액은 피부 조직을 손상시키며 감염 예방 효과가 입증되지 않았다.",
+      "보고가 늦어지면 면역글로불린과 예방조치의 적기를 놓친다.",
+      "주사침 뚜껑을 다시 씌우는 것은 자상의 주요 원인이며 사용한 주사침은 손상성 의료폐기물 전용 용기에 버려야 한다."
+    ]
+  },
+  {
+    "id": "mb103",
+    "stem": "객담 배양에서 분리된 그람음성 간균이 MacConkey 한천에서 무색 집락을 형성하고, 산화효소(oxidase) 검사 양성이며 포도당을 발효하지 않았다. 가장 가능성이 큰 균은?",
+    "choices": [
+      "Escherichia coli",
+      "Klebsiella pneumoniae",
+      "Pseudomonas aeruginosa",
+      "Proteus mirabilis",
+      "Salmonella Typhi"
+    ],
+    "answerIndex": 2,
+    "explainCorrect": "Pseudomonas aeruginosa는 포도당 비발효 그람음성 간균으로 MacConkey 한천에서 유당(lactose)을 분해하지 않아 무색 집락을 보이며 산화효소(oxidase) 양성이다. 녹농균 특유의 청록색 색소(pyocyanin)와 포도향 냄새도 감별에 도움이 된다.",
+    "explainWrong": [
+      "E. coli는 산화효소(oxidase) 음성이며 대개 MacConkey에서 유당 분해로 분홍·적색 집락을 형성한다.",
+      "K. pneumoniae는 산화효소(oxidase) 음성이고 유당 분해 양성으로 MacConkey에서 점액성 분홍 집락을 보인다.",
+      "",
+      "P. mirabilis는 산화효소(oxidase) 음성이며 유당 비분해이지만 배지 전면에 확산 증식(swarming)하는 것이 특징이다.",
+      "Salmonella Typhi는 산화효소(oxidase) 음성이고 유당 비분해인 Enterobacteriaceae에 속한다."
+    ]
+  },
+  {
+    "id": "mb104",
+    "stem": "혈액한천에서 β용혈을 보이는 그람양성 구균이 카탈라제(catalase) 양성이고 응고효소(coagulase) 양성이었다. 가장 가능성이 큰 균은?",
+    "choices": [
+      "Staphylococcus aureus",
+      "Staphylococcus epidermidis",
+      "Streptococcus pyogenes",
+      "Enterococcus faecalis",
+      "Streptococcus pneumoniae"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "포도알균(Staphylococcus)은 카탈라제 양성으로 연쇄알균·장구균(카탈라제 음성)과 구분한다. 응고효소 양성은 Staphylococcus aureus의 핵심 동정 소견이며, 혈액한천에서 흔히 β용혈을 보인다. 피부·연부조직 감염, 농양, 식중독, 원내감염의 중요 원인균이다.",
+    "explainWrong": [
+      "",
+      "Staphylococcus epidermidis는 카탈라제 양성이지만 응고효소 음성이며, 보통 용혈이 약하거나 없다.",
+      "Streptococcus pyogenes(A군)는 β용혈이지만 카탈라제 음성이라 포도알균과 구분된다.",
+      "Enterococcus faecalis는 보통 비용혈 또는 α용혈이며 카탈라제 음성(또는 약양성 위양성)이고 응고효소 양성이 아니다.",
+      "Streptococcus pneumoniae는 α용혈 연쇄알균으로 카탈라제 음성이며 옵토킨(optochin) 감수성·쓸개즙 용해로 동정한다."
+    ]
+  }
 ]

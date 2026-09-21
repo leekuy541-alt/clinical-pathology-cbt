@@ -2,7 +2,13 @@
   {
     "id": "it51",
     "stem": "ABO 혈액형 항원 생성 과정에서 A 및 B 당전이효소(glycosyltransferase)가 당을 붙이는 기질이 되는 항원은?",
-    "choices": ["H 항원", "Lewis 항원", "I 항원", "P 항원", "Rh 항원"],
+    "choices": [
+      "H 항원",
+      "Lewis 항원",
+      "I 항원",
+      "P 항원",
+      "Rh 항원"
+    ],
     "answerIndex": 0,
     "explainCorrect": "H 유전자(FUT1)가 만드는 푸코스 전이효소(fucosyltransferase)가 전구물질 말단 갈락토스에 L-푸코스를 붙여 H 항원을 만든다. A·B 당전이효소(glycosyltransferase)는 이 H 항원에 각각 당을 추가하므로 H 항원이 없으면 A·B 항원도 만들어지지 않는다. O형은 A·B 전이효소가 기능하지 않아 H 항원이 그대로 남아 있다.",
     "explainWrong": [
@@ -16,7 +22,13 @@
   {
     "id": "it52",
     "stem": "A 당전이효소(glycosyltransferase)가 H 항원에 붙여 A 항원의 특이성을 결정하는 면역우성당(immunodominant sugar)은?",
-    "choices": ["N-아세틸갈락토사민(GalNAc)", "D-갈락토스(Gal)", "L-푸코스(Fuc)", "N-아세틸글루코사민(GlcNAc)", "시알산(sialic acid)"],
+    "choices": [
+      "N-아세틸갈락토사민(GalNAc)",
+      "D-갈락토스(Gal)",
+      "L-푸코스(Fuc)",
+      "N-아세틸글루코사민(GlcNAc)",
+      "시알산(sialic acid)"
+    ],
     "answerIndex": 0,
     "explainCorrect": "A 유전자는 N-아세틸갈락토사민(GalNAc) 전이효소를 만들어 H 항원 말단 갈락토스에 N-아세틸갈락토사민을 붙인다. 이 당이 A 항원의 특이성을 결정하는 면역우성당(immunodominant sugar)이다.",
     "explainWrong": [
@@ -30,7 +42,13 @@
   {
     "id": "it53",
     "stem": "A형 아버지와 B형 어머니 사이에서 O형 자녀가 태어났다. 부모의 유전형으로 옳은 것은?",
-    "choices": ["아버지 AO, 어머니 BO", "아버지 AA, 어머니 BO", "아버지 AO, 어머니 BB", "아버지 AA, 어머니 BB", "아버지 AB, 어머니 OO"],
+    "choices": [
+      "아버지 AO, 어머니 BO",
+      "아버지 AA, 어머니 BO",
+      "아버지 AO, 어머니 BB",
+      "아버지 AA, 어머니 BB",
+      "아버지 AB, 어머니 OO"
+    ],
     "answerIndex": 0,
     "explainCorrect": "O형 자녀의 유전형은 OO이므로 부모 각각에게서 O 유전자를 하나씩 받아야 한다. 따라서 표현형이 A형인 아버지는 AO, B형인 어머니는 BO여야 한다.",
     "explainWrong": [
@@ -44,7 +62,13 @@
   {
     "id": "it54",
     "stem": "ABO 혈액형 후방검사(혈청검사)에서 환자 혈청과 반응시키는 시약은?",
-    "choices": ["A1 적혈구와 B 적혈구", "항A 혈청과 항B 혈청", "항D 혈청과 Rh 대조액", "O형 선별 적혈구(screening cell)", "다특이성(polyspecific) 항글로불린(AHG) 시약"],
+    "choices": [
+      "A1 적혈구와 B 적혈구",
+      "항A 혈청과 항B 혈청",
+      "항D 혈청과 Rh 대조액",
+      "O형 선별 적혈구(screening cell)",
+      "다특이성(polyspecific) 항글로불린(AHG) 시약"
+    ],
     "answerIndex": 0,
     "explainCorrect": "후방검사(reverse typing)는 환자 혈청 속 항A·항B 항체를 항원이 알려진 A1 적혈구와 B 적혈구로 확인하는 검사다. 전방검사(forward typing)에서 확인한 적혈구 항원과 서로 맞아야 ABO 혈액형을 확정한다.",
     "explainWrong": [
@@ -58,7 +82,13 @@
   {
     "id": "it55",
     "stem": "ABO 혈액형의 자연항체(규칙항체)에 대한 설명으로 옳은 것은?",
-    "choices": ["주로 IgM이며 실온 식염수에서 직접 응집을 일으킨다", "주로 IgG이며 37°C 항글로불린(AHG) 단계에서 검출된다", "태반을 잘 통과해 중증 태아수종(hydrops fetalis)을 흔히 일으킨다", "출생 직후부터 성인 수준의 역가를 보인다", "수혈이나 임신으로 감작된 뒤에 생성된다"],
+    "choices": [
+      "주로 IgM이며 실온 식염수에서 직접 응집을 일으킨다",
+      "주로 IgG이며 37°C 항글로불린(AHG) 단계에서 검출된다",
+      "태반을 잘 통과해 중증 태아수종(hydrops fetalis)을 흔히 일으킨다",
+      "출생 직후부터 성인 수준의 역가를 보인다",
+      "수혈이나 임신으로 감작된 뒤에 생성된다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "ABO 항체는 장내세균 등 환경 속 유사 당항원에 노출되며 생후 자연히 만들어지는 규칙항체(regular antibody)다. 주로 IgM이어서 실온 식염수 상태에서 직접 응집을 일으키고 보체(complement)를 강하게 활성화한다. 그래서 ABO 부적합 수혈은 급성 혈관내 용혈(intravascular hemolysis)로 이어진다.",
     "explainWrong": [
@@ -72,7 +102,13 @@
   {
     "id": "it56",
     "stem": "ABO 혈액형 검사 결과가 다음과 같을 때 판정은?\n· 전방검사(forward typing): 항A 0, 항B 4+\n· 후방검사(reverse typing): A1 적혈구 4+, B 적혈구 0",
-    "choices": ["B형", "A형", "O형", "AB형", "전방·후방 불일치(ABO discrepancy)로 판정 보류"],
+    "choices": [
+      "B형",
+      "A형",
+      "O형",
+      "AB형",
+      "전방·후방 불일치(ABO discrepancy)로 판정 보류"
+    ],
     "answerIndex": 0,
     "explainCorrect": "적혈구가 항B에만 응집하므로 B 항원을 가지고 있다. 혈청은 A1 적혈구를 응집시켜 항A를 가지고 있으므로 전방검사(forward typing)와 후방검사(reverse typing)가 모두 B형으로 일치한다.",
     "explainWrong": [
@@ -86,7 +122,13 @@
   {
     "id": "it57",
     "stem": "생후 2개월 된 영아의 ABO 혈액형을 판정할 때 후방검사(reverse typing) 결과를 판정 근거로 사용하지 않는 이유는?",
-    "choices": ["영아 자신의 ABO 항체가 아직 충분히 생성되지 않았다", "적혈구의 A·B 항원이 아직 발현되지 않았다", "영아 혈청에는 보체(complement)가 없어 응집이 일어나지 않는다", "태아 혈색소(HbF)가 시약 적혈구와 교차반응한다", "영아 적혈구의 i 항원이 항A와 반응한다"],
+    "choices": [
+      "영아 자신의 ABO 항체가 아직 충분히 생성되지 않았다",
+      "적혈구의 A·B 항원이 아직 발현되지 않았다",
+      "영아 혈청에는 보체(complement)가 없어 응집이 일어나지 않는다",
+      "태아 혈색소(HbF)가 시약 적혈구와 교차반응한다",
+      "영아 적혈구의 i 항원이 항A와 반응한다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "ABO 항체는 생후 수개월이 지나야 만들어지기 시작하므로 어린 영아의 혈청에서는 기대되는 항체가 검출되지 않는 경우가 많다. 이 시기에 검출되는 항체는 태반을 넘어온 모체 IgG일 수도 있어 영아 자신의 혈액형을 반영하지 못한다. 그래서 영아는 전방검사(forward typing)로 혈액형을 판정한다.",
     "explainWrong": [
@@ -100,7 +142,13 @@
   {
     "id": "it58",
     "stem": "A1형과 A2형을 구별할 때 사용하는 항A1 렉틴(lectin)의 원료 식물은?",
-    "choices": ["Dolichos biflorus", "Ulex europaeus", "Arachis hypogaea", "Glycine max", "Vicia graminea"],
+    "choices": [
+      "Dolichos biflorus",
+      "Ulex europaeus",
+      "Arachis hypogaea",
+      "Glycine max",
+      "Vicia graminea"
+    ],
     "answerIndex": 0,
     "explainCorrect": "Dolichos biflorus 씨앗 추출물을 적절히 희석하면 A1 적혈구와는 응집하고 A2 적혈구와는 반응하지 않는다. A1 적혈구는 A2보다 A 항원 수가 많고 항원 구조에도 질적 차이가 있어 이 렉틴(lectin)으로 구별할 수 있다.",
     "explainWrong": [
@@ -114,7 +162,13 @@
   {
     "id": "it59",
     "stem": "다음 검사 결과를 보인 환자의 혈액형으로 가장 가능성이 높은 것은?\n· 전방검사(forward typing): 항A 0, 항B 0, 항H 렉틴(Ulex europaeus) 0\n· 후방검사(reverse typing): A1 적혈구 4+, B 적혈구 4+, O 적혈구 4+\n· 자가대조(autocontrol): 0",
-    "choices": ["봄베이형(Oh)", "O형", "A2형", "Ax형", "한랭자가항체(cold autoantibody)를 가진 O형"],
+    "choices": [
+      "봄베이형(Oh)",
+      "O형",
+      "A2형",
+      "Ax형",
+      "한랭자가항체(cold autoantibody)를 가진 O형"
+    ],
     "answerIndex": 0,
     "explainCorrect": "적혈구에 A·B·H 항원이 모두 없고 혈청이 O 적혈구까지 강하게 응집시키므로 강한 항H가 존재한다. 봄베이형(Bombay phenotype)은 H 유전자와 분비형(secretor) 유전자가 모두 결손되어 H 항원을 만들지 못하고 항A·항B·항H를 함께 가진다. 이 환자에게는 봄베이형 혈액만 수혈할 수 있다.",
     "explainWrong": [
@@ -128,7 +182,13 @@
   {
     "id": "it60",
     "stem": "대장암으로 입원한 환자의 ABO 검사 결과다. 불일치의 원인으로 가장 가능성이 높은 것은?\n· 전방검사(forward typing): 항A 4+, 항B 1+\n· 후방검사(reverse typing): A1 적혈구 0, B 적혈구 4+\n· 자가대조(autocontrol): 0",
-    "choices": ["획득 B 항원(acquired B)", "A 아형(A subgroup)", "연전형성(rouleaux)", "저감마글로불린혈증(hypogammaglobulinemia)", "최근 B형 적혈구 수혈"],
+    "choices": [
+      "획득 B 항원(acquired B)",
+      "A 아형(A subgroup)",
+      "연전형성(rouleaux)",
+      "저감마글로불린혈증(hypogammaglobulinemia)",
+      "최근 B형 적혈구 수혈"
+    ],
     "answerIndex": 0,
     "explainCorrect": "장내 세균의 탈아세틸화효소(deacetylase)가 A 항원의 N-아세틸갈락토사민을 갈락토사민으로 바꾸면 B 항원과 비슷해져 일부 항B 시약과 약하게 반응한다. 혈청의 항B는 그대로이지만 자기 적혈구와는 반응하지 않아 자가대조(autocontrol)는 음성이고 후방검사(reverse typing)는 A형과 일치한다. 대장암, 장폐색, 그람음성균 패혈증이 있는 A형 환자에서 주로 나타난다.",
     "explainWrong": [
@@ -142,7 +202,13 @@
   {
     "id": "it61",
     "stem": "다발골수종(multiple myeloma) 환자의 ABO 검사 결과다. 불일치 원인과 해결 방법이 옳게 짝지어진 것은?\n· 전방검사(forward typing): 항A 4+, 항B 0\n· 후방검사(reverse typing): A1 적혈구 2+, B 적혈구 4+\n· 자가대조(autocontrol): 2+ (현미경에서 동전을 쌓은 듯한 모양)",
-    "choices": ["연전형성(rouleaux) - 식염수 치환법(saline replacement)", "한랭자가응집소(cold autoagglutinin) - 37°C 세척", "항A1 항체 - 항A1 렉틴(lectin) 검사", "획득 B 항원(acquired B) - 산성화 항B 사용", "저감마글로불린혈증(hypogammaglobulinemia) - 4°C 배양"],
+    "choices": [
+      "연전형성(rouleaux) - 식염수 치환법(saline replacement)",
+      "한랭자가응집소(cold autoagglutinin) - 37°C 세척",
+      "항A1 항체 - 항A1 렉틴(lectin) 검사",
+      "획득 B 항원(acquired B) - 산성화 항B 사용",
+      "저감마글로불린혈증(hypogammaglobulinemia) - 4°C 배양"
+    ],
     "answerIndex": 0,
     "explainCorrect": "다발골수종(multiple myeloma)처럼 혈장 단백이 크게 증가하면 적혈구가 동전을 쌓은 모양으로 붙는 연전형성(rouleaux)이 생겨 후방검사(reverse typing)와 자가대조(autocontrol)에서 가성응집(pseudoagglutination)이 나타난다. 원심 후 혈청을 제거하고 식염수로 치환하면 연전은 흩어지고 진짜 응집은 남는다.",
     "explainWrong": [
@@ -156,7 +222,13 @@
   {
     "id": "it62",
     "stem": "추운 곳에서 손끝이 청색으로 변하는 노인 환자의 ABO 검사 결과다. 가장 적절한 조치는?\n· 전방검사(forward typing): 항A 4+, 항B 2+\n· 후방검사(reverse typing): A1 적혈구 2+, B 적혈구 4+\n· 자가대조(autocontrol): 2+ (실온)",
-    "choices": ["37°C 식염수로 세척한 적혈구와 예열(prewarm) 혈청으로 재검사한다", "혈청을 식염수로 치환해 후방검사(reverse typing)를 반복한다", "항A1 렉틴(lectin)으로 A 아형(A subgroup) 여부를 확인한다", "4°C에서 배양 시간을 늘려 반응을 강화한다", "산성화 항B 시약으로 전방검사(forward typing)를 반복한다"],
+    "choices": [
+      "37°C 식염수로 세척한 적혈구와 예열(prewarm) 혈청으로 재검사한다",
+      "혈청을 식염수로 치환해 후방검사(reverse typing)를 반복한다",
+      "항A1 렉틴(lectin)으로 A 아형(A subgroup) 여부를 확인한다",
+      "4°C에서 배양 시간을 늘려 반응을 강화한다",
+      "산성화 항B 시약으로 전방검사(forward typing)를 반복한다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "한랭자가응집소(주로 항I)가 실온에서 환자 적혈구와 시약 적혈구에 모두 붙어 전방검사(forward typing) 가성양성, 후방검사(reverse typing) 추가 반응, 자가대조(autocontrol) 양성을 일으킨 경우다. 환자 적혈구를 37°C 식염수로 세척해 붙은 항체를 떼어내고 혈청도 37°C로 예열하거나 자가흡착(autoadsorption)한 뒤 재검사한다.",
     "explainWrong": [
@@ -170,7 +242,13 @@
   {
     "id": "it63",
     "stem": "다음 결과에서 전방·후방 불일치(ABO discrepancy)의 원인으로 가장 가능성이 높은 것은?\n· 전방검사(forward typing): 항A 4+, 항B 4+\n· 후방검사(reverse typing): A1 적혈구 1+, B 적혈구 0\n· 자가대조(autocontrol): 0\n· 항A1 렉틴(lectin): 0",
-    "choices": ["A2B형의 항A1 항체", "획득 B 항원(acquired B)", "연전형성(rouleaux)", "한랭자가응집소(cold autoagglutinin)", "최근 O형 혈장 수혈"],
+    "choices": [
+      "A2B형의 항A1 항체",
+      "획득 B 항원(acquired B)",
+      "연전형성(rouleaux)",
+      "한랭자가응집소(cold autoagglutinin)",
+      "최근 O형 혈장 수혈"
+    ],
     "answerIndex": 0,
     "explainCorrect": "전방검사(forward typing)는 AB형인데 항A1 렉틴(lectin)에 반응하지 않으므로 A2B형이다. A2·A2B형의 일부는 비예기항체(unexpected antibody)로 항A1을 만들어 A1 적혈구와 약하게 반응한다. A2 적혈구로 후방검사(reverse typing)를 반복하면 음성으로 확인되며 항A1이 37°C에서 반응하면 수혈 시 A1 항원이 없는 적혈구를 고른다.",
     "explainWrong": [
@@ -184,7 +262,13 @@
   {
     "id": "it64",
     "stem": "만성 림프구백혈병(CLL) 환자의 ABO 검사 결과다. 불일치를 해결하기 위한 방법으로 가장 적절한 것은?\n· 전방검사(forward typing): 항A 0, 항B 4+\n· 후방검사(reverse typing): A1 적혈구 0, B 적혈구 0\n· 자가대조(autocontrol): 0",
-    "choices": ["혈청을 실온 또는 4°C에서 더 오래 반응시킨다", "혈청을 식염수로 치환해 재검사한다", "환자 적혈구를 37°C 식염수로 세척한다", "산성화 항B 시약으로 전방검사(forward typing)를 반복한다", "항H 렉틴(lectin)으로 환자 적혈구를 검사한다"],
+    "choices": [
+      "혈청을 실온 또는 4°C에서 더 오래 반응시킨다",
+      "혈청을 식염수로 치환해 재검사한다",
+      "환자 적혈구를 37°C 식염수로 세척한다",
+      "산성화 항B 시약으로 전방검사(forward typing)를 반복한다",
+      "항H 렉틴(lectin)으로 환자 적혈구를 검사한다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "전방검사(forward typing)는 B형인데 후방검사(reverse typing)에서 기대되는 항A가 검출되지 않아 혈청 반응이 누락된 경우다. 만성 림프구백혈병(CLL), 저감마글로불린혈증(hypogammaglobulinemia), 면역억제 치료, 고령자에서는 ABO 항체 역가가 낮아 이런 불일치가 생긴다. 혈청량을 늘리거나 실온에서 배양 시간을 늘리고, 필요하면 자가대조(autocontrol)·O 적혈구 대조와 함께 4°C에서 반응시켜 약한 항체를 확인한다.",
     "explainWrong": [
@@ -198,7 +282,13 @@
   {
     "id": "it65",
     "stem": "헌혈자 선별 시 일정 비중의 황산구리(CuSO₄) 용액에 혈액을 떨어뜨려 확인하는 것은?",
-    "choices": ["혈색소(Hb) 농도의 기준 충족 여부", "혈소판(PLT) 수의 기준 충족 여부", "ABO 혈액형", "B형 간염(HBV) 감염 여부", "혈청 총단백(total protein) 농도"],
+    "choices": [
+      "혈색소(Hb) 농도의 기준 충족 여부",
+      "혈소판(PLT) 수의 기준 충족 여부",
+      "ABO 혈액형",
+      "B형 간염(HBV) 감염 여부",
+      "혈청 총단백(total protein) 농도"
+    ],
     "answerIndex": 0,
     "explainCorrect": "황산구리법(CuSO₄)은 기준 비중(specific gravity)의 황산구리 용액에 혈액 방울이 가라앉는지를 보고 혈액 비중으로 혈색소(Hb) 농도를 추정하는 방법이다. 방울이 가라앉으면 기준 이상으로 판단한다. 빈혈이 있는 사람이 헌혈하지 않도록 헌혈자를 보호하는 선별 과정이다.",
     "explainWrong": [
@@ -212,7 +302,13 @@
   {
     "id": "it66",
     "stem": "ABO 항원 다음으로 면역원성(immunogenicity)이 강해 수혈 전 항원 유무를 반드시 확인하는 적혈구 항원은?",
-    "choices": ["D 항원", "K 항원", "Fya 항원", "Jka 항원", "E 항원"],
+    "choices": [
+      "D 항원",
+      "K 항원",
+      "Fya 항원",
+      "Jka 항원",
+      "E 항원"
+    ],
     "answerIndex": 0,
     "explainCorrect": "D 항원은 면역원성(immunogenicity)이 매우 강해 D음성인 사람이 D양성 적혈구에 노출되면 높은 비율로 항D를 만든다. 그래서 ABO와 함께 D 항원 유무를 확인해 혈액을 선택하며 Rh 양성과 음성은 D 항원 유무로 구분한다.",
     "explainWrong": [
@@ -226,7 +322,13 @@
   {
     "id": "it67",
     "stem": "헌혈 혈액이 항D 시약과 즉시원심(immediate spin)에서 응집하지 않았다. D음성으로 판정하기 전에 추가로 시행하는 검사는?",
-    "choices": ["간접항글로불린법(IAT)에 의한 weak D 검사", "직접항글로불린검사(DAT)", "효소처리 적혈구 교차시험(crossmatch)", "항H 렉틴(lectin) 응집검사", "4°C 저온 배양 응집검사"],
+    "choices": [
+      "간접항글로불린법(IAT)에 의한 weak D 검사",
+      "직접항글로불린검사(DAT)",
+      "효소처리 적혈구 교차시험(crossmatch)",
+      "항H 렉틴(lectin) 응집검사",
+      "4°C 저온 배양 응집검사"
+    ],
     "answerIndex": 0,
     "explainCorrect": "D 항원 수가 적은 적혈구는 식염수 즉시원심(immediate spin)에서 응집하지 않을 수 있어 항D와 37°C에서 감작한 뒤 항글로불린(AHG)을 넣어 확인한다. 헌혈자의 weak D를 놓쳐 D음성 혈액으로 공급하면 D음성 수혈자에게 항D가 생길 수 있으므로 헌혈 혈액에서 특히 중요하다.",
     "explainWrong": [
@@ -240,7 +342,13 @@
   {
     "id": "it68",
     "stem": "D 항원의 일부 에피토프(epitope)가 결손되어 D양성으로 판정되더라도 D양성 적혈구 수혈 후 항D를 만들 수 있는 표현형은?",
-    "choices": ["partial D", "weak D", "D−−", "Rh null", "DEL"],
+    "choices": [
+      "partial D",
+      "weak D",
+      "D−−",
+      "Rh null",
+      "DEL"
+    ],
     "answerIndex": 0,
     "explainCorrect": "partial D는 D 단백의 일부 구역이 다른 구조로 바뀌어 특정 에피토프(epitope)가 없는 표현형이다. 항D 시약에는 양성으로 반응할 수 있지만 결손된 에피토프에 대해 항D를 만들 수 있다. 그래서 수혈이 필요하면 D음성 적혈구를 선택하는 것이 원칙이다.",
     "explainWrong": [
@@ -254,7 +362,13 @@
   {
     "id": "it69",
     "stem": "지연성 용혈성 수혈반응(DHTR)의 흔한 원인이며 역가가 빨리 떨어져 수혈 전 검사에서 놓치기 쉬운 항체는?",
-    "choices": ["항Jka", "항Lea", "항M", "항P1", "항I"],
+    "choices": [
+      "항Jka",
+      "항Lea",
+      "항M",
+      "항P1",
+      "항I"
+    ],
     "answerIndex": 0,
     "explainCorrect": "Kidd 항체는 IgG이면서 보체(complement)를 활성화할 수 있고 시간이 지나면 역가가 빠르게 떨어져 수혈 전 검사에서 검출되지 않기 쉽다. 이후 해당 항원을 가진 적혈구를 수혈받으면 기억반응(anamnestic response)으로 항체가 급증해 수일 뒤 용혈이 나타난다. 용량효과(dosage effect)가 뚜렷해 동형접합(homozygous) 세포에서 더 강하게 반응한다.",
     "explainWrong": [
@@ -268,7 +382,13 @@
   {
     "id": "it70",
     "stem": "한 명의 헌혈자에게서 채집한 성분채집혈소판(SDP)이 여러 명의 전혈에서 만든 농축혈소판(PC)을 모아 쓰는 것보다 유리한 점은?",
-    "choices": ["수혈자가 노출되는 헌혈자 수가 줄어든다", "적혈구 혼입이 없어 ABO 확인이 필요 없다", "냉장 보관이 가능해 유효기간이 길다", "방사선조사(irradiation) 없이도 이식편대숙주병(GVHD)이 예방된다", "혈소판 항원이 없어 불응증(refractoriness)이 생기지 않는다"],
+    "choices": [
+      "수혈자가 노출되는 헌혈자 수가 줄어든다",
+      "적혈구 혼입이 없어 ABO 확인이 필요 없다",
+      "냉장 보관이 가능해 유효기간이 길다",
+      "방사선조사(irradiation) 없이도 이식편대숙주병(GVHD)이 예방된다",
+      "혈소판 항원이 없어 불응증(refractoriness)이 생기지 않는다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "성분채혈(apheresis) 장비를 이용하면 한 사람에게서 치료 용량의 혈소판을 얻을 수 있어 수혈자가 노출되는 헌혈자 수가 줄어든다. 그만큼 감염 전파와 HLA 동종면역(alloimmunization)의 위험이 낮아지고 HLA 적합 혈소판을 골라 공급하기도 쉽다.",
     "explainWrong": [
@@ -282,7 +402,13 @@
   {
     "id": "it71",
     "stem": "Fy(a−b−) 표현형 적혈구가 감염 저항성을 보이는 적혈구 내 기생 원충은?",
-    "choices": ["Plasmodium vivax", "Plasmodium falciparum", "Plasmodium malariae", "Plasmodium ovale", "Babesia microti"],
+    "choices": [
+      "Plasmodium vivax",
+      "Plasmodium falciparum",
+      "Plasmodium malariae",
+      "Plasmodium ovale",
+      "Babesia microti"
+    ],
     "answerIndex": 0,
     "explainCorrect": "Duffy 당단백은 삼일열 말라리아 원충이 적혈구에 침입할 때 쓰는 수용체다. 서아프리카계 흑인에게 흔한 Fy(a−b−) 적혈구에는 이 수용체가 없어 Plasmodium vivax 감염에 저항성을 보인다.",
     "explainWrong": [
@@ -296,7 +422,13 @@
   {
     "id": "it72",
     "stem": "Lewis 혈액형 항원에 대한 설명으로 옳은 것은?",
-    "choices": ["혈장의 당지질이 적혈구막에 흡착되어 나타난다", "적혈구 전구세포에서 막단백으로 직접 합성된다", "신생아 적혈구에서 가장 강하게 발현된다", "항Lea는 신생아 용혈성 질환(HDFN)의 흔한 원인이다", "임신 중에는 적혈구 발현이 강해진다"],
+    "choices": [
+      "혈장의 당지질이 적혈구막에 흡착되어 나타난다",
+      "적혈구 전구세포에서 막단백으로 직접 합성된다",
+      "신생아 적혈구에서 가장 강하게 발현된다",
+      "항Lea는 신생아 용혈성 질환(HDFN)의 흔한 원인이다",
+      "임신 중에는 적혈구 발현이 강해진다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "Lewis 항원은 적혈구가 스스로 만들지 않고 분비선 등에서 합성된 당지질이 혈장을 통해 적혈구막에 흡착된 것이다. 그래서 신생아에서는 약하거나 음성이고 임신 중에는 일시적으로 Le(a−b−)가 되기도 한다. Lewis 항체는 주로 IgM이라 신생아 용혈성 질환(HDFN)을 일으키지 않는다.",
     "explainWrong": [
@@ -310,7 +442,13 @@
   {
     "id": "it73",
     "stem": "모체의 항K가 태아에게 용혈 정도에 비해 심한 빈혈을 일으키는 이유는?",
-    "choices": ["K 항원이 적혈구 전구세포(erythroid precursor) 단계부터 발현된다", "항K가 주로 IgM이어서 태반을 쉽게 통과한다", "K 항원이 혈소판에도 강하게 발현된다", "항K가 태아 간에서 보체(complement)를 과도하게 활성화한다", "K 항원이 백혈구 HLA 항원과 교차반응한다"],
+    "choices": [
+      "K 항원이 적혈구 전구세포(erythroid precursor) 단계부터 발현된다",
+      "항K가 주로 IgM이어서 태반을 쉽게 통과한다",
+      "K 항원이 혈소판에도 강하게 발현된다",
+      "항K가 태아 간에서 보체(complement)를 과도하게 활성화한다",
+      "K 항원이 백혈구 HLA 항원과 교차반응한다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "Kell 당단백은 성숙 적혈구뿐 아니라 초기 적혈구 전구세포(erythroid precursor)에도 발현된다. 모체의 IgG 항K가 이 전구세포를 공격해 적혈구 생성을 억제하므로 빌리루빈 상승에 비해 빈혈이 심하게 나타난다. K 항원은 D 다음으로 면역원성(immunogenicity)이 강한 항원이기도 하다.",
     "explainWrong": [
@@ -324,7 +462,13 @@
   {
     "id": "it74",
     "stem": "파파인(papain)이나 피신(ficin) 같은 단백분해효소(protease)로 적혈구를 처리하면 파괴되어 반응이 사라지는 항원은?",
-    "choices": ["Fya", "D", "Jka", "Lea", "I"],
+    "choices": [
+      "Fya",
+      "D",
+      "Jka",
+      "Lea",
+      "I"
+    ],
     "answerIndex": 0,
     "explainCorrect": "단백분해효소(protease)는 적혈구 표면 당단백의 일부를 잘라내 Duffy(Fya·Fyb)와 M·N·S 항원을 파괴한다. 반면 시알산(sialic acid)이 제거되며 음전하가 줄어 Rh, Kidd, Lewis, I, P1 항원의 반응은 오히려 강해진다. 이 차이를 이용해 효소처리 패널로 혼합항체를 구별한다.",
     "explainWrong": [
@@ -338,7 +482,13 @@
   {
     "id": "it75",
     "stem": "Mycoplasma pneumoniae 감염 후 증가하는 한랭자가응집소(cold autoagglutinin)의 특이성은?",
-    "choices": ["항I", "항i", "항P", "항H", "항M"],
+    "choices": [
+      "항I",
+      "항i",
+      "항P",
+      "항H",
+      "항M"
+    ],
     "answerIndex": 0,
     "explainCorrect": "Mycoplasma 폐렴 후에는 다클론(polyclonal) IgM 항I 한랭자가항체(cold autoantibody)가 일시적으로 증가해 한랭응집과 용혈을 일으킬 수 있다. 항I는 I 항원이 강한 성인 적혈구와 강하게, i 항원이 우세한 제대혈(cord blood) 적혈구와는 약하게 반응한다.",
     "explainWrong": [
@@ -352,7 +502,13 @@
   {
     "id": "it76",
     "stem": "소아의 바이러스 감염 후 발생하는 발작성 한랭혈색소뇨증(PCH)에서 Donath-Landsteiner 항체의 특이성은?",
-    "choices": ["항P", "항I", "항i", "항Fya", "항k"],
+    "choices": [
+      "항P",
+      "항I",
+      "항i",
+      "항Fya",
+      "항k"
+    ],
     "answerIndex": 0,
     "explainCorrect": "Donath-Landsteiner 항체는 이상성(biphasic) IgG 항P 자가항체다. 저온에서 적혈구에 결합해 초기 보체(complement) 성분을 붙이고 37°C로 체온이 오르면 보체가 활성화되어 혈관내 용혈(intravascular hemolysis)이 일어난다. 저온과 37°C를 차례로 거치는 Donath-Landsteiner 검사로 확인한다.",
     "explainWrong": [
@@ -366,7 +522,13 @@
   {
     "id": "it77",
     "stem": "직접항글로불린검사(DAT)를 적용하는 경우로 옳은 것은?",
-    "choices": ["신생아 용혈성 질환(HDFN)이 의심되는 신생아의 제대혈 적혈구 검사", "수혈 전 환자 혈청의 비예기항체(unexpected antibody) 선별검사", "헌혈 혈액의 weak D 확인검사", "환자 혈청과 공혈자 적혈구의 교차시험(crossmatch)", "패널 적혈구를 이용한 항체 동정검사(antibody identification)"],
+    "choices": [
+      "신생아 용혈성 질환(HDFN)이 의심되는 신생아의 제대혈 적혈구 검사",
+      "수혈 전 환자 혈청의 비예기항체(unexpected antibody) 선별검사",
+      "헌혈 혈액의 weak D 확인검사",
+      "환자 혈청과 공혈자 적혈구의 교차시험(crossmatch)",
+      "패널 적혈구를 이용한 항체 동정검사(antibody identification)"
+    ],
     "answerIndex": 0,
     "explainCorrect": "DAT는 환자 적혈구를 세척한 뒤 곧바로 항글로불린(AHG) 시약을 넣어 생체 내에서 이미 IgG나 보체(complement)가 결합했는지 확인하는 검사다. 신생아 용혈성 질환(HDFN), 자가면역용혈빈혈(AIHA), 용혈성 수혈반응(HTR), 약물유발 면역용혈의 진단에 사용한다.",
     "explainWrong": [
@@ -380,7 +542,13 @@
   {
     "id": "it78",
     "stem": "항글로불린검사가 음성이어서 IgG 감작 적혈구(Coombs 대조세포)를 넣었는데 응집이 나타나지 않았다. 해석으로 옳은 것은?",
-    "choices": ["항글로불린 시약이 중화되거나 누락되어 검사가 무효이다", "환자 적혈구에 보체(complement)가 결합하지 않았음이 확인된다", "음성 결과가 정상적으로 확정된다", "환자 혈청에 IgM 한랭항체(cold antibody)가 존재한다", "시약 적혈구의 항원이 효소로 파괴되었다"],
+    "choices": [
+      "항글로불린 시약이 중화되거나 누락되어 검사가 무효이다",
+      "환자 적혈구에 보체(complement)가 결합하지 않았음이 확인된다",
+      "음성 결과가 정상적으로 확정된다",
+      "환자 혈청에 IgM 한랭항체(cold antibody)가 존재한다",
+      "시약 적혈구의 항원이 효소로 파괴되었다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "음성 시험관에 IgG 감작 적혈구를 넣으면 남아 있는 항글로불린(AHG) 시약과 반응해 응집해야 한다. 응집이 없으면 시약을 넣지 않았거나 시약이 활성을 잃었거나, 세척이 불충분해 남은 혈청 글로불린이 시약을 중화한 것이다. 따라서 결과는 무효이며 검사를 다시 해야 한다.",
     "explainWrong": [
@@ -394,7 +562,13 @@
   {
     "id": "it79",
     "stem": "다특이성(광범위) 항글로불린(AHG) 시약에 포함된 항체 성분은?",
-    "choices": ["항IgG와 항C3d", "항IgM과 항IgA", "항IgG와 항IgE", "항C1q와 항C4", "항IgD와 항C5"],
+    "choices": [
+      "항IgG와 항C3d",
+      "항IgM과 항IgA",
+      "항IgG와 항IgE",
+      "항C1q와 항C4",
+      "항IgD와 항C5"
+    ],
     "answerIndex": 0,
     "explainCorrect": "다특이성(polyspecific) 항글로불린(AHG) 시약은 항IgG와 항C3d(시약에 따라 항C3b 포함)로 구성되어 적혈구에 결합한 IgG와 보체(complement)를 모두 검출한다. DAT가 양성이면 단일특이성(monospecific) 항IgG와 항C3d 시약으로 어느 쪽이 결합했는지 구분한다.",
     "explainWrong": [
@@ -408,7 +582,13 @@
   {
     "id": "it80",
     "stem": "시험관 응집 반응에서 하나의 단단한 응집괴가 형성되고 배경이 투명할 때의 판정 등급은?",
-    "choices": ["4+", "3+", "2+", "1+", "w+"],
+    "choices": [
+      "4+",
+      "3+",
+      "2+",
+      "1+",
+      "w+"
+    ],
     "answerIndex": 0,
     "explainCorrect": "4+는 적혈구 전체가 하나의 단단한 응집괴를 이루고 떨어져 있는 적혈구가 없어 배경이 투명한 상태다. 반응이 약해질수록 응집괴가 작아지고 여러 개로 나뉘며 배경이 탁해진다.",
     "explainWrong": [
@@ -422,7 +602,13 @@
   {
     "id": "it81",
     "stem": "비예기항체(unexpected antibody) 선별검사(screening)에 사용하는 시약 적혈구의 요건으로 옳은 것은?",
-    "choices": ["O형 적혈구로 주요 항원을 가능한 한 동형접합(homozygous)으로 포함한다", "환자와 같은 ABO 혈액형의 적혈구를 사용한다", "여러 명의 적혈구를 섞은 혼합세포(pooled cell)를 사용한다", "효소로 미리 처리해 모든 항원을 증강시킨다", "D 항원이 없는 적혈구로 모두 구성한다"],
+    "choices": [
+      "O형 적혈구로 주요 항원을 가능한 한 동형접합(homozygous)으로 포함한다",
+      "환자와 같은 ABO 혈액형의 적혈구를 사용한다",
+      "여러 명의 적혈구를 섞은 혼합세포(pooled cell)를 사용한다",
+      "효소로 미리 처리해 모든 항원을 증강시킨다",
+      "D 항원이 없는 적혈구로 모두 구성한다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "선별 적혈구(screening cell)는 ABO 항체가 반응하지 않도록 O형을 쓰고 D, C, c, E, e, K, Fya, Fyb, Jka, Jkb, M, N, S, s 등 임상적으로 중요한 항원을 포함한다. Rh·Kidd·Duffy·MNS 항체는 용량효과(dosage effect)가 있어 동형접합(homozygous) 세포가 있어야 약한 항체를 놓치지 않는다.",
     "explainWrong": [
@@ -436,7 +622,13 @@
   {
     "id": "it82",
     "stem": "비예기항체(unexpected antibody) 선별검사(screening)가 양성인 환자의 항체 동정(antibody identification) 결과다(37°C 항글로불린 단계). 가장 가능성이 높은 항체는?\n· 세포1 (D+ K− Fya+ Jka+): 0\n· 세포2 (D− K+ Fya− Jka+): 3+\n· 세포3 (D+ K− Fya− Jka−): 0\n· 세포4 (D− K+ Fya+ Jka−): 3+\n· 세포5 (D− K− Fya+ Jka+): 0\n· 자가대조(autocontrol): 0",
-    "choices": ["항K", "항D", "항Fya", "항Jka", "항K와 항Jka의 혼합"],
+    "choices": [
+      "항K",
+      "항D",
+      "항Fya",
+      "항Jka",
+      "항K와 항Jka의 혼합"
+    ],
     "answerIndex": 0,
     "explainCorrect": "음성으로 반응한 세포가 가진 항원부터 배제하면 세포1·3·5에서 D, Fya, Jka가 배제된다. 남은 K는 K+인 세포2·4가 양성이고 K−인 세포가 모두 음성이어서 반응 양상이 정확히 일치한다. 자가대조(autocontrol)가 음성이므로 동종항체(alloantibody)이며 환자 적혈구가 K 음성인지 확인해 결론을 뒷받침한다.",
     "explainWrong": [
@@ -450,7 +642,13 @@
   {
     "id": "it83",
     "stem": "교차시험(crossmatch) 중 주교차시험(major crossmatch)에서 반응시키는 조합은?",
-    "choices": ["환자 혈청 + 공혈자 적혈구", "공혈자 혈장 + 환자 적혈구", "환자 혈청 + 환자 적혈구", "공혈자 혈장 + 공혈자 적혈구", "환자 혈청 + O형 시약 적혈구"],
+    "choices": [
+      "환자 혈청 + 공혈자 적혈구",
+      "공혈자 혈장 + 환자 적혈구",
+      "환자 혈청 + 환자 적혈구",
+      "공혈자 혈장 + 공혈자 적혈구",
+      "환자 혈청 + O형 시약 적혈구"
+    ],
     "answerIndex": 0,
     "explainCorrect": "수혈에서 가장 중요한 것은 들어간 공혈자 적혈구가 환자 항체에 의해 파괴되는지 여부이므로 주교차시험(major crossmatch)은 환자 혈청과 공혈자 적혈구를 반응시킨다. 식염수, 37°C, 항글로불린(AHG) 단계를 거쳐 ABO 부적합과 임상적으로 중요한 비예기항체(unexpected antibody)를 확인한다.",
     "explainWrong": [
@@ -464,7 +662,13 @@
   {
     "id": "it84",
     "stem": "교차시험(crossmatch)의 식염수 즉시원심(실온) 단계에서 주로 확인하는 부적합은?",
-    "choices": ["ABO 부적합", "항D에 의한 부적합", "항Jka에 의한 부적합", "항Fya에 의한 부적합", "항K에 의한 부적합"],
+    "choices": [
+      "ABO 부적합",
+      "항D에 의한 부적합",
+      "항Jka에 의한 부적합",
+      "항Fya에 의한 부적합",
+      "항K에 의한 부적합"
+    ],
     "answerIndex": 0,
     "explainCorrect": "ABO 항체는 IgM이어서 실온 식염수 상태에서 곧바로 응집을 일으킨다. 즉시원심(immediate spin) 단계는 ABO 부적합과 혈액형 판정·검체 오류를 빠르게 확인하는 역할을 한다. 비예기항체(unexpected antibody) 선별검사가 음성이고 항체 이력이 없으면 즉시원심 교차시험만 시행하기도 한다.",
     "explainWrong": [
@@ -478,7 +682,13 @@
   {
     "id": "it85",
     "stem": "혈액형 검사 결과를 기다릴 수 없는 응급 상황에서 가임기 여성에게 우선 수혈하는 적혈구 제제는?",
-    "choices": ["O형 D음성 농축적혈구(packed RBC)", "O형 D양성 농축적혈구(packed RBC)", "AB형 D음성 농축적혈구(packed RBC)", "A형 D음성 농축적혈구(packed RBC)", "AB형 D양성 전혈(whole blood)"],
+    "choices": [
+      "O형 D음성 농축적혈구(packed RBC)",
+      "O형 D양성 농축적혈구(packed RBC)",
+      "AB형 D음성 농축적혈구(packed RBC)",
+      "A형 D음성 농축적혈구(packed RBC)",
+      "AB형 D양성 전혈(whole blood)"
+    ],
     "answerIndex": 0,
     "explainCorrect": "O형 적혈구는 A·B 항원이 없어 환자가 어떤 ABO 항체를 가지고 있어도 반응하지 않는다. 가임기 여성은 항D가 생기면 이후 임신에서 신생아 용혈성 질환(HDFN) 위험이 있으므로 D음성을 고른다. 수혈 전에 검체를 채혈해 두고 혈액형이 확인되면 동형 혈액으로 바꾼다.",
     "explainWrong": [
@@ -492,7 +702,13 @@
   {
     "id": "it86",
     "stem": "최근 3개월 이내 수혈이나 임신력이 있는 환자의 수혈 전 검사 검체로 적합한 것은?",
-    "choices": ["채혈 후 3일 이내의 검체", "채혈 후 7일 이내의 검체", "채혈 후 14일 이내의 검체", "이전 입원 때 보관해 둔 검체", "혈액형 기록이 남아 있는 기존 검체"],
+    "choices": [
+      "채혈 후 3일 이내의 검체",
+      "채혈 후 7일 이내의 검체",
+      "채혈 후 14일 이내의 검체",
+      "이전 입원 때 보관해 둔 검체",
+      "혈액형 기록이 남아 있는 기존 검체"
+    ],
     "answerIndex": 0,
     "explainCorrect": "최근 수혈이나 임신으로 적혈구 항원에 노출된 환자는 짧은 기간에 새로운 비예기항체(unexpected antibody)를 만들 수 있다. 그래서 현재의 항체 상태를 반영하도록 채혈 후 3일 이내의 검체로 선별검사와 교차시험(crossmatch)을 한다.",
     "explainWrong": [
@@ -506,7 +722,13 @@
   {
     "id": "it87",
     "stem": "농축적혈구(packed RBC)의 보관 온도로 옳은 것은?",
-    "choices": ["1~6°C", "20~24°C", "−18°C 이하", "−65°C 이하", "10~15°C"],
+    "choices": [
+      "1~6°C",
+      "20~24°C",
+      "−18°C 이하",
+      "−65°C 이하",
+      "10~15°C"
+    ],
     "answerIndex": 0,
     "explainCorrect": "농축적혈구(packed RBC)는 1~6°C에서 냉장 보관해 적혈구 대사를 늦추고 세균 증식을 억제한다. 혈액 전용 냉장고에 보관하며 온도를 계속 기록하고 범위를 벗어나면 경보가 울리도록 관리한다.",
     "explainWrong": [
@@ -520,7 +742,13 @@
   {
     "id": "it88",
     "stem": "농축혈소판(PC)의 보관 조건으로 옳은 것은?",
-    "choices": ["20~24°C에서 연속 진탕", "1~6°C에서 정치 보관", "−18°C 이하에서 동결 보관", "37°C 항온 수조에서 보관", "20~24°C에서 정치 보관"],
+    "choices": [
+      "20~24°C에서 연속 진탕",
+      "1~6°C에서 정치 보관",
+      "−18°C 이하에서 동결 보관",
+      "37°C 항온 수조에서 보관",
+      "20~24°C에서 정치 보관"
+    ],
     "answerIndex": 0,
     "explainCorrect": "혈소판을 냉장하면 모양이 변해 수혈 후 체내에서 빨리 제거되므로 20~24°C 실온에 보관한다. 계속 진탕하면 가스교환이 유지되어 젖산 축적과 pH 저하를 막을 수 있다. 실온 보관이기 때문에 세균 오염 관리가 특히 중요하다.",
     "explainWrong": [
@@ -534,7 +762,13 @@
   {
     "id": "it89",
     "stem": "신선동결혈장(FFP)의 주된 적응증은?",
-    "choices": ["여러 응고인자(coagulation factor)가 함께 부족한 출혈 환자", "혈량 보충이 필요한 단순 저혈량 환자", "철결핍빈혈(IDA) 환자의 혈색소 교정", "혈소판 감소에 의한 점상출혈(petechiae)", "단순 저알부민혈증(hypoalbuminemia)의 교정"],
+    "choices": [
+      "여러 응고인자(coagulation factor)가 함께 부족한 출혈 환자",
+      "혈량 보충이 필요한 단순 저혈량 환자",
+      "철결핍빈혈(IDA) 환자의 혈색소 교정",
+      "혈소판 감소에 의한 점상출혈(petechiae)",
+      "단순 저알부민혈증(hypoalbuminemia)의 교정"
+    ],
     "answerIndex": 0,
     "explainCorrect": "신선동결혈장(FFP)은 채혈 후 빨리 분리해 동결하므로 V·VIII인자 같은 불안정한 인자를 포함한 모든 응고인자(coagulation factor)가 보존된다. 간질환, 파종혈관내응고(DIC), 대량수혈(massive transfusion), 와파린(warfarin) 효과의 긴급 교정처럼 여러 응고인자가 함께 부족한 출혈 환자에게 쓴다. −18°C 이하에 보관하고 30~37°C에서 녹여 사용한다.",
     "explainWrong": [
@@ -548,7 +782,13 @@
   {
     "id": "it90",
     "stem": "동결침전제제(cryoprecipitate)의 주된 적응증은?",
-    "choices": ["저피브리노겐혈증(hypofibrinogenemia)", "혈우병 B(hemophilia B)", "비타민 K 결핍증", "혈소판무력증(Glanzmann thrombasthenia)", "제VII인자 결핍증"],
+    "choices": [
+      "저피브리노겐혈증(hypofibrinogenemia)",
+      "혈우병 B(hemophilia B)",
+      "비타민 K 결핍증",
+      "혈소판무력증(Glanzmann thrombasthenia)",
+      "제VII인자 결핍증"
+    ],
     "answerIndex": 0,
     "explainCorrect": "신선동결혈장(FFP)을 1~6°C에서 천천히 녹일 때 생기는 침전물로 피브리노겐(fibrinogen), VIII인자, von Willebrand 인자(vWF), XIII인자, 피브로넥틴(fibronectin)이 농축되어 있다. 주로 피브리노겐 보충에 쓰며 농축제제를 쓸 수 없을 때 von Willebrand병(vWD)이나 XIII인자 결핍에도 사용한다.",
     "explainWrong": [
@@ -562,7 +802,13 @@
   {
     "id": "it91",
     "stem": "혈액제제에 감마선이나 X선을 조사하는 주된 목적은?",
-    "choices": ["수혈 관련 이식편대숙주병(TA-GVHD) 예방", "발열성 비용혈성 수혈반응(FNHTR) 예방", "혈액제제의 세균 멸균(sterilization)", "IgA 결핍 환자의 아나필락시스(anaphylaxis) 예방", "HLA 동종면역(alloimmunization) 예방"],
+    "choices": [
+      "수혈 관련 이식편대숙주병(TA-GVHD) 예방",
+      "발열성 비용혈성 수혈반응(FNHTR) 예방",
+      "혈액제제의 세균 멸균(sterilization)",
+      "IgA 결핍 환자의 아나필락시스(anaphylaxis) 예방",
+      "HLA 동종면역(alloimmunization) 예방"
+    ],
     "answerIndex": 0,
     "explainCorrect": "방사선조사(irradiation)는 혈액제제에 섞인 공혈자 T림프구의 증식 능력을 없애 수혈 관련 이식편대숙주병(TA-GVHD)을 예방한다. 조혈모세포이식(HSCT) 환자, 선천성 면역결핍 환자, 혈연 공혈자의 혈액, HLA 적합 혈소판 수혈에서 필요하다. 백혈구여과제거(leukoreduction)만으로는 확실하게 예방되지 않는다.",
     "explainWrong": [
@@ -576,7 +822,13 @@
   {
     "id": "it92",
     "stem": "IgA 결핍으로 항IgA 항체를 가진 환자에게 적혈구를 수혈할 때 아나필락시스(anaphylaxis)를 예방하기 위해 선택하는 제제는?",
-    "choices": ["세척적혈구(washed RBC)", "방사선조사적혈구(irradiated RBC)", "백혈구여과제거적혈구(leukoreduced RBC)", "전혈(whole blood)", "농축적혈구(packed RBC)"],
+    "choices": [
+      "세척적혈구(washed RBC)",
+      "방사선조사적혈구(irradiated RBC)",
+      "백혈구여과제거적혈구(leukoreduced RBC)",
+      "전혈(whole blood)",
+      "농축적혈구(packed RBC)"
+    ],
     "answerIndex": 0,
     "explainCorrect": "적혈구를 생리식염수로 여러 번 세척하면 IgA를 포함한 혈장 단백이 대부분 제거된다. IgA 결핍 환자의 아나필락시스(anaphylaxis)는 소량 수혈 직후 발열 없이 저혈압, 기관지경련(bronchospasm), 호흡곤란으로 나타나며 예방을 위해 세척 제제나 IgA 결핍 공혈자의 혈액을 사용한다.",
     "explainWrong": [
@@ -590,7 +842,13 @@
   {
     "id": "it93",
     "stem": "백혈구여과제거(leukoreduction) 혈액제제로 예방 효과를 기대할 수 있는 수혈 부작용은?",
-    "choices": ["발열성 비용혈성 수혈반응(FNHTR)", "수혈 관련 이식편대숙주병(TA-GVHD)", "수혈 관련 순환과부하(TACO)", "ABO 부적합 급성 용혈성 수혈반응(AHTR)", "수혈 후 철과부하(iron overload)"],
+    "choices": [
+      "발열성 비용혈성 수혈반응(FNHTR)",
+      "수혈 관련 이식편대숙주병(TA-GVHD)",
+      "수혈 관련 순환과부하(TACO)",
+      "ABO 부적합 급성 용혈성 수혈반응(AHTR)",
+      "수혈 후 철과부하(iron overload)"
+    ],
     "answerIndex": 0,
     "explainCorrect": "발열성 비용혈성 수혈반응(FNHTR)은 공혈자 백혈구와 보관 중 백혈구가 분비한 사이토카인(cytokine), 수혈자의 항백혈구 항체가 주요 원인이다. 보관 전에 백혈구를 제거하면 이 반응이 줄어든다. 또한 HLA 동종면역(alloimmunization)에 의한 혈소판 불응증(refractoriness)과 백혈구를 통한 CMV 전파도 줄일 수 있다.",
     "explainWrong": [
@@ -604,7 +862,13 @@
   {
     "id": "it94",
     "stem": "CPDA-1 혈액 보존액에서 아데닌(adenine)의 역할은?",
-    "choices": ["적혈구 ATP 합성을 도와 생존 기간을 늘린다", "칼슘을 킬레이트해 응고를 막는다", "보관 중 pH 저하를 완충한다", "해당과정의 기질이 되는 당을 공급한다", "2,3-DPG를 보관 기간 내내 유지한다"],
+    "choices": [
+      "적혈구 ATP 합성을 도와 생존 기간을 늘린다",
+      "칼슘을 킬레이트해 응고를 막는다",
+      "보관 중 pH 저하를 완충한다",
+      "해당과정의 기질이 되는 당을 공급한다",
+      "2,3-DPG를 보관 기간 내내 유지한다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "아데닌(adenine)은 적혈구가 ATP를 다시 합성하는 데 쓰는 기질이다. ATP가 유지되면 적혈구 막과 형태가 보존되어 수혈 후 생존율이 높아지므로 아데닌을 넣은 CPDA-1은 CPD보다 보존 기간이 길다.",
     "explainWrong": [
@@ -618,7 +882,13 @@
   {
     "id": "it95",
     "stem": "적혈구 수혈 시작 직후 환자에게 발열, 오한, 옆구리 통증, 혈색소뇨(hemoglobinuria)가 나타났다. 가장 먼저 해야 할 조치는?",
-    "choices": ["즉시 수혈을 중단하고 생리식염수로 정맥로를 유지한다", "해열제를 투여하고 수혈 속도를 늦춘다", "항히스타민제를 투여한 뒤 수혈을 계속한다", "남은 혈액백을 폐기하고 새 혈액으로 교체한다", "이뇨제를 투여하면서 같은 혈액을 계속 수혈한다"],
+    "choices": [
+      "즉시 수혈을 중단하고 생리식염수로 정맥로를 유지한다",
+      "해열제를 투여하고 수혈 속도를 늦춘다",
+      "항히스타민제를 투여한 뒤 수혈을 계속한다",
+      "남은 혈액백을 폐기하고 새 혈액으로 교체한다",
+      "이뇨제를 투여하면서 같은 혈액을 계속 수혈한다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "급성 용혈성 수혈반응(AHTR)이 의심되므로 즉시 수혈을 중단하고 생리식염수로 정맥로를 확보한 뒤 의사와 혈액은행에 보고한다. 혈액백과 수혈세트, 수혈 후 새로 채혈한 검체를 혈액은행으로 보내 환자·혈액 확인, ABO 재검사, DAT, 혈장 유리혈색소(free Hb) 등을 확인한다. 대부분 환자 확인 오류에 의한 ABO 부적합이 원인이다.",
     "explainWrong": [
@@ -632,7 +902,13 @@
   {
     "id": "it96",
     "stem": "혈장 함량이 많은 제제를 수혈받은 뒤 6시간 이내에 급성 저산소증과 양측 폐침윤이 나타났으며 순환과부하(TACO) 소견은 없었다. 주된 기전은?",
-    "choices": ["공혈자 혈장의 항HLA·항HNA 항체에 의한 호중구(neutrophil) 활성화", "수혈량 과다에 의한 정수압성 폐부종(hydrostatic pulmonary edema)", "수혈자 IgA 결핍에 의한 아나필락시스(anaphylaxis)", "혈소판 제제의 세균 오염에 의한 패혈증(sepsis)", "구연산 중독(citrate toxicity)에 의한 저칼슘혈증(hypocalcemia)"],
+    "choices": [
+      "공혈자 혈장의 항HLA·항HNA 항체에 의한 호중구(neutrophil) 활성화",
+      "수혈량 과다에 의한 정수압성 폐부종(hydrostatic pulmonary edema)",
+      "수혈자 IgA 결핍에 의한 아나필락시스(anaphylaxis)",
+      "혈소판 제제의 세균 오염에 의한 패혈증(sepsis)",
+      "구연산 중독(citrate toxicity)에 의한 저칼슘혈증(hypocalcemia)"
+    ],
     "answerIndex": 0,
     "explainCorrect": "수혈 관련 급성 폐손상(TRALI)은 주로 임신 경험이 많은 여성 공혈자 혈장의 항HLA·항HNA 항체가 수혈자 호중구(neutrophil)에 결합해 폐모세혈관을 손상시키는 비심인성 폐부종(noncardiogenic pulmonary edema)이다. 신선동결혈장(FFP)이나 혈소판처럼 혈장이 많은 제제에서 잘 생기며 남성 공혈자 혈장을 우선 사용하는 것이 예방책이다.",
     "explainWrong": [
@@ -646,7 +922,13 @@
   {
     "id": "it97",
     "stem": "심부전이 있는 고령 환자에게 농축적혈구(packed RBC)를 빠르게 수혈하던 중 호흡곤란, 혈압 상승, 경정맥 확장이 나타났다. 가장 가능성이 높은 수혈 부작용은?",
-    "choices": ["수혈 관련 순환과부하(TACO)", "수혈 관련 급성 폐손상(TRALI)", "발열성 비용혈성 수혈반응(FNHTR)", "지연성 용혈성 수혈반응(DHTR)", "수혈 관련 이식편대숙주병(TA-GVHD)"],
+    "choices": [
+      "수혈 관련 순환과부하(TACO)",
+      "수혈 관련 급성 폐손상(TRALI)",
+      "발열성 비용혈성 수혈반응(FNHTR)",
+      "지연성 용혈성 수혈반응(DHTR)",
+      "수혈 관련 이식편대숙주병(TA-GVHD)"
+    ],
     "answerIndex": 0,
     "explainCorrect": "순환과부하(TACO)는 심폐 기능이 떨어진 환자에게 혈액을 많이 또는 빠르게 넣어 생기는 정수압성 폐부종(hydrostatic pulmonary edema)으로 혈압 상승, 경정맥 확장, 호흡곤란이 나타난다. 수혈을 멈추고 상체를 세우며 이뇨제를 투여한다. 위험 환자는 천천히 나누어 수혈해 예방한다.",
     "explainWrong": [
@@ -660,7 +942,13 @@
   {
     "id": "it98",
     "stem": "세균 오염에 의한 수혈 부작용이 가장 흔하게 발생하는 혈액제제는?",
-    "choices": ["농축혈소판(PC)", "농축적혈구(packed RBC)", "신선동결혈장(FFP)", "동결침전제제(cryoprecipitate)", "세척적혈구(washed RBC)"],
+    "choices": [
+      "농축혈소판(PC)",
+      "농축적혈구(packed RBC)",
+      "신선동결혈장(FFP)",
+      "동결침전제제(cryoprecipitate)",
+      "세척적혈구(washed RBC)"
+    ],
     "answerIndex": 0,
     "explainCorrect": "혈소판은 20~24°C 실온에 보관하기 때문에 채혈 시 들어간 피부 세균 등이 증식하기 쉽다. 수혈 중이나 직후 고열, 오한, 저혈압, 쇼크가 나타나면 즉시 수혈을 멈추고 환자 혈액과 남은 제제를 배양한다.",
     "explainWrong": [
@@ -674,7 +962,13 @@
   {
     "id": "it99",
     "stem": "지중해빈혈(thalassemia)처럼 장기간 반복적으로 적혈구 수혈을 받는 환자에서 문제가 되는 합병증과 치료가 옳게 짝지어진 것은?",
-    "choices": ["철과부하(iron overload) - 철킬레이트제(iron chelator) 투여", "고칼륨혈증(hyperkalemia) - 세척적혈구(washed RBC) 사용", "구연산 중독(citrate toxicity) - 칼슘 투여", "저체온증(hypothermia) - 혈액 가온기 사용", "희석성 혈소판감소(dilutional thrombocytopenia) - 혈소판 수혈"],
+    "choices": [
+      "철과부하(iron overload) - 철킬레이트제(iron chelator) 투여",
+      "고칼륨혈증(hyperkalemia) - 세척적혈구(washed RBC) 사용",
+      "구연산 중독(citrate toxicity) - 칼슘 투여",
+      "저체온증(hypothermia) - 혈액 가온기 사용",
+      "희석성 혈소판감소(dilutional thrombocytopenia) - 혈소판 수혈"
+    ],
     "answerIndex": 0,
     "explainCorrect": "수혈된 적혈구의 철은 몸 밖으로 배출할 경로가 없어 반복 수혈 시 간, 심장, 내분비샘에 쌓여 장기 손상을 일으킨다. 혈청 페리틴(ferritin) 등으로 추적하며 데페록사민(deferoxamine) 같은 철킬레이트제(iron chelator)로 철을 배출시킨다.",
     "explainWrong": [
@@ -688,7 +982,13 @@
   {
     "id": "it100",
     "stem": "ABO 신생아 용혈성 질환(HDFN)을 Rh(D) 신생아 용혈성 질환(HDFN)과 비교한 설명으로 옳은 것은?",
-    "choices": ["첫 임신에서도 발생할 수 있고 대개 경증이다", "주로 A형 산모와 O형 태아 사이에서 발생한다", "제대혈 DAT가 대부분 강양성으로 나타난다", "산모에게 RhIG를 투여해 예방한다", "태아수종(hydrops fetalis) 같은 중증 빈혈이 흔하다"],
+    "choices": [
+      "첫 임신에서도 발생할 수 있고 대개 경증이다",
+      "주로 A형 산모와 O형 태아 사이에서 발생한다",
+      "제대혈 DAT가 대부분 강양성으로 나타난다",
+      "산모에게 RhIG를 투여해 예방한다",
+      "태아수종(hydrops fetalis) 같은 중증 빈혈이 흔하다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "ABO 신생아 용혈성 질환(HDFN)은 O형 산모가 원래 가진 IgG 항A·항B가 태반을 넘어 A형이나 B형 태아의 적혈구에 결합해 생긴다. 사전 감작이 필요 없어 첫 임신에서도 생길 수 있지만 태아 적혈구의 A·B 항원이 약하고 조직에도 분포해 항체가 흡수되므로 대개 경증이다. Rh 신생아 용혈성 질환은 감작이 필요해 주로 두 번째 임신부터 나타나며 중증이 될 수 있다.",
     "explainWrong": [
@@ -702,7 +1002,13 @@
   {
     "id": "it101",
     "stem": "D음성 산모에게 Rh 면역글로불린(RhIG)을 투여하는 시기로 옳은 것은?",
-    "choices": ["임신 28주경과 D양성 아기 분만 후 72시간 이내", "임신 확인 즉시와 분만 1주일 후", "신생아에게 황달이 나타났을 때", "산모에게 항D가 검출된 이후", "D음성 아기를 분만한 직후"],
+    "choices": [
+      "임신 28주경과 D양성 아기 분만 후 72시간 이내",
+      "임신 확인 즉시와 분만 1주일 후",
+      "신생아에게 황달이 나타났을 때",
+      "산모에게 항D가 검출된 이후",
+      "D음성 아기를 분만한 직후"
+    ],
     "answerIndex": 0,
     "explainCorrect": "RhIG는 산모 혈액에 들어온 태아의 D양성 적혈구를 제거해 산모가 항D를 만들지 않도록 막는다. 임신 28주경 산전 투여하고 분만한 아기가 D양성이면 분만 후 72시간 이내에 다시 투여한다. 유산이나 양수천자(amniocentesis)처럼 태아모체출혈(FMH)이 생길 수 있는 경우에도 투여한다.",
     "explainWrong": [
@@ -716,7 +1022,13 @@
   {
     "id": "it102",
     "stem": "자가수혈(autologous transfusion)의 장점으로 옳은 것은?",
-    "choices": ["동종항체(alloantibody) 생성과 수혈 전파 감염 위험을 피할 수 있다", "보관 중 세균 오염 위험이 전혀 없다", "혈액형 확인과 환자 확인 절차가 필요 없다", "빈혈 환자에게 가장 우선 권장된다", "보관 중 저장 손상(storage lesion)이 발생하지 않는다"],
+    "choices": [
+      "동종항체(alloantibody) 생성과 수혈 전파 감염 위험을 피할 수 있다",
+      "보관 중 세균 오염 위험이 전혀 없다",
+      "혈액형 확인과 환자 확인 절차가 필요 없다",
+      "빈혈 환자에게 가장 우선 권장된다",
+      "보관 중 저장 손상(storage lesion)이 발생하지 않는다"
+    ],
     "answerIndex": 0,
     "explainCorrect": "자가수혈은 수술 전 자기 혈액을 미리 예치하거나 수술 중 흘린 혈액을 회수하거나 급성 등용량 혈액희석(ANH)으로 자신의 혈액을 사용하는 방법이다. 다른 사람의 적혈구 항원에 노출되지 않아 동종면역(alloimmunization)과 수혈 전파 감염을 피할 수 있다. 희귀 혈액형이나 여러 동종항체(alloantibody)를 가진 환자에게 특히 유용하다.",
     "explainWrong": [
@@ -725,6 +1037,26 @@
       "다른 환자의 예치 혈액과 뒤바뀌는 사고를 막기 위해 확인 절차는 똑같이 필요하다.",
       "빈혈이 있으면 수술 전 헌혈로 빈혈이 악화되므로 자가 예치에 적합하지 않다.",
       "예치한 혈액도 동종 혈액과 마찬가지로 보관 중 저장 손상(storage lesion)이 생긴다."
+    ]
+  },
+  {
+    "id": "it103",
+    "stem": " Duffy 혈액형 항원(Fya, Fyb)이 모두 음성인 적혈구(Fy(a−b−))가 어떤 병원체에 대한 저항성과 관련되는가?",
+    "choices": [
+      "Plasmodium falciparum",
+      "Plasmodium vivax",
+      "Babesia microti",
+      "Trypanosoma cruzi",
+      "Toxoplasma gondii"
+    ],
+    "answerIndex": 1,
+    "explainCorrect": "Plasmodium vivax(삼일열원충)는 적혈구 침입에 Duffy 항원(ACKR1)을 수용체로 이용한다. Fy(a−b−) 표현형은 서아프리카 기원 인구에서 흔하며 vivax 말라리아에 대한 자연 저항성과 관련된다. 반면 falciparum은 다른 침입 경로를 쓰므로 Duffy 음성과의 관계는 vivax만큼 직접적이지 않다.",
+    "explainWrong": [
+      "Plasmodium falciparum(열대열원충)은 Duffy 항원에 의존하지 않으며, 중증 말라리아의 주원인이다.",
+      "",
+      "Babesia microti는 진드기 매개 적혈구 기생 원충으로 Duffy 항원 음성과의 전형적 저항성 연관은 없다.",
+      "Trypanosoma cruzi는 샤가스병의 원인으로 주로 곤충 매개이며 적혈구 Duffy와 직접 관련되지 않는다.",
+      "Toxoplasma gondii는 조직 포자충으로 적혈구 Duffy 표현형과 관련되지 않는다."
     ]
   }
 ]
