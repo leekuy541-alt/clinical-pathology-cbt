@@ -1138,5 +1138,25 @@
       "",
       "98.9%는 음성예측도(negative predictive value, NPV)=860/(860+10)로 계산한 값이다."
     ]
+  },
+  {
+    "id": "pb58",
+    "stem": "특정 시점에 어떤 인구집단에서 특정 질병을 가진 사람의 비율을 나타내는 역학 지표는?",
+    "choices": [
+      "유병률(prevalence)",
+      "발생률(incidence)",
+      "치명률(case fatality rate)",
+      "사망률(mortality rate)",
+      "상대위험도(relative risk)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "유병률(prevalence)은 특정 시점(또는 일정 기간)에 인구집단 가운데 질병을 가진 사람의 비율이다. 기존 환자와 신규 환자를 모두 포함하므로 질병의 부담(burden)을 파악하는 데 쓰인다.",
+    "explainWrong": [
+      "",
+      "발생률(incidence)은 일정 기간에 새로 생긴 환자 수(신규 발생)를 나타내며, 기존 환자는 포함하지 않는다.",
+      "치명률(case fatality rate)은 환자 가운데 사망한 비율로, 질병의 중증도를 본다.",
+      "사망률(mortality rate)은 인구 전체에서 사망한 비율(또는 수)을 말한다.",
+      "상대위험도(relative risk)는 노출군과 비노출군의 발생률 비로, 연관성의 크기를 본다."
+    ]
   }
 ]

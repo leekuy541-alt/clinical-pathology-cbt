@@ -1078,5 +1078,25 @@
       "Ziehl-Neelsen은 항산균(acid-fast bacilli)의 세포벽 지질을 붉게 염색한다.",
       "톨루이딘블루(toluidine blue)는 비만세포 과립 등의 이염색성(metachromasia) 관찰에 쓰인다."
     ]
+  },
+  {
+    "id": "hp105",
+    "stem": "조직 절편에서 아밀로이드(amyloid)를 확인하고, 편광현미경에서 사과녹색 복굴절(apple-green birefringence)을 관찰하는 데 가장 적합한 특수염색은?",
+    "choices": [
+      "과요오드산-Schiff(PAS) 염색",
+      "콩고레드(Congo red) 염색",
+      "Masson 삼색염색(trichrome)",
+      "항산성 염색(Ziehl-Neelsen)",
+      "Giemsa 염색"
+    ],
+    "answerIndex": 1,
+    "explainCorrect": "콩고레드(Congo red)는 아밀로이드에 친화성이 있어 보통광에서 적황색~적색으로 염색되고, 편광하에서 특징적인 사과녹색 복굴절을 보인다. 아밀로이드증 진단의 표준 특수염색이다.",
+    "explainWrong": [
+      "PAS는 글리코겐·중성점액·기저막 등에 쓰이며 아밀로이드 확진 염색이 아니다.",
+      "",
+      "Masson 삼색염색은 콜라겐과 근육·세포질을 구분하는 염색이다.",
+      "Ziehl-Neelsen은 항산균 검출용이다.",
+      "Giemsa는 혈액·골수 도말이나 일부 미생물 관찰에 쓰인다."
+    ]
   }
 ]
