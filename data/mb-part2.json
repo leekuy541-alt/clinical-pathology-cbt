@@ -1078,5 +1078,25 @@
       "Enterococcus faecalis는 보통 비용혈 또는 α용혈이며 카탈라제 음성(또는 약양성 위양성)이고 응고효소 양성이 아니다.",
       "Streptococcus pneumoniae는 α용혈 연쇄알균으로 카탈라제 음성이며 옵토킨(optochin) 감수성·쓸개즙 용해로 동정한다."
     ]
+  },
+  {
+    "id": "mb105",
+    "stem": "객담 검체에서 항산성염색(acid-fast stain) 양성이고 중합효소연쇄반응(PCR)에서 Mycobacterium tuberculosis complex가 검출되었다. 가장 적절한 해석은?",
+    "choices": [
+      "일반세균 폐렴의 원인으로 Streptococcus pneumoniae가 확진된다",
+      "결핵균군(Mycobacterium tuberculosis complex) 감염을 시사한다",
+      "진균 감염만 의미하며 항결핵 치료는 고려하지 않는다",
+      "바이러스성 상기도감염의 특이 소견이다",
+      "오염균이므로 임상적 의미는 없다"
+    ],
+    "answerIndex": 1,
+    "explainCorrect": "항산성균(AFB) 양성과 M. tuberculosis complex PCR 양성은 폐결핵 등 결핵균군 감염을 강하게 시사한다. 확진·약제감수성은 배양과 연계하고, 감염관리·접촉자 조사·치료 방침은 임상·영상의학 소견과 함께 판단한다. NTM(비결핵항산균)과 감별에도 분자검사가 도움이 된다.",
+    "explainWrong": [
+      "S. pneumoniae는 그람양성 쌍구균으로 항산성염색·결핵 PCR 소견으로 확진되지 않는다.",
+      "",
+      "항산성·결핵 PCR은 진균 특이 소견이 아니며, 결핵이 의심되면 항결핵 치료 검토가 필요하다.",
+      "상기도 바이러스감염의 특이 검사 소견이 아니다.",
+      "객담 AFB·결핵 PCR 양성을 단순히 오염으로 무시해서는 안 된다."
+    ]
   }
 ]
