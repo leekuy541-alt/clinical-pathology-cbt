@@ -1098,5 +1098,25 @@
       "PEF 증가·FEV1 정상은 폐쇄성을 시사하지 않는다.",
       ""
     ]
+  },
+  {
+    "id": "ph106",
+    "stem": "정상 심전도에서 QRS파가 주로 반영하는 전기적 현상은?",
+    "choices": [
+      "심실의 탈분극(ventricular depolarization)",
+      "심방의 탈분극(atrial depolarization)",
+      "심실의 재분극(ventricular repolarization)",
+      "심방의 재분극(atrial repolarization)",
+      "동방결절의 자동능만(SA node automaticity alone)"
+    ],
+    "answerIndex": 0,
+    "explainCorrect": "QRS파는 좌·우 심실 심근의 탈분극을 나타낸다. 심실 수축에 앞선 전기적 흥분을 반영하며, 정상적으로는 좁고 뚜렷한 파형을 보인다.",
+    "explainWrong": [
+      "",
+      "심방 탈분극은 주로 P파로 나타난다.",
+      "심실 재분극은 주로 T파로 나타난다.",
+      "심방 재분극은 QRS에 가려져 보통 따로 뚜렷한 파로 보이지 않는다.",
+      "동방결절 자동능은 심박의 기원이지만, QRS파 자체가 나타내는 현상은 심실 탈분극이다."
+    ]
   }
 ]
