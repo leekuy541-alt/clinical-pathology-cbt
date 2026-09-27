@@ -10,10 +10,25 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>임상병리사 CBT</title>
-    <link rel="stylesheet" href="styles.css?v=20260927a" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css?v=20260928a" />
   </head>
   <body>
-    <div id="app">
+    <section id="screen-lock" class="lock-screen" aria-label="잠금 해제" hidden>
+      <div class="lock-card">
+        <h1 class="lock-title">임상병리사 CBT</h1>
+        <p class="lock-sub">교재 문항 은행은 암호화되어 있습니다.<br />비밀번호를 입력하면 이 기기에서 풀 수 있습니다.</p>
+        <form id="lock-form" class="lock-form" autocomplete="on">
+          <input type="text" name="username" value="cbt" autocomplete="username" hidden />
+          <label for="lock-password" class="lock-label">비밀번호</label>
+          <input id="lock-password" class="lock-input" type="password" autocomplete="current-password" required />
+          <label class="lock-remember"><input type="checkbox" id="lock-remember" checked /> 이 기기에서 기억</label>
+          <button type="submit" id="lock-submit" class="btn btn-primary lock-submit">열기</button>
+          <p id="lock-msg" class="lock-msg" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+    <div id="app" hidden>
       <!-- Home -->
       <section id="screen-home" class="screen active" aria-label="홈">
         <header class="app-header">
@@ -107,15 +122,6 @@
           <p class="today-lesson-note">약점·오답 기준 자동 배정 · 약 15~25문항</p>
         </section>
 
-        <section class="midterm-card" id="midterm-card" aria-label="중간고사 대비" hidden>
-          <h2 class="section-label midterm-label">중간고사 대비</h2>
-          <button type="button" id="btn-midterm" class="btn-midterm">
-            <span class="midterm-title">📖 3-2 중간 · 의료관계법규</span>
-            <span class="midterm-desc">수업 요약본에서만 출제 (의료법 · 의료기사법 · 지역보건법)</span>
-            <span class="midterm-count" id="midterm-count"></span>
-          </button>
-        </section>
-
         <h2 class="section-label">국시 유형 응시</h2>
         <div class="preset-list home-presets">
           <button type="button" class="preset-btn" data-preset="S1">
@@ -128,7 +134,7 @@
           </button>
           <button type="button" class="preset-btn" data-preset="S3">
             <span class="preset-name">3교시 실기 (65)</span>
-            <span class="preset-desc">실기 65 · 사진·도표형</span>
+            <span class="preset-desc">실기 65 · 3교시 교재 문항</span>
           </button>
           <button type="button" class="preset-btn" data-preset="WRITTEN">
             <span class="preset-name">필기 215</span>
@@ -140,10 +146,11 @@
           </button>
         </div>
 
-        <details class="subject-details">
-          <summary class="section-label subject-summary">과목별 연습 (선택)</summary>
+        <details class="subject-details" open>
+          <summary class="section-label subject-summary">과목별 연습</summary>
           <ul id="subject-list" class="subject-list"></ul>
-          <p class="footer-note">과목 은행에서 문항을 무작위로 추출합니다.</p>
+          <p class="footer-note">과목 은행(교재 1·2·3교시)에서 문항을 무작위로 추출합니다. 실기는 3교시 교재 문항입니다.</p>
+          <button type="button" id="btn-lock" class="btn-lock" hidden>이 기기에서 잠그기</button>
         </details>
       </section>
 
@@ -257,7 +264,7 @@
         </div>
       </section>
     </div>
-    <script src="questions.js?v=20260927a"></script>
-    <script src="app.js?v=20260927a"></script>
+    <script src="questions.js?v=20260928a"></script>
+    <script src="unlock.js?v=20260928a"></script>
   </body>
 </html>

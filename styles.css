@@ -1701,3 +1701,92 @@ details[open] > .subject-summary::after {
   line-height: 1.4;
   margin-top: -4px;
 }
+
+/* —— 잠금 화면 (암호화된 교재 문항 은행) —— */
+.lock-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(24px + var(--safe-top)) 20px calc(24px + var(--safe-bottom));
+}
+.lock-screen[hidden] {
+  display: none;
+}
+.lock-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+}
+.lock-title {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+.lock-sub {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.lock-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lock-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.lock-input {
+  font: inherit;
+  font-size: 1.05rem;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+.lock-input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.lock-remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+.lock-submit {
+  margin-top: 6px;
+}
+.lock-msg {
+  min-height: 1.3em;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.lock-msg--error {
+  color: var(--wrong);
+}
+.btn-lock {
+  margin-top: 12px;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 0.82rem;
+}
+.choice-explain-source {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.85;
+}
+.question-image {
+  background: #fff;
+}

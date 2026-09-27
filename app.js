@@ -11,6 +11,19 @@
   const NOTEBOOK_KEY = "cbt-wrong-notebook-v1";
   const EXAM_DATE_KEY = "cbt-exam-date-v1";
   const TODAY_LESSON_KEY = "cbt-today-lesson-v1";
+  const BANK_VERSION_KEY = "cbt-bank-version";
+  const BANK_VERSION = (typeof window !== "undefined" && window.CBT_BANK_VERSION) || "kukshi-v1";
+  // 문제 은행이 교체되면 옛 문항 id를 가리키는 통계·오답노트·오늘의 수업 기록을 초기화한다.
+  try {
+    if (localStorage.getItem(BANK_VERSION_KEY) !== BANK_VERSION) {
+      localStorage.removeItem("cbt-study-stats-v1");
+      localStorage.removeItem("cbt-wrong-notebook-v1");
+      localStorage.removeItem("cbt-today-lesson-v1");
+      localStorage.setItem(BANK_VERSION_KEY, BANK_VERSION);
+    }
+  } catch (_) {
+    /* ignore */
+  }
   const SUBJECT_COUNT_PRESETS = [10, 20, 35, 50];
   /** 국시 필기 전공·공통 9과목 (합격 가능도 커버리지) */
   const STATS_SUBJECT_IDS = [
@@ -241,6 +254,10 @@
    * so the correct option is equally likely in any slot. Does not mutate the bank.
    */
   function shuffleQuestionChoices(q) {
+    if (q && q.fixedOrder) {
+      // 교재 원문 문항: 해설이 원래 보기 번호(①~⑤)를 가리키므로 보기 순서를 유지한다.
+      return Object.assign({}, q, { _shuffled: true });
+    }
     const n = (q.choices && q.choices.length) || 0;
     const indices = [];
     for (let i = 0; i < n; i++) indices.push(i);
@@ -698,7 +715,7 @@
       const items = Array.isArray(data.items) ? data.items : [];
       return {
         items: items.filter(function (it) {
-          return it && it.id != null && it.subjectId != null;
+          return it && it.id != null && it.subjectId != null && !!findBankQuestion(it.id);
         }),
         updatedAt: data.updatedAt || null,
       };
@@ -750,6 +767,8 @@
     };
     if (q.image) base.image = q.image;
     if (q.law) base.law = q.law;
+    if (q.source) base.source = q.source;
+    if (q.fixedOrder) base.fixedOrder = true;
     if (found >= 0) {
       const prev = nb.items[found];
       base.savedAt = now;
@@ -773,7 +792,28 @@
     updateNotebookButton();
   }
 
+  /** 현재 은행에서 id로 문항 찾기 (없으면 null) */
+  let _bankIndex = null;
+  function findBankQuestion(id) {
+    if (!_bankIndex) {
+      _bankIndex = {};
+      Object.keys(QUESTIONS || {}).forEach(function (sid) {
+        (QUESTIONS[sid] || []).forEach(function (q) {
+          if (q && q.id != null) _bankIndex[q.id] = { q: q, sid: sid };
+        });
+      });
+    }
+    return _bankIndex[id] || null;
+  }
+
   function notebookItemToQuestion(it) {
+    const live = findBankQuestion(it.id);
+    if (live) {
+      return Object.assign({}, live.q, {
+        subjectId: it.subjectId,
+        paperTag: "오답노트",
+      });
+    }
     const q = {
       id: it.id,
       stem: it.stem,
@@ -1367,12 +1407,12 @@
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "subject-btn";
-      const ready = sub.status === "ready";
+      const bankLen = (QUESTIONS[sub.id] || []).length;
+      const ready = sub.status === "ready" && bankLen > 0;
       btn.disabled = !ready;
-      const count =
-        ready && QUESTIONS[sub.id]
-          ? QUESTIONS[sub.id].length + "문항"
-          : sub.description;
+      const count = ready
+        ? bankLen + "문항 · " + (sub.description || "").split(" · ")[0]
+        : "문항 없음";
       btn.innerHTML =
         '<span class="name">' +
         escapeHtml(sub.name) +
@@ -1420,6 +1460,10 @@
 
   function startSubjectPractice(id, n) {
     const bank = QUESTIONS[id] || [];
+    if (!bank.length || n <= 0) {
+      renderHome();
+      return;
+    }
     const isPrac = id === PRACTICAL_BANK_ID;
     const picked = sampleN(bank, n).map((q) =>
       Object.assign({}, q, {
@@ -1623,6 +1667,7 @@
     saveCounts(counts, practical);
     const paper = buildExamPaper(counts, practical);
     if (paper.length === 0) {
+      window.alert("이 구성에 해당하는 문항이 아직 없습니다.");
       renderHome();
       return;
     }
@@ -1634,6 +1679,10 @@
   }
 
   function beginSession(list, opts) {
+    if (!list || !list.length) {
+      renderHome();
+      return;
+    }
     questionList = list.map((q) =>
       q && q._shuffled ? q : shuffleQuestionChoices(q)
     );
@@ -1784,7 +1833,7 @@
     let correctExplainEl = null;
 
     const correctLi = items[correct];
-    const whyCorrect = q.explainCorrect || "";
+    const whyCorrect = q.explainCorrect || (q.source ? "교재에 별도 해설이 없는 문항입니다. (정답 " + correctLabel + ")" : "");
     if (correctLi && whyCorrect) {
       correctExplainEl = insertChoiceExplain(
         correctLi,
@@ -1792,6 +1841,12 @@
         "정답 해설",
         whyCorrect
       );
+      if (q.source) {
+        const src = document.createElement("p");
+        src.className = "choice-explain-source";
+        src.textContent = "출처: " + q.source;
+        correctExplainEl.appendChild(src);
+      }
     }
 
     // Compact result only — do not repeat the explanation here.
@@ -1850,8 +1905,19 @@
     if (el.imageWrap && el.image) {
       if (q.image) {
         el.imageWrap.hidden = false;
-        el.image.src = q.image;
         el.image.alt = "문항 그림";
+        if (String(q.image).indexOf("img:") === 0 && window.CBTBank) {
+          el.image.removeAttribute("src");
+          const want = q.image;
+          el.image.dataset.want = want;
+          window.CBTBank.loadImage(want.slice(4)).then(function (url) {
+            if (el.image.dataset.want === want) el.image.src = url;
+          }).catch(function () {
+            if (el.image.dataset.want === want) el.image.alt = "그림을 불러오지 못했습니다";
+          });
+        } else {
+          el.image.src = q.image;
+        }
       } else {
         el.imageWrap.hidden = true;
         el.image.removeAttribute("src");
