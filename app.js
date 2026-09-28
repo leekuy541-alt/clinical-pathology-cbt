@@ -280,11 +280,19 @@
     });
   }
 
-  /** Sample n items without replacement */
+  /** 기출 연도 표시(year)가 있는 문항을 앞에, 나머지를 뒤에 — 각 묶음 안에서는 무작위 */
+  function yearFirst(arr) {
+    const marked = [];
+    const rest = [];
+    arr.forEach((q) => (q && q.year ? marked : rest).push(q));
+    return shuffle(marked).concat(shuffle(rest));
+  }
+
+  /** Sample n items without replacement (기출 표시 문항 우선) */
   function sampleN(arr, n) {
     if (n <= 0) return [];
-    const shuffled = shuffle(arr);
-    return shuffled.slice(0, Math.min(n, shuffled.length));
+    const ordered = yearFirst(arr);
+    return ordered.slice(0, Math.min(n, ordered.length));
   }
 
   function loadSavedCounts() {
@@ -1127,7 +1135,7 @@
       }
     }
 
-    let finalList = shuffle(list);
+    let finalList = yearFirst(list);
     if (finalList.length > 25) {
       finalList = finalList.slice(0, 25);
     }
@@ -1660,7 +1668,7 @@
       });
     }
 
-    return shuffle(paper);
+    return yearFirst(paper);
   }
 
   function startExamSession(counts, practical) {
@@ -1849,6 +1857,17 @@
       }
     }
 
+    // 오답 보기 4개 모두: 왜 틀렸는지
+    const ew = Array.isArray(q.explainWrong) ? q.explainWrong : [];
+    items.forEach((li, i) => {
+      if (i === correct) return;
+      const body = ew[i] && String(ew[i]).trim();
+      if (!body) return;
+      const title =
+        (i === selected ? "내가 고른 " : "") + NUM_LABELS[i] + " 오답 이유";
+      insertChoiceExplain(li, "wrong", title, body);
+    });
+
     // Compact result only — do not repeat the explanation here.
     el.feedback.innerHTML =
       '<div class="feedback-result ' +
@@ -1898,6 +1917,13 @@
     } else {
       el.questionTag.hidden = true;
       el.questionTag.textContent = "";
+    }
+    if (q.year) {
+      const yearLabel = q.year + " 기출";
+      el.questionTag.textContent = el.questionTag.hidden
+        ? yearLabel
+        : yearLabel + " · " + el.questionTag.textContent;
+      el.questionTag.hidden = false;
     }
 
     el.stem.textContent = q.stem;
