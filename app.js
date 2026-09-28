@@ -777,6 +777,7 @@
     if (q.law) base.law = q.law;
     if (q.source) base.source = q.source;
     if (q.fixedOrder) base.fixedOrder = true;
+    if (q.aiCorrect) base.aiCorrect = true;
     if (found >= 0) {
       const prev = nb.items[found];
       base.savedAt = now;
@@ -834,6 +835,7 @@
     };
     if (it.image) q.image = it.image;
     if (it.law) q.law = it.law;
+    if (it.aiCorrect) q.aiCorrect = true;
     return q;
   }
 
@@ -1846,7 +1848,7 @@
       correctExplainEl = insertChoiceExplain(
         correctLi,
         "correct",
-        "정답 해설",
+        q.aiCorrect ? "정답 해설 · AI 작성" : "정답 해설",
         whyCorrect
       );
       if (q.source) {
@@ -1864,7 +1866,7 @@
       const body = ew[i] && String(ew[i]).trim();
       if (!body) return;
       const title =
-        (i === selected ? "내가 고른 " : "") + NUM_LABELS[i] + " 오답 이유";
+        (i === selected ? "내가 고른 " : "") + NUM_LABELS[i] + " 오답 이유 · AI 작성";
       insertChoiceExplain(li, "wrong", title, body);
     });
 
